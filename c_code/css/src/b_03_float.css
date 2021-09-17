@@ -143,9 +143,46 @@ h2 {
 .b_03 { float:left; background-color: rgb( 207,  191, 42) ;}
 .b_04 { float:left; background-color: rgb( 5,  182, 43) ;}
 .b_05 { float:left; background-color: rgb( 221,  188, 213) ;}
+.b_06 { float:left; background-color: rgb(110, 39, 92) ;}
+.b_07 { float:left; background-color: rgb(231, 217, 84) ;}
 
 .floor {
-  /* 판 깔아주는 것 clear:both; */
   clear: both;
   width: 100%; height: 10px; background-color: #fff;
 }
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%; height: 20px;
+  background-color: #fff;
+}
+
+br {
+  display: block;
+  width: 100%; height: 20px;
+  background-color: #111;
+  clear:both;
+  /* clear : 안전한 막 */
+}
+
+
+ul.float_area {
+  margin: 0; padding: 0;
+}
+
+ul.float_area li {
+  margin: 0; padding: 0; list-style: none;
+}
+
+/* ul.float_area::after {
+  content: ""; display: block;
+  width: 100%; height: 0;
+  clear:both;
+} */
+
+.clearfix:after {
+  content: ""; display: block; clear:both;
+}
+/* clear:both를 사용하지 않으면 높이 자동설정이 안됨. 왜? */
