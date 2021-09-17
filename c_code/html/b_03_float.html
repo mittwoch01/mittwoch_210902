@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- [if IE] -->
+      <script src="../js/common/modernizr-custom.js"></script>
+    <!-- [endif] -->
+
+    <link rel="stylesheet" href="../css/src/b_03_float.css">
+
+    <title>float 및 clear</title>
+
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+
+
+  </head>
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+      <h1><a href="./a_00_content.html">웹기초</a></h1>
+      <hr />
+
+      <div class="ex_part">
+        <h2>이미지 불러오기</h2>
+        <div class="img_arr">
+          <img src="../img/sticker/bear.png" alt="곰 이미지"/>
+          <img src="../img/sticker/crocodile.png" alt="악어 이미지"/>
+          <img src="../img/sticker/fox.png" alt="여우 이미지"/>
+
+
+        </div>
+      </div>   
+      <!-- //.ex_part -->
+
+      <div class="ex_part">
+        <h2>이미지와 텍스트포함</h2>
+        <div class="img_content">
+          <div class="img_area">
+           
+            <img src="../img/sticker/panda-bear.png" alt="판다이미지">
+          </div>  
+
+            <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In numquam, quam aliquam labore ipsa quis pariatur commodi exercitationem. Ipsam ex illo nemo provident vero sint quisquam, expedita repellendus amet perferendis nihil, sapiente reiciendis nobis consequuntur et obcaecati, molestias qui? Placeat, et nihil voluptate quos suscipit magnam consequuntur. Id minus alias dolor, officia vitae sequi neque illo ea error ad ut fugiat quam tenetur recusandae consequatur eaque ex enim dicta sapiente molestias explicabo inventore? Nulla rem molestiae fugiat. Illum alias corrupti quisquam animi corporis ut officia ipsa repellat totam commodi ea consequuntur, quae accusantium sapiente minima suscipit, asperiores pariatur magni dignissimos? 
+          </p>
+        </div>
+      </div>
+
+      <hr />
+      <h2>다시 해보기</h2>
+
+      <div class="img_wrap">
+        <img src="../img/sticker/bear.png" alt="이미지"/>
+        <img src="../img/sticker/crocodile.png" alt="이미지"/>
+        <img src="../img/sticker/fox.png" alt="이미지"/>
+        <img src="../img/sticker/lynx.png" alt="이미지"/>
+        <img src="../img/sticker/panda-bear.png" alt="이미지"/>
+      </div>
+
+
+      <!-- class는 그룹이름? -->
+      <ul class="img_list">
+        <li><img src="../img/sticker/bear.png" alt="이미지" /></li>
+        <li><img src="../img/sticker/crocodile.png" alt="이미지" /></li>
+        <li><img src="../img/sticker/fox.png" alt="이미지" /></li>
+        <li><img src="../img/sticker/lynx.png" alt="이미지" /></li>
+        <li><img src="../img/sticker/panda-bear.png" alt="이미지" /></li>
+      </ul>
+
+
+    <div class="content_area">
+      <div class="viewer"> 
+        <img src="../img/sticker/bear.png" alt="곰"/>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis sequi, pariatur sint magnam, vel laboriosam, corrupti quia aspernatur quae natus ipsum perspiciatis quis sunt. Saepe numquam nihil, animi eum fuga corporis porro, quidem libero veritatis aspernatur vel at unde officia iste dolorum. Nihil, assumenda vitae. Quod molestias iure in commodi. Enim at ipsa, labore velit repellat repudiandae omnis quibusdam aut dignissimos corporis dolorum soluta possimus molestiae facere voluptatem repellendus fugit placeat ab modi corrupti! Architecto recusandae itaque voluptatem quas voluptatum eum officiis doloribus veritatis omnis reprehenderit sunt blanditiis molestias, accusantium modi sed voluptatibus eligendi, atque magnam obcaecati eaque incidunt dolor iste cum odio! Illum dolorum ipsa possimus molestias placeat, fuga aspernatur facilis id aliquam veniam nulla sint recusandae pariatur. Magnam saepe laudantium, velit beatae ratione eius asperiores natus consequuntur quaerat. Doloribus atque natus inventore, placeat laborum obcaecati autem sapiente quos! Harum, et molestiae voluptatem distinctio ad praesentium error. Ratione unde cumque, vitae dignissimos blanditiis adipisci, dolorem dicta nulla obcaecati saepe veniam odit deleniti tempora, quod deserunt voluptate ad sit. Minima quod nam amet nemo nisi vitae, odit velit saepe cumque voluptates eos voluptas a ex magni labore eveniet aliquid, at blanditiis libero placeat in. Provident voluptate vel officia quidem laborum?
+      </p>
+    </div>
+
+    <div class="list_area">
+      <ul>
+        <li><img src="../img/sticker/bear.png" alt="이미지"></li>
+        <li><img src="../img/sticker/crocodile.png" alt="이미지"></li>
+        <li><img src="../img/sticker/fox.png" alt="이미지"></li>
+        <li><img src="../img/sticker/lynx.png" alt="이미지"></li>
+        <li><img src="../img/sticker/panda-bear.png" alt="이미지"></li>
+      </ul>
+      <div class="other"></div>
+    </div>
+      
+
+    <!-- float의 문제점 : 부모가 높이 auto일떄 자식이 float처리를 하면, 부모의 높이는 0이 된다. 이를 해결하는 방법을 찾아내자!! -->
+
+    &gt; c
+    
+    
+    <div class="ex_part">
+      <div class="float_area float_01">
+        <div class="box b_01">1</div>
+        <div class="box b_02">2</div>
+        <div class="box b_03">3</div>
+        <div class="box b_04">4</div>
+        <div class="box b_05">5</div>
+        <!-- 판이 없어서 판을 깔아주는 단계였음 -->
+        <div class="floor"></div>
+
+
+      </div>
+    </div>
+    <!-- 옆으로 나란히 박스를 까는 기본방법 -->
+
+
+    <!-- //#wrap -->
+    </div>
+    <!-- script -->
+    <script></script>
+
+  </body>
+</html>
