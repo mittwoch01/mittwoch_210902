@@ -39,9 +39,7 @@
   content: ""; display: block; clear:both;
 }
 
-.m_base > div {
-  float: left;
-}
+.m_base > div { float: left; }
 
 .margin_01{
   /* margin-left:50px; */
@@ -54,8 +52,105 @@
   /* margin-left: 300px; */
   /* margin-bottom: 100px; */
 }
+/* ------------- */
 
+.m_base2 { margin-top: 50px;}
+.m_base2:after{
+  content: ""; display: block; clear:both; 
+}
+.m_base2 > div {float: left;}
 
+.m_01 { margin: 50px; }
+.m_02 { margin: 10px 30px; }
+.m_03 { margin: 10px 50px 30px; }
+.m_04 { margin: 5px 20px 40px 70px; }
+.m_05 { margin: 20px; margin-bottom: 10px;}
+/* .m_05 { margin:20px 20px 10px;} */
 
+.m_06 { margin: auto;}
+/* auto는 자동모드  */
+.m_07 { margin-top: -50px ;}
+.m_08 { margin-left: 10%}
+/*  margin-top, bottom 은 % 를 사용하지 않는다. */
 
+/* ---------------------- */
 
+.float_area { 
+  list-style:none;
+  padding: 0;
+  width:500px; 
+  margin:auto;
+  border:1px solid #333;
+  background-color: #fff;
+}
+
+.float_area:after{
+  content:""; display: block; clear:both;
+  width: 100%; height: 30px;
+  background-color: #fff;
+}
+.float_area > li {
+  float: left;
+  width: 100px; height: 100px;
+  background-image: 
+    linear-gradient(60deg, #adf, #f7a);
+}
+
+.l_01 { margin-bottom: 10px;}
+.float_area > .l_02 { 
+  height: 50px; margin-bottom: 10px;
+  }
+  /* -------------------- */
+
+  .p_base {
+    padding: 0; list-style: none;
+    width: 600px; height: auto;
+  }
+
+  .p_base::after{
+    content: ""; display: block; clear: both;
+  }
+
+  .p_base > li {
+    float: left;
+    width: 100px; height: 100px;
+    background-color: #dfa;
+    background-image: linear-gradient(45deg, #dfa, #7a8);
+  }
+
+  .p_base span{
+    display: block; width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 30%);
+  }
+  /* ------------------------------------------- */
+
+.p_01 {padding: 10px; }
+.p_02 {padding: 20px 40px;}
+.p_03 {padding: 10px 40px 50px;}
+.p_04 {padding: 5px 10px 20px 40px;}
+.p_05 {
+  padding-top: 30px; padding-left: 10px;
+  padding-right: 30px; padding-bottom: 20px;}
+
+.p_06 {
+  padding-top: 10%; padding-left: 10%;
+}
+.p_07 {padding:10px; padding-right: 40px;}
+
+.p_08 {
+  padding-top: 30px;
+  background-image: none;
+  background-color: transparent;}
+
+.p_base .p_09 {
+  width: 40px; height: 40px;
+  padding: 30px;
+}
+.p_10 {
+  width: 100px; height: 100px;
+  padding: 30px;
+  /* box-sizing: content-box; || border-box; */
+  box-sizing: border-box;
+}
+
+/* margin, padding에 대한 설명 */
