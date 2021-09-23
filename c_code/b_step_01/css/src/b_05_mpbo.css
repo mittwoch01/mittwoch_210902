@@ -1,0 +1,61 @@
+@charset "UTF-8 ";
+/* b_05_mpbo.css 8*/
+
+#wrap {
+  width: 900px; height: auto;
+  margin: auto; padding-bottom: 500px;
+  background-color: #eee;
+}
+
+.ex_part {
+  margin-bottom: 50px;
+  background-color: #ddd;
+}
+
+.ex {
+  width: 95%; height: auto;
+  border-width: 1px; border-style: solid;
+  border-color: #777;
+}
+
+.ex > div {
+  width: 150px; height: 150px;
+  border-radius: 5px;
+  color: #fff; font-weight:900;
+  background-color: #07a;
+  background-image: linear-gradient(45deg, #07a, #5a9);
+}
+/* -------------------------------------- */
+/* margin: 외부여백 - 요소와 요소사이의 (눈으로 볼 수 있는)공백 */
+
+
+.m_base {
+ border:0;
+ width: 200px; 
+ background-color: #fda;
+}
+
+.m_base:after {
+  content: ""; display: block; clear:both;
+}
+
+.m_base > div {
+  float: left;
+}
+
+.margin_01{
+  /* margin-left:50px; */
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+.margin_02 {
+  margin-top: 50px;
+  /* margin-left: 300px; */
+  /* margin-bottom: 100px; */
+}
+
+
+
+
+
