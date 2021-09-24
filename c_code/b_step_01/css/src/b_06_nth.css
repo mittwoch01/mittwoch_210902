@@ -1,0 +1,25 @@
+@charset "UTF-8 ";
+/* b_06_nth.css 8*/
+
+.ex {
+  width: 80%; height: auto;
+  margin: auto; padding: 20px;
+  border: 1px solid #333; 
+}
+
+ul {
+  background-color: #eee;
+}
+
+ul li { margin-bottom: 5px; padding: 3px 0;}
+ul li:first-child {background-color: #adf;}
+/* 1st 2nd 3rd 4th 5th 6th */
+ul li:nth-child(1) { color: #f07;}
+ul li:nth-child(2) { color: #0f7;}
+ul li:nth-child(5) { border-bottom: 1px solid #5ac;}
+/* solid설정이 bottom에만 주어져서 언더바처럼보임  */
+ul li:last-child { margin-bottom: 0;}
+ul li:nth-last-child(1) { background-color: #add;}
+ul li:nth-last-child(3) { background-color: #a6d;}
+ul li:nth-child(2n) { text-indent:20px;}
+ul li:nth-child(2n-1) { text-indent: 50px;}
