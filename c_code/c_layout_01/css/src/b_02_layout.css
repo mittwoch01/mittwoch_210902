@@ -1,46 +1,158 @@
 @charset "UTF-8 ";
 /* b_02_layout.css */
 
-#wrap {
-  width: 600px; height: 500px;
-  background-color: #aaffaa;
-  margin: auto;
-  margin-top: 100px;
+/* reset.css
+----------------------------------------------- */
+body {margin: 0;
+  background-color: #000070;}
+h1,h2,h3,h4,h5,h6,
+p,pre,address,
+ul,ol,li,dl,dt,dd{
+  margin: 0; padding: 0;
+  font-size: 16px; font-family: sans-serif;
 }
 
+ul, ol {list-style: none;}
+/* 123 떙떙떙 없애는 설정 */
 
+a { text-decoration: none; color: inherit;}
+button {border: 0; background-color: transparent; cursor: pointer;}
+
+
+.clearfix:after,
+.clearfix::after {
+  content: ""; display: block; clear: both;
+}
+
+/* design
+------------------------------------------------ */
+
+#wrap {
+  width: 600px; height: auto; min-height: 500px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* header
+------------------------------------------------- */
 #header {
   width: 600px; height: 100px;
   background-color: #ff0077;
 }
-
-#section {
-  width:600px; height: 300px;
-  background-color: #d6e700;
+h1 {
+  float: left;
+  width:120px; height: 100px; background-color: #dfd;
 }
 
+.navigation {
+  float: right;
+  width: 400px; height: 100px;
+  padding-top: 50px; box-sizing: border-box;
+  background-color: #fa0;
+}
+
+.navigation > ul {
+  float: right;
+  width: auto; height: auto; background-color: #fff;
+}
+
+/* .navigation > ul > li */
+.navigation li {
+  float: left; width: 40px; height: 50px;
+  margin-left: 10px;
+  background-color: #35a; color: #fff;
+}
+
+.navigation li a {
+  display: block; width: 100%; height: 100%; background-color: #ca7;
+}
+
+.navigation li:first-child { margin-left:0;}
+
+
+
+
+
+
+
+
+
+
+
+
+/* section
+------------------------------------------------- */
+#section {
+  width:100%; height: auto; background-color: #d6e700;}
+ #section > div {float: left; height: 300px;}
  .sect_01 {
-  float:left;
-  width: 40%; height: 300px;
+  width: 40%; 
   background-color: #329664;
 }
-
  .sect_02 {
-  float:right;
-  width: 60%; height: 300px;
+  width: 60%; 
   background-color: #555555;
 }
 
-#aside {width: 100%; height: 300px;}
 
-#aside > div { float: left; height: 300px; }
-.aside_01 {width: 33.333%; background-color: #adaadd;} 
-.aside_02 {width: 33.333%; background-color: #607259;} 
-.aside_03 {width: 33.333%; background-color: #ad6fdd;} 
+/* aside
+---------------------------------------------------- */
+#aside {
+  width: 100%; 
+  height: auto;
+}
+
+#aside > div { 
+  float: left; 
+  width: calc(100% / 3); 
+  height: 300px;
+}
+.side_01 {width: 33.333333%; background-color: #adaadd;} 
+.side_02 {width: 33.333334%; background-color: #607259;} 
+.side_03 {width: 33.333333%; background-color: #ad6fdd;} 
+
+/* article 
+---------------------------------------------------- */
+#article {
+  width: 100%; height: 300px;
+  background-color: #7a7;
+}
+.art_01 {
+  float: left;
+  width: calc(100% / 3);
+  height: 300px; background-color: #35a;
+}
+.art_02 {
+  float: right;
+  width: calc(100% / 3 * 2);
+  height: 150px; background-color: #f37;
+}
+.art_03 {
+  float: right;
+  width: calc(100% / 3 * 2);
+  height: 150px; background-color: #a7a;
+}
+
+/* content
+------------------------------------------------------ */
+
+#content .art_01 {
+  float:left; width: 70%; height: 150px;
+}
+#content .art_02 {
+  float:left; width: 70%; height: 350px;
+}
+#content .art_03 {
+  float:right; width: 30%; height: 500px;
+  margin-top: -150px;
+}
 
 
 
 
+
+/* footer
+------------------------------------------------------ */
 
 #footer {
   width: 100%; height: 100px;
