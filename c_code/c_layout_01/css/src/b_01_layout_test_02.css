@@ -1,0 +1,110 @@
+@charset "UTF-8 ";
+/* b_01_layout_test_02.css */
+
+/* reset.css
+------------------------------------------- */
+body {margin: 0;
+  background-color: #000070;}
+h1,h2,h3,h4,h5,h6,
+p,pre,address,
+ul,ol,li,dl,dt,dd{
+  margin: 0; padding: 0;
+  font-size: 16px; font-family: sans-serif;
+  /* 16px = 1rem */
+}
+
+ul,ol {list-style: none;}
+
+a { text-decoration: none; color: inherit;}
+button { border: 0; background-color: transparent; cursor: pointer;}
+
+/* common.css
+------------------------------------------ */
+.clearfix:after,
+.clearfix::after {
+  content: ""; display: block; clear: both;
+}
+
+/* design
+------------------------------------------ */
+#wrap { 
+  width: 1600px; height: auto; min-height: 1100px;
+  margin: auto; 
+
+  background-color: #fff;
+}
+
+/* headerBox.css 
+--------------------------------*/
+#headBox { width: 1600px; height: 150px; background-color: rgb(255, 255, 255);}
+
+h1 { 
+  float:left; margin-top:35px; margin-left: 50px;
+  width: 250px; height: 80px; background-color: rgb(62, 187, 204);}
+
+#headBox > div { float: left; height: 80px; }
+.box_01 { width: 850px; margin: 34px 75px; background-color: rgb(62, 187, 204);}
+.box_02 { width: 250px; margin-top: 34px; margin-right: 50px; background-color: rgb(62, 187, 204);}
+
+
+
+/* adViewBox
+-------------------------------- */
+#adViewBox {
+  width: 1600px; height: 750px; background-color: rgb(189, 189, 189);
+}
+
+.view_outer {
+  margin: auto; 
+  margin-top: 28px;
+  margin-bottom: 28px; 
+  width: 1300px; height: 600px; background-color: rgb(62, 187, 204);}
+
+.view_indicator { margin: auto; width: 850px; height: 60px; background-color: rgb(62, 187, 204);}
+
+
+/* localNavBox
+------------------------------- */
+#localNavBox { width: 1600px; height: 250px; background-color: rgb(138, 138, 138);
+margin-bottom: 50px;
+}
+
+.local_nav_outer {
+  width: 1500px; height: 196px; margin: auto; background-color: rgb(62, 187, 204);
+}
+
+
+/* popularContentBox
+-------------------------------- */
+#popularContentBox { width: 1600px; height: 600px; background-color: rgb(189, 189, 189);}
+
+h3 { margin: auto; margin-bottom: 30px; width: 1300px; height: 50px; background-color: rgb(62, 187, 204);
+
+}
+
+.pop_con_area { margin: auto;  width: 1300px; height: 470px; background-color: rgb(62, 187, 204);}
+
+/* newContentBox
+----------------------------------*/
+#newContentBox { width: 1600px; height: 900px; background-color: #eee; margin-bottom: 80px;}
+
+/* recommededConttentBox
+--------------------------------- */
+#recommededConttentBox { width: 1600px; height: 600px ;
+  background-color: rgb(189, 189, 189);  margin-bottom: 80px;
+}
+
+/* communityBox
+-------------------------- */
+#communityBox { width: 1600px; height: 800px; background-color: #eee; margin-bottom: 80px;}
+
+/* miniAdBox
+---------------------------- */
+#miniAdBox { width: 1600px; height: 400px; background-color: rgb(189, 189, 189); margin-bottom: 80px;}
+
+/* footBox
+-------------------------------*/
+#footBox { width: 1600px; height: 200px; background-color: rgb(158, 158, 158);}
+
+
+

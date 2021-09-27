@@ -1,0 +1,93 @@
+@charset "UTF-8 ";
+/* b_01_answer.css */
+
+/* reset
+----------------------------------------------- */
+
+html, body { width: 100%; height: 100%;}
+
+html, body,
+h1,h2,h3,h4,h5,h6,
+p,pre,address,
+ul,ol,li,dl,dt,dd{
+  margin: 0; padding: 0;
+  font-size: 16px; font-family: arial , 'apple SD' , 'myriad pro' , sans-serif;
+  /* font-family = 서체. sans-serif는 고딕을 지칭함. */
+  /* 16px = 1rem */
+}
+
+ol, ul { list-style: none;}
+a { text-decoration: none; color: inherit;}
+table, tr, th, td, thead, tbody, tfoot {
+  border: 1px solid #333; border-spacing: 0; border-collapse: collapse;
+}
+em, address { font-style: normal;}
+strong, b {font-weight: normal;}
+abbr { text-decoration: none;}
+button { border: 0; background-color: transparent; cursor: pointer;}
+
+ /* common.css
+ ---------------------------------------------- */
+ .clearfix:after,
+ .clearfix::after {
+   content: ""; display: block; clear: both;
+ }
+
+ /* design
+ ---------------------------------------------- */
+
+ #wrap {
+   width: 1600px; height: auto; min-width: 500px;
+   margin: auto;
+   background-color: #ddd;
+ }
+
+/* #headBox
+====================================== */
+ #headBox {}
+
+/* #adViewBox
+====================================== */
+ #adViewBox {}
+
+/* #localNavBox
+====================================== */
+ #localNavBox {}
+
+ /* #popularContentBox
+====================================== */
+ #popularContentBox {}
+
+/* #newContentBox
+====================================== */
+ #newContentBox {}
+
+/* #recommendeContentBox
+====================================== */
+ #recommendedContentBox {}
+
+/* #communityBox
+====================================== */
+ #communityBox {}
+
+/* #miniBox
+====================================== */
+ #miniBox {}
+
+/* #hfootBox
+====================================== */
+ #footBox {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
