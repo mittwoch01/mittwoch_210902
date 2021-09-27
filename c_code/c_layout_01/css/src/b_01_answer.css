@@ -44,6 +44,8 @@ button { border: 0; background-color: transparent; cursor: pointer;}
    content: ""; display: block; clear: both;
  }
 
+ .box_space { margin-bottom: 80px;}
+
  /* design
  ---------------------------------------------- */
 
@@ -79,23 +81,40 @@ button { border: 0; background-color: transparent; cursor: pointer;}
 
 /* #newContentBox
 ====================================== */
- #newContentBox {}
+ #newContentBox { height: 900px; 
+  background-color: #ddd;
+}
 
 /* #recommendeContentBox
 ====================================== */
- #recommendedContentBox {}
+ #recommendedContentBox {
+   height: 600px;
+
+   background-color: #aaa;
+ }
 
 /* #communityBox
 ====================================== */
- #communityBox {}
+ #communityBox {
+   height: 800px;
+
+   background-color: #ddd;
+ }
 
 /* #miniBox
 ====================================== */
- #miniBox {}
+ #miniBox {
+   height: 400px;
+
+   background-color: #aaa;
+ }
 
 /* #hfootBox
 ====================================== */
- #footBox {}
+ #footBox {
+   height: 200px;
+   background-color: #999;
+ }
 
 
 

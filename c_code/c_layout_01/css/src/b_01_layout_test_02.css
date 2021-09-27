@@ -55,19 +55,21 @@ h1 {
   padding-top: 28px;
 }
 
-.view_outer {
-  margin: auto; 
-  margin-top: 28px;
-  margin-bottom: 28px; 
-  width: 1300px; height: 600px; background-color: rgb(62, 187, 204);}
+  .view_outer {
+    margin: auto; 
+    margin-top: 28px;
+    margin-bottom: 28px; 
+    width: 1300px; height: 600px; background-color: rgb(62, 187, 204);}
 
-.view_indicator { margin: auto; width: 850px; height: 60px; background-color: rgb(62, 187, 204);}
+  .view_indicator { margin: auto; width: 850px; height: 60px; background-color: rgb(62, 187, 204);}
 
 
 /* localNavBox
 ------------------------------- */
-#localNavBox { width: 1600px; height: 250px; background-color: rgb(138, 138, 138);
-margin-bottom: 50px;
+#localNavBox { width: 1600px; height: 250px; 
+  margin-bottom: 50px;
+  padding-top: 18px;
+  background-color: rgb(138, 138, 138);
 }
 
 .local_nav_outer {
