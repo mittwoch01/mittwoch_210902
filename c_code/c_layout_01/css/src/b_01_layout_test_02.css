@@ -81,7 +81,7 @@ h1 {
 -------------------------------- */
 #popularContentBox { width: 1600px; height: 600px; background-color: rgb(189, 189, 189);}
 
-h3 { margin: auto; margin-bottom: 30px; width: 1300px; height: 50px; background-color: rgb(62, 187, 204);
+.area_title { margin: auto; margin-bottom: 30px; width: 1300px; height: 50px; background-color: rgb(62, 187, 204);
 
 }
 
