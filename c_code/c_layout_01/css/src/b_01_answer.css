@@ -1,6 +1,17 @@
 @charset "UTF-8 ";
 /* b_01_answer.css */
-
+/* 속성작성요령:
+  선택자{
+    존재유무/형태 -> display, overflow
+    위치 -> position
+    크기 -> width -> height -> min-width -> min-height(반응형)
+    공간 -> margin -> box-sizing -> padding -> border 
+    서체 -> font-style, font-weight, line-height, font-family, font-size .....
+    배경처리 -> image, repeat, position, size .....
+    기타효과 -> shadow .....
+    애니메이션 
+  }
+ */
 /* reset
 ----------------------------------------------- */
 
@@ -39,24 +50,32 @@ button { border: 0; background-color: transparent; cursor: pointer;}
  #wrap {
    width: 1600px; height: auto; min-width: 500px;
    margin: auto;
-   background-color: #ddd;
  }
+
+ #wrap > div { width: 100%; }
 
 /* #headBox
 ====================================== */
- #headBox {}
+ #headBox { height: 150px; background-color: #ddd; }
+ /* margin-top을 쓸수 없다. 왜냐면 #wrap을 끌고 내려온다. */
 
 /* #adViewBox
 ====================================== */
- #adViewBox {}
+ #adViewBox { height: 750px; background-color: #aaa;} 
 
 /* #localNavBox
 ====================================== */
- #localNavBox {}
+ #localNavBox { 
+   height: 250px; background-color: #999;
+   margin-bottom: 50px;
+}
 
  /* #popularContentBox
 ====================================== */
- #popularContentBox {}
+ #popularContentBox {
+   height: 600px; background-color: #aaa;
+   /* margin-top: 50px; 겹칠 때는 작은 값은 상쇄된다. */
+ }
 
 /* #newContentBox
 ====================================== */

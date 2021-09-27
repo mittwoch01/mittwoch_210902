@@ -52,6 +52,7 @@ h1 {
 -------------------------------- */
 #adViewBox {
   width: 1600px; height: 750px; background-color: rgb(189, 189, 189);
+  padding-top: 28px;
 }
 
 .view_outer {
