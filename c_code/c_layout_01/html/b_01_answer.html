@@ -16,30 +16,35 @@
 <body>
   <!-- layout -->
   <div id="wrap">
-     <div id="headBox" role="banner">
+     <header id="headBox" >
        <h1>file name</h1>
-       <div class="gnb" role="navigation">
-         <h2 class="blind">global navigation</h2>
-         <ul class="clearfix"> <!--ul>li*5{li_$$}-->
-           <li>li_01</li>
-           <li>li_02</li>
-           <li>li_03</li>
-           <li>li_04</li>
-           <li>li_05</li>
-         </ul>
-       </div>
+       <nav id="navigation">
+        <div class="gnb" role="navigation">
+          <h2 class="blind">global navigation</h2>
+          <ul class="clearfix"> <!--ul>li*5{li_$$}-->
+            <li>li_01</li>
+            <li>li_02</li>
+            <li>li_03</li>
+            <li>li_04</li>
+            <li>li_05</li>
+          </ul>
+        </div>
 
-       <div class="unb" role="navigation">
-         <h2 class="blind">utility naviagtion</h2>
-       </div>
-     </div>
+        <nav class="unb" >
+          <h2 class="blind">utility naviagtion</h2>
+        </nav>>
+       </nav>
+     </header>
      <!-- // #headBox-->
 
-     <div id="adViewBox" role="region">
+     <section id="adViewBox" >
        <h2 class="blind">주요 광고 내용</h2>
 
-       <div class="view_outer">view_outer</div>
-       <div class="view_indicator">
+       <article class="view_outer">
+        <h3>view_outer</h3>
+       </article>
+       <article class="view_indicator">
+        <h2>view_indicator</h2>
         <ul class="clearfix">
           <li>ad_01</li>
           <li>ad_02</li>
@@ -48,7 +53,8 @@
           <li>ad_05</li>
           <li>ad_06</li>
         </ul>
-       </div>
+       </article>
+
        <div class="view_btn">
         <a href="" role="button" aria-roledescription="이전">
           <span class="blind">이전</span>
@@ -57,10 +63,10 @@
           <span class="blind">다음</span>
         </a>
        </div>
-     </div>
+     </section>>
      <!-- // #adViewBox -->
 
-     <div id="localNavBox" role="navigation">
+     <nav id="localNavBox" >
        <h2 class="blind">local navigation</h2>
        <!-- blind는 속성은 살아 있으나 화면에서는 안보임. -->
        <div class="local_nav_outer">
@@ -73,13 +79,13 @@
           <li>lnb_06</li>
         </ul> 
        </div>
-     </div>
+     </nav>>
      <!-- // #localNavBox -->
 
 
-     <div class="content_box_wrap" role="main">
+     <main class="content_box_wrap" >
         <h2 class="blind">주요 내용</h2>
-        <div id="popularContentBox" >
+        <article id="popularContentBox" >
           <h3 class="area_title">
             인기콘텐츠
           </h3>
@@ -97,11 +103,11 @@
               <div class="con_part"></div>
             </div>
           </div>
-        </div>
+        </article>
         <!-- // #popularContentBox -->
         <!-- class="box_space"를 넣는이유 : 한번에 묶어서 처리하려고 -->
 
-        <div id="newContentBox" class="box_space">
+        <article id="newContentBox" class="box_space">
           <h3 class="area_title">
             최신 콘텐츠
           </h3>
@@ -115,11 +121,11 @@
               </div>
             <div class="new_con_more_area"></div>
           </div>
-        </div>
+        </article>>
         <!-- // #newContentBox -->
 
 
-        <div id="recommendedContentBox" class="box_space">
+        <article id="recommendedContentBox" class="box_space">
             <h3 class="area_title">
               추천 콘텐츠
             </h3>
@@ -143,12 +149,12 @@
                 </li>
               </ul>
             </div>
-        </div>
+        </article>>
         <!-- #recommendedContentBox -->
-     </div> <!--// .content_box -->
+      </main> <!--// .content_box -->
 
 
-     <div id="communityBox" class="box_space" role="main">
+     <section id="communityBox" class="box_space">
        <h2 class="area_title">
          community
        </h2>
@@ -174,25 +180,25 @@
           </li>
          </ul>
        </div>
-     </div>
+     </section>>
      <!-- // #communityBox -->
 
 
-     <div id="miniBox" class="box_space" role="region">
+     <aside id="miniBox" class="box_space" >
        <h2 class="blind">보조 광고</h2>
        <div class="mini_ad_outer">
          mini_ad_outer
        </div>
-     </div>
+     </aside>>
      <!-- // #miniBox -->
 
 
-     <div id="footBox" role="contentinfo">
+     <footer id="footBox" >
        <h2 class="blind">site infomation</h2>
        <div class="foot_outer">
          foot_outer
        </div>
-     </div>
+     </footer>>
      <!-- // #footBox -->
 
   </div>
