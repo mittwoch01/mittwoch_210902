@@ -1,0 +1,152 @@
+@charset "UTF-8 ";
+/* c_02_layout_test.css */
+
+/* reset.css
+----------------------------------------- */
+html, body { width: 100%; height: 100%;}
+
+html, body,
+h1,h2,h3,h4,h5,h6,
+p,pre,address,
+ul,ol,li,dl,dt,dd{
+  margin: 0; padding: 0;
+  font-size: 16px; font-family: arial , 'apple SD' , 'myriad pro' , sans-serif;
+  /* font-family = 서체. sans-serif는 고딕을 지칭함. */
+  /* 16px = 1rem */
+}
+
+ol, ul { list-style: none;}
+a { text-decoration: none; color: inherit;}
+header,nav,article,section,aside,menu,footer,figure,figcaption {display:block; margin: 0; padding: 0;}
+table, tr, th, td, thead, tbody, tfoot {
+  border: 1px solid #333; border-spacing: 0; border-collapse: collapse;
+}
+em, address { font-style: normal;}
+strong, b {font-weight: normal;}
+abbr { text-decoration: none;}
+button { border: 0; background-color: transparent; cursor: pointer;}
+
+/* common.css
+-------------------------------------- */
+.blind { width: 0; height: 0; overflow: hidden;}
+.clearfix {height: auto;}
+.clearfix:after,
+.clearfix::after {
+  content: ""; display: block; clear: both;
+}
+
+/* design
+---------------------------------------- */
+
+/* headBox
+--------------------------------------- */
+#wrap {
+  width: 700px; height: auto;
+  margin: auto; 
+  background-color: #555;
+}
+
+  #headBox {
+    width: 100%; height: 80px;
+    padding: 15px 0; box-sizing: border-box;
+    background-color: rgb(16, 145, 150);
+  }
+
+  h1 {
+    float: left;
+    margin-left: 30px;
+    width: 100px; height: 50px;
+    background-color: #fff;
+  }
+
+  #navigation {
+    float: right; width: auto; height: 30px;
+  }
+
+  .gnb {
+    width: auto; height: 30px;
+    background-color: #add;
+  }
+  .gnb a {
+    display: block; float: left;
+    width: 100px; height: 100%;
+    margin-right: 10px;
+    background-color: #fff;
+  }
+  .gnb a:last-child {margin: 0;}
+
+
+  /* .navigation_area { 
+    float: right;
+    margin-right: 30px;
+    width: 430px; height: 30px;
+    background-color: rgb(218, 49, 49);
+  }
+
+  .navigation_area > ul {
+    width: 100%; height: auto;
+    box-sizing: border-box;
+  }
+
+  .navigation_area li {
+    width: 100px; height: 30px;
+    /* margin-right: 10px; */
+    /* background-color: #fff;
+  } */ 
+
+  .navigation_area li:last-child {margin-right: 0;}
+
+  /* viewBox
+  --------------------------------------- */
+  #viewBox {
+    width: 100%; height: 250px;
+    background-color: rgb(245, 255, 187);
+  }
+
+  /* asideBox
+  --------------------------------------- */
+  #adBox {
+    width: 100%; height: 35px;
+    background-color: rgb(22, 36, 83);
+  }
+
+  /* articleBox
+  --------------------------------------- */
+ .content_wrap {
+    width: 100%; height: 300px;
+    background-color: #eee;
+  }
+  .con_area {
+    float: left; height: 50%; height: 30px;
+  }
+
+  #contentBox { 
+    box-sizing: border-box; padding: 30px;
+    background-color: #f77;}
+    #contentBox div {
+      float: left; width: 140px; height: 120px;
+      margin-right: 10px; margin-bottom: 10px;
+      background-color: #fff;
+    }
+    #contentBox div:nth-of-type(2n){
+      margin-right: 0;
+    }
+    #contentBox div:nth-last-of-type(-n+2){
+      margin-bottom: 0; background-color: #fd0;
+    }
+
+  #infoBox { 
+    box-sizing: border-box; padding: 30px;
+    background-color:#f7f;}
+  #infoBox div {width: 100%; height: 50px; 
+    margin-bottom: 20px;
+    background-color: #fff;}
+
+
+
+  /* footBox
+  -------------------------------------- */
+  #footBox {
+    width: 100%; height: 80px;
+    background-color: #fa0;
+  }
