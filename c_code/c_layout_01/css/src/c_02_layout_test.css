@@ -41,20 +41,20 @@ button { border: 0; background-color: transparent; cursor: pointer;}
 /* headBox
 --------------------------------------- */
 #wrap {
-  width: 700px; height: auto;
+  width: 700px; height: auto; min-height: 500px;
   margin: auto; 
   background-color: #555;
 }
 
   #headBox {
     width: 100%; height: 80px;
-    padding: 15px 0; box-sizing: border-box;
+    padding: 15px 20px; box-sizing: border-box;
     background-color: rgb(16, 145, 150);
   }
 
   h1 {
     float: left;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     width: 100px; height: 50px;
     background-color: #fff;
   }
@@ -65,10 +65,10 @@ button { border: 0; background-color: transparent; cursor: pointer;}
 
   .gnb {
     width: auto; height: 30px;
-    background-color: #add;
   }
   .gnb a {
-    display: block; float: left;
+    /* float: left; */
+    display: inline-block;
     width: 100px; height: 100%;
     margin-right: 10px;
     background-color: #fff;
@@ -114,10 +114,13 @@ button { border: 0; background-color: transparent; cursor: pointer;}
   --------------------------------------- */
  .content_wrap {
     width: 100%; height: 300px;
-    background-color: #eee;
+    /* background-color: #eee; */
   }
+
+
+
   .con_area {
-    float: left; height: 50%; height: 30px;
+    float: left; width: 50%; height: 300px;
   }
 
   #contentBox { 
@@ -129,18 +132,20 @@ button { border: 0; background-color: transparent; cursor: pointer;}
       background-color: #fff;
     }
     #contentBox div:nth-of-type(2n){
+      float: right;
       margin-right: 0;
     }
     #contentBox div:nth-last-of-type(-n+2){
       margin-bottom: 0; background-color: #fd0;
     }
 
+
   #infoBox { 
     box-sizing: border-box; padding: 30px;
     background-color:#f7f;}
-  #infoBox div {width: 100%; height: 50px; 
-    margin-bottom: 20px;
-    background-color: #fff;}
+    #infoBox div {width: 100%; height: 50px; 
+      margin-bottom: 20px;
+      background-color: #fff;}
 
 
 
