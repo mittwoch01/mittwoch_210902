@@ -1,0 +1,98 @@
+@charset "UTF-8 ";
+/* a_01_test_1440.css */
+
+/* reset.css
+----------------------------------- */
+html, body { width: 100%; height: 100%;}
+
+html, body,
+h1,h2,h3,h4,h5,h6,
+p,pre,address,
+ul,ol,li,dl,dt,dd{
+  margin: 0; padding: 0;
+  font-size: 16px; font-family: arial , 'apple SD' , 'myriad pro' , sans-serif;
+  /* font-family = 서체. sans-serif는 고딕을 지칭함. */
+  /* 16px = 1rem */
+}
+
+ol, ul { list-style: none;}
+a { text-decoration: none; color: inherit;}
+table, tr, th, td, thead, tbody, tfoot {
+  border: 1px solid #333; border-spacing: 0; border-collapse: collapse;
+}
+em, address { font-style: normal;}
+strong, b {font-weight: normal;}
+abbr { text-decoration: none;}
+button { border: 0; background-color: transparent; cursor: pointer;}
+
+/* common.css
+------------------------------------------ */
+.blind { width: 0; height: 0; overflow: hidden;}
+.clearfix:after,
+.clearfix::after {
+  content: ""; display: block; clear: both;
+}
+
+/* design
+------------------------------------------ */
+#wrap {
+  width: 1440px; height: 3750px;
+  background-color: #eee;
+}
+
+/* header
+------------------------------------------ */
+#headBox {
+  width: 100%; height: 100px;
+  background-color: #c4c4c4;
+} 
+
+/* main
+------------------------------------------ */
+#bannerBox {
+  width: 100%; height: 600px;
+  background-color: #834c33;
+}
+
+/* section
+------------------------------------------ */
+#menuBox {
+  width: 100%; height: 700px;
+  background-color: #fff;
+}
+
+/* section_02
+------------------------------------------ */
+#subbannerBox {
+  width: 100%; height: 350px;
+  background-color: #ffbd55;
+}
+
+/* article
+------------------------------------------ */
+#viewBox {
+  width: 100%; height: 700px;
+  background-color: #fff;
+}
+
+/* aside
+------------------------------------------ */
+#galleryBox {
+  width: 100%; height: 750px;
+  background-color: #f7e9d3;
+}
+
+/* article_02
+------------------------------------------ */
+#sponsorBox {
+  width: 100%; height: 100px;
+  background-color: #777;
+}
+
+/* footer
+------------------------------------------ */
+#footBox {
+  width: 100%; height: 450px;
+  background-color: #171717;
+}
+
