@@ -1,0 +1,129 @@
+@charset "UTF-8 ";
+/* main_v1.css */
+body {
+  --color-gray1 :#c4c4c4;
+  --color_sample: #acf;
+}
+/* 같은 색 수정을 한번에 할 수 있다. 주의:구형 브라우저는 안먹는다.*/
+/* 틀을 잡을 때 사용할 수 있다. 사용한 후에는 transparent하면 된다. */
+
+/* main_common.css */
+
+
+/* design
+------------------------------------------ */
+
+#wrap {
+  width: 1440px; height: auto; min-height: 500px;
+  /* background-color: #eee; */
+  /* 배경색 설정 다 한다음엔 꼭 배경색 지워주기 */
+}
+
+/* headBox
+------------------------------------------ */
+#headBox {
+  width: 100%; height: 100px;
+  padding-top: 20px; padding-bottom: 10px;
+  background-color: #c4c4c4;
+} 
+  
+.head_inner {
+  width: 1100px; height: 100%;
+  margin: auto;
+  background-color: var(--color_sample);
+}
+
+
+/* bannerBox
+------------------------------------------ */
+#bannerBox {
+  width: 100%; height: 600px;
+  padding-top:50px;
+  background-color: #834c33;
+}
+
+.view_inner {
+  width: 780px; height: 400px; margin: auto;
+  background-color: var(--color_sample);
+}
+
+/* menuBox
+------------------------------------------ */
+#menuBox {
+  width: 100%; height: 700px;
+  padding-top: 60px;
+  background-color: #fff;
+}
+  .new_inner {
+    width: 940px; height: 570px;
+    margin: auto;
+    background-color:var(--color_sample);
+  }
+
+/* subAdBox
+------------------------------------------ */
+#subAdBox {
+  width: 100%; height: 350px;
+  padding-top: 50px;
+  background-color: #ffbd55;
+}
+
+.sub_inner{
+  width: 1100px; height: 300px;
+  margin: auto;
+  background-color: var(--color_sample);
+}
+
+/* bestBox
+------------------------------------------ */
+#bestBox {
+  width: 100%; height: 700px;
+  padding-top: 175px;
+  background-color: #fff;
+}
+.best_inner {
+  width: 1100px; height: 380px;
+  margin: auto;
+  background-color:var(--color_sample);
+}
+
+/* galleryBox
+------------------------------------------ */
+#galleryBox {
+  width: 100%; height: 750px;
+  padding-top: 50px;
+  background-color: #f7e9d3;
+}
+.gallery_inner {
+  width: 940px; height: 540px;
+  margin: auto;
+  background-color: var(--color_sample);
+}
+
+/* sponsorBox
+------------------------------------------ */
+#sponsorBox {
+  width: 100%; height: 100px;
+  padding-top: 10px;
+  background-color: #777;
+}
+.sponsor_inner {
+  width: 940px; height: 80px;
+  margin: auto;
+  background-color: var(--color_sample);
+}
+/* margin:auto;는 가운데 정렬임 */
+
+/* footBox
+------------------------------------------ */
+#footBox {
+  width: 100%; height: 450px;
+  padding-top: 70px;
+  background-color: #171717;
+}
+.foot_inner {
+  width: 940px; height: 250px;
+  margin: auto;
+  background-color: var(--color_sample);
+}
+
