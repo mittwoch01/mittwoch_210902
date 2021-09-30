@@ -72,7 +72,6 @@ h1 {
   background-color: var(--color_sample);
 }
 
-
 .view_inner dt {
   width: 100%; height: auto;
   margin-bottom: 12px;
@@ -97,16 +96,12 @@ h1 {
   background-color: #fff;
 }
 
+
 .img_source {
   float: right;
-  width: 380px; height: 400px;
+  width: 380px; height: 100%;
   background-color: var(--color_sample);
 }
-
-
-
-
-
 
 /* menuBox
 ------------------------------------------ */
