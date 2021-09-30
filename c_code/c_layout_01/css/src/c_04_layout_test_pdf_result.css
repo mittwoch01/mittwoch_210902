@@ -28,7 +28,9 @@
 .q_9 > .side_indicator {
   position: absolute;
   right: 30px;
-  width: 50px; height: 350px;
+  width: 50px; 
+  /* height:30px; */
+  height: auto;
   background-color: #0af;
 
   /* 방법1 
@@ -47,20 +49,22 @@
 .q_9 li{
   width: 30px; height: 30px; 
   margin: 0 auto;
+  /* 왜 0을 줬지? */
   margin-bottom: 30px;
   border-radius: 100%;
   text-align: center;
   line-height: 30px;
   background-color: #fff;
-  
 }
-.q-9 li:last-child { margin-bottom: 0;}
+.q_9 li:last-child { margin-bottom: 0;}
+
  
 /* --------------------------------- */
+
 .q_10 > .side_indicator {
   position: absolute;
-  right: 30px; top: 0; bottom: 0; margin: auto;
-  width: 50px; height: 350px;
+  right: 30px; top: 30%;
+  width: 50px; height: auto;
   background-color: #0af;
 }
 .q_10 ul {
@@ -72,10 +76,11 @@
   position: relative;
   width: 30px; height: 30px;
   margin-bottom: 20px;
+  text-align: center;
   
   
 }
-.q-9 li:last-child { margin-bottom: 0;}
+.q_10 li:last-child { margin-bottom: 0;}
 
 
 .q_10 a {
@@ -85,7 +90,7 @@
   background-color: #fff;
 }
 .q_10 span {
-  display: block;
+  display: none;
   position: absolute;
   top: -5px; right: 50px;
   width: 200px; height: 40px;
@@ -93,7 +98,7 @@
   background-color: #06c;
 }
 
-/* .q_10 a:hover + span { display: block; } */
+.q_10 a:hover + span { display: block; }
 
 
 
