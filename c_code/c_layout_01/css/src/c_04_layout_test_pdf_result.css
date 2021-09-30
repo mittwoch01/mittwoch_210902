@@ -4,7 +4,7 @@
 .wrap {
   position: relative;
   width:800px; height:600px;
-  margin-bottom: 20px;
+  margin:50px auto;
   background-color: #ff00aa;
   /* border-top: 1px solid #f0a; 1*/
 }
@@ -52,9 +52,52 @@
   text-align: center;
   line-height: 30px;
   background-color: #fff;
- 
+  
 }
 .q-9 li:last-child { margin-bottom: 0;}
+ 
+/* --------------------------------- */
+.q_10 > .side_indicator {
+  position: absolute;
+  right: 30px; top: 0; bottom: 0; margin: auto;
+  width: 50px; height: 350px;
+  background-color: #0af;
+}
+.q_10 ul {
+  list-style: none;
+  width: 100%; height: auto;
+  padding:10px; box-sizing: border-box;
+}
+.q_10 li{
+  position: relative;
+  width: 30px; height: 30px;
+  margin-bottom: 20px;
+  
+  
+}
+.q-9 li:last-child { margin-bottom: 0;}
+
+
+.q_10 a {
+  display: block;
+  width: 100%; height: 100%;
+  border-radius: 100%;
+  background-color: #fff;
+}
+.q_10 span {
+  display: block;
+  position: absolute;
+  top: -5px; right: 50px;
+  width: 200px; height: 40px;
+  color: #fff;
+  background-color: #06c;
+}
+
+/* .q_10 a:hover + span { display: block; } */
+
+
+
+
 
 
 
