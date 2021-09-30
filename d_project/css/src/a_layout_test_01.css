@@ -125,10 +125,54 @@
   float: left;
   width: 400px; height: 200px;
   background-color: #555;}
+/* 03 */
 .con_inner_03 {
   float: right;
   width: 400px; height: 200px;
-  background-color: #eee;}
+  padding: 20px; box-sizing: border-box;
+  background-color: #eee;
+}
+.con_inner_03 .btn {
+  width: 100%; height: 30px;
+}
+.con_inner_03 button {
+  width: 100%; height: 100%;
+  background-color: #fd0;
+}
+
+.con_inner_03 button:hover {
+  font-weight: 700;
+  background-color: #fa0;
+}
+.con_inner_03 button:focus {
+  outline: 0;
+  border-bottom: 3px solid #f06;
+  box-shadow:3px 3px 3px #333;
+}
+/* x y blur color */
+
+.modal {
+  display: none;
+  position: fixed; top: 0; left: 0; z-index: 1000;
+  width: 100%; height: 100%;
+}
+.modal.action {display: block;}
+.modal_message {
+  position: absolute;
+  top: 50%; left: 50%; margin-left: -250px; margin-top: -150px;
+  /* top: 0; left: 0; bottom: 0; right: 0; margin: auto; */
+  /* 뭔말인지 모르겠다 */
+  /* fixed 해도 됨 근데 굳이? */
+  width: 500px;height: 300px;
+  padding: 30px;
+  border: 1px solid #333;
+  background-color: #fff;
+}
+.modal_bg {
+  width: 100%;height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
 
 /* footer
 ==============================*/
