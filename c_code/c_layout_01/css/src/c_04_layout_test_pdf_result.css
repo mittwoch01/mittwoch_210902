@@ -123,3 +123,79 @@
   background-color: #afa;
 }
 /* 형제 선택자로 범위를 지정할 때는 nn ~ nn으로 설정한다. */
+
+ .wrap_inner {
+   width: 700px; height: 500px;
+   padding: 50px 20px; padding-bottom: 0; 
+   box-sizing: border-box;
+ }
+
+
+ /* .title_box {
+   position: absolute;
+   width: 450px; height: 200px;
+   top: 30%; left: 20px;
+   background-color: rgba(67, 106, 231, 0.3);
+ } */
+ 
+  h1 {
+    width: 100%; height: auto;
+    margin-bottom: 10px;
+    background-color: rgba(67, 106, 231, 0.3);
+  }
+
+  p { 
+    width: 100%; height: 100%;
+  background-color: rgba(67, 106, 231, 0.3);
+  }
+
+ .img { 
+   bottom: 0;
+   width: 250px; height: 400px;
+   background-color: #5bb;
+  } 
+ .img3 { 
+   float: right;
+   top: 30%;
+   right: 20px; 
+   width: 250px; height: 500px;
+   background-color: #798;
+  }
+
+  /* 문제풀이 q_11
+  -------------------------------- */
+  /* .wrap은 위에 작성 */
+  .q_11 { position: relative;}
+
+  .title_box {
+    z-index: 300;
+    position: absolute;
+    top: 30%; left: 20px;
+    width: 450px; height: 200px;
+    box-sizing: border-box; padding: 10px;
+    color: #fff;
+    background-color: rgba(150,0,150,0.3);
+    /* background-color: hsla(270, 50%,50%,1); */
+    /* opacity: 50%; */
+    /* opacity는 글씨 자체가 투명해짐 */
+  }
+  h1 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+  p {font-size: 1rem;}
+  .img2 { 
+    position: absolute; bottom: 0; 
+    width: 250px;  }
+
+  .img2:nth-child(2){
+    right: 250px; z-index: 200;
+    height: 400px; background-color: #5bb;}
+
+  /* nth-child(1)이 아닌 이유 : class 순서상 두번째이다. */
+
+  .img2:nth-child(3){
+    right: 20px;
+    height: 500px; background-color: #798;
+  }
+  
