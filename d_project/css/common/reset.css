@@ -40,6 +40,7 @@ main,figure,figcaption,hgroup {display: block;}
 /* common.css
 ------------------------------------------ */
 .blind { width: 0; height: 0; overflow: hidden;}
+/* overflow:hidden이란?  */
 .clearfix { width: 100%; height: auto;}
 .clearfix:after,
 .clearfix::after {
