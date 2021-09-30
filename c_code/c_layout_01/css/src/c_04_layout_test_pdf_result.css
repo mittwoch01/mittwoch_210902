@@ -100,10 +100,26 @@
 
 .q_10 a:hover + span { display: block; }
 
-
-
-
-
-
-
 /* =============================== */
+
+.siblings {
+  width: 400px; height: 800px;
+  margin: auto;
+  border: 1px solid #777;
+}
+
+.siblings:hover  dt {
+  background-color: #ccf;
+}
+/* sinlings 전체 구역에 마우스를 올리면 #ccf 색으로 반응한다. */
+
+.siblings > dt:hover + dd {
+  background-color: #faa;
+}
+/* dt에 마우스를 올리면 가장 근접한 dd가 #faa 색으로 반응한다. */
+/* 인접 형제 선택자로써 바로 뒤에오는 dd만이 반응한다. */
+
+.siblings > dt:hover ~ dd {
+  background-color: #afa;
+}
+/* 형제 선택자로 범위를 지정할 때는 nn ~ nn으로 설정한다. */
