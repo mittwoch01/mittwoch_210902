@@ -24,21 +24,27 @@ h1 {
 }
 #navigation {
   float: right;
-  width: 500px; height: 30px;
-  background-color: #fff;
+  width: 400px; height: 30px;
+  margin-top: 10px;
+  background-color: #aff;
 }
-.gnb { width: 100%; height: 100%;}
+
+.gnb ul { width: 100%; height: 100%;
+background-color: #999;}
 
 .gnb li {
   float: left;
   width: 25%; height: 100%;
   padding: 0 10px;
   box-sizing: border-box;
+}
+.gnb a { 
+  display: block; 
+  width: 100%; height: 100%; 
+  background-color: #fff;
   text-align: center;
   line-height: 30px;
-  background-color: #434566;
 }
-.gnb a { display: block; width: 100%; height: 100%; background-color: #fff;}
 
 
 /* adBox 
