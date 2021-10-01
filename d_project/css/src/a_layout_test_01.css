@@ -13,7 +13,7 @@
 
 /* header
 =============================*/
-#header{ 
+#headBox{ 
   height: 100px; padding:30px 20px;
   box-sizing: border-box;
   background-color: #add;
@@ -40,8 +40,9 @@
    padding: 0 5px;
    box-sizing: border-box;
    text-align: center;
-   line-height: 40px;
+   line-height: 60px;
  }
+ /* line-height가 뭘까?  */
 
  .gnb a {
    display: block;

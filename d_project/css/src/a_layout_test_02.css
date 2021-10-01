@@ -1,0 +1,112 @@
+@charset "UTF-8 ";
+/* a_layout_test_02.css */
+/* 
+* {margin: 0; padding: 0; border: 0; box-sizing: border-box;} 
+*/
+
+/* design */
+#wrap {
+  width: 1200px; height: auto;
+}
+
+
+/* headBox 
+----------------------------------*/
+#headBox { 
+  width: 100%; height: 100px;
+  padding: 70px 20px 0 20px; box-sizing: border-box;
+  background-color: #523876;
+}
+h1 {
+  float: left;
+  width: 200px; height: 40px;
+  background-color: #fff;
+}
+#navigation {
+  float: right;
+  width: 500px; height: 30px;
+  background-color: #fff;
+}
+.gnb { width: 100%; height: 100%;}
+
+.gnb li {
+  float: left;
+  width: 25%; height: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 30px;
+  background-color: #434566;
+}
+.gnb a { display: block; width: 100%; height: 100%; background-color: #fff;}
+
+
+/* adBox 
+----------------------------------*/
+#adBox { 
+  width: 100%; height: 300px;
+  background-color: #234567;
+}
+
+/* conBox 
+----------------------------------*/
+#conBox { 
+  width: 100%; height: 200px;
+}
+#conBox > div {
+  float: left; width: 400px; height: 200px;
+}
+/* 1 */
+.con_box_01 {
+  float: left;
+  /* width: 400px; height: 100%; */
+  background-color: #647839;
+}
+  .tab_title_area {
+    width: 100%; height: 30px;
+    background-color: #f0a;
+  }
+  .tab_content_area {
+    
+  }
+
+/* 2 */
+.con_box_02 {
+  float: left;
+  /* width: 400px; height: 100%; */
+  background-color: #269484;
+}
+
+/* 3 */
+.con_box_03 {
+  float: right;
+  /* width: 400px; height: 100%; */
+  background-color: #995122;
+}
+
+/* footBox 
+------------------------------------*/
+#footBox { 
+  width: 100%; height: 100px;
+  padding: 30px 20px; 
+  padding-bottom: 50px; box-sizing: border-box;
+  background-color: #176538;
+}
+#footBox > h2 {
+  float: left;
+  width: 200px; height: 40px;
+  background-color: #fff;
+}
+address {
+  float: left;
+  margin-top: 10px;
+  width: 600px; height: 40px;
+  margin-left: 100px;
+  background-color: #fff;
+}
+.sns {
+  float: right;
+  margin-top: 10px;
+  width: 200px; height: 40px;
+  background-color: #fff;
+}

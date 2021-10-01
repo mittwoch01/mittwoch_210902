@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="no-js">
+  <!-- a_layout_test_02.html --> 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../js/common/modernizr-custom.js"></script>
+  
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/a_layout_test_02.css">
+  <title>웹기초</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+     <header id="headBox">
+       <h1>logo</h1>
+       <nav id="navigation">
+        <h2 class="blind">웹페이지 네비게이션</h2>
+        <div class="gnb">
+          <ul>
+            <li><a href="#">탑</a></li>
+            <li><a href="#">아우터</a></li>
+            <li><a href="#">팬츠</a></li>
+            <li><a href="#">악세사리</a></li>
+          </ul>
+        </div>
+       </nav>
+     </header>
+
+     <article id="adBox">
+       <h2 class="blind">광고영역</h2>
+     </article>
+
+     <section id="conBox">
+       <h2 class="blind">본문내용</h2>
+       <!-- 1 -->
+       <div class="con_box_01">
+        <h3 class="blind">공지사항</h3>
+
+        <div class="tab_title_area">
+          <ul>
+            <li>
+              <button type="button">공지</button>
+            </li>
+            <li class="action">
+              <button type="button">갤러리</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab_content_area">
+          <div class=""></div>
+          <div class=""></div>
+        </div>
+
+       </div>
+
+       <!-- 2 -->
+       <div class="con_box_02">
+         <h3 class="blind">갤러리</h3>
+       </div>
+       <!-- 3 -->
+       <div class="con_box_03">
+         <h3 class="blind">배너</h3>
+       </div>
+     </section>
+
+     <footer id="footBox">
+       <h2>logo</h2>
+       <address>company info</address>
+       <div class="sns"></div>
+     </footer>
+  </div>
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>
+
+<!-- 
+  시멘틱 구조 :
+  웹페이지의 본문의 성격을 띄는 article(기사..)/section의 형식은 
+  내부에 다시 header/article/section/nav/aside/footer...을 가질 수 있다.
+  하지만,
+  header/footer/aside/nav처럼 특정 위치나, 정확한 기능을 가지고 있는 요소는 내부에
+  section/article을 사용할 수 없다.
+  header의 경우는 내부에 nav(예를 들면 gnb,unb와 같은) 요소를 가질 수 있다.
+ -->
