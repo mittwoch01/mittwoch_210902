@@ -1,86 +1,110 @@
 <!DOCTYPE html>
-<html lang="ko-KR" class="no-js">
-  <!-- a_layout_test_02.html --> 
+<html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script src="../js/common/modernizr-custom.js"></script>
-  
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
   <link rel="stylesheet" href="../css/src/a_layout_test_02.css">
-  <script src="../js/common/modernizr-custom .js"></script>
-  <title>웹기초</title>
-  <link rel="shortcut icon" href="../favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="../favicon.png">
+  <script src="../js/common/modernizr-custom.js"></script>
+  <title>Document</title>
 </head>
 <body>
-  <!-- layout -->
   <div id="wrap">
-     <header id="headBox">
-       <h1>logo</h1>
-       <nav id="navigation">
-        <h2 class="blind">웹페이지 네비게이션</h2>
-        <div class="gnb">
-          <ul>
-            <li><a href="#">탑</a></li>
-            <li><a href="#">아우터</a></li>
-            <li><a href="#">팬츠</a></li>
-            <li><a href="#">악세사리</a></li>
-          </ul>
-        </div>
-       </nav>
-     </header>
+    <header id="headBox">
+      <div class="head_wrapper">
+        <h1>logo</h1>
+        <nav class="navigation">
+          <h2 class="blind">네비게이션</h2>
 
-     <article id="adBox">
-       <h2 class="blind">광고영역</h2>
-     </article>
-
-     <section id="conBox">
-       <h2 class="blind">본문내용</h2>
-       <!-- 1 -->
-       <div class="con_box_01">
-        <h3 class="blind">공지사항</h3>
-
-        <div class="tab_title_area">
           <ul>
             <li>
-              <button type="button">공지</button>
+              <div class="nav_title"><a href="#">재단소개</a></div>
+              <ul class="nav_list">
+                <li><a href="#">설립취지</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">찾아오시는길</a></li>
+              </ul>
             </li>
-            <li class="action">
-              <button type="button">갤러리</button>
+
+            <li>
+              <div class="nav_title"><a href="#">후원하기</a></div>
+              <ul class="nav_list">
+                <li><a href="#">국내후원</a></li>
+                <li><a href="#">국외후원</a></li>
+                <li><a href="#">맞춤후원</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="nav_title"><a href="#">자료실</a></div>
+              <ul class="nav_list">
+                <li><a href="#">서식자료실</a></li>
+                <li><a href="#">사진자료실</a></li>
+                <li><a href="#">후원양식</a></li>
+              </ul>
+            </li>
+            
+            <li>
+              <div class="nav_title"><a href="#">스토리</a></div>
+              <ul class="nav_list">
+                <li><a href="#">웹진</a></li>
+                <li><a href="#">보고서</a></li>
+                <li><a href="#">나의 후원</a></li>
+              </ul>
             </li>
           </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="viewBox">
+      <h2 class="blind">광고</h2>
+    </section>
+
+    <article id="contentbox">
+      <h2 class="blind">본문내용</h2>
+
+      <section class="con_area notice_area">
+        <!-- class 이름이 두개쓸때는 띄어쓰기 -->
+        <h3>공지사항</h3>
+        <div class="con_part">
+          <ul>
+            <li>공지사항: Lorem ipsum dolor sit.</li>
+            <li>공지사항: Lorem ipsum dolor sit.</li>
+            <li>공지사항: Lorem ipsum dolor sit.</li>
+            <li>공지사항: Lorem ipsum dolor sit.</li>
+          </ul>
         </div>
+      </section>
 
-        <div class="tab_content_area">
-          <div class=""></div>
-          <div class=""></div>
+      <section class="con_area gallery_area">
+        <h3>갤러리</h3>
+        <div class="con_part">
+          <ul>
+            <li>gallery_01</li>
+            <li>gallery_02</li>
+            <li>gallery_03</li>
+          </ul>
         </div>
+      </section>
 
-       </div>
+      <section class="con_area commercial_area">
+        <h3 class="blind">commercial</h3>
+      </section>
+    </article>
 
-       <!-- 2 -->
-       <div class="con_box_02">
-         <h3 class="blind">갤러리</h3>
-       </div>
-       <!-- 3 -->
-       <div class="con_box_03">
-         <h3 class="blind">배너</h3>
-       </div>
-     </section>
+    <aside id="otherBox">
 
-     <footer id="footBox">
-       <h2>logo</h2>
-       <address>company info</address>
-       <div class="sns"></div>
-     </footer>
+    </aside>
+
+    <footer id="footBox">
+      <h2>사이트이름</h2>
+      <address>copyright</address>
+      <div class="family"></div>
+    </footer>
   </div>
-
-  <!-- script -->
-  <script></script>
 </body>
 </html>
 

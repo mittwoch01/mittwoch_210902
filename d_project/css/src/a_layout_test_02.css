@@ -1,118 +1,181 @@
-@charset "UTF-8 ";
-/* a_layout_test_02.css */
-/* 
-* {margin: 0; padding: 0; border: 0; box-sizing: border-box;} 
-*/
+@charset "UTF-8";
+/* c_02_web.css */
+/* * { margin: 0; padding: 0; border: 0;
+box-sizing: border-box;} */
 
-/* design */
+/* --------------------------- */
 #wrap {
-  width: 1200px; height: auto;
+  width: 1200px; height:auto; min-height:700px;
+  margin:auto; padding-top: 100px;
+}
+/* . */
+/* height가 auto인 이유는 ? Box들의 크기대로 유동적이게 늘어나라고*/
+
+
+/* 01 #headBox ============================================*/
+/* headBox를 상단에 고정 : position:fixed;
+    1. top:0; 가로 가운데 배치 (전체가로 꽉차게하려고)
+    2. 다른요소들 보다 앞에 위치한다. 단, 팝업창은 팝업창이 먼저다.
+    3. fixed를 처리함으로 인해 다른 요소들은 다 뒤로 간다. 내가 먼저다. 
+    4. 형제요소가 아닌 별도의 위치가 되었다.
+    5. 내부 요소는 가로 1200크기일때 가운데 배치가 된다. */
+#headBox{
+  position: fixed; top: 0; left: 0; z-index: 1500;
+  /* modal 팝업창이 있을 경우, 고정헤더보다 modal 팝업창이 더 앞이다. 근데 이제 팝업창만이다.(지금까지는.) */
+  /* 전체화면이 아닌 내가 만든 박스크기에 적용시키고 싶으니까 margin-left도 함께 사용해서 계산하고 맞춰준다. 오ㅐ냐면 왼쪽에 뭐가 없어야 붙을거 아니니?*/
+  /* position을 쓰면 꼭 바로 top과 (left)를 써라. 천장에 딱붙는 헤더를 하고싶어서 저렇게 쓴거다.*/
+  /* fixed를 사용하니까 위에 고정된 채로 찰싹 붙는다. 마치라잌 sticky */
+  width:100%; height:100px; 
+  /* 크기고정하려면 width에 크기를 쓴다. (예를 들면 1200px~) 100%으로 하면 전체화면 꽉 차는거다.*/
+  padding:0 20px; padding-top: 60px; box-sizing: border-box;
+  /* 박스사이징 : 박스를 만들어서 , 패딩+패딩탑 : 중심을 기준으로 빵빵하게 됐다. */
+  background-color: rgba(200, 200, 200, 0.5);
 }
 
 
-/* headBox 
-----------------------------------*/
-#headBox { 
-  width: 100%; height: 100px;
-  padding: 70px 20px 0 20px; box-sizing: border-box;
-  background-color: #523876;
-}
-h1 {
-  float: left;
-  width: 200px; height: 40px;
-  background-color: #fff;
-}
-#navigation {
-  float: right;
-  width: 400px; height: 30px;
-  margin-top: 10px;
-  background-color: #aff;
-}
-
-.gnb ul { width: 100%; height: 100%;
-background-color: #999;}
-
-.gnb li {
-  float: left;
-  width: 25%; height: 100%;
-  padding: 0 10px;
-  box-sizing: border-box;
-}
-.gnb a { 
-  display: block; 
-  width: 100%; height: 100%; 
-  background-color: #fff;
-  text-align: center;
-  line-height: 30px;
-}
-
-
-/* adBox 
-----------------------------------*/
-#adBox { 
-  width: 100%; height: 300px;
-  background-color: #234567;
-}
-
-/* conBox 
-----------------------------------*/
-#conBox { 
-  width: 100%; height: 200px;
-}
-#conBox > div {
-  float: left; width: 400px; height: 200px;
-}
-/* 1 */
-.con_box_01 {
-  float: left;
-  /* width: 400px; height: 100%; */
-  background-color: #647839;
-}
-  .tab_title_area {
-    width: 100%; height: 30px;
-    background-color: #f0a;
+  .head_wrapper {
+    width: 1200px; height: auto;
+    /* width에 100%를 주면 내가 wrap을 설정한 대로가 아닌 아예 전체화면을 중심으로 모든게 움직인다. 전체 100%는 브라우저 전체인 것을 까먹지 말것.*/
+    margin: auto;
   }
-  .tab_content_area {
-    
+  /* .head_wrapper는 header를 상단에 고정하는 방법1 에 추가해야할 사항.*/
+
+
+  h1{
+    float:left; width: 200px; height: 40px;
+    background-color: #afa;
+  }
+  .navigation {
+    float:right; width: 600px; height: 30px; 
+    margin-top: 10px;
+    background-color: #aff;
+  }
+  .navigation > ul {
+    width: 100%; height: auto;
+    background-color: #999;
+  }
+  .navigation > ul > li {
+    float:left;
+    width: 25%; height:auto;
+    padding:0 5px;
+  }
+  /* 여기의 li는 navigition의 li */
+
+  .nav_title { width: 100%; height:30px; }
+  .nav_title a {
+    display: block;
+    width: 100%; height: 100%; 
+    text-align: center; line-height:30px;}
+
+  .nav_list { 
+    display: none;
+    width: 100%; height: auto;
+    color:#fff;
+    background-color: #333;}
+  .nav_list li{ width: 100%; height: 40px; margin-bottom:10px;}
+  .nav_list a{
+    display: block; width: 100%; height:100%;
+    text-align: center; line-height: 40px;
   }
 
-/* 2 */
-.con_box_02 {
-  float: left;
-  /* width: 400px; height: 100%; */
-  background-color: #269484;
+  .navigation:hover .nav_list {display: block;}
+  .nav_title:hover {background-color: #171717; color:#fff; }
+  /* .navigation li:hover > .nav_list {display: block;} */
+  /* .nav_title:hover + .nav_list { display: block;} */
+
+/* 02#viewBox =================================================*/
+
+/* 왜 headBox뒤에 붙을까? 공중에 떠있는데도 뷰박스가 위로가지 않고 붙어있다.아니 붙어있는것처럼 보인다. 해결방법은?
+  -headBox가 픽스처리 되어있으니 헤더박스는 공중에 떠있어서 해당부분이 비어있다. 
+   그래서 헤더박스 자리에 뷰박스가 차지해야한다. 근데 그렇지 않게 보인다.
+   해더박스 불투명하게 해준다. 
+   높이값이 300인데 내눈엔 200만 보인다. 왜그럴까?
+   - 400을 하면 윗부분이 보일까? 안보인다. 해봤다. 나는 높이만을 늘렸는데, margin-top이나 padding-top을 추가해서 늘리신다. 
+   margin-top은 안된다. 바깥인데 왜 않되? 
+   padding-top.
+ */
+
+#viewBox{
+  width:100%; height:300px; 
+  background-color: #aaa;
+  /* padding-top: 100px; box-sizing: content-box; */
 }
 
-/* 3 */
-.con_box_03 {
-  float: right;
-  /* width: 400px; height: 100%; */
-  background-color: #995122;
-}
+/* #contentbox */
+#contentbox{ width:100%; height:200px; }
 
-/* footBox 
-------------------------------------*/
-#footBox { 
-  width: 100%; height: 100px;
-  padding: 30px 20px; 
-  padding-bottom: 50px; box-sizing: border-box;
-  background-color: #176538;
+/*  */
+  #contentbox > .con_area {
+    float:left; width:400px; height:200px;
+    padding:10px 30px; box-sizing: border-box;
+  }
+  .notice_area { background-color: #afd;}
+
+  .con_part { width: 100%; height: 150px; border:1px solid #777; }
+  .con_part ul { width: 100%; height:auto;  }
+  /* .con_part ul:after {content:""; display: block; clear:both;} */
+
+  .notice_area ul { 
+    list-style:decimal; 
+    padding:10px; padding-left:30px; box-sizing: border-box;}
+  .notice_area li { width: 100%; height:25px; margin-bottom:10px; }
+
+  .gallery_area {counter-reset:gal_li; background-color: #daf;}
+  .gallery_area li:before { counter-increment:gal_li; content:counter(gal_li) ". "; }
+
+  .gallery_area ul {display:flex; justify-content: space-between;}
+  /* justify-content: space-between; 
+     양쪽 정렬 : 간격을 균등하게 해줘라.
+  */
+  .gallery_area li {
+    /* float:left;  */
+    width:100px; height:150px;
+    /* margin-right:19px;  */
+    background-color: #fff;}  
+  .gallery_area li:last-child {margin: 0;}
+
+  .commercial_area { background-color: #afd;}
+
+  /* 탭 메뉴설정 가이드 */
+  .con_part { display: none;}
+  /* 둘다 안보이게 하는 방법 none. */
+  .con_area > h3:active + .con_part { display: block;}
+  /* :active는 마우스를 눌렀을 때 보이는 거다. */
+  /* :hover는 마우스를 올려놓았을 때 보이는 거다. */
+
+
+
+/* otherBox */
+#otherBox { 
+  width: 900px; height: 800px;
+  margin: auto;
+  background-image: linear-gradient(#aaf, #faa);}
+
+
+
+
+
+
+
+
+
+/* #footBox */
+#footBox{
+  width:100%; height:100px; 
+  padding:30px 20px; padding-bottom:50px;
+  background-color: #999;
 }
-#footBox > h2 {
-  float: left;
-  width: 200px; height: 40px;
-  background-color: #fff;
-}
-address {
-  float: left;
-  margin-top: 10px;
-  width: 600px; height: 40px;
-  margin-left: 100px;
-  background-color: #fff;
-}
-.sns {
-  float: right;
-  margin-top: 10px;
-  width: 200px; height: 40px;
-  background-color: #fff;
-}
+  #footBox > h2 {
+    float:left; width:200px; height:40px;
+    background-color: #faa;
+  }
+  address {
+    float:left; width:600px; height:30px; 
+    margin-top:10px; margin-left:100px;
+    background-color: #afa;
+  }
+  .family {
+    float:right; width:200px; height:30px;
+    margin-top:10px;
+    background-color: #aaf;
+  }
