@@ -1,0 +1,194 @@
+@charset "UTF-8 ";
+/* a_layout_test_03.css */
+body {
+  --color-gray1 : #c4c4c4;
+  --color_sample : rgba(20,100,255,0.15);
+}
+
+/* design ================================== */
+#wrap {
+  width: 1000px; height: 650px;
+  margin: auto;
+}
+/* layout common */
+.wrapper {
+  width: 800px;
+}
+/* headBox ==================================*/
+#headBox {
+  /* position:relative; z-index:100; */
+  float: left;
+  width: 200px; height: 100%;
+  background-color: #777;
+}
+h1 {
+  width: 100%; height: 100px;
+  background-color: #eee;
+}
+h1 a { display: block; width: 100%; height: 100%;}
+.navigation {
+  margin: 10px;
+  width: 180px; height: 200px;
+  background-color: var(--color_sample);
+}
+.navigation ul { width: 100%; height: 100%;}
+.navigation li {
+  width: 100%; height: 50px;
+  border: 1px solid #171717;  box-sizing: border-box;
+  text-align: center;
+}
+.navigation dl {
+  width: 100%; height: 100%; 
+}
+.navigation dt {
+  width: 100%; height: 100%; background-color: #fff;
+}
+.navigation dt a {
+  display: block; 
+  width: 100%; height: 100%; 
+  text-align: center;
+  line-height: 36px;
+  background-color: #fa0;
+}
+.navigation dd { 
+  display: none;
+  width: 100%; height: auto; min-height: 140px;
+  margin-left: 100%;
+  transform: translateY(-50%);
+  /** #headBox에 position:relative; z-index:100;과 같음 */
+  background-color: #171717;
+}
+.navigation li:hover dd { display: block;}
+
+.navigation dd a {
+  display: block; 
+  width: 100%; height: auto;
+  margin-bottom: 10px;
+  color: #fff; font-weight: 700;
+  padding: 10px; box-sizing: border-box;
+}
+.navigation dd a:hover {
+  color: #333;
+  background-color: #fff;
+}
+.navigation dd a:focus {
+  color: #f06; font-size: 1.1rem; background-color: #ddd;
+}
+/* imgBox ==================================*/
+#viewBox {
+  float: right;
+  height: 350px;
+  background-color: #555;
+}
+
+/* conBox ===================================*/
+#conBox {
+  float: right;
+  height: 200px;
+  background-color: #c4c4c4;
+}
+.notice_gallery {
+  float: left; width: 65%; height: 100%;
+  
+}
+.notice_gallery dl { 
+  position: relative;
+  width: 100%; height: 100%;
+  background-color: #fd05;
+}
+.notice_gallery dt { 
+  float: left;
+  width: 45%; height: 25px;
+  border: 1px solid #333;
+  background-color: #fd0;
+  }
+.notice_gallery dt:last-of-type {border: 0;}
+.notice_gallery dd { 
+  display: none; 
+  position: absolute; left: 0; top: 25px;
+  width: 100%; height: calc(100% - 25px);
+}
+dd.notice {background-color: #555;}
+dd.gallery {background-color: rgb(206, 206, 206);}
+dt.action + dd { display: block;}
+
+.location_link {
+  float: left; 
+  width: 35%; height: 100%;
+}
+.location_link > button {
+  width: 100%; height: 100%;
+  background-color: #ff5; 
+  color: #171717; font-weight: 700;
+}
+
+.modal_area {
+ position: fixed; top: 0; left: 0;right: 0;bottom: 0; 
+ z-index: 1500;
+ margin: auto;
+}
+.modal_massage {
+  position: absolute; 
+  top: 0; left: 0;right: 0;bottom: 0; margin: auto;
+  padding: 10px;
+  width: 700px; height: 400px;
+  border: 1px solid #333;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px 5px rgba(51,51,51,0.9);
+}
+.modal_massage .close {
+  position: absolute; right: 0; bottom: 0;
+  padding: 10px;
+}
+.modal_massage .close button{
+  width: 100px; height: 40px;
+  border-radius: 0.3rem;
+  background-color: #ccc;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+.modal_bg {
+  width: 100%; height: 100%;
+  background-color: rgba(51,51,51,0.7);
+}
+
+.location_link > button:hover + .modal_area {
+  display: block;
+}
+/* -------------------------------------- */
+/* .con_inner li:nth-child(1){
+  float: left;
+  width: calc(100% / 3); height: 200px;
+  background-color: #d0d778;
+}
+.con_inner li:nth-child(2){
+  float: left;
+  width: calc(100% / 3); height: 200px;
+  background-color: #30d680;
+}
+.con_inner li:nth-child(3){
+  float: left;
+  width: calc(100% / 3); height: 200px;
+  background-color: #fa0;
+} */
+/* footBox =================================*/
+#footBox {
+  float: right;
+  height: 100px;
+  background-color: #333;
+}
+#footBox > h2 {
+  float: left;
+  width: 200px; height: 100px;
+  background-color: #eee;
+}
+#footBox li:nth-child(1) {
+  float: left;
+  width: 450px; height: 100px;
+  background-color: #777;
+}
+#footBox li:nth-child(2) {
+  float: right;
+  width:150px; height: 100px;
+  background-color: #eee;
+}

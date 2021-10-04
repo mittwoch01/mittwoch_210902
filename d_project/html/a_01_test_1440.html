@@ -23,64 +23,198 @@
   <link rel="apple-touch-icon" href="../favicon.png">
 </head>
 <body>
-  <!-- layout -->
+<!-- layout -->
 
-  <!-- header -->
+<!-- header -->
   <div id="wrap">
-     <header id="headBox" class="clearfix">
+     <header id="headBox">
+      <div class="head_inner">
       <h1>logo</h1>
-      <div class="navigation_area" >
-        <nav id="unb">
-          <h2 class="blind">unb</h2>
-        </nav>
+      <nav id="navigation_area" >
+        <h2 class="blind">navigation</h2>
 
-        <nav id="gnb">
-          <h2 class="blind">gnb</h2>
-        </nav>
+        <div class="unb">
+          <h3 class="blind">unb</h3>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="gnb">
+          <h3 class="blind">gnb</h3>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
 
+        </nav>
       </div>
      </header> 
-  <!-- section_01 -->
-     <section id="bannerBox">
-      <h2 class="blind">main</h2>
-        <div id="title">
-          <h2 class="banner">banner title</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus, quia impedit hic distinctio, maxime eaque totam est animi illum eum aperiam esse officia numquam explicabo magni nam inventore possimus?</p>
-          <nav id="navigation">
-            <a href="#">바로가기</a>
-          </nav>
-        </div>  
-          <div class="image">image</div>
-        
+
+<!-- section_01 -->
+  <!-- <dl>은 정의가 필요한 목차를 쓸때 사용.
+       <dl>과 함께 <dt>, <dd>가 함께 따라옴. 꼭 있어야함.
+       인라인 요소이기 때문에 <li>, <ul>, <p> 등과 같은 블록 요소가 내부로 삽입될 수 없음.
+  -->
+     <section id="viewBox">
+      <h2 class="blind">광고영역</h2>
+        <div class="view_inner">
+          <dl>
+            <dt>banner title</dt>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus, quia impedit hic distinctio, maxime eaque totam est animi illum eum aperiam esse officia numquam explicabo magni nam inventore possimus?</dd>
+            <dd>
+              <a href="#">바로가기</a>
+            </dd>
+            <!-- <dt><button class="button"></button></dt> -->
+          </dl>
+          <figure class="view_img_source">
+            <figcaption>이미지 설명</figcaption>
+          </figure>
+          <!-- figure는 사진, 이미지, 다이어그램 등을 감싸는 요소.
+               figcaption은 figure를 설명해주는 태그. 
+               - 사용은 자유.
+               - 앞, 뒤 배치 상관없음. 
+              -->
+        </div>
      </section>
 
-     <section id="menuBox">
-      <h2 class="banner_02">banner title</h2>
+<!-- section_02 -->
+     <section id="menuBox">  
+      <h2>new product</h2>    
+       <div class="new_inner"> 
+         <div class="new_img_inner">
+           <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+           </ul>
+         </div>
+         <div class="new_img_bar">
+           <ul>
+             <li></li>
+             <li></li>
+             <li></li>
+           </ul>
+         </div>
+        </div>
      </section>
 
+<!-- aside -->
      <aside id="subAdBox">
-      <h2>section_02</h2>
+      <div class="sub_inner">
+        <h2 class="blind">서브광고 제목</h2>
+        <figure class="sub_img_box">
+          <figcaption>이미지 설명</figcaption>
+        </figure>
+        <dl>
+          <dt>banner title</dt>
+          <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tempore eaque cupiditate? Nobis magni quam, ipsum vero laboriosam aperiam nihil?</dd>
+          <dd><a href="#"></a>바로가기_left</dd>
+          <dd><a href="#"></a>바로가기_right</dd>
+        </dl>
+      </div>
      </aside>
 
+<!-- section_03-->
      <section id="bestBox">
-      <h2>article</h2>
+      <div class="best_inner">
+        <h2 class="blind">best title</h2>
+        <div class="best_nav">
+          <dl>
+            <dt>best <br /> Box</dt>
+            <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam odit quibusdam facilis incidunt eaque vel!</dd>
+            <dd>n1</dd>
+            <dd>n2</dd>
+            <dd><a href="#">+더보기</a></dd>
+          </dl>
+        </div>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
      </section>
 
+<!--  section_04-->
      <section id="galleryBox">
-      <h2>aside</h2>
+      <div class="gallery_inner">
+        <h2>gallery title</h2>
+        <figure class="gallery_img">
+          <figcaption>이미지 설명</figcaption>
+        </figure>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol> 
+      </div>
      </section>
 
+<!-- aside -->
      <aside id="sponsorBox">
-      <h2>article_02</h2>
+      <div class="sponsor_inner">
+        <h2 class="blind">sponsor</h2>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
      </aside>
 
+<!-- footer -->
      <footer id="footBox">
-      <h2>footer</h2>
+      <div class="foot_inner">
+        <h2>
+          <span class="blind">sitename infomation</span>
+        </h2>
+        <div class="foot_info">
+          <nav id="foot_nav">
+            <h2 class="blind">foot_nav</h2>
+            <ul>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">운영정책</a></li>
+              <li><a href="#">권리침해신고안내</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">contact us</a></li>
+            </ul>
+          </nav>
+          <p>서울특별시 강남구 논현동 000 MEGA빌딩 (서울특별시 강남구 논현동 000-00) <br />
+            Tel : 02-0000-0000  |  fax : 02-0000-0001 <br />
+            사업자등록번호 : 100-00-00000  |  통신판매업 신고 : 강남 제 000000호  |  대표이사 : 000</p>
+          <p>© coffinx Corp. All rights reserved.</p>
+        </div>
+        <div class="foot_site">
+         <ul>
+           <li></li>
+           <li></li>
+           <li></li>
+         </ul>         
+        </div>
+      </div>
      </footer>
 
   </div>
 
+  <!-- Q_01 : h2 안에 span을 왜 썼을까? -->
   <!-- script -->
   <script></script>
 </body>
 </html>
+
+<!-- article : 내용이 독립적일 경우.
+     section : 내용이 서로 관계가 있는 경우.
+     div : 의미 없는 박스로, 묶기만 할 경우. -->
