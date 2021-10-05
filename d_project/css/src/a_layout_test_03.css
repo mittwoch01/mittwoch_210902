@@ -6,14 +6,13 @@ body {
 }
 
 /* design ================================== */
-#wrap {
-  width: 1000px; height: 650px;
-  margin: auto;
-}
+#wrap { width: 1000px; height: 650px; margin: auto; }
+
 /* layout common */
 .wrapper {
   width: 800px;
 }
+
 /* headBox ==================================*/
 #headBox {
   /* position:relative; z-index:100; */

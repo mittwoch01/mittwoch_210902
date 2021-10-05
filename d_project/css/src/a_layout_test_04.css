@@ -1,0 +1,115 @@
+@charset "UTF-8 ";
+/* a_layout_test_04.css */
+
+/**  
+  체크할 사항!
+  - [] 로고: 200px x 40px , 글자로 대체
+  - [] navigation : 마우스 올리면 (hover) = hilight. (영역을 벗어나면 해제)
+  - [] 공지사항 첫번째 클릭(click)시 팝업창 나타남.
+  - [] 레이어 팝업창 내에 닫기 버튼을 두어서 클릭 사라짐
+  - [] html/css 유효성 검사
+  - [] 임시경로는 "#" 으로
+  - [] 메인페이지 이름 index.html
+*/
+/* common.css */
+body {
+  --color-gray1 : #c4c4c4;
+  --color_sample : rgba(20,100,255,0.15);
+}
+.wrapper {
+  width: 800px; 
+}
+/* IR: image replace */
+/* : reset보강 */
+.blind_wrap a > span,
+.blind_wrap button > span,
+.blind {
+  display: block;
+  width: 0; height: 0; overflow: hidden;
+}
+.blind_wrap a {
+  display: block; width: 100%; height: 100%;
+  background-repeat: no-repeat;
+  background-position:50% 50% ;
+}
+.none {display: none;}
+/* 이미지를 쓰기위한 설정 */
+
+/* design
+============================= */
+#wrap {
+  margin: auto;
+  width: 1000px; height: 650px;
+}
+/* headBox--------------------- */
+#headBox { 
+  float: left;
+  width: 200px; height: 100%;
+  background-color: #eee;
+}
+h1 { 
+  width: 100%; height: 40px;
+  margin-bottom: 10px;
+  background-color: #ed0;
+}
+h1 a {
+  display: block; width: 100%; height: 100%;
+  text-align: center; line-height: 40px;
+  font-size: 1.2rem;
+}
+#navigation {
+  margin: auto;
+  width: 180px; height: 200px;
+  background-color: var(--color_sample);
+}
+#navigation > ul { width: 100%; height: 100%; }
+#navigation li {
+  float: left;
+  width: 100%; height: 50px;
+  border: 1px solid #333; box-sizing: border-box;
+}
+#navigation dl { width: 100%; height: 100%; }
+#navigation dt {
+  padding-top: 15px;
+  width: 100%; height: 100%; background-color: #fff;
+  text-align: center;
+}
+#navigation dt a { 
+
+}
+#navigation dd {}
+#navigation dd a {}
+/* viewBox----------------------*/
+#viewBox { 
+  float: right;
+  height: 350px;
+  background-color: #555;
+}
+/* conBox---------------------- */
+#conBox { 
+  float: right;
+  height: 200px;
+  background-color: #777;
+}
+/* footBox--------------------- */
+#footBox { 
+  float: right;
+  height: 100px;
+  /* background-color: #333; */
+}
+#footBox > ul { width: 100%; height: 100%; }
+#footBox li:first-child {
+  float: left;
+  width: 150px; height: 100%;
+  background-color: #dee;
+}
+#footBox li:nth-child(2) {
+  float: left;
+  width: 650px; height: 50%;
+  background-color: #fa0;
+}
+#footBox li:nth-child(3) {
+  float: left;
+  width: 650px; height: 50%;
+  background-color: #ffa;
+}
