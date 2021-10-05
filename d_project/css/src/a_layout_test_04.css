@@ -24,7 +24,7 @@ body {
 .blind_wrap a > span,
 .blind_wrap button > span,
 .blind {
-  display: block;
+  display: block; position: absolute; z-index: -1;
   width: 0; height: 0; overflow: hidden;
 }
 .blind_wrap a {
@@ -45,7 +45,7 @@ body {
 #headBox { 
   float: left;
   width: 200px; height: 100%;
-  background-color: #eee;
+  background-color: #dcc;
 }
 h1 { 
   width: 100%; height: 40px;
@@ -57,28 +57,49 @@ h1 a {
   text-align: center; line-height: 40px;
   font-size: 1.2rem;
 }
-#navigation {
+/** line-height는 font의 층간  */
+
+.navigation {
   margin: auto;
   width: 180px; height: 200px;
-  background-color: var(--color_sample);
 }
-#navigation > ul { width: 100%; height: 100%; }
-#navigation li {
-  float: left;
-  width: 100%; height: 50px;
-  border: 1px solid #333; box-sizing: border-box;
+.navigation ul { width: 100%; height: auto; }
+.navigation li { width: 100%; height: auto; }
+.navigation dl { width: 100%; height: auto; }
+.navigation dt {
+  width: 100%; height: 40px; 
+  padding-bottom: 3px;
+  background-color: #fff;
 }
-#navigation dl { width: 100%; height: 100%; }
-#navigation dt {
-  padding-top: 15px;
-  width: 100%; height: 100%; background-color: #fff;
-  text-align: center;
+.navigation dt:last-child {padding: 0;}
+.navigation dt a { 
+  display: block; width: 100%; height: auto;
+  text-align: center; line-height: 40px;
+  /* border: 1px solid #333; */
 }
-#navigation dt a { 
+.navigation dt a:hover { color: #fff; background-color: #333;}
+.navigation dd { 
+  /* display: none; */
+  width: 100%; height: auto;
+  background-color: #fff;
+  height: 0;
+  overflow-y: hidden; transition: all 300ms linear;
+}
+/* transition 애니메이션 움직임 태그 */
+.navigation dd a { 
+  display: block; width: 100%; height: 30px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  text-indent: 10px; line-height: 30px;
+}
+.navigation dd a:hover {
+  color: #fff; font-weight: 700;
+  background-color: #333;
+}
+/* .navigation dl:hover > dd { display: block;} */
+.navigation dl:hover > dd {height: 120px;}
+.navigation dl:hover > dt {background-color: #333; color:#fff;}
 
-}
-#navigation dd {}
-#navigation dd a {}
 /* viewBox----------------------*/
 #viewBox { 
   float: right;
@@ -97,19 +118,32 @@ h1 a {
   height: 100px;
   /* background-color: #333; */
 }
-#footBox > ul { width: 100%; height: 100%; }
-#footBox li:first-child {
+#footBox > h2 {
   float: left;
-  width: 150px; height: 100%;
-  background-color: #dee;
-}
-#footBox li:nth-child(2) {
-  float: left;
-  width: 650px; height: 50%;
+  width: 150px; height: 100px;
   background-color: #fa0;
 }
-#footBox li:nth-child(3) {
+.info_nav {
   float: left;
   width: 650px; height: 50%;
-  background-color: #ffa;
+  background-color: #df0;
+}
+address {
+  float: left;
+  width: 650px; height: 50%;
+  background-color: #aaf;
+}
+/* clip : 범위를 지정해서 */
+.cilp_t {
+  /* clip:rect(상단, 오른쪽, 하단, 왼쪽); */
+  position:absolute;
+  clip: rect(18px, 122px,92px,18px);
+  width: 200px; height: 200px;
+  box-sizing: border-box; padding: 20px;
+  background-image: radial-gradient(#66f, #fc5);
+}
+
+.insert {
+  width: 100px; height: 70px;
+  background-color: rgba(255,255,255,0.2);
 }

@@ -21,7 +21,7 @@
   <!-- headBox -->
      <header id="headBox">
        <h1>logo</h1>
-       <nav id="navigation">
+       <nav class="navigation">
          <h2 class="blind">gnb_area</h2>
          <div>
            <ul>
@@ -29,7 +29,7 @@
                <dl>
                  <dt><a href="#">이용안내</a></dt>
                  <dd>
-                   <a href="#">이용방법-</a>
+                   <a href="#">이용방법</a>
                    <a href="#">이용시간</a>
                    <a href="#">이용요금</a>                 
                  </dd>
@@ -71,7 +71,10 @@
      </header>
   <!-- viewBox -->
      <section class="wrapper" id="viewBox">
-      <h2>광고영역</h2>
+      <h2 class="blind">광고영역</h2>
+      <div class="cilp_t">
+        <div class="insert"></div>
+      </div>
      </section>
   <!-- conBox-->
      <article class="wrapper" id="conBox">
@@ -83,12 +86,27 @@
      </article>
   <!-- footBox -->
      <footer class="wrapper" id="footBox">
-      <h2 class="blind">company info</h2>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+      <h2>company info</h2>
+        <div class="info_nav"></div>
+        <address>
+          <!-- 제목 h3 같은건 안된다. -->
+          <P hidden>사이트명</P>
+          <P hidden>사이트 주소</P>
+          <P hidden>
+            <!-- 강조의 표현
+            strong : 강요성(위협, 무조건적인)을 띈 강조 - danger
+            em : 권유성을 강조
+            ins : 추가 첨부된 내용
+            del : 기존 내용에서 삭제된 것
+            mark : 형광펜
+            -->
+            <em>연락처</em>:<span>02-0000-0001</span>
+            <em>팩스</em>:<span>02-0000-0002</span>
+            <em>이메일</em>:<span>xxx@ffff.com</span>
+          </P>
+          <P hidden>사업자번호, 통신판매번호</P>
+          <p hidden><span class="blind">copyright</span> &copy; web tutorial.</p>
+        </address>
      </footer>
   </div>
 
