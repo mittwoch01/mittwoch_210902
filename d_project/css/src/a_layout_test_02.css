@@ -101,7 +101,7 @@ box-sizing: border-box;} */
   /* padding-top: 100px; box-sizing: content-box; */
 }
 
-/* #contentbox */
+/* #contentbox ===============================================*/
 #contentbox{ width:100%; height:200px; }
 
 /*  */
@@ -145,7 +145,7 @@ box-sizing: border-box;} */
 
 
 
-/* otherBox */
+/* otherBox =================================================*/
 #otherBox { 
   width: 900px; height: 800px;
   margin: auto;
