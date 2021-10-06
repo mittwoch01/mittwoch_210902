@@ -1,0 +1,55 @@
+@charset "UTF-8 ";
+/* c_05_web.css */
+
+/* h1 {
+  background-color: #ccc;
+  border-bottom: 1px solid #057;
+}
+
+@supports (var(--border-l2) ) {
+  h1{
+    background-color: var(--color-gray2);
+    border-bottom: var(--border-l2);
+  }
+} */
+
+/* #wrap ============================ */
+#wrap {
+  width: 1200px; height: 700px;
+  width: 75rem; height: 43.75rem;
+  margin: auto;
+  background-color: #eee;
+  background-color: var(--color-gray1);
+}
+
+/* #headBox ========================= */
+#headBox {
+ width: 100%; height: 100px; height: 6.25rem;
+ background-color: #eee;
+ background-color: var(--color-gray2);
+ background-image: linear-gradient(#0af, #057);
+ border: 1px solid #171717; box-sizing: content-box;
+}
+/* bc-color위에 bc-image가 있는 상태. */
+/* ! 브라우저 8버전에서는 linear-gradient가 안먹힌다. */
+
+/* #viewBox ========================= */
+#viewBox {
+ width: 100%; height: 300px; height: 18.75rem;
+ background-color: #aaa;
+ background-color: var(--color-gray3);
+}
+
+/* #conBox ========================= */
+#conBox {
+ width: 100%; height: 200px; height: 12.5rem;
+ background-color: #eee;
+ background-color: var(--color-gray2);
+}
+
+/* #footBox ========================= */
+#footBox {
+ width: 100%; height: 100px; height: 6.25rem;
+ background-color: #aaa;
+ background-color: var(--color-gray3);
+}
