@@ -6,13 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="../js/common/modernizr-custom.js"></script>
   
+  <!-- <link rel="stylesheet" href="../css/common/variable.css"> -->
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
+
   <link rel="stylesheet" href="../css/src/b_layout_main.css">
 
-  <title>웹 프로토 타입</title>
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <title>STYLE NANDA_site</title>
   <link rel="shortcut icon" href="../favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="../favicon.png">
 </head>
@@ -21,11 +24,21 @@
   <div id="wrap">
     <!-- headBox -->
      <header class="wrapper" id="header">
-       <h1>site</h1>
-       <div class="gnb"></div>
+       <div class="head_wrapper">
+         <h1>site</h1>
+         <nav class="gnb">
+           <ul>
+             <li>BEST ITEM</li>
+             <li>STORE</li>
+             <li>ABOUT</li>
+             <li>MY PAGE</li>
+             <li>LANGUAGE</li>
+           </ul>
+         </nav>
+       </div>
      </header>
 
-     <!-- main -->
+     <!-- new in -->
      <section class="wrapper" id="new">
        <h2 class="blind">newin</h2>
        <div class="new_bar">
@@ -39,30 +52,157 @@
 
      <!-- bestitem -->
      <section class="wrapper" id="bestitem">
-       <div class="best_title">
-       <h2>best item</h2>
-       
+       <div class="best_inner">
+        <div class="title_box">
+          <h2>BEST ITEM</h2>
+          <nav class="title_add">
+            <ul>
+              <li class="wrapper">STYLENANDA</li>
+              <li class="wrapper">NANDAMADE</li>
+              <li class="wrapper">KKXX</li>
+              <li class="wrapper">3CE</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="best_img">
+          <ul>
+            <li>stylenanda</li>
+            <li>nandamade</li>
+            <li>kkxx</li>
+            <li hidden>3ce</li>
+          </ul>
+        </div>
        </div>
      </section>
 
-     <!-- nmb -->
+     <!-- nmb (nanda made better) -->
      <section class="wrapper" id="nmb">
-       <h2>nanda makes better</h2>
+       <h2>Nanda Makes Better</h2>
+       <div class="content_box">
+          <figure id="nmb_img">
+            <figcaption class="blind">nmb_img</figcaption>
+          </figure>
+          <div class="nmb_content">
+            <p>
+              <strong>Lorem ipsum dolor sit amet consectetur</strong>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis reprehenderit dicta voluptas assumenda, molestiae, consectetur alias, veniam quaerat nobis laboriosam minima fuga sunt aperiam quas tempore dolore esse. Aliquid provident recusandae tenetur similique omnis nobis doloribus, architecto odio nostrum officiis itaque culpa deserunt. Iste possimus nulla nostrum nam quas dicta qui, veritatis optio illum voluptatibus ipsum quibusdam. Vel, beatae??
+              </span>
+                <a href="#" class="button-arrow">브랜드 스토리</a>
+            </p>
+          </div>
+      </div>
+
      </section>
 
      <!-- store -->
      <section class="wrapper" id="store">
-       <h2>store</h2>
+       <div class="store_inner">
+        <div class="store_title">
+          <h2>STORE</h2>
+          <p>
+            가장 가까운
+            <span class="en">STYLENANDA</span>
+            매장을 검색해보세요!
+          </p>
+        </div>
+
+        <div class="map_box">
+          <!-- <div class="location_box"> -->
+              <div class="location_inner">
+                <div class="bar">
+                  <ul>
+                    <li><img src="#" alt="search_img"></li>
+                    <li>강남본점</li>
+                  </ul>
+                </div>
+               
+                <a href="#" class="button-arrow">자세히 보기</a>
+                  <div class="current_box">
+                    <div>
+                      <img src="#" alt="current_img">
+                      <button type="button" class="button_current">현재 위치 재설정</button>
+                    </div>
+                  </div>
+              </div>
+          
+          <address class="location_address">
+            <em>강남점</em>
+            <p>서울특별시 강남구 Lorem ipsum dolor sit amet consectetur, <br />
+              adipisicing elit. <br />
+              Animi, temporibus aliquam quod reiciendis omnis corporis.
+            </p>
+          </address>    
+
+        </div>
+      </div>
+      figu
      </section>
 
      <!-- followUs -->
      <article class="wrapper" id="followUs">
-       <h2>follow us</h2>
+      <div class="follow_inner">
+        <div class="follow_title">
+          <h2>FOLLOW US</h2> 
+          <ul>
+            <li><a href="#">@stylenanda_korea</a></li>
+          </ul>
+        </div>       
+        <figure>
+          <figcaption class="blind">follow us</figcaption>
+          <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+          </ul>
+        </figure>
+      </div>
      </article>
 
      <!-- footBox -->
      <footer class="wrapper" id="footBox">
-       <h2>footBox</h2>
+       <div class="foot_inner">
+
+        <!-- foot_head -->
+        <div class="foot_head">
+          <h2>LOGO</h2>
+          <div class="foot_unb">
+            <ul>
+              <li><a href="#">3CE</a></li>
+              <li><a href="#">NANDAMADE</a></li>
+              <li><a href="#">STYLENANDA</a></li>
+              <li><a href="#">ABOUT</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- foot_right_content+info -->
+        <div class="con_info">
+          <nav class="unb_box">
+            <select class="foot_lang">
+              <option value="/ko">KO</option>
+              <option value="/en">EN</option>
+              <option value="/zn">ZN</option>
+            </select>
+            <div class="foot_bar">
+              <ul>
+                <li><a href="#">ins</a></li>
+                <li><a href="#">face</a></li>
+              </ul>
+            </div>
+          </nav>
+          <address>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nostrum sit tempora natus voluptatibus cupiditate illum labore. Aspernatur, nesciunt consequatur reiciendis quis aliquam minima ipsam ut modi, molestiae perspiciatis dolore magnam sapiente, minus maiores voluptatum?
+          </address>
+        </div>
+          
+       </div>
      </footer>
 
   </div>
