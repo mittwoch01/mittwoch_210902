@@ -1,0 +1,142 @@
+@charset "UTF-8 ";
+/* a_09_practice.css */
+
+#wrap {
+  width: 1280px; height: auto; 
+  padding-bottom: 700px;
+}
+/* design ============================== */
+/* #footBox {
+  width: 600px; height: 600px;
+  background-color: #eee;
+}
+.nav_list {
+  width: 600px; height: 100px;
+  border: 1px solid #333;
+  background-color: #fff;
+}
+.nav_list > ul {
+  position: relative;
+  width: 100%; height: 30px;
+}
+.nav_list li {
+  float: left;
+  width: auto; height: auto;
+  margin-right: 10px;
+  background-color: #fd5;
+  /* display: inline-block;
+  height: 30px;
+  margin: 0 20px;
+  padding: 30px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  border-right: 1px solid #333;
+  background-color: #7c7c7c; */
+/* }
+.nav_list li:after,
+.nav_list li::after {
+  content: ""; display: block;
+  position: absolute; 
+  padding-left: 5px;
+  width: 0; height: 10px; border-right: 1px solid #333;
+}
+.nav_list li:last-child:after { 
+  display: none;
+  /* border-right: 0; */
+/* }
+
+
+
+#unb { background-color: #faa;}
+#unb ul{ display: none;}
+#unb:focus ul,
+#unb:hover ul { display: block;}  */ */
+
+.slide {
+  width: 900px; height: 750px; margin: auto;
+  margin-bottom: 50px; padding: 30px 10px;
+  border: 1px solid #333;
+}
+.slide_wrapper {
+  position: relative;
+  width: 800px; height: 500px;
+  margin: auto;
+  background-color: #ccc;
+}
+.btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 114%; height: 0;
+  /* 가로를 114%를 줘서 button이 밖으로 빠져나감  */
+  background-color: #aaa;
+  transform: translateX(-50%);
+}
+.btn button {
+  width: 40px; height: 40px;
+  border-radius: 100%;
+  transform: translateY(-50%);
+  background-color: #acf;
+}
+
+.btn button:hover { box-shadow: 3px 3px 3px #59a;}
+.btn button:focus { box-shadow: 3px 3px 3px #157 inset; background-color: #7aa;}
+
+.next {float: right;}
+.prev {float: left;}
+
+.indicator { 
+  position: absolute; bottom: -50px; left: 50%;
+  width: 100%; height: 30px; padding: 5px; 
+  box-sizing: content-box;
+  transform: translateX(-50%);
+  background-color: #555;
+}
+.indicator ul {
+  text-align: center;
+  width: 100%; height: 100%;
+}
+.indicator li {
+  /* float: left; */
+  display: inline-block;
+  width: 30px; height: 30px;
+  margin-right: 30px;
+}
+.indicator li:last-child {margin-right: 0;}
+.indicator a {
+  display: block; width: 100%; height: 100%;
+  background-color: #fd7; border-radius: 50px;
+}
+.indicator li.action {width: 60px;}
+.indicator li.action > a { 
+  box-sizing: border-box;
+  background-color: #f05;}
+
+.indicator a:hover {box-shadow: 3px 3px 3px #540;}
+.indicator a:focus {border: 3px solid #310; outline: 0;}
+
+.slide_content { width: 100%; height: 100%; overflow: hidden;}
+.slide_con_wrap { position: relative; height: 100%;}
+/* ------------------------------------------------------- */
+.position_slide .slide_con_wrap > div { 
+  display: none;
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+} 
+.position_slide .slide_con_wrap > div.action { display: block; z-index: 10;}
+
+/*  */
+.horizontal_slide .slide_con_wrap {
+  --len:6;
+  width: 500%; width: clac( 100% * var(--len) ); height: 100%;
+}
+.horizontal_slide .slide_con_wrap > div {
+  float: left; width: 20%; width: calc( 100% / var(--len)); height: 100%;
+}
+/*  */
+#slide_01 { background-color: #4bb;}
+#slide_02 { background-color: #773;}
+#slide_03 { background-color: #666;}
+#slide_04 { background-color: #cc8;}
+#slide_05 { background-color: #3e016277;}
+
