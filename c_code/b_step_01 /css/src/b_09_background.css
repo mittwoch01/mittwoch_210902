@@ -36,7 +36,7 @@
   background-image: url(../../img/icon/scream.png);
   background-repeat: no-repeat;
   /* background-position:x y - 왼쪽 상단이 기준임. 
-     (좌표로 위치선정하는 것은 권장함.) */
+     (좌표로 위치선정하는 것을 권장함.) */
   background-position: 50% 50%;
   /* none = initial */
   background-size : initial;
