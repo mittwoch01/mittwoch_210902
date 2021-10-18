@@ -322,3 +322,32 @@ Position -pdf 문제 풀이
 ------
 
 https://transfonter.org/
+
+------
+
+# 211018
+
+## 수업내용
+
+css
+
+- [ ] transform:
+  - [ ] translate() - 위치이동
+  - [ ] rotate() - 회전
+  - [ ] skew() - 기울기
+  - [ ] scale() - 배율
+  - [ ] perspective() - 원근법
+
+- [ ] Perspective:transform에 들어가는 값과 동일한 기능이지만 그 범위를 설정할 때 사용하는 기능
+
+html
+
+- [ ] Video, audio, iframe
+
+  - [ ] Video : mp4, ogg, ogv(음성을 뺀 영상), mebM
+
+  - [ ] Audio : mp3, ogg
+
+  - [ ] Iframe : 외부의 문서를 불러와서 삽입하는 코드 (Facebook, twitter, instagram, youtube)
+
+- [ ] overflow, visibility, border-
