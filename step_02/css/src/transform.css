@@ -112,3 +112,40 @@ h3 { background-color: #ddf;}
   text-align: center; line-height: 100px;
 }
 .rotate3:hover li { transform: perspective(300px) rotateY(180deg)}
+
+/* -------------------------------------- */
+.multi_tr li { transition: all 2000ms ease;}
+.multi_tr:hover li:nth-child(1) { transform: translateX(500px) rotate(360deg);}
+.multi_tr:hover li:nth-child(2) { transform: rotate(360deg) translateX(500px);}
+/* 화면(0,0)을 기준으로 돈다. */
+.multi_tr li:nth-child(3) {transform-origin: 0 0;}
+.multi_tr:hover li:nth-child(3) { transform: rotate(360deg);}
+
+/* 
+  prespective: 숫자가 작을수록 가까운처리;
+  transform-origin: 기준의 좌표를 지정하는 형태;
+  transform: translate() || scale() || skew() || rotate() || perspective() ;
+  backface-visibility:hidden ||visible;
+*/
+
+#perspectiveWrap {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%; min-height: 1440px;
+  height: 400px; padding-bottom: 500px;
+  box-sizing: content-box;
+  padding-top: 50px;
+  background-color: #eee;
+
+}
+.pers_card {
+  width: 250px; height: 400px;
+  background-color: #acf;
+  background-image: linear-gradient(45deg, #acf, #fac);
+  border-radius: 5px;
+  transition: all 2s linear;
+}
+
+.perspectiveWrap:hover .pers_card { transform: rotateX(45deg);}
