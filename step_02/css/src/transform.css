@@ -8,8 +8,8 @@
 }
 h1 {
   width: 100%; height: auto;
-  font-size: 1.5rem;
   margin-bottom: 50px;
+  font-size: 1.5rem;
 }
 h2 {
   border-bottom: 1px solid #171717;
@@ -37,3 +37,11 @@ h3 { background-color: #ddf;}
 .translate:hover li:nth-child(3) { transform: translate(-120px, 50px); }
 .translate:hover li:nth-child(4) { transform: translateZ(500px); }
 .translate:hover li:nth-child(5) { transform: translate(50%); }
+/* -------------------------------------------- */
+.scale li {margin: 30px; transition: all 400ms ease;}
+.scale:hover li:nth-child(1) { transform: scale(1.2);} /* 1.2=120% */
+.scale:hover li:nth-child(2) { transform: scaleX(1.5);} 
+.scale:hover li:nth-child(3) { transform: scaleY(0.7);}
+.scale:hover li:nth-child(4) { transform: scale(0.5, 1,5);}
+.scale:hover li:nth-child(5) { transform: scaleZ(2);}
+/* -------------------------------------------- */
