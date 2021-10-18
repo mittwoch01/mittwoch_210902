@@ -36,11 +36,58 @@ h3 { background-color: #ddf;}
 .translate:hover li:nth-child(3) { transform: translate(-120px, 50px); }
 .translate:hover li:nth-child(4) { transform: translateZ(500px); }
 .translate:hover li:nth-child(5) { transform: translate(50%); }
-/* -------------------------------------------- */
+/* --------------------------------------------x,y */
 .scale li {margin: 30px; transition: all 400ms ease;}
 .scale:hover li:nth-child(1) { transform: scale(1.2);} /* 1.2=120% */
 .scale:hover li:nth-child(2) { transform: scaleX(1.5);} 
 .scale:hover li:nth-child(3) { transform: scaleY(0.7);}
 .scale:hover li:nth-child(4) { transform: scale(0.5, 1,5);}
 .scale:hover li:nth-child(5) { transform: scaleZ(2);}
-/* -------------------------------------------- */
+/* --------------------------------------------x */
+.skew li { 
+  margin: 30px; transition: all 300ms ease-in;
+  font-size: 2rem;
+}
+.skew li:nth-child(1) { transform: skew(30deg); } /* 글자도 함께 뒤틀린다 */
+.skew li:nth-child(2) { transform: skewY(30deg);}
+.skew li:nth-child(3) { transform: skew(30deg, 15deg);}
+.skew li:nth-child(4) { transform: skewX(45deg);}
+.skew li:nth-child(4) span{ 
+  display: block; width: 100%; height: 100%;
+  transform: skewX(-45deg);
+}
+/* -----------------------------------------z */ 
+.rotate li { margin: 40px; transition: all 300ms ease-in;}
+.rotate:hover li:nth-child(1) {transform: rotate(45deg);}
+.rotate:hover li:nth-child(2) {transform: rotateY(60deg);}
+.rotate:hover li:nth-child(3) {transform: rotateX(30deg);}
+.rotate:hover li:nth-child(4) {transform: rotate3d(1,2,1,40deg);}
+
+.rotate:hover li:nth-child(5) {transform: rotateY(180deg);}
+
+.rotate li:nth-child(5) {
+  position: relative;
+  width: 200px; height: 150px;
+}
+.rotate li div { width: 100%; height: 100%;}
+.front {
+  position: absolute; top: 0; left: 0; z-index: 1;
+  background-color: #fa0; 
+  backface-visibility: hidden;
+}
+.back {
+  position: absolute; top: 0; left: 0; z-index: -1;
+  background-color: #acf; 
+  /* backface-visibility: hidden; */
+  transform: rotateY(180deg);
+}
+/* 카드 뒤집기 문제 발생 해결요망 */
+/* ----------------------------------- */
+.part .rotate2 {
+  perspective: 100px;
+  float: left; width: auto;
+}
+.rotate2 li {
+  float: left; transition: all 1500ms linear;
+}
+.rotate2:hover li { transform: rotateY(360deg);}
