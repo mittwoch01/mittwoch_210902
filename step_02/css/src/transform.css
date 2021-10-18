@@ -11,16 +11,15 @@ h1 {
   margin-bottom: 50px;
   font-size: 1.5rem;
 }
-h2 {
-  border-bottom: 1px solid #171717;
-}
+h2 {border-bottom: 1px solid #171717;}
 
 .part {
-  width: 95%; height: 500px;
+  width: 95%; height: 800px;
   margin: auto; margin-top: 50px; padding: 8px;
   border: 1px solid #333;
 }
 h3 { background-color: #ddf;}
+.part ul { width: 100%; height: auto; background-color: #ffa;}
 .part li {
   width: 100px;height: 100px;
   border-radius: 4px;
