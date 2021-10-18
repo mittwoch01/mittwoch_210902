@@ -36,4 +36,4 @@ h3 { background-color: #ddf;}
 .translate:hover li:nth-child(2) { translate:translateY(-100px); }
 .translate:hover li:nth-child(3) { transform: translate(-120px, 50px); }
 .translate:hover li:nth-child(4) { transform: translateZ(500px); }
-.translate:hover li:nth-child(5) { transform: translateX(50%); }
+.translate:hover li:nth-child(5) { transform: translate(50%); }
