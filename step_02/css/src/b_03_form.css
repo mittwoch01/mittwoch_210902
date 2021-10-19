@@ -4,3 +4,38 @@
 #wrap {
   padding-bottom: 10px;
 }
+
+
+/* #login_wrap{
+  width: 400px; height:auto;
+  margin: auto; 
+  border: 1px solid #ddd;
+} */
+
+
+.naver_login{
+  margin: auto;
+  width: 350px; height: auto;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  text-align: center;
+}
+
+.naver_login ul {
+  width: 400px; height: 150px;
+  background-color: #fa0;
+}
+
+.find_wrap { 
+  margin: auto; 
+  width: 350px; height: auto; 
+  
+}
+
+.find_wrap ul { display: block; }
+.find_wrap li { float: left; margin-right: 10px;}
+.find_wrap li:before {
+  
+}
+
+.find_wrap li:nth-child(3) { margin-right: 0;}
