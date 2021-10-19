@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- <link rel="stylesheet" href="../css/common/common.css">
-  <link rel="stylesheet" href="../css/common/reset.css"> -->
+  <link rel="stylesheet" href="../css/common/common.css">
+  <!-- <link rel="stylesheet" href="../css/common/reset.css"> -->
   <link rel="stylesheet" href="../css/src/b_03_form.css">
 
   <script src="../js/common/modernizr-custom.js"></script>
@@ -43,11 +43,24 @@
           <fieldset>
             <legend>각 영역별 기능 구분</legend>
             
-            <input type="text" value="" name="userName"/>
-            <input type="text" value="" name="userGender"/>
-            <input type="text" value="" name="userOld"/>
+            <label for="userName">사용자 이름</label>
+            <input type="text" id="userName" value="" name="userName"/>
+
+            <label for="userPw">비밀번호</label>
+            <input type="password" id="userPw" value="" name="userPw"/>
+
+            <label for="userGender">성별</label>
+            <input type="text" id="userGender" value="" name="userGender"/>
+
+            <label for="userOld">나이
+              <span class="blind">
+                를 태어난 해를 기준으로 입력하세요.
+              </span>
+            </label>
+            <input type="text" id="userOld" value="" name="userOld"/>
 
             <input type="submit" value="확인" />
+
             <!-- 
             userName : wittwoch
             userGender :female
