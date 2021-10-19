@@ -322,3 +322,29 @@ Position -pdf 문제 풀이
 ------
 
 https://transfonter.org/
+
+------
+
+# 211019
+
+## 수업내용
+
+css
+
+- [ ] overflow
+- [ ] visibility
+- [ ] border-radius
+
+html
+
+- [ ] form
+  - [ ] Form - action(자료를 전송하고 검증받을 주소), method(처리방식)
+  - [ ] Fieldset(영역), legend(form 영역 제목)
+  - [ ] Input(자료를 입력, 버튼), label(input과 연동되는 가이드기능)
+  - [ ] Textarea, select, button...
+
+------
+
+- [ ] transition
+
+- [ ] animation
