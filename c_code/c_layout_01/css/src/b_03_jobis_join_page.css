@@ -1,0 +1,67 @@
+@charset "UTF-8 ";
+/* b_03_jobis_join_page.css */
+
+#wrap {
+  width: 100%; height: auto;
+  padding: 20px;
+  background-color: #eee;
+}
+
+h1 { 
+  width: 100%; height: 50px;
+  padding: 1rem;
+}
+h1 > a { 
+  display: block;
+  width: 70px; height: 100%; 
+  color: #325DFF; font-size: 2rem;
+}
+
+.part {
+  width: 500px; height: auto; min-height: 500px;
+  margin: auto; margin-top: 50px; padding: 5px;
+}
+h2 { 
+  width: 100px; height: 50px; 
+  margin-bottom: 30px;
+  font-size: 1.375rem;
+}
+
+.join_area {
+  width: 100%; height: auto;
+  background-color: #fff;
+}
+/* ----------------------------------------------- */
+.make_account {width: 470px; height: auto;}
+.member { 
+  width: 470px; height:60px;
+  margin-bottom: 12px;
+  border:1px solid #ccc;
+  background-color: #ddd;
+  border-radius:0.5rem;
+}
+.member:last-of-type { margin-bottom: 0;}
+.join_btn { width: 100%; height: 40px; padding: 1rem 0; box-sizing: content-box;}
+.join_btn > button {
+  width: 100%; height: 100%;
+  color: #fff; font-size: 1rem; font-weight: 600;
+  border-radius: 0.3rem; box-shadow: 0 0.3rem 0.3rem #325DFF9d;
+  background-color: #325DFF; transition: all 200ms ease;
+}
+.join_btn > button:hover { transform: translateY(-0.3rem); background-color: #4f75ff; color: #171717;}
+.join_btn > button:focus {
+  outline: 3px solid #22367e; font-size: 1.3rem;
+}
+
+
+/* ----------------------------------------------- */
+p { width: 100%; height: auto; padding: 15px;}
+p > a { font-size: 1rem; color: #325DFF;}
+p:last-of-type { text-align: center;}
+/* ----------------------------------------------- */
+
+.signUp {
+  margin: auto;
+  width: 460px; height: 1116px;
+  background-color: #dff;
+}
