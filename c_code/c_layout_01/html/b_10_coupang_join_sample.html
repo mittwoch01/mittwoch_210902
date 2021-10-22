@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- b_10_coupang_join_result.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_10_coupang_join_sample.css">
+  <script src="../js/common/modernizr-custom.js"></script>
+  <title>웹기초</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1><a href="./a_content.html">웹</a></h1>
+    </header>
+
+    <article id="joinBox">
+      <h2 class="blind">쿠팡회원가입 내용 입력 및 체크</h2>
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>회원정보를 입력해주세요</legend>
+          <ul class="private_data">
+            <li>
+              <!-- 아이디(이메일) 작성 -->
+              <div class="input_data">
+                <input type="email" id="userId" name="user__Id" value="" placeholder="아이디(이메일)"/>
+                <label class="blind" for="userId">
+                  <i class="far fa-envelope"></i>
+                  <span class="blind">
+                    사용자 아이디를 입력하세요.
+                    형식은 이메일 입니다.
+                  </span>
+                </label>
+              </div>
+              <div class="input_info">
+                이메일을 입력하세요.
+              </div>
+            </li>
+
+            <li>
+            <!-- 비밀번호1 -->
+              <div class="input_data">
+                <input type="password" id="userPw" name="user__Pw" value="" placeholder="비밀번호" required />
+                <label for="userPw2">
+                  <i class="fas fa-lock"></i>
+                  <span class="blind">
+                    사용자 비밀번호를 생성하세요<div class="최소 10자 이상 최소 8자 입니다."></div>
+                  </span>
+                </label>
+              </div>
+            </li>
+            <!-- 비밀번호2 -->
+            <li>
+              <div class="input_data">
+                <input type="password" id="userPw2" name="user__Pw2" value="" placeholder="비밀번호 확인" required />
+                <label for="userPw2">
+                  <i class="fas fa-user-lock"></i>
+                  <span class="blind">
+                    사용자 비밀번호를 다시 생성하세요. 최소 10자 이상 최소 8자 입니다.
+                  </span>
+                </label>
+              </div>
+            </li>
+            <!-- name -->
+            <li>
+              <div class="input_data">
+                <input type="text" id="userName" name="user__Name" value="" maxlength="12" placeholder="이름" required />
+                <label for="userName">
+                  <i class="fas fa-eye"></i>
+                  <span class="blind">이름을 입력하세요.</span>
+                </label>
+              </div>
+            </li>
+            <!-- tel -->
+            <li>
+              <div class="input_data">
+                <input type="tel" id="userTel" name="user__Tel" value="" placeholder="휴대폰 번호" required />
+                <label for="userTel">
+                  <i class="fas fa-phone"></i>
+                  <span class="blind">휴대폰 번호를 입력하세요.</span>
+                </label>
+              </div>
+            </li>
+
+          </ul>
+        </fieldset>
+        <hr class="form_line">
+        <fieldset>
+          <legend>쿠팡 서비스약관에 동의해주세요</legend>
+        </fieldset>
+        <fieldset>
+          <legend class="blind">동의 및 가입</legend>
+          <button type="submit">동의하고 가입하기</button>
+        </fieldset>
+      </form>
+    </article>
+
+    <footer id="footBox">
+      <address>
+        <p>©Coupang Corp. All rights reserved.</p>
+      </address>
+    </footer>
+
+  </div><!--// #wrap -->
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>
