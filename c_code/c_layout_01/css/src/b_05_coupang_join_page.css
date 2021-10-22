@@ -1,0 +1,106 @@
+@charset "UTF-8 ";
+/* b_05_coupang_join_page.css */
+
+
+/* ================================ */
+#wrap {
+  width: 100%; height: auto; min-height: 500px;
+}
+/* ================================ */
+#headbox {
+  width: 460px; height: 43px;
+  margin: auto; padding: 33px 133px 25px 133px;
+}
+
+h1 { 
+  width: 197px; height: 43px; 
+  margin: auto; 
+}
+h1 a { 
+  display: block; 
+  width: 100%; height: 100%; 
+  text-align: center;
+}
+/* ================================ */
+#joinBox {
+  width: 460px; height: auto;
+  margin: auto;
+}
+h2 { 
+  width: 460px; height: 18px; 
+  font-size: 14px; font-weight: 700;
+}
+
+.input_area {width: 460px; height: 304px;}
+
+.private {
+  width: 100%; height: 100%; 
+  padding: 0;
+  border: none;
+}
+.private ul {width: 100%; height: 100%; padding: 0;} 
+.private li {
+  width: 460px; height: 50px;
+  margin-bottom: 16px;
+  border: 1px solid #777;
+}
+.private li:last-of-type { margin-bottom: 0;}
+/* -------- */
+.private li label {
+  border: 0;
+  float: left; width: 50px; height: 50px;
+  border-right: 1px solid #555;
+  color: #575757; 
+  font-size: 1.2rem; text-align: center; 
+  line-height: 50px; 
+  background-color: #eee;
+}
+.private li input { 
+  float: left; width: calc(100% - 60px); height: 44px;
+
+}
+
+
+
+/* ================================ */
+#agreeBox { 
+  width: 460px; height: auto;
+  margin: auto; margin-bottom: 30px; padding: 0;
+}
+.agree { border: none;}
+
+/* ------------------------- */
+.essentialCheck { 
+  
+  width: 460px; height: auto;
+  padding: 0; border: none;
+}
+.essentialCheck > ul {
+  width: 100%; height: auto;
+  padding: 18px;
+  border: 1px solid #555;
+}
+.essentialCheck li { 
+  width: 100%; height: auto;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* ------------------------- */
+.join_btn { 
+  
+  width: 100%; height: 53px;
+  padding: 0;
+  background-color: #0074e9;
+  text-align: center; 
+  border: none;
+}
+
+/* ================================ */
+#footBox {
+  width: 460px; height: auto;
+  margin: auto; margin: 1rem; padding: 0 30px;
+  text-align: center;
+  background-color: #ffd;
+}
