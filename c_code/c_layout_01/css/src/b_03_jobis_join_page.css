@@ -4,7 +4,6 @@
 #wrap {
   width: 100%; height: auto;
   padding: 20px;
-  background-color: #eee;
 }
 
 h1 { 
@@ -15,6 +14,8 @@ h1 > a {
   display: block;
   width: 70px; height: 100%; 
   color: #325DFF; font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .part {
@@ -31,13 +32,24 @@ h2 {
   width: 100%; height: auto;
   background-color: #fff;
 }
+form {}
+fieldset { 
+  width: 100%; height: auto;
+  border: 0;
+}
+
+
+
+
+
+
 /* ----------------------------------------------- */
 .make_account {width: 470px; height: auto;}
 .member { 
   width: 470px; height:60px;
   margin-bottom: 12px;
-  border:1px solid #ccc;
-  background-color: #ddd;
+  border:1px solid #ddd;
+  background-color: #fff;
   border-radius:0.5rem;
 }
 .member:last-of-type { margin-bottom: 0;}
