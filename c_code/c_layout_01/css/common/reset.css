@@ -14,12 +14,11 @@ ul,ol,li,dl,dt,dd,
 hr,button,img,
 header,article,nav,section,footer,aside,
 main,figure,figcaption,hgroup,
-form, fieldset {
+form, fieldset,div {
   margin: 0; padding: 0; border: 0;
   font-size: 100%; 
   box-sizing: border-box;
   font-family: arial , 'apple SD' , 'myriad pro' , sans-serif;
-  box-sizing: border-box;
   /* font-family = 서체. sans-serif는 고딕을 지칭함. */
   /* 16px = 1rem */
 }

@@ -3,7 +3,8 @@
 /* IR: image replace */
 
 .blind { 
-  display: block;
+  display: block; position: absolute; z-index: -1;
+  clip:rect(0,0,0,0);
   width: 0; height: 0; overflow: hidden;}
   
 .clearfix { width: 100%; height: auto;}
