@@ -1,0 +1,98 @@
+@charset "UTF-8 ";
+/* c_06_animation.css */
+
+#wrap {
+  width: 900px; height: auto;
+  margin: auto;
+  box-sizing: content-box;
+  padding-bottom: 700px;
+}
+
+.part {
+  width: 100%; height: auto;
+  margin-bottom: 4rem;
+  padding: 1rem;
+  border: 1px solid #777;
+}
+
+ul { width: 100%; height: auto;
+background-color: #eee;}
+
+li { width: 100%; height: 6rem;
+padding: 1rem;
+border-bottom: 1px solid #555;
+}
+
+.part span {
+  --size:4rem;
+
+  display: block; width: 4rem; height: 4rem;
+  border-radius: 0.3rem; background-color: #f7a;
+  text-align: center; line-height: 4rem; font-weight: 700;
+}
+
+/* ------------------ */
+/**
+* animation기능 사용을 위해서는 2가지 속성을 알아야한다.
+* 1. animation 시간/ 움직임 / 반복 등의 선택자에 관련된 내용
+* 2. animation의 전체 시간에 따른 비율(%)에 대한 움직임 처리
+ */
+ @keyframes mymove {
+  0% {transform: translate(0px);}
+  50% {transform: translate(-100px, -100px) rotate(360deg);}
+  100% {transform: translate(500px, 100px);}
+}
+
+
+.ani li:nth-child(1) > span { 
+  animation-name: mymove;
+  /* name (사용자가 임의로 생성) */
+  animation-duration: 2000ms;
+  /* animation이 움직이는 시간*/
+  animation-iteration-count: 2;
+  /* animation의 반복여부 1 = 1번이동, infinite = 무제한 반복 */
+  animation-direction: normal;
+  /* 
+  행동을 처리하는 방향 
+  - 정방향(normal), 
+  - 역방향(reverse), 
+  - 역순으로 왕복 (alternate-reverse)
+  */
+  animation-timing-function: linear;
+  /* 움직임 처리 */
+}
+
+.ani li:nth-child(2) > span {
+  animation-name: mymove;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease;
+  /* 
+  animation-fill-mode: 
+  backwards, both, forwards 
+  */
+  animation-fill-mode: backwards;
+  animation-delay: 3000ms;
+}
+
+.ani li:nth-child(3) > span {
+  animation: mymove 500ms infinite alternate linear 500ms;
+}
+.ani li:nth-child(4) > span {
+  animation: myLinear 2000ms infinite alternate;
+  animation-play-state: paused ;
+}
+
+@keyframes myLinear {
+  0% {transform:translate(0);}
+  50% {transform:translateX(400px) scale(1.5) rotate(720deg);}
+  100% {transform:translate(700px) scale(1.2) rotate(960deg);
+  background-color: #057;
+  }
+}
+
+.ani li:nth-child(4):hover > span {
+  animation-play-state: running;
+}
+
