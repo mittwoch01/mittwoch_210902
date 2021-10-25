@@ -119,8 +119,33 @@ border-bottom: 1px solid #555;
   border: 1px solid #057;
   background-color: #fff;
   transform: translate(100vw);
-  transition: all 1000ms ease 1000ms;
+  /* transition: all 1000ms ease 1000ms; */
+  animation: oncemove 1000ms 1 both 1000ms;
 }
-.action .car {
+/* .action .car {
   transform: translate(0);
+} */
+
+@keyframes oncemove {
+  100% { transform: translate(0);}
+} /* oncemove */
+
+.win {
+  overflow: hidden;
+  position: absolute; top: 16.8%; left: 34%;
+  width: 128px; height: 53px;
+  background-color: #adf;
 }
+.win > span {
+  display: block; width: 110%; height: 110%;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 0.2rem;
+  transform-origin: 0 100%;
+  transform: skew(-45deg);
+  animation: oncewin 700ms 1 normal both ease-out 2500ms;
+}
+
+@keyframes oncewin {
+  100% { transform: translateY(70%) skew(-45deg);}
+}
+/* oncewin */
