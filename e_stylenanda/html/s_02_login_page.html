@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="no-js">
+  <!-- s_01_join_page.html --> 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/variable.css">
+
+  <link rel="stylesheet" href="../css/src/s_02_login_page.css">
+
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <title>웹기초</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <!-- headBox -->
+    <header class="wrapper" id="header">
+      <div class="head_wrapper">
+        <h1>
+          <a href="http://127.0.0.1:5500/html/stylenanda_site.html">
+             <img src="#" alt="stylenanda">
+          </a>
+        </h1>
+
+        <nav class="navigation">
+          <h2 class="blind">헤더 네비게이션</h2>
+          <ul class="clearfix">
+
+            <li>
+             <div class="nav_title"><a href="#">best item</a></div> 
+
+               <h3 class="blind">best item</h3>
+               <ul class="nav_list">
+                 <li><a href="#">new</a></li>
+                 <li><a href="#">stylenanda</a></li>
+                 <li><a href="#">nandamade</a></li>
+                 <li><a href="#">kkxx</a></li>
+                 <li><a href="#">3ce</a></li>
+               </ul>
+            </li>
+
+            <li>
+              <div class="nav_title"><a href="#">store</a></div> 
+               <h3 class="blind">store</h3>
+               <ul class="nav_list">
+                 <!-- <li><a href="#"></a>store</li> -->
+               </ul>
+             </li>
+
+            <li>
+              <div class="nav_title"><a href="#">about</a></div> 
+               <h3 class="blind">about</h3>
+               <ul class="nav_list">
+                 <li><a href="#">brend</a></li>
+                 <li><a href="#">review</a></li>
+                 <li><a href="#">notice</a></li>
+                 <li><a href="#">q&amp;a</a></li>
+               </ul>
+             </li>
+
+            <li>
+              <div class="nav_title"><a href="#">my page</a></div> 
+               <h3 class="blind">my page</h3>
+               <ul class="nav_list">
+                 <li><a href="#">join</a></li>
+                 <li><a href="#">log in</a></li>
+                 <li><a href="#">profile</a></li>
+                 <li><a href="#">wish list</a></li>
+                 <li><a href="#">배송조회</a></li>
+               </ul>
+             </li>
+
+            <li>
+              <div class="nav_title"><a href="#">language</a></div> 
+               <h3 class="blind">language</h3>
+               <ul class="nav_list">
+                 <li><a href="#">한국어</a></li>
+                 <li><a href="#">english</a></li>
+                 <li><a href="#">中國語</a></li>
+                 <li><a href="#">日本語</a></li>
+               </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="user_page">
+         <ul>
+           <li><a href="#">장바구니</a></li>
+           <li><a href="#">로그인</a></li>
+         </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- article -->
+    <article class="wrapper" id="loginBox">
+      <h2><a href="./s_01_join_page.html">웹</a></h2>
+
+      <div class="part">
+        <h3 class="blind">로그인 페이지</h3>
+
+        <div class="login_area">
+          <form action="#" method="POST">
+          <!-- 1 fieldset -->
+            <fieldset class="login_part">
+              <legend class="blind">회원정보를 입력해주세요.</legend>
+
+              <!-- 아이디(이메일) 작성 -->
+              <div class="member member_id">
+                <input type="email" id="userId" name="user__Id" value="" placeholder="아이디(이메일)" required/>
+                <label for="userId">
+                  <i class="far fa-user fa-3x"></i>
+                  <span class="blind">
+                    사용자 아이디를 입력하세요.
+                    형식은 이메일 입니다.
+                  </span>
+                </label>
+              </div>
+                
+              <!-- 비밀번호 -->               
+              <div class="member member_pw">
+                <input type="password" id="userPw" name="user__Pw value=" maxlength="12" placeholder="비밀번호" required />
+                <label for="userPw">
+                  <i class="fas fa-lock fa-3x"></i>
+                  <span class="blind">
+                    사용자 비밀번호를 생성하세요.
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+          <!-- 2 fieldset-->
+            <fieldset class="member_status">
+              <legend class="blind">회원 계정상태 유지관리</legend>
+
+              <div>
+                <input type="checkbox" value="상태 유지 확인" id="stateCheck" name="state__Check" class="blind" />
+                <label for="stateCheck">
+                <i class="far fa-check-circle"></i>
+                <span>로그인 접속 유지</span>
+              </label>
+              </div>
+
+              <div class="ip_check">
+                <label for="ipCheck">
+                  <span><a href="#">ip 보안</a></span>
+                  <i class="fas fa-toggle-on fa-3x"></i>
+                </label>
+                <input type="checkbox" id="ipCheck" name="ip__Check" class="blind"/>
+              </div>
+
+            </fieldset>
+
+          <!-- 3 fieldset -->
+            <fieldset class="submit_btn">
+              <legend class="blind">로그인 확인</legend>
+              <input type="submit" value="로그인">
+            </fieldset>
+
+          <!-- 4 fieldset -->
+            <fieldset>
+              <legend class="blind">회원가입</legend>
+              <button type="button">join</button>
+            </fieldset>
+
+          <!-- 1 div -->
+            <div class="sub_nav">
+              <ul>
+                <li><a href="#">아이디 찾기</a></li>
+                <li><a href="#">비밀번호 찾기</a></li>
+                <li><a href="#">비회원 로그인</a></li>
+              </ul>
+            </div>
+          <!-- 2div -->
+            <div class="c_info">
+              <p>&copy; 2017. NANDA All rights reserved.</p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </article>  
+
+    <!-- footBox -->
+    <footer class="wrapper" id="footBox"> 
+      <div class="foot_inner">
+
+       <!-- foot_head -->
+       <div class="foot_head">
+         <h2>logo</h2>
+         <nav class="foot_unb">
+           <ul>
+             <li><a href="#">3CE</a></li>
+             <li><a href="#">NANDAMADE</a></li>
+             <li><a href="#">STYLENANDA</a></li>
+             <li><a href="#">ABOUT</a></li>
+           </ul>
+         </nav>
+       </div>
+
+       <!-- foot_right_content+info -->
+       <div class="con_info">
+         <div class="unb_box">
+           <select class="foot_lang">
+             <option value="/ko">KO</option>
+             <option value="/en">EN</option>
+             <option value="/zn">CH</option>
+             <option value="/ja">JA</option>
+           </select>
+           <div class="foot_bar">
+             <ul>
+               <li>
+                 <button type="button">
+                  <i class="fab fa-instagram"></i>
+                 </button>          
+               </li>
+               <li>
+                 <button type="button">
+                  <i class="fab fa-facebook"></i>
+                 </button>
+               </li>
+             </ul>
+           </div>
+         </div>
+         <address>        
+           <p>회사명. ㈜난다  서울특별시 마포구 잔다리로 32 서문빌딩 2~6F </p>
+           <p>0502-707-8888</p>
+           <p>nanda@stylenanda.co.kr </p>
+           <p class="copyright">
+             Copyright &copy; 2017. NANDA All rights reserved. 
+           </p>
+         </address>
+       </div>
+         
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>
