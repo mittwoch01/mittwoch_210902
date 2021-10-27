@@ -1,0 +1,331 @@
+@charset "UTF-8 ";
+/* b_layout_main.css */
+
+/* common.css 
+===============================================*/
+ body {
+  padding-top: 88px;
+  --color-gray1 : #c4c4c4;
+  --color_sample : rgba(20,100,255,0.15);
+  font-family: 'Lato', sans-serif;
+}  
+a { text-decoration: none; }
+
+/* ------------------------------------------- */
+.wrapper { width: 1280px; margin: auto; }
+h2, button {text-transform: uppercase;}
+
+/* design
+============================================== */
+#wrap {
+  width: 1280px; height: auto; min-height: 500px;
+  margin: auto;
+}
+
+/* header ========================================*/
+#header {
+  position: fixed; z-index: 1000;
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  height: 88px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(73, 73, 73, 0.5);
+}
+
+.head_wrapper {
+  width: 1280px; height: auto;
+  margin: auto;
+}
+
+h1 {
+  float: left;
+  width: 200px; height: 88px;
+  background-color: #515151;
+  color: #fff;
+}
+
+/* ----navigation--------------------------------- */
+.navigation {
+  float: left;
+  width: auto; height: 100%;
+  margin: 10px; margin-left: 54px;
+}
+.navigation > ul { 
+  position: relative; z-index: 1;
+  width: 100%; height: auto; 
+}
+.navigation > ul:before { 
+  content:"";
+  width: 900px; height: 200px; height: 0;
+  margin-top: 13px;
+
+  display: block; z-index: -1;
+  position: absolute; 
+  top:65px; left: 0; 
+  background-color: #171717;
+}
+.navigation > ul > li {
+  float: left;
+  width: 160px; height: auto;
+  margin-right: 25px;
+}
+.navigation > ul > li:last-child { margin-right: 0;}
+
+/* ---nav_title---------------------------------------- */
+.nav_title {
+  width: auto; height: 100%;
+  margin-top: 18px;
+  /* background-color: #fdd; */
+}
+.nav_title a {
+  display: block;
+  width: 100%; height: 100%;
+  /* padding-top: 18px; */
+  font-size: 25px; font-weight: 700;
+  text-align: center; line-height: 30px;
+  text-transform: uppercase;
+}
+
+/* ---nav_list------------------------------------------ */
+.nav_list {
+  display: none;
+  width: 100%; height: auto;
+  margin-top: 30px; 
+  color: #fff;
+  background-color: #b93b3b;
+}
+.nav_list li {
+  width: 100%; height: 40px;
+  margin-bottom: 10px;
+}
+.nav_list a {
+  display: block;
+  width: 100%; height: 100%;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.navigation:hover .nav_list { display: block;}
+.navigation:hover ul:before{ height: 100%; }
+.nav_title:hover {
+  background-color: #fff;
+  color: #171717;
+}
+
+/* articleBox ====================================*/
+#joinBox {
+  width: 460px; height: 1212px; min-height: 300px;
+  margin:auto; margin-top: 155px;
+  background-color: #d4d4d4;
+}
+#joinBox > h2 { 
+  width: 166px; height: 124px; 
+  margin: auto;
+  background-color: #acf;
+}
+#joinBox > h2 > a { display: block; width: 100%; height: 100%;}
+
+/* ---------- */
+form { width: 100%; height: auto; margin: 0;}
+fieldset { 
+  position: relative;
+  width: 100%; height: auto;
+  margin-bottom: 1.5rem;
+  /* padding-top:1.5rem; box-sizing: border-box; */
+}
+legend {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 1.5rem;
+  padding: 0;
+}
+
+/* ----- */
+.private_data {
+  width: 100%; height: auto;
+  padding-top: 2rem; box-sizing: border-box;
+}
+.private_data li {
+  width: 100%; height: 50px; margin-bottom: 46px;
+  background-color: #fff;
+}
+.private_data li:last-child {margin-bottom: 0;}
+
+/* ------ */
+.input_data {
+  width: 100%; height: 50px; 
+  box-sizing: content-box;
+  border-bottom: 2px solid transparent;
+}
+.input_data input { 
+  float: right; 
+  width: calc(100% - 50px); height: 100%;
+  padding: 10px 10px; box-sizing: border-box;
+  border: 2px solid #7c7c7c;
+}
+.input_data .birth_day:last-of-type { border: none;}
+
+.input_data label { 
+  float: left; 
+  width: 50px; height:50px; 
+  border: 2px solid #777; border-right: 0;
+  box-sizing: border-box; 
+  background-color: #eee;
+  text-align: center; line-height: 50px; color: #777;
+  background-color: #eee;
+}
+/* -------------------- */
+.bir_inner {
+  margin: auto;
+  width: 460px; height: 50px;
+  background-color: #f00;
+}
+.bir_yy + .bir_mm { padding-left: 22px;}
+.bir_yy .bir_mm .bir_dd {
+  display: block;
+  width: 120px; height: 50px;
+  margin-left: 22px;
+}   
+
+.birth_day label { border: none;}
+
+.input_info {
+  display: none;
+  width: 100%; height: auto;
+  padding: 0.5rem 1rem; box-sizing: border-box; font-size: 0.875rem;
+  background-color: #fff;
+}
+
+/* select */
+select { 
+  float: right;
+  width: 120px; height: 100%;
+  padding: 10px; box-sizing: border-box;
+  border: 2px solid #7c7c7c;
+  text-decoration: none;
+}
+.birth_day {
+  float: right;
+  width: 120px; height: 100%;
+  border: 2px solid #7c7c7c;
+}
+
+
+/* li에 추가 class 첨부 */
+.write > .input_data { border-bottom: 3px solid #07f;}
+.write input { border-bottom: 0;}
+.write label { border-bottom: 0;}
+.error > .input_data { border-bottom: 3px solid #f33;}
+.error input { border-bottom: 0;}
+.error label { border-bottom: 0;}
+.error > .input_info { display: block; color: #f33;}
+.guide > .input_info { display: block; color: #575757;}
+
+.form_line {
+  border: 0; border-bottom: 1px solid #777;
+  margin: 1rem 0;
+}
+
+[type="submit"] {
+  width: 100%; height: 50px;
+  color: #fff;
+  /* box-shadow: inset 0 -0.3rem 0 rgba(0,0,0,0.3); */
+  background-color: #7c7c7c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.foot_info { 
+  margin: auto; margin-bottom: 160px;
+  width: 460px; height: 94px;
+}
+.foot_info > p { 
+  margin: auto;
+  width: 250px; height: 18px;
+  padding-top: 25px; box-sizing: border-box;
+  font-size: 15px; line-height: 15px;
+}
+
+
+/* footBox =======================================*/
+#footBox {
+  padding-top: 51px; box-sizing: border-box;
+  height: 326.9px;
+  background-color: #141414;
+}
+.foot_inner {
+  margin: auto; 
+  padding-left: 71px; box-sizing: border-box;
+  width: 1200px; height: 226px;
+  background-color: var(--color_sample);
+}
+.foot_head { 
+  float: left;
+  width: 165px; height: 100%;
+  background-color: var(--color_sample);
+}
+.foot_head h2 { 
+  margin-bottom: 22px;
+  width: 90px; height: 67px; 
+  background-color: #fff;
+}
+.foot_unb {
+  float: left;
+  width: 165px; height: 138px;
+  background-color: var(--color_sample);
+}
+.foot_unb ul { width: 100%; height: 100%;}
+.foot_unb li { 
+  margin-top: 6px; 
+  height: 30px; 
+  font-size: 25px; line-height: 30px;
+  color: #fff; font-weight: 300;
+}
+.con_info {
+  float: right;
+  margin-left:519px;
+  width: 445px; height: 226px;
+  background-color: var(--color_sample);
+}
+.unb_box {
+  width: 445px; height: 61px;
+  background-color: var(--color_sample);
+}
+.foot_lang { 
+  float: left;
+  padding-left: 25px;
+  width: 156px; height: 59px; 
+  background-color: var(--color_sample);
+  font-size: 25px; color: #fff; 
+  border-bottom: 2px solid #fff;
+}
+.foot_bar { 
+  float: right;
+  width: 119px; height: 62px;
+  background-color: var(--color_sample);
+}
+.foot_bar > ul { 
+  margin: auto; 
+  padding-top: 6.5px;
+  width: 105.6px; height: 49px;
+}
+.foot_bar li {
+  float: left;
+  width: 49px; height: 49px;
+  background-color: #fff;
+}
+.foot_bar > button { width: 49px; height: 49px;}
+
+.foot_bar li:first-child { margin-right: 7.6px;}
+
+address {
+  float: right;
+  margin-top: 27px;
+  width: 445px; height: 118px;
+  background-color: var(--color_sample);
+  font-size: 16px; color: #fff;
+}
+address p:first-child {
+  margin-top: 27px;
+}
