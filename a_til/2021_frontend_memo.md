@@ -357,3 +357,19 @@ css
 
 - [ ] transition
 - [ ] animation
+
+
+
+# 211027
+
+## 수업내용
+
+- web에서 사용가능한 이미지
+  - Jpg(손실압축, 배경색 투명저장 불가능) , 
+  - png(비손실 압축, 배경색 투명저장 가능) ,
+  - svg(vector)
+  - gif(움짤)
+  - webp(webm 과 동일하게 구글에서 만든 이미지) - IE, safari,photoshop
+
+- [ ] 포토샵
+  - [ ] Jpg 이미지
