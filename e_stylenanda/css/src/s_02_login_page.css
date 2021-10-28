@@ -237,9 +237,11 @@ label[for="stateCheck"] > span {
   margin: auto; padding: 0 2.5rem; box-sizing: border-box;
 }
 .sub_nav li { width: 100%; height: 100%;}
-.sub_nav > li > a { margin-right: 0.125rem;}
-.sub_nav > li > a:after { content: "|"; margin-left: 0.125rem;}
+.sub_nav > li:after { content: "|"; margin-left: 2px;}
+
+/* .sub_nav > li > a { margin-right: 2px;} */
 .sub_nav > li > a:last-of-type {margin-right: 0;}
+.sub_nav li:last-child a:after { display:none;}
 
 /* ================== */
 .c_info { width: 100%; height: 1.125rem; margin-top: 1.625rem;}

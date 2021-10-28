@@ -105,75 +105,77 @@
     <article class="wrapper" id="joinBox">
       <h2><a href="./s_01_join_page.html">웹</a></h2>
 
-      <form action="#" method="POST">
+      <div class="join_area">
+        <h3 class="blind">회원가입 페이지</h3>
+         
+         <form action="#" method="POST">
 
-        <!-- 1 fieldset -->
-        <fieldset class="user_info">
-          <legend class="blind">회원정보를 입력해주세요</legend>
-          <ul class="private_data">
+          <!-- 1 fieldset -->
+          <fieldset class="user_info">
+            <legend class="blind">회원정보를 입력해주세요.</legend>
+            <ul class="private_data">
             <!-- 아이디(이메일) 작성 -->
-            <li>
+              <li>
               <div class="input_data">
                 <input type="email" id="userId" name="user__Id" value="" placeholder="아이디(이메일)"/>
                 <label for="userId">
-                  <i class="far fa-envelope"></i>
+                  <i class="far fa-envelope fa-2x"></i>
                   <span class="blind">
                     사용자 아이디를 입력하세요.
                     형식은 이메일 입니다.
                   </span>
                 </label>
               </div>
-            </li>
-            <!-- 비밀번호 -->
-            <li>
+              </li>
+              <!-- 비밀번호 -->
+              <li>
               <div class="input_data">
                 <input type="password" id="userPw" name="user__Pw" value="" placeholder="비밀번호" required />
                 <label for="userPw2">
-                  <i class="fas fa-lock"></i>
+                  <i class="fas fa-unlock-alt fa-2x"></i>
                   <span class="blind">
                     사용자 비밀번호를 생성하세요<div class="최소 10자 이상 최소 8자 입니다."></div>
                   </span>
                 </label>
               </div>
-            </li>
-            <!-- 비밀번호2 -->
-            <li>
+              </li>
+              <!-- 비밀번호2 -->
+              <li>
               <div class="input_data">
                 <input type="password" id="userPw2" name="user__Pw2" value="" placeholder="비밀번호 확인" required />
                 <label for="userPw2">
-                  <i class="fas fa-user-lock"></i>
+                  <i class="fas fa-lock fa-2x"></i>
                   <span class="blind">
                     사용자 비밀번호를 다시 생성하세요. 최소 10자 이상 최소 8자 입니다.
                   </span>
                 </label>
               </div>
-            </li>
-            <!-- name -->
-            <li>
+              </li>
+              <!-- name -->
+              <li>
               <div class="input_data">
                 <input type="text" id="userName" name="user__Name" value="" maxlength="12" placeholder="이름" required />
                 <label for="userName">
-                  <i class="far fa-user"></i>
+                  <i class="far fa-user fa-2x"></i>
                   <span class="blind">이름을 입력하세요.</span>
                 </label>
               </div>
-            </li>
-          </ul>
-        </fieldset>
-
-        <!-- 2 fieldset -->
-        <fieldset class="user_birth">
+              </li>
+            </ul>
+          </fieldset>
+         
+          <!-- 2 fieldset -->
+          <fieldset class="user_birth">
           <legend class="blind">회원의 생일을 입력해주세요.</legend>
-          <ul>
-            <!-- birth -->
-            <li>
-              <div class="input_data">
-                <div class="bir_inner">
-                  <ul>
-                    <!-- birth_year -->
-                    <li class="bir_yy">
+
+            <!-- birth -->           
+            <div class="input_data">
+              <div class="bir_inner">
+                <ul>
+                  <!-- birth_year -->
+                  <li class="bir_yy">
                       <label for="userBirth">
-                        <i class="fas fa-birthday-cake"></i>
+                        <i class="fas fa-birthday-cake fa-2x"></i>
                         <span class="blind">태어난 년도를 입력하세요.
                           <select name="birth_year" id="birthYear" aria-placeholder="년도">
                             <option value>년도</option>
@@ -186,9 +188,9 @@
                           </select>
                         </span>
                       </label>
-                    </li>
-                    <!-- birth_month -->
-                    <li class="bir_mm">
+                  </li>
+                  <!-- birth_month -->
+                  <li class="bir_mm">
                       <select name="birth_month" id="birthMonth" aria-placeholder="월">
                         <option value="01"></option>
                         <option value="02"></option>
@@ -206,24 +208,22 @@
                       <label class="blind" for="birthMonth">
                         <span class="blind">태어난 월을 입력하세요.</span>
                       </label>
-                    </li>
-                    <!-- birth_day -->
-                    <li class="bir_dd">
+                  </li>
+                  <!-- birth_day -->
+                  <li class="bir_dd">
                       <input class="birthday_day" type="text" id="birthDay" name="birth__day" value="" maxlength="2" placeholder="일" required />
                       <label class="blind" for="birthDay">
                         <span class="blind">태어난 일을 입력하세요.</span>
                       </label>
-                    </li>
-    
-                  </ul>
-                </div>
+                  </li>
+  
+                </ul>
               </div>
-            </li>
-          </ul>
-        </fieldset>
-
-        <!-- 3 fieldset -->
-        <fieldset class="user_address">
+            </div>                   
+          </fieldset>
+         
+          <!-- 3 fieldset -->
+          <fieldset class="user_address">
           <legend class="blind">회원의 주소를 입력해주세요.</legend>
           <ul>
             <!-- address -->
@@ -238,10 +238,10 @@
               </div>
               </li>
           </ul>
-        </fieldset>
-
-        <!-- 4 fieldset -->
-        <fieldset class="user_phone">
+          </fieldset>
+         
+          <!-- 4 fieldset -->
+          <fieldset class="user_phone">
           <legend class="blind">회원의 전화번호를 입력해주세요.</legend>
           <ul>
             <!-- 인증번호 -->
@@ -249,17 +249,21 @@
   
             </li>
           </ul>
-        </fieldset>
-             
-        <!-- div -->
-        <div class="foot_info">
+          </fieldset>
+               
+          <!-- div -->
+          <div class="btn_info">
           <button type="submit">join</button>
           <p>&copy 2017. NANDA All rights reserved.</p>
-        </div>
+          </div>
         
+         </form>
+      </div>
+    </article>
+
 
     <!-- footBox -->
-    <footer class="wrapper" id="footBox"> 
+    <footer id="footBox"> 
       <div class="foot_inner">
 
        <!-- foot_head -->
