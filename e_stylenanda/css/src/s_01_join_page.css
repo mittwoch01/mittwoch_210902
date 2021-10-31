@@ -48,7 +48,7 @@ h1 {
 .navigation {
   float: left;
   width: auto; height: 100%;
-  margin: 10px; margin-left: 54px;
+  margin: 10px; margin-left: 44px;
 }
 .navigation > ul { 
   position: relative; z-index: 1;
@@ -113,6 +113,24 @@ h1 {
   background-color: #fff;
   color: #171717;
 }
+/* ---user_page_navigation-------------------------------- */
+.user_page_navigation {
+  float: right;
+  width: 110px; height: 50px;
+  margin-top: 16px;
+  background-color: #ddf;
+}
+.user_page_navigation > ul { width: 100%; height: 100%;}
+.user_page_navigation > ul > li {
+  float: left;
+  width: 50px; height: 50px;
+  margin-right: 10px;
+  background-color: #ff0;
+}
+.user_page_navigation > ul > li:last-of-type { margin-right: 0;}
+
+
+
 
 /* articleBox ====================================*/
 #joinBox {
@@ -126,24 +144,20 @@ h1 {
   background-color: #acf;
 }
 #joinBox > h2 > a { display: block; width: 100%; height: 100%;}
+.join_area { width: 100%; height: 100%; }
 
 /* ---------- */
 form { width: 100%; height: auto; margin: 0;}
 fieldset { 
   position: relative;
   width: 100%; height: auto;
-  margin-bottom: 47px;
+  margin-bottom: 45px;
   /* padding-top:1.5rem; box-sizing: border-box; */
 }
 legend {
   position: absolute; top: 0; left: 0;
   width: 100%; height: 1.5rem;
   padding: 0;
-}
-
-/* user ============== */
-.user {
-  width: 460px; height: auto;
 }
 
 /* user_info ================== */
@@ -155,7 +169,8 @@ legend {
 /* ------ */
 .input_data {
   width: 100%; height: 50px; 
-  margin-bottom: 47px; box-sizing: content-box;
+  margin-bottom: 45px; 
+  box-sizing: content-box;
   border-bottom: 2px solid transparent;
 }
 .input_data:last-of-type {margin-bottom: 0;}
@@ -180,32 +195,63 @@ legend {
 
 
 /* user_birth======================== */
-
-.input_data .birth_day:last-of-type { border: none;}
-
-.bir_inner {
-  margin: auto;
-  width: 460px; height: 50px;
-  background-color: #f00;
+.user_birth { width: 460px; height: 50px;}
+.birth_data { float: left; width: 100%; height: 100%; }
+.birth_data > ul { width: 100%; height: 100%;}
+.birth_data > ul > li {
+  float: left; 
+  width: 125px; height: 100%; box-sizing: content-box;
+  margin-right: 10px;
 }
-.bir_yy + .bir_mm { padding-left: 22px;}
-.bir_yy .bir_mm .bir_dd {
-  display: block;
-  width: 120px; height: 50px;
-  margin-left: 22px;
-}   
-
-.birth_day label { border: none;}
-
-.input_info {
-  display: none;
-  width: 100%; height: auto;
-  padding: 0.5rem 1rem; box-sizing: border-box; font-size: 0.875rem;
-  background-color: #fff;
+.birth_data > ul > li:last-of-type { margin-right: 0;}
+.birth_data > ul > li:nth-child(1) { 
+  float: left;
+  width: 175px; height: 100%;
 }
 
-/* select */
-select { 
+/* ---.bir_yy------------------------------ */
+.bir_yy { 
+  float: left;
+  width: 175px; height: 100%; 
+}
+.bir_yy label {
+  float: left;
+  width: 50px; height: 50px;
+  border: 2px solid #7c7c7c; border-right: 0;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+.bir_yy > select { 
+  float: right;
+  width: calc(100% - 50px); height: 100%;
+  padding: 10px; box-sizing: border-box;
+  border: 2px solid #7c7c7c;
+  line-height: 50px; color: #777;
+}
+
+/* ---.bir_mm------------------------------- */
+.bir_mm { width: 125px; height: 100%; background-color: #eee;}
+.bir_mm > select {
+  width: 125px; height: 100%;
+  padding: 10px;
+  border: 2px solid #7c7c7c; box-sizing: border-box;
+  line-height: 50px; color: #777;
+}
+/* ---.bir_dd------------------------------- */
+.bir_dd { width: 125px; height: 100%; background-color: #eee;}
+.bir_dd > input { 
+  width: 125px; height: 100%;
+  padding: 10px;
+  border: 2px solid #7c7c7c; box-sizing: border-box;
+  color: #777;
+}
+
+
+
+
+
+/* ---select-------------------------------- */
+/* select { 
   float: right;
   width: 120px; height: 100%;
   padding: 10px; box-sizing: border-box;
@@ -216,11 +262,11 @@ select {
   float: right;
   width: 120px; height: 100%;
   border: 2px solid #7c7c7c;
-}
+} */
 
 
 /* li에 추가 class 첨부 */
-.write > .input_data { border-bottom: 3px solid #07f;}
+/* .write > .input_data { border-bottom: 3px solid #07f;}
 .write input { border-bottom: 0;}
 .write label { border-bottom: 0;}
 .error > .input_data { border-bottom: 3px solid #f33;}
@@ -236,9 +282,9 @@ select {
 
 [type="submit"] {
   width: 100%; height: 50px;
-  color: #fff;
+  color: #fff; */
   /* box-shadow: inset 0 -0.3rem 0 rgba(0,0,0,0.3); */
-  background-color: #7c7c7c;
+  /* background-color: #7c7c7c;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -252,7 +298,7 @@ select {
   width: 250px; height: 18px;
   padding-top: 25px; box-sizing: border-box;
   font-size: 15px; line-height: 15px;
-}
+} */
 
 
 /* footBox =======================================*/
