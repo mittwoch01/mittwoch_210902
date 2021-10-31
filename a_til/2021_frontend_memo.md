@@ -371,5 +371,74 @@ css
   - gif(움짤)
   - webp(webm 과 동일하게 구글에서 만든 이미지) - IE, safari,photoshop
 
-- [ ] 포토샵
-  - [ ] Jpg 이미지
+- [x] 포토샵
+  - [x] Jpg 이미지
+
+
+
+illustrator
+
+- [x]  세팅
+- [x] 선택자 / 부분선택자
+  - [x] **선택자** : 도형자체를 선택하거나, 그룹을 선택할 때 사용
+  - [x] 직접 선택자 : 도형자체를 선택보다는 일부, 영역을 선택하여 모양을 변형
+- [x] 색: 면색/선색
+  - [x] 색상을 변경하고자 할때는, 면/ 선색이든 바꾸고자하는 색상을 선택하여 앞으로 배치하고 이후에 변경
+  - [x] Cmyk/rgb : 컬러 모두 color picker 에서 변경하는 것이 아니라 color 패널에서 색상을 변경
+- [x] 내용 확인
+  - [x] Ctrl Y : 객체가 만들어져 있는지 엑스레이 확인 (view > outline)
+  - [x] ctrl h
+  - [x] shift ctrl h
+  - [x] Ctrl r
+  - [x] ctrl shift d
+- [x] 도형그리기 : property 패널과 함께 사용
+  - [x] 사각형
+  - [x] 다각형
+  - [x] 별툴 : ctrl 키를 누르면 외경/내경 중 하나를 고정하여 모양을 변경
+- [x] arrange
+  - [x] Shift ctrl ] : 맨 앞으로 배치
+  - [x] shift ctrl [ : 맨 뒤로 배치
+  - [x] 여러요소를 한번에 앞/뒤로 배치해야하는 경우 여러개의 객체를 선택하여 사용
+- [x] align : 정렬
+  - [x] 한쪽정렬
+  - [x] 각 요소별 위치기준에 따라 정렬
+  - [x] 추가옵션 : 각 요소와 요소사이에 간격 정렬
+  - [x] 추가옵션 : align to (selector , key, artboard)
+- [x] pathfinder
+  - [x] Unit : 요소들을 하나로 합치는 것
+  - [x] Divide : 요소들을 분리(자르는 것)
+- [x] ctrl 8 : Compound path <-> shift ctrl alt 8
+  - [x] 분리되어 있는 요소들을 완전한 하나의 도형으로 처리
+- [x] ctrl 7 : clipping mask
+  - [x] 맨앞에는 하나의 요소, 뒤엥서는 여러개의 요소를 담아서 마스트 처리하는 기법 (처리 후 select > 동일하게 > 칠색상 >같은 색상들 선택 > 패스파인더 > 합치기)
+- [ ] scale / offset
+- [ ] share
+- [ ] rotate
+- [ ] reflect
+- [ ] 연결 : ctrl 3
+
+------
+
+Illustrator : 웹용을 위한 이미지 저장방법
+
+- svg 저장
+- svg로 저장시 - 
+  - Compound path
+  - Artboard, 이미지 모두 소수점단위는 제거하고 
+  - save as - use artboard 체크 - 범위를 조금 더 크게 / 체크인하면 이미지만 저장
+
+
+
+
+
+
+
+
+
+
+
+------
+
+**css**
+
+- [ ] responsive web (반응형 웹)
