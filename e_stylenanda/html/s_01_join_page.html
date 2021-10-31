@@ -257,18 +257,44 @@
           <!-- 4 fieldset -->
           <fieldset class="user_phone">
           <legend class="blind">회원의 전화번호를 입력해주세요.</legend>
-          <ul>
-            <!-- 인증번호 -->
-            <li class="blind">
-  
-            </li>
-          </ul>
+
+          <!-- 1 phone -->
+            <div class="phone_data">
+              <label for="userCountry">
+                <i class="fas fa-mobile-alt fa-2x"></i>
+                <span class="blind">국가를 고르세요.</span>
+              </label>
+
+              <select name="user__Country" id="userCountry">
+                <option value="대한민국 +82">대한민국 +82</option>
+                <option value=""></option>
+              </select>
+            </div>
+
+          <!-- 2 phone -->
+            <div class="phone_data">
+              <ul>
+                <li class="get_nummber">
+                  <input type="text" id="getNummber" name="get__Nummber" value="" placeholder="전화번호 입력" required/>
+                  <label class="blind" for="getNummber"></label>
+                </li>
+                <li class="phone_button">
+                  <button type="button">인증번호 받기</button>
+                </li>
+              </ul>
+            </div>
+
+          <!-- 3 phone -->
+            <div class="phone_data">
+              <input type="text" id="phoneInput" name="phone__Input" value="" placeholder="인증번호를 입력하세요." required/>
+              <label class="blind" for="phoneInput"></label>
+            </div>
           </fieldset>
                
           <!-- div -->
           <div class="btn_info">
-          <button type="submit">join</button>
-          <p>&copy 2017. NANDA All rights reserved.</p>
+            <button type="submit">join</button>
+            <p>&copy 2017. NANDA All rights reserved.</p>
           </div>
         
          </form>
