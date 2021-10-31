@@ -220,19 +220,38 @@
           <!-- 3 fieldset -->
           <fieldset class="user_address">
           <legend class="blind">회원의 주소를 입력해주세요.</legend>
-          <ul>
-            <!-- address -->
-            <li class="blind">
-              <div class="input_data">
+          
+            <!-- 1 address -->           
+              <div class="address_data">
                 <h3 class="blind">주소</h3>
-
-                  <input type="text" id="" name="" value=placeholder="">
-                  <label for=""></label>
-                  <a href="#">우편번호</a>      
-
+                  <ul>
+                    <li class="post_address">
+                      <input type="text" id="postAddress" name="post__Address" value=""  required/>
+                      <label for="postAddress">
+                        <i class="fas fa-map-marker-alt fa-2x"></i>
+                      </label>
+                    </li>
+                    <li class="post_button">
+                      <button type="button">우편번호</button>
+                    </li>
+                  </ul>     
+              </div> 
+            <!-- 2 address -->
+              <div class="address_data">
+                <h3 class="blind">기본 주소</h3>
+                <input type="text" id="basicAddress" name="basic__Address" value="" placeholder="기본주소" required/>
+                <label for="basicAddress">
+                  <span class="blind">기본 주소를 입력해주세요.</span>
+                </label>
               </div>
-              </li>
-          </ul>
+            <!-- 3 address -->
+              <div class="address_data">
+                <h3 class="blind">나머지 주소</h3>
+                <input type="text" id="restAdd" name="rest__Add" value="" placeholder="나머지 주소" required/>
+                <label for="restAdd">
+                  <span class="blind">나머지 주소를 입력해주세요.</span>
+                </label>
+              </div>                 
           </fieldset>
          
           <!-- 4 fieldset -->
