@@ -1,0 +1,27 @@
+@charset "UTF-8 ";
+/* c_10_responsive_01.css */
+
+#wrap {
+  width: 960px; height: auto; min-height: 500px; background-color: #ddd;
+}
+
+/* (디자인 기준 : 320px) - (767px 보다 작은 크기)767px */
+@media all and (max-width:767px) {
+
+}
+
+/* 768px - 1439px */
+@media all and (min-width:768px) and (max-width:1439px) {
+
+}
+
+/* 1440px - */
+@media all and (min-width:1440px) {
+
+}
+
+/* 
+media 영역에 해당하는 부분은
+해당 디바이스 크기에 맞는 내용을 처리하기 위한 부분으로
+이외의 공통영역/구형브라우저에서는 @media 영역이 아닌 곳에서 처리
+*/
