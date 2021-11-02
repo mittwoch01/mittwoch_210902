@@ -4,16 +4,16 @@
   
    /* #headBox ----------------------------------- */
   #headBox { height: 60px; }
-  #headBox > .container { padding: 10px 15px; }
-  h1 { float: left; width: 180px; height: 40px;
-    background-color: var(--color-deepGn);
-  }
-  #navigation { float: right; width: 80px; height: auto;}
-    .gnb {float: right; width: 40px; height: 34px; background-color: var(--color-deepY);}
+  #headBox > .container { padding: 10px; }
+  /* h1 { } */
+  #navigation { width: 100px;}
+    .gnb {float: right; width: 40px; height: 34px; }
     .unb {float: left; width: 30px; height: 34px; background-color: var(--color-white);}
 
    /* #headBox ----------------------------------- */
   #viewBox { height: 720px; padding-top: 60px; height: 150vw; min-height: 720px;}
+
+  .indicator p { display: none;}
 
    /* #headBox ----------------------------------- */
   #contentBox {  height: 720px; height: 150vw; min-height: 720px;}
