@@ -50,14 +50,14 @@
     .gnb_list {
       position: fixed; top: 0; right: 0;
       width: 100%; height: 100%;
-      padding: 1rem; padding-top: 3rem;
-      background-color: #171717;
+      padding: 2rem; padding-top: 3rem;
+      background-color: #ffffff;
     }
     .gnb_list ul { width: 100%; height: auto;}
     .gnb_list li { width: 100%; height: auto; margin-bottom: 2rem;
-      font-size: 1.5625rem; font-weight: 600; text-transform: uppercase;
+      font-size: 1.25rem; font-weight: 600; text-transform: uppercase;
     }
-    .gnb_list a { color: var(--color-white); }
+    .gnb_list a { color: var(--color-black); }
 
     /* .gnb에 .action 첨부시 처리 --------------- */
     .action .open_btn { display: none;}
