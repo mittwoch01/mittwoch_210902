@@ -2,6 +2,8 @@
 ------------------------------------------ */
 /* IR: image replace */
 
+.blind_wrap a > span,
+.blind_wrap button > span,
 .blind { 
   display: block; position: absolute; z-index: -1;
   clip:rect(0,0,0,0);
