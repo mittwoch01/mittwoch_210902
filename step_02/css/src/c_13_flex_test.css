@@ -45,6 +45,28 @@ h3 { width: 150px; height: 80px; background-color: #ccc; }
 .header_03 {
   width: 100%; height: auto;
   border: 1px solid #fa0; padding: 10px; box-sizing: border-box;
+  margin-bottom: 20px;
 
   display: flex; justify-content: space-between;
+}
+
+/* ------------------------------ */
+.part { 
+  display: flex; justify-content: space-between;
+  width: 800px; height: 500px; background-color: #eee;
+}
+.part > ul { 
+  display: flex; justify-content: space-around;
+  width: 350px; height: 300px; 
+  border: 1px solid #333;
+}
+.part > ol { 
+  display: flex; justify-content: space-around;
+  width: 350px; height: 300px; 
+  border: 1px solid #f06;
+}
+
+.part li { 
+  width: 80px; height: 200px; 
+  background-image: linear-gradient(#dff, #fd7);
 }
