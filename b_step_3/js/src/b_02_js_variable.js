@@ -32,70 +32,8 @@ console.clear();
 
 // 예약어는 아니지만 후보 : name
 // 예약어 : 변수명으로 사용할 수 없는 용어
-/* 
-abstract
-arguments 
-boolean 
-break 
-byte
-case  
-catch 
-char  
-class*  
-const
-continue  
-debugger  
-default 
-delete  
-do
-double  
-else  
-enum* 
-eval 
-export*
-extends*  
-false 
-final 
-finally 
-float
-for 
-function  
-goto  
-if  
-implements
-import* 
-in  
-instanceof  
-int 
-interface
-let 
-long  
-native  
-new 
-null
-package 
-private 
-protected 
-public  
-return
-short 
-static  
-super*  
-switch  
-synchronized
-this  
-throw 
-throws  
-transient 
-true
-try 
-typeof  
-var 
-void  
-volatile
-while 
-with  
-yield
+/*
+ abstrac, arguments, boolean, break, byt, case , catch, char , class* , cons, continue , debugger , default, delete , d, double , else , enum*, eval, export, extends* , false, final, finally, floa, for, function , goto , if , implement, import*, in , instanceof , int, interfac, let, long , native , new, nul, package, private, protected, public , retur, short, static , super* , switch , synchronize, this , throw, throws , transient, tru, try, typeof , var, void , volatil, while, with , yield
 
 // *는 ES6에서 추가된 예약어
 * 위 예약어 및 키워드 외에도 매우 많으므로 변수명을 설정하는 가장 쉬운방법은
@@ -149,4 +87,8 @@ fn();
 // 5. 변수는 일부 사용되는 용어를 피해서 작성
 // 6. 호이스트 현상이 있으니(변수를 선언하기도 전에 해당 변수가 미정의 되었다!라는 의미) 유의
 // 7. js는 다소 복잡한 구조들로 보이고 혼란이 있을 수 있으니 꼭 들여쓰기, 괄호체크 필수!!!
+
+// + - / * %
+// 숫자/문자/true/false
+// =,==,===,!=,!==,!,!! ...
 
