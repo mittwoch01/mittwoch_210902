@@ -1,0 +1,50 @@
+@charset "UTF-8 ";
+/* c_13_flex_test.css */
+
+#wrap { 
+  width: 900px; height: auto;
+  padding-bottom: 500px;
+}
+h3 { width: 150px; height: 80px; background-color: #ccc; }
+.gnb { float: left; width: 400px; height: 40px; background-color: #acf;}
+.unb { float: right; width: 150px; height: 40px; background-color: #fdd;}
+
+/* .navi > .gnb { float: left;}
+.navi > .unb { float: right;} */
+
+/* ---------------------------------- */
+.header_01 {
+  width: 100%; height: auto;
+  border: 1px solid #333;
+  margin-bottom: 10px; padding: 10px; box-sizing: border-box;
+}
+.header_01 > h3 { float: left; }
+.header_01 > .navi {
+  float: right; width: 600px; height: 50px;
+  background-color: #eee;
+  margin-top: 30px;
+}
+
+/* ----------------------------------- */
+.header_02 {
+  width: 100%; height: auto;
+  border: 1px solid #07f; 
+  margin-bottom: 10px;
+  padding: 10px; box-sizing: border-box;
+  display: flex; justify-content: space-between;
+}
+/* flex는 부모에게 쓰고 자식이 영향을 받는다. */
+
+.header_02 > .navi {
+  width: 600px; height: 50px;
+  background-color: #eee;
+  margin-top: 30px;
+}
+
+/* ------------------------------ */
+.header_03 {
+  width: 100%; height: auto;
+  border: 1px solid #fa0; padding: 10px; box-sizing: border-box;
+
+  display: flex; justify-content: space-between;
+}
