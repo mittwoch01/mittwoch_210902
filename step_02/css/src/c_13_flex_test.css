@@ -70,3 +70,15 @@ h3 { width: 150px; height: 80px; background-color: #ccc; }
   width: 80px; height: 200px; 
   background-image: linear-gradient(#dff, #fd7);
 }
+
+/* 
+* flex : 자식요소들을 정렬하는 것을 편하게 처리할 수 있는 기능이다.
+* flex-direction을 사용하면 가로정렬(row), 세로정렬(culumn)을 할 수 있다.
+* 내부요소들의 시작과, 끝의 정렬을 맞출 수 있는데 시작위치 정렬(flex-start) , 끝정렬(flex-end) , 가운데(center) , 양쪽정렬(space-between) , 공간을 가지는 양쪽정렬(space-around)의 값을 가질 수 있다.
+* 이러한 정렬이 요소의 배치방향에 따른 정렬이면 justify-contenta 속성을 사용
+* 요소의 나열방향이 아닌 방향이면, align-items와 align-content로 사용
+* 내용요소들은 기본적으로 지정영역보다 양이 많을 경우, 넘쳐서 처리된다. 이를 해결하기 위해 
+  flex-wrap을 사용한다. 
+  - 넘치는 것을 허용(한줄로 주주룩 넘치게 배열됨) : nowrap / 
+  - 허용하지 않고 내부에서 처리(밑으로 내려가면서 주루룩 배열됨) : wrap
+*/
