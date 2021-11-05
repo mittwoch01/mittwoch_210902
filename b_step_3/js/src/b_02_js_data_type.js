@@ -8,28 +8,29 @@ var num = 1;
 var num2 = num;
     num = 10;
     // num = 10; / num2 = 1; 인 상태
-    num2 = num;
+    num2 = num; // 둘다 숫자 10;
 
 console.log( num, typeof(num) ); // 위에서 작업한 결과를 보여주는 것
 console.log( num2, typeof(num2) );
 
 // 문자(string) -----------------------------------------------------
 var str = '123';
-var str2 = str; // str2 = 123
-    str = '문자'; //str2 = 123
+var str2 = str; // str2 = '123'
+    str = '문자'; // str = '문자' str2 = '123'
 
 console.log( str , typeof( str ) );
 console.log( str2 , typeof( str2 ) );
 
 var str3 = str2 + 567; // 문자 + 숫자 -> 문자의 나열 -> '123' + 567 -> 123567
 console.log( str3 ); // '123' + 567 = '123'567
+
 var str4 = parseInt( str2 ) + 567; // parseInt : 문자를 정수로 바꾸기 
 console.log( str4 ); // 123 + 567 = 690
 
 console.log( typeof('50.4%') );
 console.log( parseInt('50.4% auto') ); // 첫 글자부터 정수숫자로 변환가능한것 까지만 숫자화 처리
 console.log( parseFloat('50.4%') ); // 첫 글자부터 실수 숫자모두 변환가능한 부분까지 숫자로 처리
-console.log( Number('50.4%') ); // 문자든/숫자든 관계없이 모두 숫자로 변환처리
+console.log( Number('50.4%') ); // 문자든/숫자든 관계없이 모두 숫자로 변환처리 //왜 NaN?
 
 var nan = NaN; // Not a Number
 console.log( nan, typeof(nan) );
@@ -38,7 +39,7 @@ console.log( nan, typeof(nan) );
 var n = 5.54;
 console.log('올림처리', Math.ceil(n) );
 console.log('내림처리', Math.floor(n) );
-console.log('반올림처리', Math.round(n) );
+console.log('반올림처리', Math.round(n) ); // 정수?
 console.log('0~1까지의 난수', parseInt(Math.random() * 64) ); // loto game
 console.log('절댓값', Math.abs(-n) ); 
 
@@ -93,7 +94,7 @@ arr[9] = '웹캠';
 console.log( arr[5], arr[9] );
 console.log( arr[9], arr );
 
-console.clear();
+// console.clear();
 
 var arr2 = arr;
 console.log( arr2 );
@@ -101,7 +102,7 @@ arr[9] = '빼빼로';
 console.log( arr );
 console.log( arr2 );
 
-console.clear();
+// console.clear();
 
 var arT = new Array() // 지어진 공간에 값을 채워넣어라 ~ / 가방이 필요하면 기본형태가 있는 원본 가방을 하나 더 만들어진 것을 구매하여 가방을 하나 얻은 것?
 console.log( arT );
@@ -151,7 +152,7 @@ obj2[2] = '텀블러';
 console.log( obj2 );
 
 
-console.clear();
+// console.clear();
 
 // function ----------------------------------- fn = f
 var fn = function(a){   
@@ -162,10 +163,74 @@ var fn = function(a){
 
 console.log( fn(5) ); // 숫자 5를 담은 수행결과
 
+var fn2 = function(a,b){
+  var c = a + b;
+  return a;
+};
+
+console.log( fn2(1,6) );
+
+var d = 1 + 6;
+console.log( d );
+
+console.log( fn2(4,50) );
+console.log( fn2(4,80) );
+console.log( fn2(44,80) );
+console.log( fn2(41,4) );
+
+// 함수의 기본형태(익명함수) : function(){};
+// 함수 선언식 ~> 이름을 부여한다(기명함수) : function 이름 () {};
+// 대신 할당할수 있는 변수를 선언한다( var 변수명 = ) ~> 이름을 부여하지 않는다(익명함수) : function(){}; => var 변수명 = function(){};
+
+// 함수 선언식
+console.log( fn3() );
+function fn3(){
+  return 'test';
+}
+console.log( fn3() );
 
 
+// 함수 표현식 [V]
+// console.log( fn4() );
+var fn4 = function(){
+  return 'test2';
+};
+console.log( fn4() );
+// ------------------------
+// console.clear();
 
+var x = 'hero'; // 광범위한 범위를 가지고 있다. (전역변수)
+function ckFn() {
+  var y ='op'; // y의 사용범위는 function ckFn() 내부에서만 동작 가능하다. (지역변수)
+  console.log( x, y ); // 콘솔을 사용했으므로, 반환과는 관계없이 무조건 console창에 내용을 작성
+  return y;
+}
 
+// 1.console.log(x); //
+// console.log(x);
+// 2.ckFn(); // 콘솔 결과 : hero op, 반횐된 값 : op
+// ckFn();
+// 3. var rel = ckFn(); console.log( rel );
+// var rel = ckFn(); console.log( rel );
+// 4. console.log(y); // 콘솔 결과 :  error
+
+function ckFn2(){
+  // 함수 내부에서 var 선언을 하느냐 아니냐에 따라 원(전역) 변수의 값이 변경됨 or 안됨으로 구분;
+  // var x = 'who?';
+  x = 'who?';
+  return x;
+}
+console.log(x); // hero
+ckFn2();
+console.log(x); // who?
+
+// --------------------------------------------------
+
+function ff(){}
+ff()
+
+(function(){})() // 즉시실행함수 : 익명함수의 기다림없이 바로 실행
+(function(){}()) // 즉시실행함수 : 익명함수의 기다림없이 바로 실행
 
 
 // 강제로 정의 내리기 위한 형식들 ~ 
