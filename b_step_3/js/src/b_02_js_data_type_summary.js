@@ -83,7 +83,7 @@ console.clear();
 var content = ['오늘도 고생하셨어요!', '힘내세요.', '내일도 또 다시!!'];
 
 var userFn = function(data){
-  var random = Math.random() * 3;
+  var random = Math.random() * 3; //0,1,2
   var int = parseInt(random);
   var plusText = data + '님' + ' ' + content[int];
   return plusText;
@@ -95,14 +95,155 @@ var userFn = function(data){
  // 2. document.querySelector(css와 동일한 선택자);
 
  // 요소 생성 방법
- // document.createElement('div'); // 생성해서 어딘가 넣을 준비
+ // document.createElement('div'); // 생성해서 어딘가 넣을 준비 
  // 선택자.innerHTML = '<div></div>; // 기존 선택자 내부에 존재하는것 삭제
  // 선택자.append(요소) // 선택자 내부 뒤에 요소를 삽입(단, text 형태는 글자로 삽입)
 
- var userRel = userFn('op');
- console.log( userRel );
+  var userRel = userFn('op');
+  console.log( userRel );
+  var wrap = document.getElementById('wrap'); //
+  var p = document.createElement('p'); // 새로운 p 생성
+  p.innerText = userRel;
+  wrap.append(p);
 
- var wrap = document.getElementById('wrap'); //
- var p = document.createElement('p'); // 새로운 p 생성
- p.innerText = userRel;
- wrap.append(p);
+  console.clear();
+
+ // ------------------------------------------------------------
+
+var variable = '이것은 변수입니다.';
+var indicatorNumber = 0;
+// function(){}
+// 함수() : 수행하세요 ~
+document.write( variable );
+
+// var 식 = (n)번째 광고내용이 바뀌는 식;
+// 인디케이터를 클릭하면, 클릭한 인디케이터가 '몇번째'인지 파악하여, 변수 indicatorNumber에 순번을 담아 식(몇번째)를 수행하라
+
+var indiFn = function(){ return 10; }; // 일정한 행동패턴을 저장
+// document.write( indiFn ); // 문자 'function(){ return 10; }'
+document.write( indiFn() ); // 문자 'function(){ return 10; }'
+
+//function(){
+//  return 10;
+// };
+
+// 1. 변수가 무엇이고 변수르 부르는 방법과 그 결과
+var variable = '이것은 변수입니다.';
+// 2. 함수는 무엇이고 변수에 함수를 담아 함수를 부는 방법
+var indiFn = function(){return 10;};
+
+// 변수는 햄버거를 담는 그릇
+// 함수는 햄버거를 만드는 방법
+  var buger = '치즈버거';
+  var buger2 = function(){return '불고기버거';};
+
+
+  var mybuger = '핫스파이시버거'; // 얘가 변수.
+  console.log( mybuger );
+
+  // ---------------------------------
+  var selectBuger = function(재료){  // 얘가 함수.
+    var primary = 재료;
+    var makeBuger = '참깨빵 위에 ' + '순 쇠고기 패티두장 ' + primary + '양상추 ' + '치즈, ' + '피클 ' + '양파까지';
+    return primary + '버거';
+  };
+
+  console.log( selectBuger('1955') );
+
+  // 
+
+  var a = 10;
+  console.log( a ); // 10
+
+  var ar = [5,8,'what','a'];
+  console.log( ar[2] ); // what
+
+  var fnCall = function(){ // function은 실행할 준비를 해라.
+    console.log('game Go!');
+  };  // 함수를 담은 변수 = 함수
+
+  fnCall(); // fnCall를 실행 해라.
+
+  var fnCall2 = function(){
+    return 'this is Game!';  // 
+  };
+
+  // ; 작성위치 : 변수내용 끝, 기능 끝, ()이후 쓸게없다면;
+
+  console.log( fnCall2() );
+
+  // console.log() : (글자 가상화) 실제 구현x - 단순 led표시기에 표시되는 형태(console창에) - 상상
+  // return : (글자가 실제로 구현되는것) 실제 구현o - 기능자체가 돌아가는거  - 실물
+  // console.log()로 결과를 확인하고, 차후에 console.log에 들어가는것을 return에 담는다.
+
+  console.clear();
+  // ---------------------------------------------------------
+  // sum(a, b); // 덧셈 : a + b = 값  v
+  // mul(a, b); // 곱셈 : a * b = 값  v
+  // divide(a, b); // 나눗셈 : a / b = 값
+  // minus(a ,b); // 뺄셈 : a - b = 값 -> 정수값만 도출  v
+  // svg(a, b); // 평균 : a * b / 2 = 값
+  // remainder(a, b); // 나머지 값 : a % b = 값
+  // + - * / %
+
+  //+
+  var sum = function(a, b){   // (양식)
+    var c = a + b;
+    var rel = a + '+' + b + '=' + c;
+    return rel; // (순서)
+    // return `${a} + ${b} = ${c}`;
+  };
+  console.log( sum( 1,3 ) ); // (호출)
+
+  //-
+  var minus = function(a, b){
+    var c = a - b;
+    var rel3 = a + '-' + b + '=' + c;
+    return rel3;
+  };
+  console.log( minus(6,4) );
+
+  //*
+  var mul = function(a, b){
+    var c = a * b;
+    var rel2 = a + 'x' + b + '=' + c; // 문자 + 숫자 = 문자;;;;;;;; NaN = 숫자인데 표기할수 없어 문자가 아니야 숫자야
+    dic.push (rel2); // 배열에 값을 추가해라
+    return rel2; // 값을 반환해라
+  };
+  console.log( mul(1,3), typeof(mul(1,3)) );
+
+  ///
+  var divide = function(a, b){
+    var c = parseInt(a / b); // parseInt(), Math.floor()
+    var rel = a + '/' + b + '=' + c + ' (정수형 몫 값만 계산)';
+    var c2 = a % b;
+    // var rel2 = a + '%' + b + '=' + c;
+    return rel + '나머지 값: ' + c2;
+  };
+  var d = divide(7,5);
+  console.log(d);
+
+  // svg
+  var svg = function(a,b){
+    var c = a * b /2;
+    var rel5 = a + 'x' + b + '/' + 2 + '=' + c;
+    return rel5;
+  };
+  var s = svg(5,6);
+  console.log(s);
+  // -----------------------------------------------
+
+  // var dic = []; // -> 각각 다 집어 넣어라!
+  
+  var arr = [];
+  sum(3, 4);  
+  mul(3, 3);  
+  divide(3, 3); 
+  minus(3 ,3); 
+  svg(3, 3); 
+  remainder(3, 3);
+  console.log( dic );
+
+  
+
+  
