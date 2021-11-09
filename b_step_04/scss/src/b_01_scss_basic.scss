@@ -22,11 +22,15 @@ $border : $line $style $gray;
   outline: $border;
 }
 
+@mixin full($full:100%){
+  width: $full; height: $full;
+  min-width:90px; min-height: 100px;
+}
 #navBox {
   $full:100%;
-  width: $full; height: $full;
+  @include full($full);
 
-  & > ul { width: $full; height: $full;}
+  & > ul { @include full($full);}
   & li { width: $full; height: auto; margin-bottom: 10px;
     &:last-chlid {
       margin-bottom: 0;
