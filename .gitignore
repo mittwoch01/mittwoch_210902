@@ -1,2 +1,12 @@
+# .DS_Store
+**/.DS_Store
 .DS_Store
-**/.DS_Store.DS_Store
+
+# .css.map
+**/*.css.map
+*.css.map
+
+# prepros.config
+**/prepros.config
+prepros.config
+
