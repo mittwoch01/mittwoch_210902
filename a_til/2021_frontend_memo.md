@@ -472,8 +472,11 @@ babel로 처리하면 간단하게 최신 내용을 작성하고, 이를 변환�
 
 **css ~ 전처리기(scss)**
 
-- Vscode - plugin - live server compile, prepress, node.js
-- 변수( $이름), nesting( 선택자{ 선택자 { &:hover{} } } ), list, dictionary, @mixin/@include .....
+- [x] Vscode - plugin - live server compile, prepress, node.js
+- [x] 변수( $이름), nesting( 선택자{ 선택자 { &:hover{} } } )
+- [ ] list, map
+- [ ] dictionary
+- [ ] @mixin/@include , @function, @if
 
 **Javascript**
 
@@ -481,9 +484,12 @@ babel로 처리하면 간단하게 최신 내용을 작성하고, 이를 변환�
   - [x] 사칙연산( + - * / % )  5 % 3  -> 2
   - [x] 증감연산( ++a, a++, --a, b-- ) , 할당연산( += , -=, /=, *=, ... ), ... a+=1; , 비교연산( ||, &&, |, & ), 동치연산( ===, !==)
   - [x] 삼항연산 : 3가지 영역으로 나눠서 처리하는 연산  / (조건) ? 참 : 거짓 ;
-- [ ] 객체 내 객체 (배열 / 함수) [ [], [], [], [] ], [ {}, {}, {}, { a:[], b:[] } ]
-- [ ] 문법 - 조건문(switch, if) 반복문(do-while, for, for-in, for-Each)
+- [x] 객체 내 객체 (배열 / 함수) [ [], [], [], [] ], [ {}, {}, {}, { a:[], b:[] } ]
+- [ ] 문법
+  - [x] 조건문(switch, if) 
+  - [ ] 반복문( while (실무에서는 쓰지않음) , do-while, for, for-in, for-Each )
 - [ ] 베소드, 내장함수
+- [x] 함수 - 클로저, 재귀함수
 
 ------
 
@@ -491,3 +497,6 @@ babel로 처리하면 간단하게 최신 내용을 작성하고, 이를 변환�
 
 - 반응형으로 figma 디자인 완성(모든페이지)
 - 320, 768, 1280, 1440, 1920 (기준수치에서 변경 가능하지만, 다른페이지 모두 설정된 사이즈와 동일한 기준에서 변경)
+
+
+
