@@ -474,9 +474,9 @@ babel로 처리하면 간단하게 최신 내용을 작성하고, 이를 변환�
 
 - [x] Vscode - plugin - live server compile, prepress, node.js
 - [x] 변수( $이름), nesting( 선택자{ 선택자 { &:hover{} } } )
-- [ ] list, map
+- [x] list, map
 - [ ] dictionary
-- [ ] @mixin/@include , @function, @if
+- [x] @mixin/@include , @function, @if
 
 **Javascript**
 
@@ -487,7 +487,7 @@ babel로 처리하면 간단하게 최신 내용을 작성하고, 이를 변환�
 - [x] 객체 내 객체 (배열 / 함수) [ [], [], [], [] ], [ {}, {}, {}, { a:[], b:[] } ]
 - [ ] 문법
   - [x] 조건문(switch, if) 
-  - [ ] 반복문( while (실무에서는 쓰지않음) , do-while, for, for-in, for-Each )
+  - [x] 반복문( while (실무에서는 쓰지않음) , do-while, for, for-in, for-Each )
 - [ ] 베소드, 내장함수
 - [x] 함수 - 클로저, 재귀함수
 
