@@ -14,3 +14,7 @@ p{
   @include unit(width,100);
   height: rem(50);
 }
+
+.div1 {
+  width: vw(40);
+}
