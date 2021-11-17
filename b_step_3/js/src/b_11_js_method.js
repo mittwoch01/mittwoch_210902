@@ -90,7 +90,7 @@ console.log('filterList:', filterList);
 */
 // filtera는 체크된 내용중 return값만 별도로 담아서 처리
 filterList = nList.filter(function(d,i,k){
-  // console.log(d,i,k) : data, index, array 순서
+  // console.log(d,i,k) : data, index, array 순서있음!!
   if(d > 4){
     return d;
   }
