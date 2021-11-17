@@ -32,7 +32,7 @@ console.log(a+'5'); // 105
 console.log(a+'a') // 10a
 console.log(parseInt(a+'a')); // 10 : parseInt는 정수만을 도출한다.
 
-var b = a+' ';
+var b = a+' '; // '10' 문자
 var c = a.toString();
 console.log(b+1,c+1); // 문자, 문자
 
@@ -99,7 +99,7 @@ for(var j=0; j<10; j++){
   console.log('j:', j, '-', arr2[j]);
 }
 
-// [].forEach(function(각 요소 하나씩, 순서){})
+// [배열의 이름].forEach(function(각 요소 하나씩, 순서){})
 arr2.forEach(function(arg, idx){
   console.log(idx,':', arg, arr2[idx]);
 });

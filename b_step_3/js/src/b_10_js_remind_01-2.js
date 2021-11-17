@@ -19,7 +19,7 @@ ar1.push('melon');
 console.log(ar1);
 console.log(cAr);
 
-console.clear();
+// console.clear();
 
 /*
 var obt = {'a':1, 'b':2};
@@ -72,7 +72,7 @@ ob1.fruits.push('melon');
 console.log(cOb1);
 
 //------------------------------------------------
-console.clear();
+//console.clear();
 
 var originAr = { // 문자가 아니다 {}<< 가 있으니까 .. 안에 있는것들만이 문자 // 얘는JSON형식의 배열이 아니다?
   'fruits': ['딸기', '포도', '바나나','오렌지'],
