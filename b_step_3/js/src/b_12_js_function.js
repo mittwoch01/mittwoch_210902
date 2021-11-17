@@ -36,7 +36,7 @@ var adultCheck = '당신은 성인이신가요?';
 //   groupEnd:function(){}
 // }
 
-var arr = ['one', 'two', 'three', 'four', 'five'];
+var arr = ['one', 'two', 'three', 'four', 'five']; 
 var obj = {'a': 'one', 'b': 'two', 'c': 'three'};
 console.log(arr);
 console.table(arr); // 표로 보여준다.
@@ -74,9 +74,9 @@ console.clear();
 // var n = '7'/ 7; // + 만이 NaN 으로 나온다...? '7'숫자가 들어간 문자는 숫자로 치환이 되어서 계산이 된다...?
 
 // js에서 문자형태의 숫자는 기본 연산이 된다.(단, +형태는 연결로 처리)
-var n1 = "7";
+var n1 = '7';
 var n2 = '5';
-var n = n2 - n1; // NaN
+var n = n2 - n1; // NaN or 암묵적변환에 의한 결과
 var nRel = isNaN(n); // var nRel : boolean(t/f)
 console.log( n, nRel );
 
@@ -93,3 +93,83 @@ console.log( space, encodeS );
 var url = 'http://naver.com';
 var encode = encodeURIComponent(url);
 console.log(encode);
+
+// -----------------------------------------------
+// setInterval() -> 일정시간마다 수행
+// clearInterval() -> setInterval을 강제로 완전히 삭제
+// setTimeout() -> 일정시간 뒤에 수행
+
+// console.clear();
+// 
+// console.log('글자 등장.');
+//   setTimeout(function(){
+//   console.log('3초 뒤에 등장.');
+// }, 3000);
+
+// ----------------------------
+// var i = 0;
+// var setI = setInterval(function(){ // 무한대로 수행하는 기능이다.
+//              console.log('i:', i);
+//              // if(i >= 20) ? i = 0 : i++;
+//              i++;
+//               if(i > 20) {
+//                 clearInterval(setI);
+//               } 
+//            }, 5000);
+// 
+// console.clear();
+
+// ----------------------------
+// 생성자함수, instance
+// 생성자함수 - 객체의 생성시에만 호출되어 메모리 생성과 동시에 객체의 데이터를 초기화하는 역할, new라는 단어를 붙여서 객체화 시킴
+// instance - 추상화 개념 또는 클래스 객체, 컴퓨터 프로세스 등과 같은 템플릿이 실제 구현된 것
+
+// Date(); 이거 함수임. 날짜와 관련된 기능임.
+var date = new Date(); // new가 붙으면, 함수형태를 객체로 변환하여 사용할 수 있음 
+
+date.setFullYear(2019);
+var year = date.getFullYear();
+var month = date.getMonth() + 1;
+var day = date.getDate();
+
+console.log( year, month, day );
+// ----------------------------
+// 원시함수 - 
+// console.log(Array);
+// console.log(Object);
+// console.log(Function);
+// console.log();
+// console.log();
+
+var array = [];
+var array2 = new Array();
+// 둘이 같음
+
+
+console.clear();
+// 원시함수 : 애초에 만들어진 기본개념을 담은 함수. 직접사용 불가한 함수를 객체로 변환해 사용해. (첫글자 대문자)
+// Number(), String(), Boolean(), Date(), Function(), Object(), Array()......
+
+// 내장함수 : 기본형태로 사용할 수 있도록 만들어진 함수
+// paresInt(), parseFloat()
+
+// 생성자함수 : 원함수 사용이 불가능한 함수를 객체로 변환하여 사용할 수 있도록 하는 근본이 되는 함수(첫글자 대문자)
+
+// instance : 함수가 객체로 변환되는 것. 생성자함수에 의해 생성된 객체
+
+// 처음부터 생성된 함수는 변경이 불가 : 원시함수/내장함수
+// 변경/생성할 수 있는 함수 : 생성자 함수
+// 유사배열이 존재하는 이유 : li들의 요소를 단순 나열하여 배열로 처리, {객체}로 모은형식
+
+
+
+// 이게모야~~~~~~
+var fn = function(){};
+var Fn2 = function(){
+  this.name = a;
+  this.age = b;
+};
+// Fn2.prototype.middle = 'lee'
+
+var afn = new Fn2('op', 25); // var afn = { name : 'op' , age : 25 };
+console.log( afn.name );
