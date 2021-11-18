@@ -489,8 +489,8 @@ babel로 처리하면 간단하게 최신 내용을 작성하고, 이를 변환�
   - [x] 조건문(switch, if) 
   - [x] 반복문( while (실무에서는 쓰지않음) , do-while, for, for-in, for-Each )
 - [x] 메소드 : 객체 배열을 수행하는 함수( ) - 사용자 지정 형태.메소드( )  
-  - push, **forEach**, shift, pop, unshift, split, **reduce**, reverse, join, splice, sort, **filter**, length
-- [ ] 내장함수 : 이미 만들어진형태.메소드( ) | 만들어져있는함수  - 자바스트립트에 기본적으로 내장되어있는 함수이다. 
+  - *push*, ***forEach***, *shift, pop, unshift*, *split,* ***reduce***, *reverse*, *join,* *splice*, *sort*, **filter**, *length*,*indexOf*,*concat*
+- [x] 내장함수 : 이미 만들어진형태.메소드( ) | 만들어져있는함수  - 자바스트립트에 기본적으로 내장되어있는 함수이다. 
   -  alert( ), prompt( ), comfirm( ), Math.random( ), Math.ceil( ), Math.round( ), console.log( ) ...
 - [x] 함수 - 클로저, 재귀함수
 - [x] 깊은 복사, 얕은 복사
@@ -506,6 +506,52 @@ babel로 처리하면 간단하게 최신 내용을 작성하고, 이를 변환�
 - 320, 768, 1280, 1440, 1920 (기준수치에서 변경 가능하지만, 다른페이지 모두 설정된 사이즈와 동일한 기준에서 변경)
 
   
+
+
+
+------
+
+javascript
+
+// --------------------------------------------------------------------------------------
+
+var id = document.getElementById( 'wrap' );
+
+var class1 = document.getElementsByClassName( 'box' )[ n ];
+
+var class2 = document.getAttribute( 'class', 'box' );
+
+var type = document.getElementsByTagName( 'html' );
+
+
+
+// var nodeSelect = document.querySelector( 'ul' );
+
+// --------------------------------------------------------------------------------------
+
+Var $ = function( ){ 
+
+​		var inser = arguments;
+
+​		switch( insert[0] ){
+
+​			case ' . ' :
+
+​					document.getElementsByClassName( insert );
+
+​					break;
+
+​		  case ' # ' :
+
+​					document.getElementById( insert );
+
+​		 default :
+
+​					document.getElementsByTagName
+
+​	}
+
+}
 
 
 
