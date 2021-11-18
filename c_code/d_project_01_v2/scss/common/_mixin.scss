@@ -20,3 +20,26 @@
 // image
 
 // size
+$mobile : 320px;
+$tablet : 600px;
+$laptop : 1024px;
+$pc : 1440px;
+// // $pcfull : 1920px
+
+// media 쿼리 같은 경우는 rem을 하면 오히려 오류가나서 일단 안함.
+@mixin mobile(){
+  @media all and ( max-width: #{$tablet - 10}){ // 600px - 1(띄워쓰기 해야 계산됨.)
+    @content; 
+  }
+}
+@mixin tablet(){
+  @media all and ( min-width:$tablet ) and ( max-width: #{$laptop - 1}){
+    @content;
+  }
+}
+@mixin laptop(){
+  @media all and ( min-width:$laptop ) and ( max-width: #{$pc - 1}){}
+}
+@mixin pc(){
+  @media all and ( min-width:$pc ) {}
+}
