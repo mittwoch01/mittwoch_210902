@@ -66,8 +66,9 @@ Directory 구성(개발용) :
 |> 📂css:scss 변환처리
 |> 📂scss/ - 📂common/ - 📓_mixin.scss, 📓_variable.scss, 📓reset.scss, 📓common.scss
 		  	   - 📂src/    - main.scss()  
-		  	   - 📂page/   - 📂base/ - _headBox.css, _footBox.css
-		  	               - 📂main/ - _view.scss, _view_smart.scss, _view_tablet.scss
+		  	   - 📂page/   - 📂base/ - _headBox.scss, _footBox.scss
+		  	               - 📂main/ - _slideBox.scss, _newBox.scss, _commercialBox.scss, 
+		  	                           _bestBox.scss, _galleryBox.scss, _sponsorBox.scss
 			 					       - 📂about/
 			 					       - 📂product/
 |> 📂font/ - 🛄userFontFolder, 🛄fontawesome 
