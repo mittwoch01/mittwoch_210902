@@ -494,7 +494,11 @@ babel로 처리하면 간단하게 최신 내용을 작성하고, 이를 변환�
   -  alert( ), prompt( ), comfirm( ), Math.random( ), Math.ceil( ), Math.round( ), console.log( ) ...
 - [x] 함수 - 클로저, 재귀함수
 - [x] 깊은 복사, 얕은 복사
-- [ ] this, prototype
+- [ ] this (window)
+- [ ] prototype(사용하게 위해 기본 편성된 내장 기능)
+- [ ] JSON 처리
+  - [ ] csv > json 변환
+  - [ ] 외부파일을 불러오는 방법( XML)
 
 ------
 
