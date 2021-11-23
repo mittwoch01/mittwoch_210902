@@ -127,18 +127,42 @@ dataList.forEach( loopFn1 );
 var i = 0;
 var len = dataList.length; 
 
-.forEach(function(data){
+var loopFn2 = function(i){
   var makeLi = document.createElement('li');
   var makeA = '<a class="link">sample text</a>';
-  var makeLi.innerHTML = makeA;
+  makeLi.innerHTML = makeA;
   findA = makeLi.querySelector('a');
 
-  var title = dataList[0].title;
-  var link = dataList[0].url;  
+  var title = dataList[i].title;
+  var link = dataList[i].url;  
   findA.href = link;
   findA.innerText = title;
   UlList.append(makeLi); 
 }
+ for(;i<len;i+=1){
+   loopFn2(i);
+ }
+
+ // javascrip로 순수하게 처리하는 것 : 모든 것을 수동으로 처리
+ // jQuery로 처리하는 것 : 반자동처리
+
+(function($){
+  // console.log( $.fn );
+  var ul = $('list');
+  // li 생성/삽입
+
+  // jQuery 에서는 if, for, forEach 등등 문법 그대로 활용이 가능
+  // forEach 대신 수행가능한 메소드는 jQuery에 별도롤 첨부되어 있다.
+  dataList.forEach(function(content, index){
+    // ul.append('<li><a class="link" href="' + content.link + '">' + content.title + '</a></li>');
+    ul.append('<li><a class="link" href=""></a></li>')
+    var list = ul.children('li').eq(index).children('a');    // eq는 제이쿼리 순서
+    list.text(content.title);        // 선택자.innerText = '값';
+    list.text('href', content.link); // 선택자.setAttribute('속성명', '값');
+
+  })
+})(jQuery);
+ 
 
 
 
