@@ -124,6 +124,7 @@ dataList.forEach( loopFn1 );
 // --------------------------------------------------
 // for문을 함수화 처리
 
+/*
 var i = 0;
 var len = dataList.length; 
 
@@ -142,6 +143,7 @@ var loopFn2 = function(i){
  for(;i<len;i+=1){
    loopFn2(i);
  }
+ */ // -------------------------------------
 
  // javascrip로 순수하게 처리하는 것 : 모든 것을 수동으로 처리
  // jQuery로 처리하는 것 : 반자동처리

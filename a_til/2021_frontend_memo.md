@@ -503,7 +503,7 @@ babel로 처리하면 간단하게 최신 내용을 작성하고, 이를 변환�
 
 - [ ] 생성자 함수( 함수를 생성한다는 의미를 가지지만, 원본으로 만들어서 사용할 때는 별도의 복제본을 쓰는 것.)
 
-```
+```javascript
  var Fn = function(site,link){
   this.name = site;
   this.url = link;
@@ -513,20 +513,21 @@ babel로 처리하면 간단하게 최신 내용을 작성하고, 이를 변환�
 
 
 
-- [ ] this (window, 함수에서 window객체, 메소드 안에서 호출한 객체) - 가리키는 지칭
+- [ ] this (window, 함수에서 window객체, 메소드 안에서 호출한 객체) - 무언가를 가리키는 지칭
 
-```
+```javascript
 // this
 // 1. window : 
 console.log( this ); // window
 // 2. window/undefined - 'use strict'; 유무
 // 3. 생성자 함수에서 인스턴스 처리시 (객체로 변환) 그 변수
 // 4. 메소드 처리시
+// 5. 이벤트의 주체
 ```
 
 - [ ] prototype(사용하게 위해 기본 편성된 내장 기능)
 
-```
+```javascript
 var Fn = function(site, link){
 	this.name = site;
 	this.url = link;
@@ -543,20 +544,29 @@ naver.charactor // sally
 // Array.prototype.slice.call();
 ```
 
-- [ ] 객체를 불러와서 활용 1 : 브라우저에 코드를 삽입
+- [x] 객체를 불러와서 활용 1 : 브라우저에 코드를 삽입
   - [ ] 선택자, 생성, 삽입, 덮어씌우기(html, text), style, attribute
   - [ ] 여러개의 내용을 반복 순환하기 위해, for/forEach
   - [ ] 하나의 기능이 여러번 반복하기 위헤 해당 기능들을 하나의 묶음으로 function(){}
   - [ ]  jQuery를 통해 파일을 삽입하는 방법과의 비교(js 는 무엇이든 수동, jQuery는 반자동)
-
 - [ ] JSON 처리
   - [ ] csv > json 변환
   - [ ] 외부파일을 불러오는 방법( XML)
-  - [ ] GET(추출), POST(생성), PUSH(수정), DELETE(삭제)
+  - [ ] GET(추출), POST(생성), PUSH(수정), DELETE(삭제) - crud
 
 ------
 
-- [x] 시험 : 2021.11.15
+# 211124
+
+## 수업내용
+
+- javascript
+  - jQuery 일부 기능 파악 : slide 기능 - 기본(class), animation
+  - 
+
+------
+
+- [x] 시험 : 2021.12.16
 
 
 - 반응형으로 figma 디자인 완성(모든페이지)
