@@ -550,8 +550,8 @@ naver.charactor // sally
   - [ ] 하나의 기능이 여러번 반복하기 위헤 해당 기능들을 하나의 묶음으로 function(){}
   - [ ]  jQuery를 통해 파일을 삽입하는 방법과의 비교(js 는 무엇이든 수동, jQuery는 반자동)
 - [ ] JSON 처리
-  - [ ] csv > json 변환
-  - [ ] 외부파일을 불러오는 방법( XML)
+  - [ ] 외부파일을 불러오는 방법 ( XMLHttpRequest(open, send), fetch/then )
+    - [ ] var http = new XMLHttpRequest(); http.open('GET','fileurl',true ); , http.send(); http.status;
   - [ ] GET(추출), POST(생성), PUSH(수정), DELETE(삭제) - crud
 
 ------
@@ -562,9 +562,27 @@ naver.charactor // sally
 
 - javascript
   - jQuery 일부 기능 파악 : slide 기능 - 기본(class), animation
-  - 
+  - javascript를 이용하여 jQuery기능과 동일하게 처리하는 방법
+- scss
+  - 부트스트랩으로 처리된 반응형 navigation 영역을 직접 코딩
 
 ------
+
+# 211126
+
+## 수업내용
+
+- ##### javascript
+
+  - 호이스트, 함수 - 응용 + 애니메이션 추가, for, if, 객체, 배열
+
+  - [ ] 버튼 클릭시 사라지는 기능의 반대로 나타나는 형태로 제작
+    - [ ] 슬라이드 형태, fade 처리
+
+  - [ ] for / forEach문 정리 - 탭메뉴 사용법
+  - [ ] setTimeout, setInterval, clearInterval, call, apply, bind, css값 가져오기
+
+
 
 - [x] 시험 : 2021.12.16
 
