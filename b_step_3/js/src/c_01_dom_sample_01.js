@@ -9,6 +9,7 @@
 // 1. 버튼을 클릭한다. > 메뉴가 나타난다.               // document.getElementsByClassName('navbarSupportContent');
 // 1-1. 버튼 : .navbar-togger > var navToggleBtn = document.querySelector('.navbar-toggler');
 // 1-2. 클릭 : 선택자 클릭( add Event Listener ) > navToggleBtn.addEventListener('click', function(event){});
+
 // 1-3. 메뉴 : id = "navbarSupportedContent" > document.querySelector('#navbarSupportedContent');
 // 1-4. 나타나기(어떻게?) - html.classname = "action" : class이름 추가(?) + (display:none > block)
 // 1-5. 기능을 수행하기 전 체크 : 
@@ -34,12 +35,12 @@ navToggleBtn.addEventListener('click', function(event){
   }
 });
 
-var box = document.querySelector('.box');
-var boxBtn = box.querySelector('a');
-boxBtn.addEventListener('click', function(event){
-  event.preventDefault(); // 고유기능을 사전에 예방하여 default 처리 해버리는 것
-  console.log( event );
-});
+// var box = document.querySelector('.box');
+// var boxBtn = box.querySelector('a');
+// boxBtn.addEventListener('click', function(event){
+//   event.preventDefault(); // 고유기능을 사전에 예방하여 default 처리 해버리는 것
+//   console.log( event );
+// });
 
 // ----------------------------------------------------------------------
 // jQuery 코드로 작성시
