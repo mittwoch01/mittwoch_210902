@@ -597,47 +597,30 @@ naver.charactor // sally
 
 ------
 
+```
 javascript
 
-// --------------------------------------------------------------------------------------
-
+// -------------------------------------------------------------------------------------
 var id = document.getElementById( 'wrap' );
-
 var class1 = document.getElementsByClassName( 'box' )[ n ];
-
 var class2 = document.getAttribute( 'class', 'box' );
-
 var type = document.getElementsByTagName( 'html' );
-
-
-
 // var nodeSelect = document.querySelector( 'ul' );
 
-// --------------------------------------------------------------------------------------
-
+// -------------------------------------------------------------------------------------
 Var $ = function( ){ 
-
-​		var inser = arguments;
-
-​		switch( insert[0] ){
-
-​			case ' . ' :
-
-​					document.getElementsByClassName( insert );
-
-​					break;
-
-​		  case ' # ' :
-
-​					document.getElementById( insert );
-
-​		 default :
-
-​					document.getElementsByTagName
-
-​	}
-
+	var inser = arguments;
+	switch( insert[0] ){
+		case ' . ' :
+				document.getElementsByClassName( insert );
+				break;
+	  case ' # ' :
+				document.getElementById( insert );
+	  default :
+				document.getElementsByTagName
+  }
 }
+```
 
 
 
