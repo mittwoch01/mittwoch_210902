@@ -35,7 +35,14 @@
       &:nth-of-type(#{$i}) .img_zone{ @include img(nth($cardImg, $i), $size:cover); }
     }
   }// .card
-  @at-root .new_area_modal {
+  @at-root .new_area_modal { display: none;
+
+    // transition-property: ;
+    // transition-timing-function:ease;
+    // transition-duration: ;
+    // transition-delay: ;
+    // transition:all 500ms ease;
+    
     &:before {
       content: ""; display: block;
       position: fixed; top: 0; left: 0; z-index: -1;
@@ -55,7 +62,7 @@
       & > button:focus {background-color: $color_yellow_01;}
       & > button:hover {background-color: $color_yellow_02;}
     }
-  }
+  } // vw는 브라우저의 가로값이 변할 때, vh 브라우저의 세로크기가 변할 때 그 비율이 처리되는..
 }
 @supports (width:clamp(10px, 10%, 300px) ){
   #wrap { width:clamp(600px, 90%, 1400px); }
