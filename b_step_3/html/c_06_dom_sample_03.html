@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/src/c_06_dom_sample_03.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1><a href="./a_content.html">js-sample</a></h1>
+    </header>
+    <article id="contentBox">
+      <h2>탭메뉴 구성하기</h2>
+      <div class="tab_area">
+        <div class="tab_title_inner">
+          <ul>
+            <li class="on"><button type="button">tab title 01</button></li>
+            <li><button type="button">tab title 02</button></li>
+            <li><button type="button">tab title 03</button></li>
+            <li><button type="button">tab title 04</button></li>
+          </ul>
+        </div>
+        <div class="tab_content_inner">
+          <!-- .tab_content_part> -->
+          <div class="tab_content_part on">
+            <h3>tab content title 01</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, aut.</p>
+            <div class="link"><a href="#">자세히보기</a></div>
+          </div>
+          <div class="tab_content_part">
+            <h3>tab content title 02</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut officiis pariatur non id incidunt mollitia perspiciatis debitis? Soluta, sint fugiat?</p>
+            <div class="link"><a href="#">자세히보기</a></div>
+          </div>
+          <div class="tab_content_part">
+            <h3>tab content title 03</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime quae ex sed odio, rem qui. Voluptatem saepe omnis illum debitis, vitae quas quos labore odit corporis in ut. Eum, alias!</p>
+            <div class="link"><a href="#">자세히보기</a></div>
+          </div>
+          <div class="tab_content_part">
+            <h3>tab content title 04</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eos asperiores voluptas optio nobis consequuntur porro iusto, minima quas excepturi accusamus incidunt illo animi. Perspiciatis impedit quae, odit dolorum, explicabo reprehenderit sequi illum, adipisci ipsa corrupti sed voluptatem cum distinctio!</p>
+            <div class="link"><a href="#">자세히보기</a></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <!-- script -->
+  <script src="//code.jquery.com/jquery.js"></script>
+  <script src="https://unpkg.com/jqueryui@1.11.1/jquery-ui.js"></script>
+  <script src="../js/src/c_06_dom_sample_03.js"></script>
+</body>
+</html>
