@@ -575,14 +575,32 @@ naver.charactor // sally
 - ##### javascript
 
   - 호이스트, 함수 - 응용 + 애니메이션 추가, for, if, 객체, 배열
-
-  - [ ] 버튼 클릭시 사라지는 기능의 반대로 나타나는 형태로 제작
+- [ ] 버튼 클릭시 사라지는 기능의 반대로 나타나는 형태로 제작
     - [ ] 슬라이드 형태, fade 처리
-
   - [ ] for / forEach문 정리 - 탭메뉴 사용법
-  - [ ] setTimeout, setInterval, clearInterval, call, apply, bind, css값 가져오기
+- [ ] setTimeout, setInterval, clearInterval, call, apply, bind, css값 가져오기
+
+------
+
+# 211201
+
+## 수업내용
+
+- javascript
+
+  - [ ] setInterval, setTimeout, clearInterval
+  - [ ] transition
+  - [ ] Index 파악 - if, 삼항연산자
+  - [ ] 여러 선택자를 모아서 사용가능하게 - 배열로 처리, forEach사용
+  - [ ] 접근성 고려를 위해 focus, for 문을 시용하여 forEach 대신 이벤트 처리 + 클로저
+
+  수업 내용 :
+
+  - [ ] 탭메뉴 구성, fadeIn, fadeOut 처리에 따른 구성
 
 
+
+------
 
 - [x] 시험 : 2021.12.16
 
