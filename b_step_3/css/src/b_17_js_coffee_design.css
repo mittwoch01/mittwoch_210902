@@ -1,0 +1,61 @@
+/* b_17_js_coffee_design.css */
+#wrap {
+  width: 1400px;
+  height: auto;
+  min-height: 500px;
+  margin: auto;
+  background-color: #ddd;
+}
+
+#headBox {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #eee;
+  background-color: #dfd;
+}
+
+#conBox {
+  width: 100%;
+  height: 2058px;
+}
+.content_head {
+  width: 100%;
+  height: 250px;
+  background-color: #af9c73;
+}
+
+.content_area {
+  width: 100%;
+  height: 1516px;
+  padding: 6.25rem 25rem;
+  background-color: #fff;
+}
+.content_area .tab_title {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 40px;
+  background-color: #dfdd;
+}
+.content_area .tab_title > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.content_area .tab_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 1350px;
+  background-color: #fda;
+}
+.card {
+  width: 940px;
+  height: 200px;
+  background-color: #faa;
+}
+.card .year_event {
+  display: flex;
+}
+
+/*# sourceMappingURL=b_17_js_coffee_design.css.map */

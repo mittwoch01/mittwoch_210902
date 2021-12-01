@@ -36,7 +36,7 @@
   width: 90%;
   min-width: 180px;
   max-width: 300px;
-  height: makeVw(400, 600);
+  height: 66.6666666667vw;
   min-height: 400px;
   max-height: 500px;
   padding: 0.5rem;
