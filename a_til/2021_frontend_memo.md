@@ -624,9 +624,20 @@ naver.charactor // sally
 진행 체크 :
 
 - 지난시간에 했던 내용 보수
+
+  - 추가로 내부에 요소를 담는 메소드 : <br / >
+
+    append, prepend, before, after
+
+  - textContent
+  - next / prev
+  - Focus : a, button 강제로 초점을 맞출 때
+
 - 모달 윈도우 + fadeIn, fadePut
-- 자료 관리/ 저장하는 방법/ branch로 처리하는 방법 - vercle
-- 
+
+- 자료 관리/ 저장하는 방법/ 
+
+- branch로 처리하는 방법 - vercle
 
 ------
 
