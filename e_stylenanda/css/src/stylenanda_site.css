@@ -23,8 +23,8 @@ h2 {text-transform: uppercase;}
   width: 1280px; height: auto; min-height: 500px;
   margin: auto;
 }
-/* header ========================================*/
-#header {
+/* headBox ========================================*/
+#headBox {
   position: fixed; z-index: 1000;
   top: 0; left: 0; right: 0;
   width: 100%;
@@ -114,8 +114,8 @@ h1 {
   color: #171717;
 }
 
-/* new in ===========================================*/
-#new {
+/* newBox ===========================================*/
+#newBox {
   /* padding-top: 75px; */
   height: 768px;
   background-color: #d4d4d4;
@@ -134,8 +134,8 @@ h1 {
 }
 .new_bar li:last-child { margin-right: 0;}
 
-/* bestitem ======================================*/
-#bestitem {
+/* bestitemBox ======================================*/
+#bestitemBox {
   padding: 25px; 
   height: 963px;
   background-color: #fff;
@@ -216,12 +216,12 @@ h1 {
   background-color: #7c7c7c;
 }
 /* nanda made better ===========================================*/
-#nmb {
+#nmbBox {
   position: relative; 
   height: 700px;
   background-color: #ececec;
 }
-#nmb > h2 { 
+#nmbBox > h2 { 
   position: absolute; box-sizing: border-box;
   z-index: 100;
   width: 1280px; height: 138px; 
@@ -275,8 +275,8 @@ h1 {
   background-color: var(--color_sample);
 }
 
-/* store =========================================*/
-#store {
+/* storeBox =========================================*/
+#storeBox {
   padding-top: 112px;
   height: 780px;
   background-color: #fff;
@@ -386,8 +386,8 @@ button {
   color: #141414;
 }
 
-/* followUs ======================================*/
-#followUs {
+/* followStyleBox ======================================*/
+#followStyleBox {
   padding-top: 74px; box-sizing: border-box;
   height: 763px;
   background-color: #ffc59b;

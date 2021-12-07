@@ -1,0 +1,32 @@
+// s_00_site_main.scss
+/* s_00_site_main.css */
+
+@import "../common/variable";
+@import "../common/mixin";
+
+// --------------------------------
+#wrap {
+  width: 100%; min-width: 320px;
+  height: auto; min-height: 568px;
+  background-color: #fff;
+
+  @include mobile { min-width: 320; background-color: #fda;}
+  @include tablet { background-color: #adf; }
+  @include laptop { background-color: #fdf; }
+  @include pc { background-color: #dfd; }
+  @include pcfull { background-color: #ddf; }
+} // #wrap
+
+// --------------------------------
+@import "../page/common/headBox";
+
+@import "../page/main/new";
+@import "../page/main/bestitem";
+@import "../page/main/nmb";
+@import "../page/main/store";
+@import "../page/main/followStyle";
+
+@import "../page/common/footBox";
+// --------------------------------
+
+

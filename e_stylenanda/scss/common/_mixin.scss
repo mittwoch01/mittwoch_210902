@@ -73,7 +73,7 @@ $mobile : 320px;
 $tablet : 600px;
 $laptop : 1024px;
 $pc:1440px;
-// $pcfull : 1920px;
+$pcfull : 1920px;
 
 
 @mixin mobile(){
@@ -101,7 +101,13 @@ $pc:1440px;
 }
 
 @mixin pc(){
-  @media all and (min-width:$pc) {
+  @media all and (min-width:$pc) and (max-width:#{$pcfull - 1}) {
+    @content;
+  }
+}
+
+@mixin pcfull(){
+  @media all and (min-width:$pcfull) {
     @content;
   }
 }
