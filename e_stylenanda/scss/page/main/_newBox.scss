@@ -1,0 +1,56 @@
+// newBox.scss
+/* newBox.css */
+// --------------------------------------------------
+#newBox {
+  width: 100%; height: auto; min-height: 558px;
+  padding-top: $headH;
+  background-color: #ddf;
+
+    @include mobile{padding-top: $headH+px; height: 493px;}
+    @include tablet{padding-top: 110px; height: 895px;}
+    @include laptop{padding-top: $headH2+px; height: 768px;}
+    @include pc{padding-top: $headH2+px; height: 768px;}
+    @include pcfull{padding-top: $headH2+px; height: 768px;}
+  
+// ---------------------------------------------------------------------
+  @at-root .indicator {
+    position: absolute; z-index: 100; top: 710px; left: 50%; 
+    width: 170px; height: 34px; 
+    padding: 4px; box-sizing: border-box;
+    //background-color: $color_gray_03;
+    border-radius: 100px;
+    transform: translate(-50%);
+    @include mobile { display: none; }
+    @include tablet { display: none; }
+    & > .indi_list { 
+      > li { 
+        float: left;
+        width: 26px; height: 26px; 
+        margin-left: 42px;
+        > a { 
+          display: block; 
+          margin: auto;
+          width: 100%; height: 100%; 
+          background-color: $color_white_01;
+          border-radius: 100%;
+        }// a
+      }// li
+      > li:first-child { margin-left: 0;}
+    }// .indi_list
+  }// .indicator
+
+// ---------------------------------------------------------------------
+  @at-root .view_area {
+    width: 100%; height: 100%;
+
+    & > .view_inner_wrap {
+      position:relative; z-index: 10; width: 100%; height: 100%;
+      & > li { position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+        width: 100%; height: auto;
+        @include full($file: 'new_in.png', $size:cover);
+      }// li
+      & > li.action { z-index: 20; display: block;}
+    }// .view_inner_wrap
+  }// .view_area
+
+}// #newBox

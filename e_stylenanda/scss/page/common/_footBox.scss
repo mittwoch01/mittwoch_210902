@@ -1,0 +1,115 @@
+// footBox.scss
+/* footBox.css */
+
+#footBox {
+  width: 100%; height: auto; min-height: 142px;
+  background-color: $color_black_02;
+  color: $color_white_01;
+
+  @include tablet { height: 356px;}
+  @include laptop { height: 327px;}
+  @include pc { height: 327px;}
+  @include pcfull { height: 327px;}
+  // -----------------------------------------------
+  @at-root .foot_inner {
+    display: flex; justify-content: space-between;
+    position: relative; top: 51px; left: 0; right: 0;
+    width: 1200px; height: 226px;
+    margin: auto;
+    // background-color: #dde;
+
+    @include mobile { top: 20px; width: 264px; height: 114px;}
+    @include tablet { top: 30px; width: 702px; height: 306px;}
+    @include laptop { top: 51px; width: 1024px; height: 226px; }
+  // ----------------------------------------------
+    @at-root .foot_head {
+      width: 170px; height: 227px;
+      //background-color: #faa;
+      & > h2 { 
+        width: 90px; height: 67px; 
+        background-image: url($logoBlack); background-size: contain;
+      }// h2
+      & > .foot_unb {
+        width: 166px; height: 138px;
+        margin-top: 22px;
+        // background-color: #daf;
+        @include mobile {}
+        @include tablet {}
+        @include laptop {}
+        & > ul { 
+          text-transform: uppercase;
+          font-size: 25px; font-weight: $font_weight_normal;
+          & > li {
+            margin-bottom: 6px;
+          }// li
+        }// ul
+      }// .foot_unb
+      @include mobile { display: none;}
+      @include tablet { display: none;}
+      @include laptop { width: 784px; height: 226px; }
+    }// .foot_head
+  // ----------------------------------------------------- 
+    @at-root .con_info {
+      width: 439px; height: 196px;
+      @include mobile { width: 263px; height: 113px;}
+      // background-color: #fa0;
+      & > .unb_box { 
+        width: 439px; height: 60px;
+        margin-bottom: 50px; 
+        //background-color: #fda;
+        & > .foot_lang { 
+          width: 156px; height: 59px;
+          font-size: 25px;
+          background-color: $color_black_02;
+          border-bottom: 2px solid $color_white_01;
+          color: $color_white_01;
+        }
+        @at-root .foot_bar { 
+          float: right;
+          width: 106px; height: 50px;
+          //background-color: #333;
+            & > button { 
+              float: left;
+              margin-right: 6px;
+              width: 50px; height: 50px;
+              //background-color: #fff;
+              color: #fff;
+              &:last-child { margin-right: 0;}
+            }// li
+        }// .foot_bar
+        @include mobile { display: none;}
+        @include tablet { display: none;}
+      }// .unb_box
+
+      & > address { 
+        width: 439px; height: 86px;
+        // background-color: #555;
+        font-size: 16px; font-weight: $font_weight_normal;
+        @include mobile { display: none;}
+        @include tablet { display: none;}
+      }
+      & > .ad2 {
+        width: 702px; height: 306px;
+        font-size: 25px; font-weight: $font_weight_normal;
+        //background-color: #daf;
+        @include mobile { 
+          width: 258px; height: 96px; 
+          font-size: 10px; 
+        }
+        @include laptop {display: none; }
+        @include pc {display: none;}
+        @include pcfull {display: none;}
+        & > p { 
+          margin-bottom: 13px;
+          &:last-child { margin-bottom: 0;}
+          @include mobile { margin-bottom: 3px; }
+        }// p
+
+      }// .ad2
+  // -----------------------------------------------------
+      
+    }// .con_info
+
+  }// .foot_inner
+
+}// #footBox

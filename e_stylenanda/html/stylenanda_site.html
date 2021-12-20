@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
   <link rel="stylesheet" href="../css/common/variable.css">
+  <link rel="stylesheet" href="../css/common/reset.css">
 
   <!-- <link rel="stylesheet" href="../css/src/stylenanda_site.css"> -->
   <link rel="stylesheet" href="../css/src/s_00_site_main.css">
@@ -20,26 +20,66 @@
   <script src="../js/common/modernizr-custom.js"></script>
 
   <title>stylenanda_site</title>
-  <link rel="shortcut icon" href="../favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="../favicon.png">
   <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
 </head>
 <body>
   <!-- layout -->
   <div id="wrap">
     <!-- headBox -->
-     <header class="wrapper" id="headBox">
-       <div class="head_wrapper">
-         <h1>
-           <a href="http://127.0.0.1:5500/html/stylenanda_site.html">
-              <img src="#" alt="stylenanda">
-           </a>
-         </h1>
+     <header id="headBox">
+       <div class="container head_area clearfix">
+         <h1><a href="./stylenanda_site.html"><span class="blind">site name</span></a></h1>
 
-         <nav class="navigation">
+         <nav class="navi_area">
            <h2 class="blind">헤더 네비게이션</h2>
-           <ul class="clearfix">
-
+           <!-- <ul class="clearfix"> -->
+           <div class="nav_btn">
+             <button type="button">
+               <span class="blind">menu button</span>
+             </button>
+             <div class="language blind">
+               <ul>
+                <li><span>한국어</span></li>
+                <li><span>english</span></li>
+                <li><span>중국어</span></li>
+                <li><span>일본어</span></li>
+               </ul>
+             </div>
+           </div>
+           <div class="navi_inner">
+             <h2 class="blind">navi 영역</h2>
+             <ul class="navi_part">
+              <li>
+                <div class="nav_title"><a href="#">new in</a></div>
+               </li>
+               <li>
+                <div class="nav_title"><a href="#">3ce</a></div> 
+               </li>
+               <li>
+                <div class="nav_title"><a href="#">nandamade</a></div> 
+               </li>
+               <li>
+                <div class="nav_title"><a href="#">stylenanda</a></div> 
+               </li>
+               <li>
+                <div class="nav_title"><a href="#">about</a></div> 
+               </li>
+               
+               <li>
+                <div class="navi_sns">
+                  <ul>
+                    <li><a href="#"><span class="blind">instagram</span></a></li>
+                    <li><a href="#"><span class="blind">face book</span></a></li>
+                    <li><a href="#"><span class="blind">kakao talk</span></a></li>
+                    <li><a href="#"><span class="blind">youtube</span></a></li>
+                  </ul>
+                 </div>
+               </li>
+              </ul>
+           </div>
+           
+           <!-- .pc_menu -->
+           <ul class="pc_menu">
              <li>
               <div class="nav_title"><a href="#">best item</a></div> 
                 <h3 class="blind">best item</h3>
@@ -94,8 +134,9 @@
             </li>
 
            </ul>
+
          </nav>
-         <div class="user_page">
+         <div class="user_page blind">
           <ul>
             <li><a href="#">장바구니</a></li>
             <li><a href="#"></a></li>
@@ -106,22 +147,36 @@
 
      <!-- new in -->
      <section class="wrapper" id="newBox">
-       <h2 class="blind">newin</h2>
-       <div class="new_bar">
-         <ul>
-           <li>1</li>
-           <li>2</li>
-           <li>3</li>
+       <h2 class="blind">newin 광고이미지 변환</h2>
+       
+       <!-- .indicator -->
+       <div class="indicator">
+         <ul class="indi_list blind_wrap">
+          <li class="action">
+            <a href="#"><span>광고 n번째 내용 요약 설명</span></a>
+          </li>
+          <li><a href="#"><span>광고 n번째 내용 요약 설명</span></a></li>
+          <li><a href="#"><span>광고 n번째 내용 요약 설명</span></a></li>
          </ul>
        </div>
+
+       <!-- .view_area -->
+       <div class="view_area">
+         <ul class="view_inner_wrap">
+           <li class="action"><span class="blind">해당 광고 n번째</span></li>
+           <li><span class="blind">해당 광고 n번째</span></li>
+           <li><span class="blind">해당 광고 n번째</span></li>
+         </ul>
+       </div>
+
      </section>
 
      <!-- bestitem -->
      <section class="wrapper" id="bestitemBox">
-       <div class="best_inner">
-        <div class="title_box">
+       <div class="best_area">
+        <div class="best_inner">
           <h2>best item</h2>
-          <nav class="title_add">
+          <nav class="best_title">
             <ul>
               <li><button type="button">stylenanda</button></li>
               <li><button type="button">nandamade</button></li>
@@ -129,12 +184,33 @@
               <li><button type="button">3ce</button></li>
             </ul>
           </nav>
+    <!-- moblie용 best title -->
+          <div class="mobile_title">
+            <ul>
+              <li>
+                <button type="button">
+                  <span class="blind">3ce</span> 
+                </button>
+              </li>
+              <li>
+                <button type="button">
+                <span class="blind">nandamade</span> 
+              </button>
+              </li>
+              <li>
+                <button type="button">
+                <span class="blind">stylenanda</span> 
+              </button>
+              </li>
+            </ul>
+          </div>
+         
         </div>
         <div class="best_img">
           <ul>
-            <li>stylenanda</li>
-            <li>nandamade</li>
-            <li>kkxx</li>
+            <li><span class="blind">stylenanda</span></li>
+            <li><span class="blind">nandamade</span></li>
+            <li><span class="blind">kkxx</span></li>
             <li hidden>3ce</li>
           </ul>
         </div>
@@ -147,90 +223,153 @@
        <div class="content_box">
           <figure id="nmb_img">
             <figcaption class="blind">nmb_img</figcaption>
-            <img src="#" alt="nmb_01">
+            <img src="#" alt="">
           </figure>
           <div class="nmb_content">
-            <p>
-              <strong>Lorem ipsum dolor sit amet consectetur</strong>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis reprehenderit dicta voluptas assumenda, molestiae, consectetur alias, veniam quaerat nobis laboriosam minima fuga sunt aperiam quas tempore dolore esse. Aliquid provident recusandae tenetur similique omnis nobis doloribus, architecto odio nostrum officiis itaque culpa deserunt. Iste possimus nulla nostrum nam quas dicta qui, veritatis optio illum voluptatibus ipsum quibusdam. Vel, beatae??
-              </span>
-                <a href="#" class="button-arrow">브랜드 스토리
-
-                </a>
-            </p>
+            <dl>
+              <dt>Loremipsumdolosit</dt>
+              <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor Lorem ipsum dolor. 
+              <br >
+              <br >            
+              sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
+              </dd>
+              <dd><a href="#">브랜드 스토리</a></dd>
+            </dl>
           </div>
+          
       </div>
 
      </section>
 
      <!-- store -->
      <section class="wrapper" id="storeBox">
-       <div class="store_inner">
-        <div class="store_title">
+       <div class="store_area">
+        <div class="store_title_part">
           <h2>store</h2>
           <p>
             가장 가까운
-            <span class="en">STYLENANDA</span>
+            <span class="en">stylenanda</span>
             매장을 검색해보세요!
           </p>
         </div>
 
-        <div class="map_box">
+        <div class="map_box_part">
           <!-- <div class="location_box"> -->
-              <div class="location_inner">
-                <div class="bar">
-                  <ul>
-                    <li><img src="#" alt="search_img"></li>
-                    <li><input type="search" id="store_loacation" size="60" value="강남본점"></li>
-                    <!-- <li>강남본점</li> -->
-                  </ul>
-                </div>
-               
-                <a href="#" class="button-arrow">자세히 보기</a>
-                  <div class="current_box">
-                    <div>
-                      <img src="#" alt="current_img">
-                      <button type="button" class="button_current">현재 위치 재설정</button>
-                    </div>
-                  </div>
+          <div class="location_content">
+            
+            <div class="search_detail">
+              <ul>
+                <li><span class="blind">search_icon</span></li>
+                <li>
+                  <input type="search" id="store_loacation" size="30" value="강남본점">
+                </li>
+              </ul>
+              
+              <div class="arrow">
+                <ul>
+                  <li><span>자세히 보기</span></li>
+                  <li>
+                    <a href="#"></a>
+                  </li>
+                </ul>
               </div>
+            </div> <!-- .search_detail --> 
+
+            <div class="current_detail">         
+                <ul>
+                  <li><span class="blind">current_icon</span></li>
+                  <li>
+                    <button type="button" class="button_current">현재 위치 재설정</button>
+                  </li>
+                </ul>                
+            </div> <!-- .current_detail -->      
           
           <div class="location_address">
-            <em>강남점</em>
-            <p>서울특별시 강남구 Lorem ipsum dolor sit amet consectetur, <br />
-              adipisicing elit. <br />
-              Animi, temporibus aliquam quod reiciendis omnis corporis.
-            </p>
-          </div>    
+            <dl>
+              <dt>강남점</dt>
+              <dd>
+              서울특별시 강남구 압구정로 8길 22 
+              <br > 
+              (신사동 533-2)
+              <br >
+              open : 11:00 - 21:00
+              <br >  
+              T 02 - 544 - 7724
+              </dd>
+            </dl>
+          </div>  
+          </div> <!-- .location_content--> 
 
         </div>
       </div>
      </section>
 
      <!-- followUs -->
-     <article class="wrapper" id="followStyleBox">
-      <div class="follow_inner">
-        <div class="follow_title">
-          <h2>follow style</h2> 
+     <article class="wrapper" id="followUsBox">
+      <div class="follow_area">
+
+        <div class="follow_title_part">
+          <h2>follow us</h2> 
           <ul>
             <li><a href="#">@stylenanda_korea</a></li>
           </ul>
-        </div>       
-        <figure id="follow_Img_Box">
+        </div>    
+           
+        <figure id="follow_Img_part">
           <figcaption class="blind">follow us</figcaption>
           <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
+            <li>
+              <a href="#">
+              <span class="blind">1</span>
+            </a>
+          </li>
+            <li>
+              <a href="#">
+              <span class="blind">2</span>
+            </a>
+          </li>
+            <li>
+              <a href="#">
+              <span class="blind">3</span>
+            </a>
+          </li>
+            <li>
+              <a href="#">
+              <span class="blind">4</span>
+            </a>
+          </li>
+            <li>
+              <a href="#">
+              <span class="blind">5</span>
+            </a>
+          </li>
+            <li>
+              <a href="#">
+              <span class="blind">6</span>
+            </a>
+          </li>
+            <li>
+              <a href="#">
+              <span class="blind">7</span>
+            </a>
+          </li>
+            <li>
+              <a href="#">
+              <span class="blind">8</span>
+            </a>
+          </li>
+            <li>
+              <a href="#">
+              <span class="blind">9</span>
+            </a>
+          </li>
+            <li><a href="#">
+              <span class="blind">10</span
+                
+                ></a></li>
           </ul>
         </figure>
+
       </div>
      </article>
 
@@ -240,14 +379,13 @@
 
         <!-- foot_head -->
         <div class="foot_head">
-          <h2>logo
-          </h2>
+          <h2><span class="blind">logo</span></h2>
           <nav class="foot_unb">
             <ul>
-              <li><a href="#">3CE</a></li>
-              <li><a href="#">NANDAMADE</a></li>
-              <li><a href="#">STYLENANDA</a></li>
-              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">3ce</a></li>
+              <li><a href="#">nandamade</a></li>
+              <li><a href="#">stylenanda</a></li>
+              <li><a href="#">about</a></li>
             </ul>
           </nav>
         </div>
@@ -262,22 +400,12 @@
               <option value="/ja">JA</option>
             </select>
             <div class="foot_bar">
-              <ul>
-                <li>
-                  <button type="button">
-                    <a href="#">
-                      <i class="fab fa-instagram"></i>
-                    </a>
-                  </button>          
-                </li>
-                <li>
-                  <button type="button">
-                    <a href="#">
-                      <i class="fab fa-facebook"></i>
-                    </a>
-                  </button>
-                </li>
-              </ul>
+              <button type="button">
+                  <i class="fab fa-instagram fa-3x"></i>  
+              </button>          
+              <button type="button">
+                  <i class="fab fa-facebook fa-3x"></i>
+              </button>
             </div>
           </div>
           <address>        
@@ -288,6 +416,15 @@
               Copyright &copy; 2017. NANDA All rights reserved. 
             </p>
           </address>
+          <div class="ad2">
+            <p>회사명. ㈜난다  서울특별시 마포구 잔다리로 32 서문빌딩 2~6F</p>     
+            <p>통신판매업신고 :  2014-서울마포-0835</p>
+            <p>대표이사 : 신지은 | 사업자등록번호 130-86-24632</p>
+            <p>0502-707-8888 </p>
+            <p>nanda@stylenanda.co.kr</p>
+            <p>ⓒ 2017. NANDA All rights reserved.</p>
+          </div>
+
         </div>
           
        </div>
