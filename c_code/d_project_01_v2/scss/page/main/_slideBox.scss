@@ -7,7 +7,7 @@
 
 
 @include mobile{padding-top: $headH;}
-@include tablet{padding-top: $headH;} height: 450px;
+@include tablet{padding-top: $headH; height: 450px;}
 @include laptop{padding-top: $headH; height: 600px;}
 @include pc{padding-top: $headH; height: 60px;}
 
