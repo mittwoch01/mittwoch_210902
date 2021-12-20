@@ -1,9 +1,10 @@
-/* Error: Can't find stylesheet to import.
+/* Error: Undefined mixin.
  *    ,
- * 13 |   @import "../dist/_headBox.";
- *    |           ^^^^^^^^^^^^^^^^^^^
+ * 17 |   @include size();
+ *    |   ^^^^^^^^^^^^^^^
  *    '
- *   scss/src/menu.scss 13:11  root stylesheet */
+ *   scss/dist/_contentBox.scss 17:3  @import
+ *   scss/src/menu.scss 14:11         root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 13 \2502    @import \"../dist/_headBox.\";\a    \2502            ^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss/src/menu.scss 13:11  root stylesheet";
+  content: "Error: Undefined mixin.\a    \2577 \a 17 \2502    @include size();\a    \2502    ^^^^^^^^^^^^^^^\a    \2575 \a   scss/dist/_contentBox.scss 17:3  @import\a   scss/src/menu.scss 14:11         root stylesheet";
 }
