@@ -1,0 +1,1 @@
+let i=0;console.log(i);const arr=[];arr.push(1),arr.push(4,"a"),arr.push(9),console.log(arr);const option=!0;console.log(option),option=!1,console.log(option);const fnTest=function(o,n){return o*n};fnTest(4,5);
