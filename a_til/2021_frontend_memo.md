@@ -639,6 +639,25 @@ naver.charactor // sally
 
 - branch로 처리하는 방법 - vercle
 
+
+
+# 211209
+
+## 수업내용
+
+- js
+
+  진행 체크 : 
+
+  - [ ] package.json - script, devDependencies, dependencies, module(부품)
+  - [ ] babel - es6 이상 버전의 파일을 공통으로 사용가능하게 만드는 모듈
+    - [ ] babel.config.js, babel.config.json, babelrc
+  - [ ] ES6
+    - [ ] 변수 선언 : ```const``` - 상수 : 선언과 동시에 그 값, 형태를 취해야 한다. ```let``` - 변수 : 선언 후 값을 기입 / 변경 가능, 변수가 사용되는 범위
+    - [ ] 비구조 할당
+    - [ ] 함수 :  표현식, 선언식, 즉시실행함수, 화살표함수
+    - [ ] ajax :``` XMLHttpRequest```, ```fetch().then()```
+
 ------
 
 ## **시험 : 2021.12.16**
