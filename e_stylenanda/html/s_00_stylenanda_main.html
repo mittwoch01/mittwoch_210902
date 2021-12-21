@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../css/common/reset.css">
 
   <!-- <link rel="stylesheet" href="../css/src/stylenanda_site.css"> -->
-  <link rel="stylesheet" href="../css/src/s_00_site_main.css">
+  <link rel="stylesheet" href="../css/src/s_00_stylenanda_main.css">
 
   <script src="../js/common/modernizr-custom.js"></script>
 
@@ -258,9 +258,10 @@
           <div class="location_content">
             
             <div class="search_detail">
-              <ul>
+              <!-- <ul>
                 <li><span class="blind">search_icon</span></li>
                 <li>
+                  
                   <input type="search" id="store_loacation" size="30" value="강남본점">
                 </li>
               </ul>
@@ -272,14 +273,36 @@
                     <a href="#"></a>
                   </li>
                 </ul>
-              </div>
+              </div> -->
+
+              <form action="#" method="GET">
+                <fieldset>
+                  <legend class="blind">매장 검색</legend>
+
+                  <div class="store_search">
+                    <label for="store_loacation">
+                      <i class="location"></i>
+                      <span class="blind">검색할 매장을 입력하세요.</span>
+                    </label>
+                    <input type="search" id="store_loacation" value="" placeholder="강남본점" required/>
+                  </div>
+
+                  <div class="arrow">
+                    <button type="button">
+                      <span>자세히 보기</span>
+                      <i class="right_arrow"></i>
+                    </button>
+                  </div>
+
+                </fieldset>
+              </form>
             </div> <!-- .search_detail --> 
 
             <div class="current_detail">         
                 <ul>
                   <li><span class="blind">current_icon</span></li>
                   <li>
-                    <button type="button" class="button_current">현재 위치 재설정</button>
+                    <button type="button" class="button_current"><span>현재 위치 재설정</span></button>
                   </li>
                 </ul>                
             </div> <!-- .current_detail -->      

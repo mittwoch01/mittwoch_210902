@@ -56,87 +56,73 @@ $current: #{$imgPath}+'current_Location.png';
     @at-root .map_box_part {
       width: 720px; height: 306px;
       margin: auto;
-      //background-color: #777;
+      // background-color: #777;
       @include mobile { width: 240px; height: 146px;}
       @include tablet { width: 528px; height: 316px;}
-
+// -----------------------------------------------------------------------
       @at-root .location_content {
         width: 720px; height: 112px;
-        //background-color: #ddf;
+        // background-color: #ddf;
         @include tablet { width: 530px;}
 
         @at-root .search_detail {
           display: flex; justify-content: space-between;
-          width: 100%; height: 74px;
-          //background-color: #faa;
+          width: 100%; height: auto;
+          // background-color: #ffa;
 
-          @include mobile {
-            width: 240px; height: auto;
-          }
-          @include tablet {
-            width: 530px; height: auto;
-          }
-          & > ul {
-            display: flex;
-            width: 480px; height: 74px;
-            background-color: #fff;
-            border-bottom: 2px solid $color_black_02;
-            @include tablet {
-              width: 290px;
-            }
-            & > li:nth-child(1) { 
-              width: 70px; height: 70px;
-              //background-color: #ddd;
-              background-image: url($location);
-              //@include full('location.png', $size:contain); 
-              @include mobile { 
-                width: 44px; height: 44px;
-                margin-top: 30px;
-                $size:cover;
-              }
-            }
-            & > li:nth-child(2) {
-              width: 70px; height: 36px;
-              //background-color: #daa;
-              font-size: 25px; font-weight: $font_weight_bold;
-              & > input {
-                margin-top: 35px;
-              }// input
-            }// li:nth-child(2) 
-          }// ul
-          @at-root .arrow {
-            position: relative; top: 14px;
-            width: 230px; height: 60px;
-            border-radius: 100px;
-            border: 2px solid $color_black_02;
-            @include mobile {
-              position: absolute; top: 258px;
-              width: 176px; height: 48px;
-            }
-            
-            & > ul {
-              width: 100%; height: auto;
-              & > li:nth-child(1) {
-                & > span {
-                  position: absolute; top: 23%; left: 20px;
-                  font-size: 25px; font-weight: $font_weight_bold;
-                  @include mobile { font-size: 17px;}
-                }
-              }// li:nth-child(1)
-              & > li:nth-child(2) {
-                position: absolute; top: -2px; left: 168px;
-                width: 60px; height: 60px;
-                //background-color: #fff;
-                background-image: url($arrow);
-                @include mobile { 
-                  width: 46px; height: 46px;
-                  top: -8px; left: 120px;
-                }
-              }
-            }
-            @include tablet { width: 230px; height: 60px;}
-            
-          }//. arrow
+          & > form { width: 100%; height: 74px; 
+            & > fieldset { 
+              display: flex; justify-content: space-between;
+              width: 100%; height: 100%;
+            // -------------------------------------------------
+              @at-root .store_search {
+                display: flex; justify-content: space-between;
+                width: 480px; height: 100%;
+                // background-color: #fa0;
+                border-bottom: 2px solid $color_black_02;
+
+                & > label { 
+                  display: flex; justify-content: space-between;
+                  width: 74px; height: 100%;
+                  & > .location { 
+                    width: 74px; height: 74px; 
+                    // background-color: #dfa;
+                    background-image: url($location);
+                  }
+                }// label
+                & > input { 
+                  width: 396px; height: 36px; 
+                  margin-top: 36px;
+                  background-color: #fff;     
+                  font-size: 25px;     
+                }// input
+
+              }// .store_search
+              @at-root .arrow {
+                width: 230px; height: 60px;
+                margin-top: 14px;
+                border: 2px solid $color_black_02;
+                border-radius: 50px;
+                & > button { 
+                  display: flex; justify-content: space-between;
+                  width: 100%; height: 100%;
+                  & > span { 
+                    width: 170px; height: 100%;
+                    margin-top: 15px;
+                    font-size: 25px; line-height: 25px;
+                    font-weight: $font_weight_bold;
+                  }// span
+                  & > .right_arrow { 
+                    width: 60px; height: 100%;
+                    // background-color: #daa;
+                    background-image: url($arrow);
+                  }
+                }// button
+              }// .arrow
+
+            }// fieldset
+          }// form
+          
         }// .search_detail
 
       // ------------------------------------------------------  
@@ -171,7 +157,7 @@ $current: #{$imgPath}+'current_Location.png';
     // ---------------------------------------------------------
       @at-root .location_address {
         width: 300px; height: 140px;
-        margin-top: 54px;
+        margin-top: 66px;
         // background-color: #daf;
         & > dl{
           width: 100%; height: auto;
