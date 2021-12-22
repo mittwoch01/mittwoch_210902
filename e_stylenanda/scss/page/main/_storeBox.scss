@@ -18,7 +18,7 @@ $current: #{$imgPath}+'current_Location.png';
 
   // ------------------------------------------
   @at-root .store_area {
-    position: relative; top: 112px; left: 0; right: 0;
+    //position: relative; top: 112px; left: 0; right: 0;
     width: 1200px; height: 560px;
     margin: auto;
     //background-color: #555;
@@ -56,48 +56,66 @@ $current: #{$imgPath}+'current_Location.png';
     @at-root .map_box_part {
       width: 720px; height: 306px;
       margin: auto;
-      // background-color: #777;
-      @include mobile { width: 240px; height: 146px;}
-      @include tablet { width: 528px; height: 316px;}
+       background-color: #777;
+      @include mobile { width: 240px; height: 146px;} // 320
+      @include tablet { width: 528px; height: 316px;} // 768
 // -----------------------------------------------------------------------
       @at-root .location_content {
         width: 720px; height: 112px;
-        // background-color: #ddf;
+         background-color: #ddf;
+        @include mobile { width: 240px;}
         @include tablet { width: 530px;}
 
         @at-root .search_detail {
           display: flex; justify-content: space-between;
           width: 100%; height: auto;
           // background-color: #ffa;
+          @include mobile { width: 240px; }
 
           & > form { width: 100%; height: 74px; 
             & > fieldset { 
               display: flex; justify-content: space-between;
               width: 100%; height: 100%;
+              
             // -------------------------------------------------
               @at-root .store_search {
                 display: flex; justify-content: space-between;
                 width: 480px; height: 100%;
                 // background-color: #fa0;
                 border-bottom: 2px solid $color_black_02;
+                @include mobile { width: 240px; height: 44px;}
+                @include tablet {
+                  width: 290px;
+                }
 
                 & > label { 
                   display: flex; justify-content: space-between;
                   width: 74px; height: 100%;
                   & > .location { 
                     width: 74px; height: 74px; 
-                    // background-color: #dfa;
+                    background-color: #dfa;
                     background-image: url($location);
+                    background-size: contain;
+                    @include mobile { 
+                      width: 40px; height: 40px;   
+                    }
                   }
                 }// label
                 & > input { 
                   width: 396px; height: 36px; 
                   margin-top: 36px;
-                  background-color: #fff;     
-                  font-size: 25px;     
+                  background-color: #dff;     
+                  font-size: 25px;  
+                  @include mobile { width: 180px; height: 22px; margin-top:18px;}
+                  @include tablet { width: 210px; }
                 }// input
 
+                @include mobile {
+                  width: 44px; height: 146px;
+                }
+
               }// .store_search
+
               @at-root .arrow {
                 width: 230px; height: 60px;
                 margin-top: 14px;
@@ -118,6 +136,13 @@ $current: #{$imgPath}+'current_Location.png';
                     background-image: url($arrow);
                   }
                 }// button
+                @include mobile {
+                  width: 176px; height: 42px;
+                  // & > button {
+                  //   
+                  // }
+                }
+
               }// .arrow
 
             }// fieldset
@@ -127,11 +152,12 @@ $current: #{$imgPath}+'current_Location.png';
 
       // ------------------------------------------------------  
         @at-root .current_detail {
-          display: flex;
+          display: flex; justify-content: space-between;
           width: 170px; height: 26px;
           & > ul {
             display: flex; justify-content: space-between;
-            & > li:nth-child(1) {
+
+            & > li {
               width: 26px; height: 26px;
               margin: 7px;
               //background-color: #ffa;
@@ -139,19 +165,40 @@ $current: #{$imgPath}+'current_Location.png';
               color: $color_gray_03;
               //@include full('current_Location.png', $size:contain);       
               @include mobile { width: 15px; height: 15px;}
-              @include tablet { width: 17px; height: 17px;}
+              @include tablet { width: 17px; height: 17px; size: cover;}
             }// li
-            & > li:nth-child(2) {
+
+            & > button {
               width: 138px; height: 29px;
               margin-top: 7px;
               //background-color: #fff;
               font-size: 20px; line-height: 20px; color: $color_gray_03;
-              @include mobile { font-size: 14px; }
               @include tablet { font-size: 14px; }
             }
           }// ul
+
+          @include mobile { 
+            display: flex; justify-content: space-between;
+            width: 110px; height:17px; 
+            background-color: #fff; 
+            & > ul { 
+              width: 100px; height: 17px;
+              & > li { 
+                width: 12px; height: 12px; 
+                margin: 2px; 
+                background-color: #fad;
+                background-image: url($current);
+                background-size: contain;
+              }
+              & > button {
+                width: 83px; height: 17px;
+                margin: 0; 
+                font-size: 12px; line-height: 12px;
+              }// .button_current
+            }// ul
+          }// mobile
+        
         }// .current_detail
-        @include mobile { width: 240px;}
       }// .location_content
 
     // ---------------------------------------------------------
