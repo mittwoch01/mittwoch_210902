@@ -1,4 +1,4 @@
-/* s_00_site_main.css */
+/* s_00_stylenanda_main.css */
 #wrap {
   width: 100%;
   min-width: 320px;
@@ -606,67 +606,30 @@ h1 > a > span {
 #bestitemBox {
   width: 100%;
   height: auto;
-  min-height: 558px;
-}
-@media all and (max-width: 599px) {
-  #bestitemBox {
-    height: 556px;
-    padding: 26px 29px 26px;
-    box-sizing: border-box;
-  }
-}
-@media all and (min-width: 600px) and (max-width: 1023px) {
-  #bestitemBox {
-    height: 964px;
-    padding: 78px 0 82px;
-    box-sizing: border-box;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1439px) {
-  #bestitemBox {
-    height: 963px;
-    padding: 84px 74px 88px 75px;
-    box-sizing: border-box;
-  }
-}
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  #bestitemBox {
-    height: 964px;
-    padding: 84px 150px 88px 150px;
-    box-sizing: border-box;
-  }
-}
-@media all and (min-width: 1920px) {
-  #bestitemBox {
-    height: 964px;
-    padding: 84px 150px 88px 150px;
-    box-sizing: border-box;
-  }
+  min-height: 556px;
+  margin: auto;
+  background-color: #dfe;
 }
 #bestitemBox > .best_area {
-  background-color: #fff;
+  width: 1140px;
+  height: 790px;
+  margin: auto;
+  background-color: #7ea;
 }
 .best_inner {
   width: 100%;
   height: auto;
-  margin: auto;
+  background-color: #fd0;
 }
 .best_inner > h2 {
   width: 250px;
   height: 60px;
   margin: auto;
+  background-color: #ffd;
   font-size: 50px;
-  font-weight: 500;
   line-height: 50px;
+  font-weight: 500;
   text-transform: uppercase;
-}
-@media all and (max-width: 599px) {
-  .best_inner > h2 {
-    width: 150px;
-    height: 36px;
-    font-size: 30px;
-    line-height: 30px;
-  }
 }
 .best_title {
   width: 660px;
@@ -755,9 +718,6 @@ h1 > a > span {
     height: 114px;
     margin-right: 32px;
   }
-  .mobile_title > ul > li:last-child {
-    margin-right: 0;
-  }
 }
 .mobile_title > ul > li:last-child {
   margin-right: 0;
@@ -810,7 +770,7 @@ h1 > a > span {
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   .best_img {
-    width: 768px;
+    width: 750px;
     height: 518px;
     margin-top: 50px;
   }
@@ -876,6 +836,124 @@ h1 > a > span {
 .best_img > ul > li:nth-of-type(3) {
   background-size: cover;
   background-image: url(../../multi/img/best_kkxx.png);
+}
+
+@media all and (max-width: 599px) {
+  #bestitemBox {
+    height: 556px;
+    margin: auto;
+    padding: 26px 29px 26px;
+    box-sizing: border-box;
+  }
+  #bestitemBox > .best_area {
+    width: 262px;
+    height: 530px;
+    margin: auto;
+    background-color: #7ea;
+  }
+  #bestitemBox > h2 {
+    width: 150px;
+    height: 36px;
+    margin: auto;
+    background-color: #ffd;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #bestitemBox {
+    height: 964px;
+    margin: auto;
+    padding: 78px 0 82px 0;
+    box-sizing: border-box;
+  }
+  #bestitemBox > .best_area {
+    width: 750px;
+    height: 802px;
+    margin: auto;
+    background-color: #7ea;
+  }
+  #bestitemBox > h2 {
+    width: 250px;
+    height: 60px;
+    margin: auto;
+    background-color: #ffd;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #bestitemBox {
+    height: 963px;
+    padding: 84px 74px 88px 75px;
+    box-sizing: border-box;
+  }
+  #bestitemBox > .best_area {
+    width: 926px;
+    height: 790px;
+    margin: auto;
+    background-color: #7ea;
+  }
+  #bestitemBox > h2 {
+    width: 250px;
+    height: 60px;
+    margin: auto;
+    background-color: #ffd;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  #bestitemBox {
+    height: 964px;
+    padding: 84px 150px 88px 150px;
+    box-sizing: border-box;
+  }
+  #bestitemBox > .best_area {
+    width: 1140px;
+    height: 790px;
+    margin: auto;
+    background-color: #7ea;
+  }
+  #bestitemBox > h2 {
+    width: 250px;
+    height: 60px;
+    margin: auto;
+    background-color: #ffd;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+@media all and (min-width: 1920px) {
+  #bestitemBox {
+    height: 964px;
+    padding: 84px 150px 88px 150px;
+    box-sizing: border-box;
+  }
+  #bestitemBox > .best_area {
+    width: 1140px;
+    height: 790px;
+    margin: auto;
+    background-color: #7ea;
+  }
+  #bestitemBox > h2 {
+    width: 250px;
+    height: 60px;
+    margin: auto;
+    background-color: #ffd;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
 }
 
 /* nmb.css */
@@ -1242,10 +1320,12 @@ h1 > a > span {
   justify-content: space-between;
   width: 100%;
   height: auto;
+  background-color: #ffa;
 }
 @media all and (max-width: 599px) {
   .search_detail {
-    width: 240px;
+    width: 100%;
+    height: 40px;
   }
 }
 .search_detail > form {
@@ -1262,13 +1342,14 @@ h1 > a > span {
   display: flex;
   justify-content: space-between;
   width: 480px;
-  height: 100%;
+  height: 74px;
+  background-color: #faa;
   border-bottom: 2px solid #141414;
 }
 @media all and (max-width: 599px) {
   .store_search {
-    width: 240px;
-    height: 44px;
+    width: 100%;
+    height: 30px;
   }
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
@@ -1277,8 +1358,6 @@ h1 > a > span {
   }
 }
 .store_search > label {
-  display: flex;
-  justify-content: space-between;
   width: 74px;
   height: 100%;
 }
@@ -1345,12 +1424,32 @@ h1 > a > span {
 .arrow > button > .right_arrow {
   width: 60px;
   height: 100%;
+  background-color: #daa;
   background-image: url(../../multi/img/arrow_Box.png);
 }
 @media all and (max-width: 599px) {
   .arrow {
     width: 176px;
-    height: 42px;
+    height: 46px;
+    margin-top: 100px;
+  }
+  .arrow > button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+  .arrow > button > span {
+    width: 88px;
+    height: 28px;
+    margin: 0;
+    font-size: 17px;
+    line-height: 17px;
+  }
+  .arrow > button > .right_arrow {
+    width: 27px;
+    height: 27px;
+    background-size: contain;
   }
 }
 
@@ -1363,31 +1462,19 @@ h1 > a > span {
 .current_detail > ul {
   display: flex;
   justify-content: space-between;
+  padding: 7px;
+  box-sizing: border-box;
 }
 .current_detail > ul > li {
   width: 26px;
   height: 26px;
-  margin: 7px;
+  background-color: #ffa;
   background-image: url(../../multi/img/current_Location.png);
   color: #515151;
-}
-@media all and (max-width: 599px) {
-  .current_detail > ul > li {
-    width: 15px;
-    height: 15px;
-  }
-}
-@media all and (min-width: 600px) and (max-width: 1023px) {
-  .current_detail > ul > li {
-    width: 17px;
-    height: 17px;
-    size: cover;
-  }
 }
 .current_detail > ul > button {
   width: 138px;
   height: 29px;
-  margin-top: 7px;
   font-size: 20px;
   line-height: 20px;
   color: #515151;
@@ -1408,21 +1495,51 @@ h1 > a > span {
   .current_detail > ul {
     width: 100px;
     height: 17px;
+    padding: 2px;
+    box-sizing: border-box;
   }
   .current_detail > ul > li {
     width: 12px;
     height: 12px;
-    margin: 2px;
     background-color: #fad;
     background-image: url(../../multi/img/current_Location.png);
     background-size: contain;
+    background-repeat: no-repeat;
   }
   .current_detail > ul > button {
     width: 83px;
     height: 17px;
-    margin: 0;
     font-size: 12px;
     line-height: 12px;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  .current_detail {
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+    height: 22px;
+    background-color: #fff;
+  }
+  .current_detail > ul {
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    box-sizing: border-box;
+  }
+  .current_detail > ul > li {
+    width: 17px;
+    height: 17px;
+    background-color: #7ae;
+    background-image: url(../../multi/img/current_Location.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .current_detail > ul > button {
+    width: 100px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 14px;
   }
 }
 
