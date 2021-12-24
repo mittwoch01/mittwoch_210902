@@ -7,7 +7,7 @@
     laptop : path + 'laptop_rwd_nav.html'
   }
   const elNav = document.querySelector('#navBox');
-
+// ----------------------------------------------------
   const fnDeviceNav = (type)=>{
 
     fetch(type) 
