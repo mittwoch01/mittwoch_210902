@@ -5,36 +5,102 @@
 const elViewBox = document.querySelector('#viewBox');
 const elSlideBtn = elViewBox.querySelector('.slide_btn');
 const elSlideWrap = elViewBox.querySelector('.view_wrap');
-let elSlideLi = elSlideWrap.querySelectorAll('li');
-// const elSlideArr = [].slice.call(elSlideLi);
+const elModal = elViewBox.querySelector('.modal_area');
+const elMovie = elModal.querySelector('.movie');
+const elModalClose = elModal.querySelector('.modal_close > button');
 
-const fnSlideMove = ()=>{
-  let elSlide = [...elSlideLi];// 1,2,3,4,5
-  elSlideWrap.prepend( elSlide.at(-1) );// 5,1,2,3,4 // 1,2,3,4,5
-  elSlideLi = elSlideWrap.querySelectorAll('li');
+let elSlideLi = elSlideWrap.querySelectorAll('li');
+
+let elSlide = [...elSlideLi];
+let PERMISSION = true;
+elViewBox.style.overflowX = 'hidden';
+let dbVideoData = [];
+let videoCode = (fileName, type = 'mp4')=> {
+  return `<video controls autoplay muted preload>
+          <source src="${fileName}" type="video/${type}" / >
+          </video>`};
+
+// -----------------------------------------
+
+// elSlide.forEach((el,idx)=>{
+//   el.setAttribute('data-num',idx);
+// })
+
+const path = "../data/video_modal.json";
+fetch(path)
+  .then(response => response.json())
+  .then((data)=>{
+    dbVideoData = [...data];
+    elSlide.forEach((el,idx)=>{
+      el.setAttribute( 'data-num', dbVideoData[idx].id );
+    });
+    console.log(dbVideoData);
+  });
+
+// -----------------------------------------
+const fnSlideMove = (e)=>{
+  e.preventDefault();
+  if(PERMISSION){
+    PERMISSION = false;
+    let target = e.target.classList.contains('next');
+    elSlide = [...elSlideLi];
+    (target) ?  
+      elSlideWrap.append( elSlide.at(0) ) : 
+      elSlideWrap.prepend( elSlide.at(-1) ) ;
+
+    elSlideLi = elSlideWrap.querySelectorAll('li');
+    setTimeout(()=>{ PERMISSION=true; },500);
+  }
 };
-const fnSlideMove2 = ()=>{
-  let elSlide = [...elSlideLi];
-  elSlideWrap.append( elSlide.at(0) ); //append : 선택한 요소의 내용의 끝에 콘텐트를 추가합니다.
-  elSlideLi = elSlideWrap.querySelectorAll('li');
-};
-// 감자가 많으면 반만 깎아서 끊여줘 -> 감자하나의 반만 깎아서 전부 끓였다.
+
+elSlideWrap.prepend( elSlide.at(-1) ) ;
+elSlideWrap.prepend( elSlide.at(-2) ) ;
+elSlideLi = elSlideWrap.querySelectorAll('li');
 
 // 이벤트
+elSlideBtn.addEventListener('click', fnSlideMove);
 
-elSlideBtn.addEventListener('click', (e)=> {
-  //let target = (name) => e.target.classList.contains(name);// 이벤트발생시킨.원인제공.class이름.있는가(name) //class name의 유무를 판단하는 contains 
-  e.preventDefault();
-  let target = (name) => e.target.classList.contains(name);
-  if(target('next')){ // '.next' 버튼 클릭시 수행하는 기능
-    console.log('next버튼 클릭시')
-    fnSlideMove2();
-  }else{
-    console.log('prev버튼 클릭시')
-    fnSlideMove();
+elSlideWrap.addEventListener('click', (e) => {
+  e.preventDefault()
+  let el = e.target;
+  let selectData;
+  if(el.tagName.toLowerCase() === 'button' ){
+    let num = el.parentNode.getAttribute('data-num'); // 문자이기 때문에 parseInt 하는거다.
+    elModal.classList.add('on');
+    elModalClose.focus();
+
+    // 필요한 data 찾아오기
+    selectData = dbVideoData.filter((data)=> data.id === parseInt(num) );
+    console.log(selectData[0].file);
+    let src = `../multi/video/${selectData[0].file}.mp4`;
+    elMovie.innerHTML = videoCode(src);
+    elModal.classList.add('on');
+    elModalClose.focus();
   }
-  // e.target.classList.contains('next');
 });
+
+// 닫기 버튼 누르면 remove 되게 만들기
+elModalClose.addEventListener('click', (e)=> {
+  e.preventDefault();
+  elModal.classList.remove('on');
+});
+
+
+
+
+// (e)=> {
+  //let target = (name) => e.target.classList.contains(name);// 이벤트발생시킨.원인제공.class이름.있는가(name) //class name의 유무를 판단하는 contains 
+//  e.preventDefault();
+//  let target = (name) => e.target.classList.contains(name);
+//  if(target('next')){ // '.next' 버튼 클릭시 수행하는 기능
+//    console.log('next버튼 클릭시')
+//    fnSlideMove2();
+//  }else{
+//    console.log('prev버튼 클릭시')
+//    fnSlideMove();
+//  }
+  // e.target.classList.contains('next');
+// });
 
 
 
@@ -42,8 +108,8 @@ elSlideBtn.addEventListener('click', (e)=> {
 // 이벤트 위임 : 실제로 클릭해야하는 요소가 아닌 그 부모에서 클릭했을 경우 해당하는 요소가 반응할 수 있도록 인식
 // 버블링 : 부모에 전달, 캡처링 : 자식에게 전달
 
-let elBtn = elViewBox.querySelector('.slide_btn');
-let elNext = elBtn.querySelector('.next');
+// let elBtnWrap = elViewBox.querySelector('.slide_btn');
+// let elNext = elBtn.querySelector('.next');
 
 // ===========================================================
 // this
@@ -85,5 +151,6 @@ let elNext = elBtn.querySelector('.next');
 // }
 
 
-const arr = [1,2,3,4,5,6,7,8,9,10];
-console.log( arr[9] );
+//const arr = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+// x console.log( arr[3] );
+// console.log( arr.at(-1) ); // 뒤에서 부터 역순으로 불러온다. 배열에서만 가능한다! 유사배열 안됨 ㄴㄴ

@@ -2,11 +2,11 @@
 
 /**
  * 1. 외부파일 불러오기 : slide_area3.html
- * 2. js문서 별도로 제작 기능수행
+ * 2. js문서 별도로 제작 기능수행 {}
  */
 // ==================================
 
-
+{
 const path = '../temp/slide_movie.html';
 const body = document.querySelector('body');
 const viewBox = document.querySelector('#viewBox');
@@ -23,3 +23,9 @@ fetch(path)
     viewBox.innerHTML = element;
     fnScript();//
   })
+}
+
+(()=>{
+  let i = 0;
+  console.log( i ); 
+})
