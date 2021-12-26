@@ -19,12 +19,13 @@ const dataDevice = [ // 두개가 넘어갈경우 곤란해진다. 그래서 배
 ];
 
 let CK_DEVICE;
+let winWidth = window.innerWidth; // 브라우저의 가로크기 변수지정
 
 const fnSwitchView = (type)=>{
   switch(type){
     case dataDevice[0].type:
     case dataDevice[1].type:
-     elMobile.style.display = 'block';
+     elWrap.append();
      elPc.style.display = 'none';
      break;
    default:
@@ -35,7 +36,6 @@ const fnSwitchView = (type)=>{
 
 // const tabDevice = '(max-width:768px)'; // 최대 가로크기를 768로 지정한다. / 구형브라우저 적용안됨
 
-let winWidth = window.innerWidth; // 브라우저의 가로크기 변수지정
 console.log( winWidth );
 
  const fnRwd = (deviceType)=>{
@@ -51,6 +51,8 @@ console.log( winWidth );
    }
 
 // -----------------------------------
+// 사이즈가 변경되었을 떄 이전에 있던 크기타입과, 현재 반영된 크기타입이 다른지 체그
+// 320px , 480px 은 이미 모바일 환경인데 다시 모바일로 변경
    if(beforeDevice !== CK_DEVICE){
      console.log(CK_DEVICE);
      fnSwitchView(CK_DEVICE);
@@ -78,3 +80,8 @@ window.addEventListener('resize' , e =>{ // 브라우저의 크기를 변화시�
   console.log( winReWidth); 
   fnRwd(winReWidth); // 데이터(다시파악된 가로크기)만 바뀔 뿐 위의 함수를 그대로 실행하게끔 한다.
 });
+
+// 현재의 브라우저 사이즈가 변경되었을 때!!
+// 내가 현재 사용하는 디바이스 환경이 변화되었는가 아닌가를 판단한다.
+// 기존 디바이스환경과 다른 환경이면 새로운 환경으로 재 세팅해야한다.
+// window.matchMedia([css조건의 내용과 동일하게 작성]).matches > 
