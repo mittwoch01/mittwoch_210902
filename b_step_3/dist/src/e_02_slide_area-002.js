@@ -72,12 +72,12 @@
   // 선택자 
   const elViewBox = document.querySelector('#viewBox');
 
-  const slideNext = elViewBox.querySelector('.next');
-  const slidePrev = elViewBox.querySelector('.prev');
+  const slideNext = elViewBox.querySelector('.next');//
+  const slidePrev = elViewBox.querySelector('.prev');//
 
-  const elCount  = elViewBox.querySelector('.count_part');
-  const elNowCount = elCount.querySelector('.now_count');
-  const elTotalCount = elCount.querySelector('.total_count');
+  const elCount  = elViewBox.querySelector('.count_part');//
+  const elNowCount = elCount.querySelector('.now_count');//
+  const elTotalCount = elCount.querySelector('.total_count');//
 
   const elSlideContent = elViewBox.querySelector('.slide_content');
   const elSlideUl = elSlideContent.querySelector('.slide_wrapper'); // ul
@@ -131,7 +131,7 @@
     });
   };
 
-  // 현재 슬라이드 위치를 표현하는 함수
+  // 현재 슬라이드 위치를 표현하는 함수 x
   const fnNowCount = ()=>{
     elNowCount.innerText = SLIDE_COUNT + 1;
   };
