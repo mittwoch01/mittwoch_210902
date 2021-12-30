@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko-KR" class="no-js">
+<html lang="ko-KR">
   <!-- b_layout_main.html --> 
 <head>
   <meta charset="UTF-8">
@@ -17,7 +17,7 @@
   <!-- <link rel="stylesheet" href="../css/src/stylenanda_site.css"> -->
   <link rel="stylesheet" href="../css/src/s_00_stylenanda_main.css">
 
-  <script src="../js/common/modernizr-custom.js"></script>
+  <!-- <script src="../js/common/modernizr-custom.js"></script> -->
 
   <title>stylenanda_site</title>
   <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
@@ -25,149 +25,158 @@
 <body>
   <!-- layout -->
   <div id="wrap">
+
     <!-- headBox -->
      <header id="headBox">
-       <div class="container head_area clearfix">
+       <div class="head_area clearfix">
          <h1><a href="./stylenanda_site.html"><span class="blind">site name</span></a></h1>
 
          <nav class="navi_area">
            <h2 class="blind">헤더 네비게이션</h2>
            <!-- <ul class="clearfix"> -->
+
            <div class="nav_btn">
-             <button type="button">
-               <span class="blind">menu button</span>
-             </button>
-             <div class="language blind">
-               <ul>
-                <li><span>한국어</span></li>
-                <li><span>english</span></li>
-                <li><span>중국어</span></li>
-                <li><span>일본어</span></li>
-               </ul>
-             </div>
-           </div>
+             <button type="button"><span class="blind">menu button</span></button>
+           </div> 
+
+<!-- (mobile) inner ====================================== -->
            <div class="navi_inner">
              <h2 class="blind">navi 영역</h2>
-             <ul class="navi_part">
-              <li>
-                <div class="nav_title"><a href="#">new in</a></div>
-               </li>
-               <li>
-                <div class="nav_title"><a href="#">3ce</a></div> 
-               </li>
-               <li>
-                <div class="nav_title"><a href="#">nandamade</a></div> 
-               </li>
-               <li>
-                <div class="nav_title"><a href="#">stylenanda</a></div> 
-               </li>
-               <li>
-                <div class="nav_title"><a href="#">about</a></div> 
-               </li>
-               
-               <li>
-                <div class="navi_sns">
-                  <ul>
-                    <li><a href="#"><span class="blind">instagram</span></a></li>
-                    <li><a href="#"><span class="blind">face book</span></a></li>
-                    <li><a href="#"><span class="blind">kakao talk</span></a></li>
-                    <li><a href="#"><span class="blind">youtube</span></a></li>
-                  </ul>
-                 </div>
-               </li>
-              </ul>
-           </div>
-           
+
+             <div class="close_btn">
+               <button type="button">
+                <span class="blind">close button</span>
+               </button>
+             </div>
+
+             <div class="navi_part">
+               <ul>
+                <li>
+                  <div class="nav_title"><a href="#">new in</a></div>
+                 </li>
+                 <li>
+                  <div class="nav_title"><a href="#">3ce</a></div> 
+                 </li>
+                 <li>
+                  <div class="nav_title"><a href="#">nandamade</a></div> 
+                 </li>
+                 <li>
+                  <div class="nav_title"><a href="#">stylenanda</a></div> 
+                 </li>
+                 <li>
+                  <div class="nav_title"><a href="#">about</a></div> 
+                 </li>
+                 <li>
+                   <!-- mobile sns -->
+                  <div class="navi_sns">
+                    <ul>
+                      <li><a href="#"><span class="blind">instagram</span></a></li>
+                      <li><a href="#"><span class="blind">face book</span></a></li>
+                      <li><a href="#"><span class="blind">kakao talk</span></a></li>
+                      <li><a href="#"><span class="blind">youtube</span></a></li>
+                    </ul>
+                  </div>
+                 </li>
+               </ul>
+
+             </div> <!-- .navi_part -->
+
+           </div> <!-- .navi_inner -->
+         </nav>
+
+<!-- (pc/pc) full inner ================================== -->
            <!-- .pc_menu -->
            <ul class="pc_menu">
-             <li>
-              <div class="nav_title"><a href="#">best item</a></div> 
-                <h3 class="blind">best item</h3>
-                <ul class="nav_list">
-                  <li><a href="#">new</a></li>
-                  <li><a href="#">stylenanda</a></li>
-                  <li><a href="#">nandamade</a></li>
-                  <li><a href="#">kkxx</a></li>
-                  <li><a href="#">3ce</a></li>
-                </ul>
-             </li>
-
-             <li>
-               <div class="nav_title"><a href="#">store</a></div> 
-                <h3 class="blind">store</h3>
-                <ul class="nav_list">
-                  <!-- <li><a href="#"></a>store</li> -->
-                </ul>
-              </li>
-
-             <li>
-               <div class="nav_title"><a href="#">about</a></div> 
-                <h3 class="blind">about</h3>
-                <ul class="nav_list">
-                  <li><a href="#">brend</a></li>
-                  <li><a href="#">review</a></li>
-                  <li><a href="#">notice</a></li>
-                  <li><a href="#">q&amp;a</a></li>
-                </ul>
-              </li>
-
-             <li>
-               <div class="nav_title"><a href="#">my page</a></div> 
-                <h3 class="blind">my page</h3>
-                <ul class="nav_list">
-                  <li><a href="#">join</a></li>
-                  <li><a href="#">log in</a></li>
-                  <li><a href="#">profile</a></li>
-                  <li><a href="#">wish list</a></li>
-                </ul>
-              </li>
-
-             <li>
-               <div class="nav_title"><a href="#">language</a></div> 
-                <h3 class="blind">language</h3>
-                <ul class="nav_list">
-                  <li><a href="#">한국어</a></li>
-                  <li><a href="#">english</a></li>
-                  <li><a href="#">中國語</a></li>
-                  <li><a href="#">日本語</a></li>
-                </ul>
+            <li>
+             <div class="nav_title"><a href="#">best item</a></div> 
+               <h3 class="blind">best item</h3>
+               <ul class="nav_list">
+                 <li><a href="#">new</a></li>
+                 <li><a href="#">stylenanda</a></li>
+                 <li><a href="#">nandamade</a></li>
+                 <li><a href="#">kkxx</a></li>
+                 <li><a href="#">3ce</a></li>
+               </ul>
             </li>
 
-           </ul>
+            <li>
+              <div class="nav_title"><a href="#">store</a></div> 
+               <h3 class="blind">store</h3>
+               <ul class="nav_list">
+                 <!-- <li><a href="#"></a>store</li> -->
+               </ul>
+             </li>
 
-         </nav>
-         <div class="user_page blind">
-          <ul>
-            <li><a href="#">장바구니</a></li>
-            <li><a href="#"></a></li>
+            <li>
+              <div class="nav_title"><a href="#">about</a></div> 
+               <h3 class="blind">about</h3>
+               <ul class="nav_list">
+                 <li><a href="#">brend</a></li>
+                 <li><a href="#">review</a></li>
+                 <li><a href="#">notice</a></li>
+                 <li><a href="#">q&amp;a</a></li>
+               </ul>
+             </li>
+
+            <li>
+              <div class="nav_title"><a href="#">my page</a></div> 
+               <h3 class="blind">my page</h3>
+               <ul class="nav_list">
+                 <li><a href="#">join</a></li>
+                 <li><a href="#">log in</a></li>
+                 <li><a href="#">profile</a></li>
+                 <li><a href="#">wish list</a></li>
+               </ul>
+             </li>
+
+            <li>
+              <div class="nav_title"><a href="#">language</a></div> 
+               <h3 class="blind">language</h3>
+               <ul class="nav_list">
+                 <li><a href="#">한국어</a></li>
+                 <li><a href="#">english</a></li>
+                 <li><a href="#">中國語</a></li>
+                 <li><a href="#">日本語</a></li>
+               </ul>
+           </li>
+
           </ul>
-         </div>
+
+
        </div>
      </header>
+<!-- ================================================================== -->
 
-     <!-- new in -->
+<!-- new in -->
      <section class="wrapper" id="newBox">
+<!-- s_00_slide_area.html -->
+
+<!-- s_00_slide_area_touch.js 슬라이드 제작 ========================= -->
+       <!-- 
        <h2 class="blind">newin 광고이미지 변환</h2>
        
-       <!-- .indicator -->
        <div class="indicator">
          <ul class="indi_list blind_wrap">
-          <li class="action">
-            <a href="#"><span>광고 n번째 내용 요약 설명</span></a>
-          </li>
+          <li class="action"><a href="#"><span>광고 n번째 내용 요약 설명</span></a></li>
           <li><a href="#"><span>광고 n번째 내용 요약 설명</span></a></li>
           <li><a href="#"><span>광고 n번째 내용 요약 설명</span></a></li>
          </ul>
        </div>
-
+      --> 
        <!-- .view_area -->
+
+       <!-- section id="newBox" -->
+      <!--
        <div class="view_area">
          <ul class="view_inner_wrap">
-           <li class="action"><span class="blind">해당 광고 n번째</span></li>
-           <li><span class="blind">해당 광고 n번째</span></li>
-           <li><span class="blind">해당 광고 n번째</span></li>
+           <li>해당 광고 1번째</li>
+           <li>해당 광고 2번째</li>
+           <li>해당 광고 3번째</li>
          </ul>
        </div>
+      -->
+
+<!-- s_00_slide_area_touch.js 슬라이드 제작 ========================= -->
 
      </section>
 
@@ -447,6 +456,7 @@
   </div>
 
   <!-- script -->
-  <script></script>
+  <script src="../dist/src/s_00_slide_area_touch.js"></script> 
+  <script src="../dist/src/s_00_head_modal_menu.js"></script>
 </body>
 </html>

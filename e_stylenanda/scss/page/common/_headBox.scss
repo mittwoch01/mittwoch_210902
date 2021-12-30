@@ -11,6 +11,8 @@ $faceBook: #{$imgPath}+'facebook.png';
 $kakaoTalk: #{$imgPath}+'kakao_talk.png';
 $youtube: #{$imgPath}+'youtube.png';
 $main: #{$imgPath}+'juyeon.png';
+$closeBtn: #{$imgPath}+'closeBtn_x.png';
+
 // -----------------------------
 #headBox{
   position: fixed; z-index: 1000; top: 0; left: 0; right: 0; 
@@ -31,8 +33,9 @@ $main: #{$imgPath}+'juyeon.png';
 
     @include mobile{
       width: 68px; height: 52px;
-        @at-root .head_area { padding: 7px 15px; box-sizing: border-box;}
-        position: absolute; left: 0; right: 0; top: 7px; margin: auto; 
+        @at-root .head_area { 
+          padding: 7px 15px; box-sizing: border-box;}
+          position: absolute; left: 0; right: 0; top: 7px; margin: auto; 
     } // moblie320
     @include tablet{
       width: 126px; height: 94px;
@@ -77,113 +80,138 @@ $main: #{$imgPath}+'juyeon.png';
       @include tablet { position: absolute; top: 18px; right: 16px; width: 70px; height: 70px;}
       @include laptop { position: absolute; top: 0; right: 0; width: 85px; height: 85px;}    
       & > button { @include full($file:'menu.png', $size:contain); }
-      // & > .language { @include full($file: 'language.png', $size:contain);}
-// -------------------------------------------------------------------
+
       @include pc { display: none;}
       @include pcfull { display: none;}     
     }// .nav_btn
+// ============================================
 
-    // .navi_inner --------------------------------------------
+
+// .navi_inner (mobile) --------------------------------------
     @at-root .navi_inner { 
+      display: none;
       width: 100%; height: auto;
-      & > .navi_part { 
+
+      & > .close_btn { 
+        position: absolute; z-index: 201; top: 20px; right: 16px;
+        width: 70px; height: 70px;
+        background-image: url($closeBtn);
+        background-size: contain;
         @include mobile {
-          display: none;
+          top: 10px; right: 10px; width: 45px; height: 45px;
+        }
+        @include laptop {
+          top: 0; right: 0; width: 85px; height: 85px;
+        }
+
+        & > a {display: block;}
+      }// .close_btn
+
+      @at-root .navi_part { 
+        @include mobile {
           position: absolute; z-index: 100; top: 0; left: 0; right: 0; bottom: 0;
           width: 100%; height: 100vh;
+          // height: 100vh;
           padding: 20px; padding-top: 85px;
           background-color: $color_black_02;
         }// mobile
         @include tablet {
-          display: none;
           position: absolute; z-index: 100; top: 0; left: 0; right: 0; bottom: 0;
           width: 100%; height: 100vh;
           padding: 40px; padding-top: 100px;
           background-color: $color_black_02;
         }// tablet
         @include laptop {
-          display: none;
           position: absolute; z-index: 100; top: 0; left: 0; right: 0; bottom: 0;
           width: 100%; height: 100vh;
           padding: 40px; padding-top: 150px;
           background-color: $color_black_02;
         }// laptop
-// ----------------------------------------------------------
-        & > li { margin-bottom: 12px; text-transform: uppercase; }
-        & > li:last-child { margin-bottom: 0;}
-        & .nav_title { width: 100%; height: 100%;
-          > a { 
-            color: $color_white_01; font-size: 40px; font-weight: $font_weight_bold; line-height: 40px; text-decoration: none;
-            @include mobile { font-size: 30px; line-height: 30px; }
-
-          }// a
-          & > .nav_title:hover { background-color: #171717; color: #fff;}
-        }// .nav_title
-// ----------------------------------------------------------
         @include pc { display: none;}
         @include pcfull { display: none;}
 // ----------------------------------------------------------
-        & > .navi_sns {
-          display: flex; justify-content: space-between;
-          margin-right: 16px;
-          width: 220px; height: 45px;
-          padding: 2px; box-sizing: border-box; 
-          //background-color: #fdd;
-          @include mobile {
-            position: absolute; z-index: 100; left: 20px; bottom: 40px; 
-            width: 300px; height: 66px;
-          }// mobile
-          @include tablet {
-            position: absolute; z-index: 100; left: 40px; bottom: 40px; 
-            width: 300px; height: 66px;
-          }// tablet
-          @include laptop {
-            position: absolute; z-index: 100; left: 40px; bottom: 40px;
-            width: 300px; height: 66px;
-          }// laptop
+        & > ul {
+          width: 218px; height: 442px;
+          background-color: #7ae;
+          & > li { margin-bottom: 20px; text-transform: uppercase; 
+            & > li:nth-child(5) { margin-bottom: 0;}
+            @at-root .nav_title { width: 100%; height: 100%;
+              & > a { 
+                display: block;
+                color: $color_white_01; font-size: 40px; font-weight: $font_weight_bold; line-height: 40px; text-decoration: none;
+                @include mobile { font-size: 30px; line-height: 30px; }
+              }// a
+              & > a:hover { 
+                text-decoration: underline; 
+                color: #fff;}
+            }// .nav_title
+// ==========================================================
+          & > li:last-child {
+            width: 220px; height: 45px;
+            padding: 2px; box-sizing: border-box; 
+            background-color: #fdd;
+            @include mobile {
+              position: absolute; z-index: 100; left: 20px; bottom: 40px; 
+              width: 300px; height: 66px;
+            }// mobile
+            @include tablet {
+              position: absolute; z-index: 100; left: 40px; bottom: 40px; 
+              width: 300px; height: 66px;
+            }// tablet
+            @include laptop {
+              position: absolute; z-index: 100; left: 40px; bottom: 40px;
+              width: 300px; height: 66px;
+            }// laptop
 
-          & > li { 
-            display: flex; justify-content: space-between;
-            // background-color: #ddf;
-            @include full('kakao_talk.png', $size:contain)
-          }
-          & > li:nth-child(1) {background-image: url($instagram);}
-          & > li:nth-child(2) {background-image: url($faceBook);}
-          & > li:nth-child(3) {background-image: url($kakaoTalk);}
-          & > li:nth-child(4) {background-image: url($youtube);}        
-          
-          // -----------------------------
-          @include pc { display: none;}
-          @include pcfull { display: none;}     
-        }// .navi_sns
+            & > li { 
+              display: flex; justify-content: space-between;
+              // background-color: #ddf;
+              @include full('kakao_talk.png', $size:contain)
+            }
+            & > li:nth-child(1) {background-image: url($instagram);}
+            & > li:nth-child(2) {background-image: url($faceBook);}
+            & > li:nth-child(3) {background-image: url($kakaoTalk);}
+            & > li:nth-child(4) {background-image: url($youtube);}        
+
+            // -----------------------------
+            @include pc { display: none;}
+            @include pcfull { display: none;}     
+          }// .navi_sns
+
+          }// li
+        }// ul
       }//.navi_part
+
+      &.on { display: block; transition: opacity 1;}
     }// .navi_inner
 
 // .pc_menu ------------------------------------------
     @at-root .pc_menu { 
       position: absolute; top: 24px; left: 0; right: 0; 
       display: flex; justify-content: space-between;
-      width: 900px; height: 40px;
+      width: 900px; height: 60px;
       margin: auto;
-      // background-color: #fa0;
-// ---------------------------------------------------
+      background-color: #fa0;
       @include mobile { display: none;}
       @include tablet { display: none;}
       @include laptop { display: none;}
-
+      
+// ---------------------------------------------------
       & > li {
         position: relative;
         width: auto; margin-right: 16px; 
         color: $color_black_02; 
-        font-size: 25px; font-weight: $font_weight_bolder;
+        font-size: 25px; font-weight: $font_weight_bold;
         line-height: 40px;
         text-transform: uppercase;
-        & > li:last-child { margin-right: 0;}
-
+        &:last-child { margin-right: 0;}
 // ----------------------------------------------------
       @at-root .nav_title { 
         width: 100%; height: 100%;
-        > a { text-decoration: none; }
+        > a { 
+          margin-right: 0;
+          text-decoration: none; 
+        }
 
         @at-root .nav_list { display: none;
           position: absolute;

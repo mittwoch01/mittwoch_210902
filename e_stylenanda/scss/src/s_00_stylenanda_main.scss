@@ -6,11 +6,12 @@
 
 // --------------------------------
 #wrap {
-  width: 100%; min-width: 320px;
+  width: 100%; 
+  // min-width: 320px;
   height: auto; min-height: 568px;
   background-color: #fff;
 
-   @include mobile { min-width: 320; }
+   //@include mobile { min-width: 320; }
    //@include tablet { background-color: #adf; }
    //@include laptop { background-color: #fdf; }
    //@include pc { background-color: #dfd; }
