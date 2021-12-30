@@ -13,7 +13,7 @@ $youtube: #{$imgPath}+'youtube.png';
 $main: #{$imgPath}+'juyeon.png';
 $closeBtn: #{$imgPath}+'closeBtn_x.png';
 
-// -----------------------------
+// ============================================
 #headBox{
   position: fixed; z-index: 1000; top: 0; left: 0; right: 0; 
   display:flex; justify-content: space-between;
@@ -66,185 +66,163 @@ $closeBtn: #{$imgPath}+'closeBtn_x.png';
       @include tablet { background-image: url($logoBlack) };
     }// a
   }// h1
-
+// ============================================
   @at-root .navi_area {
-    width: 45px; height: 45px;
-    float: right; 
-    // background-color: $color_gray_02;
-
+    width: 100%; height: auto;
+    background-color: $color_gray_02;
+    //@include pc { float: left;}
+    //@include pcfull { float: left;}
+    // basic (mobile 기준) =====================
     .nav_btn{ 
-      position: relative; z-index: 200; top:10px; right: 10px;
-      width: 45px; height: 45px; margin: auto; 
-
-      @include mobile { position: absolute; top: 11px; right: 10px;}
+      position: relative; z-index: 200; top:11px; right: 10px;
+      width: 45px; height: 45px; 
+      margin: auto; 
+      background-color: #dde;
+      & > button { @include full($file:'menu.png', $size:contain); }
+    // responsive (mobile, tablet, laptop) ============================
+      @include mobile { position: absolute;}
       @include tablet { position: absolute; top: 18px; right: 16px; width: 70px; height: 70px;}
       @include laptop { position: absolute; top: 0; right: 0; width: 85px; height: 85px;}    
-      & > button { @include full($file:'menu.png', $size:contain); }
-
+    // display:none; ---------------------------------
       @include pc { display: none;}
       @include pcfull { display: none;}     
     }// .nav_btn
-// ============================================
 
-
+// ===========================================================
 // .navi_inner (mobile) --------------------------------------
     @at-root .navi_inner { 
       display: none;
       width: 100%; height: auto;
 
+      // basic (mobile 기준) =====================
       & > .close_btn { 
-        position: absolute; z-index: 201; top: 20px; right: 16px;
-        width: 70px; height: 70px;
+        position: absolute; z-index: 201; top: 10px; right: 10px;
+        width: 45px; height: 45px;
         background-image: url($closeBtn);
         background-size: contain;
-        @include mobile {
-          top: 10px; right: 10px; width: 45px; height: 45px;
-        }
-        @include laptop {
-          top: 0; right: 0; width: 85px; height: 85px;
-        }
-
-        & > a {display: block;}
+      // responsive (tablet, laptop) ============================  
+        @include tablet {top: 20px; right: 16px; width: 70px; height: 70px;}
+        @include laptop {top: 0; right: 0; width: 85px; height: 85px;}
+        & > button {display: block;}
+      // display:none; ---------------------------------
+        @include pc { display: none;}
+        @include pcfull { display: none;}   
       }// .close_btn
 
+// ==========================================================
+// .navi_part (mobile) --------------------------------------
       @at-root .navi_part { 
-        @include mobile {
-          position: absolute; z-index: 100; top: 0; left: 0; right: 0; bottom: 0;
-          width: 100%; height: 100vh;
-          // height: 100vh;
-          padding: 20px; padding-top: 85px;
-          background-color: $color_black_02;
-        }// mobile
-        @include tablet {
-          position: absolute; z-index: 100; top: 0; left: 0; right: 0; bottom: 0;
-          width: 100%; height: 100vh;
-          padding: 40px; padding-top: 100px;
-          background-color: $color_black_02;
-        }// tablet
-        @include laptop {
-          position: absolute; z-index: 100; top: 0; left: 0; right: 0; bottom: 0;
-          width: 100%; height: 100vh;
-          padding: 40px; padding-top: 150px;
-          background-color: $color_black_02;
-        }// laptop
+        position: absolute; z-index: 100; 
+        top: 0; left: 0; right: 0; bottom: 0;
+        width: 100%; height: 100vh;
+        background-color: $color_black_02;
+      // responsive (mobile, tablet, laptop) ============================   
+        @include mobile { padding: 20px; padding-top: 85px; }// mobile
+        @include tablet { padding: 40px; padding-top: 150px; }// tablet
+        @include laptop { padding: 40px; padding-top: 150px; }// laptop
+      // display:none; ---------------------------------
         @include pc { display: none;}
         @include pcfull { display: none;}
 // ----------------------------------------------------------
-        & > ul {
-          width: 218px; height: 442px;
-          background-color: #7ae;
-          & > li { margin-bottom: 20px; text-transform: uppercase; 
-            & > li:nth-child(5) { margin-bottom: 0;}
+        // basic (mobile 기준) =================================
+        & > ul { // 버튼+sns = 전체박스 크기
+          width: 220px; height: 442px;
+          //background-color: #7ae;
+        // responsive (tablet, laptop) ============================
+          @include tablet { width: 300px; height: 590px;} 
+          @include laptop { width: 300px; height: 590px;} 
+          & > li { 
+            margin-bottom: 20px; 
+            //background-color: #afe; 
+            text-transform: uppercase; 
+            &:nth-child(5) { margin-bottom: 170px;}
             @at-root .nav_title { width: 100%; height: 100%;
               & > a { 
                 display: block;
-                color: $color_white_01; font-size: 40px; font-weight: $font_weight_bold; line-height: 40px; text-decoration: none;
-                @include mobile { font-size: 30px; line-height: 30px; }
+                color: $color_white_01; 
+                font-size: 40px; font-weight: $font_weight_bold; line-height: 40px;
+                // a에 hover를 했을 경우.
+                &:hover { text-decoration: underline; color: $color_peach_01;}
+                // a에 focus를 했을 경우.
+                &:focus { font-size: 42px;}
+              // responsive (mobile) ============================
+                @include mobile { font-size: 30px; line-height: 30px; 
+                  &:focus { font-size: 32px;}
+                }
               }// a
-              & > a:hover { 
-                text-decoration: underline; 
-                color: #fff;}
             }// .nav_title
 // ==========================================================
-          & > li:last-child {
-            width: 220px; height: 45px;
-            padding: 2px; box-sizing: border-box; 
-            background-color: #fdd;
-            @include mobile {
-              position: absolute; z-index: 100; left: 20px; bottom: 40px; 
-              width: 300px; height: 66px;
-            }// mobile
-            @include tablet {
-              position: absolute; z-index: 100; left: 40px; bottom: 40px; 
-              width: 300px; height: 66px;
-            }// tablet
-            @include laptop {
-              position: absolute; z-index: 100; left: 40px; bottom: 40px;
-              width: 300px; height: 66px;
-            }// laptop
+            &:nth-child(6) {
+              width: 100%; height: 45px;
+              @at-root .navi_mob_sns{
+                width: 100%; height: 100%;
+                // background-color: #fae;
+                & > ul { 
+                  display: flex; justify-content: space-between; 
+                  width: 100%; height: 100%;
+                  & > li { 
+                    width: 45px; height: 45px;
+                    // background-color: #555;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    &:nth-child(1) {background-image: url($instagram);}
+                    &:nth-child(2) {background-image: url($faceBook);}
+                    &:nth-child(3) {background-image: url($kakaoTalk);}
+                    &:nth-child(4) {background-image: url($youtube);}   
+                  }// li
+                }// ul
+              }// .navi_mob_sns     
+            // display:none; ---------------------------------
+              @include pc { display: none;}
+              @include pcfull { display: none;}     
+            }// li:nth-child(6)
 
-            & > li { 
-              display: flex; justify-content: space-between;
-              // background-color: #ddf;
-              @include full('kakao_talk.png', $size:contain)
-            }
-            & > li:nth-child(1) {background-image: url($instagram);}
-            & > li:nth-child(2) {background-image: url($faceBook);}
-            & > li:nth-child(3) {background-image: url($kakaoTalk);}
-            & > li:nth-child(4) {background-image: url($youtube);}        
-
-            // -----------------------------
-            @include pc { display: none;}
-            @include pcfull { display: none;}     
-          }// .navi_sns
-
-          }// li
-        }// ul
+          }// .navi_part > ul > li
+        }// .navi_part > ul
       }//.navi_part
 
       &.on { display: block; transition: opacity 1;}
     }// .navi_inner
 
-// .pc_menu ------------------------------------------
-    @at-root .pc_menu { 
-      position: absolute; top: 24px; left: 0; right: 0; 
-      display: flex; justify-content: space-between;
-      width: 900px; height: 60px;
-      margin: auto;
-      background-color: #fa0;
-      @include mobile { display: none;}
-      @include tablet { display: none;}
-      @include laptop { display: none;}
-      
-// ---------------------------------------------------
-      & > li {
-        position: relative;
-        width: auto; margin-right: 16px; 
-        color: $color_black_02; 
-        font-size: 25px; font-weight: $font_weight_bold;
-        line-height: 40px;
-        text-transform: uppercase;
-        &:last-child { margin-right: 0;}
-// ----------------------------------------------------
-      @at-root .nav_title { 
-        width: 100%; height: 100%;
-        > a { 
-          margin-right: 0;
-          text-decoration: none; 
-        }
-
-        @at-root .nav_list { display: none;
-          position: absolute;
-          width: 100%; height: auto;
-          margin-top: 30px;
+// ===========================================================
+// .pc_menu (pc, pcfull) =====================================
+  @at-root .pc_menu {
+    display: flex; justify-content: space-between;
+    width: 980px; height: 40px;
+    margin: auto; margin-top: 24px;
+    background-color: #dae;
+    & > li { height: auto;}
+    @at-root .nav_title { 
+      font-weight: $font_weight_bold;
+      text-transform: uppercase;
+      & > a { 
+        margin: auto;
+        font-size: 25px; color: $color_black_02;
+        background-color: #eee;
+        &:hover { 
           color: $color_black_02;
-          background-color: $color_white_01;
-          & > li { width: 100%; height: 40px; margin-bottom: 10px;
-            & > a { 
-              display: block; 
-              width: 100%; height: 100%;
-              font-weight: $font_weight_bold; 
-              text-decoration: none;
-            &:hover { text-decoration: underline;}
-            }// a
-            
-          }// li
-          &:hover .nav_list{
-            display: block;
-            width: 700px; height: auto;
-            background-color: #fff; 
-            color: #171717;
-          }
-          
-        }// .nav_list 
-      }// .nav_title
-
+          text-decoration: underline; 
+        }
+      } // a
+    }// .nav_title
+    @at-root .nav_list {
+      display: block;
+      width: 100%; height: 180px;
+      margin-top: 24px;
+      background-color: #fff;
+      & > li { 
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        & > a { 
+          font-size: 22px; font-weight: $font_weight_bold;
+        }// a
       }// li
-      > .pc_menu:hover { color: $color_brown_01;}
-      > .pc_menu:focus { background-color: $color_brown_01; color: $color_white_01;}
-    }// .pc_menu
-  }// .navi_area
-
+    }// .nav_list   
+  // display:none; ---------------------------------
+    @include mobile { display: none;}
+    @include tablet { display: none;}
+    @include laptop { display: none;}
+  }// .pc_menu
   
-
+  }// .navi_area
 }// headBox

@@ -154,24 +154,41 @@ h1 > a > span {
 }
 
 .navi_area {
-  width: 45px;
-  height: 45px;
-  float: right;
+  width: 100%;
+  height: auto;
+  background-color: #7c7c7c;
 }
 .navi_area .nav_btn {
   position: relative;
   z-index: 200;
-  top: 10px;
+  top: 11px;
   right: 10px;
   width: 45px;
   height: 45px;
   margin: auto;
+  background-color: #dde;
+}
+.navi_area .nav_btn > button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../multi/img/menu.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.navi_area .nav_btn > button > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 @media all and (max-width: 599px) {
   .navi_area .nav_btn {
     position: absolute;
-    top: 11px;
-    right: 10px;
   }
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
@@ -192,24 +209,6 @@ h1 > a > span {
     height: 85px;
   }
 }
-.navi_area .nav_btn > button {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../multi/img/menu.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
-}
-.navi_area .nav_btn > button > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   .navi_area .nav_btn {
     display: none;
@@ -228,19 +227,19 @@ h1 > a > span {
 .navi_inner > .close_btn {
   position: absolute;
   z-index: 201;
-  top: 20px;
-  right: 16px;
-  width: 70px;
-  height: 70px;
+  top: 10px;
+  right: 10px;
+  width: 45px;
+  height: 45px;
   background-image: url(../../multi/img/closeBtn_x.png);
   background-size: contain;
 }
-@media all and (max-width: 599px) {
+@media all and (min-width: 600px) and (max-width: 1023px) {
   .navi_inner > .close_btn {
-    top: 10px;
-    right: 10px;
-    width: 45px;
-    height: 45px;
+    top: 20px;
+    right: 16px;
+    width: 70px;
+    height: 70px;
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
@@ -251,52 +250,46 @@ h1 > a > span {
     height: 85px;
   }
 }
-.navi_inner > .close_btn > a {
+.navi_inner > .close_btn > button {
   display: block;
+}
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .navi_inner > .close_btn {
+    display: none;
+  }
+}
+@media all and (min-width: 1920px) {
+  .navi_inner > .close_btn {
+    display: none;
+  }
+}
+.navi_part {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #141414;
 }
 @media all and (max-width: 599px) {
   .navi_part {
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
     padding: 20px;
     padding-top: 85px;
-    background-color: #141414;
   }
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   .navi_part {
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
     padding: 40px;
-    padding-top: 100px;
-    background-color: #141414;
+    padding-top: 150px;
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
   .navi_part {
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
     padding: 40px;
     padding-top: 150px;
-    background-color: #141414;
   }
 }
 @media all and (min-width: 1440px) and (max-width: 1919px) {
@@ -310,16 +303,27 @@ h1 > a > span {
   }
 }
 .navi_part > ul {
-  width: 218px;
+  width: 220px;
   height: 442px;
-  background-color: #7ae;
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  .navi_part > ul {
+    width: 300px;
+    height: 590px;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  .navi_part > ul {
+    width: 300px;
+    height: 590px;
+  }
 }
 .navi_part > ul > li {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-.navi_part > ul > li > li:nth-child(5) {
-  margin-bottom: 0;
+.navi_part > ul > li:nth-child(5) {
+  margin-bottom: 170px;
 }
 .nav_title {
   width: 100%;
@@ -331,95 +335,64 @@ h1 > a > span {
   font-size: 40px;
   font-weight: 500;
   line-height: 40px;
-  text-decoration: none;
+}
+.nav_title > a:hover {
+  text-decoration: underline;
+  color: #ffc59b;
+}
+.nav_title > a:focus {
+  font-size: 42px;
 }
 @media all and (max-width: 599px) {
   .nav_title > a {
     font-size: 30px;
     line-height: 30px;
   }
-}
-.nav_title > a:hover {
-  text-decoration: underline;
-  color: #fff;
+  .nav_title > a:focus {
+    font-size: 32px;
+  }
 }
 
-.navi_part > ul > li > li:last-child {
-  width: 220px;
+.navi_part > ul > li:nth-child(6) {
+  width: 100%;
   height: 45px;
-  padding: 2px;
-  box-sizing: border-box;
-  background-color: #fdd;
 }
-@media all and (max-width: 599px) {
-  .navi_part > ul > li > li:last-child {
-    position: absolute;
-    z-index: 100;
-    left: 20px;
-    bottom: 40px;
-    width: 300px;
-    height: 66px;
-  }
-}
-@media all and (min-width: 600px) and (max-width: 1023px) {
-  .navi_part > ul > li > li:last-child {
-    position: absolute;
-    z-index: 100;
-    left: 40px;
-    bottom: 40px;
-    width: 300px;
-    height: 66px;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1439px) {
-  .navi_part > ul > li > li:last-child {
-    position: absolute;
-    z-index: 100;
-    left: 40px;
-    bottom: 40px;
-    width: 300px;
-    height: 66px;
-  }
-}
-.navi_part > ul > li > li:last-child > li {
-  display: flex;
-  justify-content: space-between;
-  display: block;
+.navi_mob_sns {
   width: 100%;
   height: 100%;
-  background-image: url(../../multi/img/kakao_talk.png);
+}
+.navi_mob_sns > ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.navi_mob_sns > ul > li {
+  width: 45px;
+  height: 45px;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
   background-size: contain;
 }
-.navi_part > ul > li > li:last-child > li > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-.navi_part > ul > li > li:last-child > li:nth-child(1) {
+.navi_mob_sns > ul > li:nth-child(1) {
   background-image: url(../../multi/img/instagram.png);
 }
-.navi_part > ul > li > li:last-child > li:nth-child(2) {
+.navi_mob_sns > ul > li:nth-child(2) {
   background-image: url(../../multi/img/facebook.png);
 }
-.navi_part > ul > li > li:last-child > li:nth-child(3) {
+.navi_mob_sns > ul > li:nth-child(3) {
   background-image: url(../../multi/img/kakao_talk.png);
 }
-.navi_part > ul > li > li:last-child > li:nth-child(4) {
+.navi_mob_sns > ul > li:nth-child(4) {
   background-image: url(../../multi/img/youtube.png);
 }
+
 @media all and (min-width: 1440px) and (max-width: 1919px) {
-  .navi_part > ul > li > li:last-child {
+  .navi_part > ul > li:nth-child(6) {
     display: none;
   }
 }
 @media all and (min-width: 1920px) {
-  .navi_part > ul > li > li:last-child {
+  .navi_part > ul > li:nth-child(6) {
     display: none;
   }
 }
@@ -430,17 +403,48 @@ h1 > a > span {
 }
 
 .pc_menu {
-  position: absolute;
-  top: 24px;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: space-between;
-  width: 900px;
-  height: 60px;
+  width: 980px;
+  height: 40px;
   margin: auto;
-  background-color: #fa0;
+  margin-top: 24px;
+  background-color: #dae;
 }
+.pc_menu > li {
+  height: auto;
+}
+.nav_title {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.nav_title > a {
+  margin: auto;
+  font-size: 25px;
+  color: #141414;
+  background-color: #eee;
+}
+.nav_title > a:hover {
+  color: #141414;
+  text-decoration: underline;
+}
+
+.nav_list {
+  display: block;
+  width: 100%;
+  height: 180px;
+  margin-top: 24px;
+  background-color: #fff;
+}
+.nav_list > li {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.nav_list > li > a {
+  font-size: 22px;
+  font-weight: 500;
+}
+
 @media all and (max-width: 599px) {
   .pc_menu {
     display: none;
@@ -455,66 +459,6 @@ h1 > a > span {
   .pc_menu {
     display: none;
   }
-}
-.pc_menu > li {
-  position: relative;
-  width: auto;
-  margin-right: 16px;
-  color: #141414;
-  font-size: 25px;
-  font-weight: 500;
-  line-height: 40px;
-  text-transform: uppercase;
-}
-.pc_menu > li:last-child {
-  margin-right: 0;
-}
-.nav_title {
-  width: 100%;
-  height: 100%;
-}
-.nav_title > a {
-  margin-right: 0;
-  text-decoration: none;
-}
-.nav_list {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: auto;
-  margin-top: 30px;
-  color: #141414;
-  background-color: #ffffff;
-}
-.nav_list > li {
-  width: 100%;
-  height: 40px;
-  margin-bottom: 10px;
-}
-.nav_list > li > a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  font-weight: 500;
-  text-decoration: none;
-}
-.nav_list > li > a:hover {
-  text-decoration: underline;
-}
-.nav_list:hover .nav_list {
-  display: block;
-  width: 700px;
-  height: auto;
-  background-color: #fff;
-  color: #171717;
-}
-
-.pc_menu > .pc_menu:hover {
-  color: #6b2700;
-}
-.pc_menu > .pc_menu:focus {
-  background-color: #6b2700;
-  color: #ffffff;
 }
 
 /* newBox.css */
