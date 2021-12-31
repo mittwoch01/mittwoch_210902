@@ -69,7 +69,7 @@ $closeBtn: #{$imgPath}+'closeBtn_x.png';
 // ============================================
   @at-root .navi_area {
     width: 100%; height: auto;
-    background-color: $color_gray_02;
+    //background-color: $color_gray_02;
     //@include pc { float: left;}
     //@include pcfull { float: left;}
     // basic (mobile 기준) =====================
@@ -206,7 +206,7 @@ $closeBtn: #{$imgPath}+'closeBtn_x.png';
       } // a
     }// .nav_title
     @at-root .nav_list {
-      display: block;
+      display: none;
       width: 100%; height: 180px;
       margin-top: 24px;
       background-color: #fff;
@@ -223,6 +223,6 @@ $closeBtn: #{$imgPath}+'closeBtn_x.png';
     @include tablet { display: none;}
     @include laptop { display: none;}
   }// .pc_menu
-  
+
   }// .navi_area
 }// headBox
