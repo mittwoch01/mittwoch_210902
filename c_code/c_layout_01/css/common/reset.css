@@ -1,0 +1,52 @@
+@charset "UTF-8 ";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+/* a_01_test_1440.css */
+/* reset.css
+----------------------------------- */
+html,body {font-family: 'Nanum Myeongjo', serif;}
+/* html, body { width: 100%; height: 100%;} */
+
+html, body,
+h1,h2,h3,h4,h5,h6,
+p,pre,blockquote,address,
+ul,ol,li,dl,dt,dd,
+hr,button,img,
+header,article,nav,section,footer,aside,
+main,figure,figcaption,hgroup,
+form, fieldset,div {
+  margin: 0; padding: 0; border: 0;
+  font-size: 100%; 
+  box-sizing: border-box;
+  font-family: arial , 'apple SD' , 'myriad pro' , sans-serif;
+  /* font-family = 서체. sans-serif는 고딕을 지칭함. */
+  /* 16px = 1rem */
+}
+
+ol, ul { list-style: none;}
+hr {border: 0; border-bottom: 1px solid #555;}
+a { text-decoration: none; color: inherit;}
+a:hover { text-decoration: underline;}
+table, tr, th, td, thead, tbody, tfoot {
+  border: 1px solid #333; border-spacing: 0; border-collapse: collapse;
+}
+em, address, i { font-style: normal;}
+/* em, adress 기울어진 글씨 사용안함. 기본형으로 돌릴 때*/
+strong, b {font-weight: normal;}
+abbr { text-decoration: none;}
+button { border: 0; background-color: transparent; cursor: pointer; border-radius: 0;}
+
+header,article,nav,section,footer,aside,
+main,figure,figcaption,hgroup {display: block;}
+
+/* common.css
+------------------------------------------ */
+.blind { width: 0; height: 0; overflow: hidden;}
+/* overflow:hidden이란?  */
+.clearfix { width: 100%; height: auto;}
+.clearfix:after,
+.clearfix::after {
+  content: ""; display: block; clear: both;
+  width: 100%; height: 0;
+}
+#wrap {margin: auto;}

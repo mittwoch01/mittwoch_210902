@@ -325,29 +325,378 @@ https://transfonter.org/
 
 ------
 
-# 211018
+# 211019
 
 ## 수업내용
 
 css
 
-- [ ] transform:
-  - [ ] translate() - 위치이동
-  - [ ] rotate() - 회전
-  - [ ] skew() - 기울기
-  - [ ] scale() - 배율
-  - [ ] perspective() - 원근법
-
-- [ ] Perspective:transform에 들어가는 값과 동일한 기능이지만 그 범위를 설정할 때 사용하는 기능
+- [ ] overflow
+- [ ] visibility
+- [ ] border-radius
 
 html
 
-- [ ] Video, audio, iframe
+- [ ] form
+  - [ ] Form - action(자료를 전송하고 검증받을 주소), method(처리방식)
+  - [ ] Fieldset(영역), legend(form 영역 제목)
+  - [ ] Input(자료를 입력, 버튼), label(input과 연동되는 가이드기능)
+  - [ ] Textarea, select, button...
 
-  - [ ] Video : mp4, ogg, ogv(음성을 뺀 영상), mebM
+------
 
-  - [ ] Audio : mp3, ogg
+# 211020
 
-  - [ ] Iframe : 외부의 문서를 불러와서 삽입하는 코드 (Facebook, twitter, instagram, youtube)
+## 수업내용
 
-- [ ] overflow, visibility, border-
+html
+
+- [ ] 
+
+css
+
+- [ ] transition
+- [ ] animation
+
+
+
+# 211027
+
+## 수업내용
+
+- web에서 사용가능한 이미지
+  - Jpg(손실압축, 배경색 투명저장 불가능) , 
+  - png(비손실 압축, 배경색 투명저장 가능) ,
+  - svg(vector)
+  - gif(움짤)
+  - webp(webm 과 동일하게 구글에서 만든 이미지) - IE, safari,photoshop
+
+- [x] 포토샵
+  - [x] Jpg 이미지
+
+
+
+illustrator
+
+- [x]  세팅
+- [x] 선택자 / 부분선택자
+  - [x] **선택자** : 도형자체를 선택하거나, 그룹을 선택할 때 사용
+  - [x] 직접 선택자 : 도형자체를 선택보다는 일부, 영역을 선택하여 모양을 변형
+- [x] 색: 면색/선색
+  - [x] 색상을 변경하고자 할때는, 면/ 선색이든 바꾸고자하는 색상을 선택하여 앞으로 배치하고 이후에 변경
+  - [x] Cmyk/rgb : 컬러 모두 color picker 에서 변경하는 것이 아니라 color 패널에서 색상을 변경
+- [x] 내용 확인
+  - [x] Ctrl Y : 객체가 만들어져 있는지 엑스레이 확인 (view > outline)
+  - [x] ctrl h
+  - [x] shift ctrl h
+  - [x] Ctrl r
+  - [x] ctrl shift d
+- [x] 도형그리기 : property 패널과 함께 사용
+  - [x] 사각형
+  - [x] 다각형
+  - [x] 별툴 : ctrl 키를 누르면 외경/내경 중 하나를 고정하여 모양을 변경
+- [x] arrange
+  - [x] Shift ctrl ] : 맨 앞으로 배치
+  - [x] shift ctrl [ : 맨 뒤로 배치
+  - [x] 여러요소를 한번에 앞/뒤로 배치해야하는 경우 여러개의 객체를 선택하여 사용
+- [x] align : 정렬
+  - [x] 한쪽정렬
+  - [x] 각 요소별 위치기준에 따라 정렬
+  - [x] 추가옵션 : 각 요소와 요소사이에 간격 정렬
+  - [x] 추가옵션 : align to (selector , key, artboard)
+- [x] pathfinder
+  - [x] Unit : 요소들을 하나로 합치는 것
+  - [x] Divide : 요소들을 분리(자르는 것)
+- [x] ctrl 8 : Compound path <-> shift ctrl alt 8
+  - [x] 분리되어 있는 요소들을 완전한 하나의 도형으로 처리
+- [x] ctrl 7 : clipping mask
+  - [x] 맨앞에는 하나의 요소, 뒤엥서는 여러개의 요소를 담아서 마스트 처리하는 기법 (처리 후 select > 동일하게 > 칠색상 >같은 색상들 선택 > 패스파인더 > 합치기)
+- [ ] scale / offset
+- [ ] share
+- [ ] rotate
+- [ ] reflect
+- [ ] 연결 : ctrl 3
+
+------
+
+Illustrator : 웹용을 위한 이미지 저장방법
+
+- svg 저장
+- svg로 저장시 - 
+  - Compound path
+  - Artboard, 이미지 모두 소수점단위는 제거하고 
+  - save as - use artboard 체크 - 범위를 조금 더 크게 / 체크인하면 이미지만 저장
+
+
+
+
+
+
+
+
+
+
+
+------
+
+**css**
+
+- [x] responsive web (반응형 웹)
+- [x] figma를 이용한 반응형 웹 구축
+- [x] Display:flex; (display:grid;)
+
+**js**
+
+최신 브라우저에서 js 최신 표준을 지원하지만 그 기준이 현재의 표준보다 늦다.
+
+또한, 구형 브라우저에서는 ES6 이상의 버전을 지원하지 않는다.
+
+이를 해결하기 위해 다양한 방법을 시도하는데 이를 플리처리한다고 한다.
+
+babel로 처리하면 간단하게 최신 내용을 작성하고, 이를 변환하여 구형 브라우저에서도 동작 가능하도록 사용할 수 있다.
+
+이를 변경하여 구형 브라우저에서도 동작 가능하도록 사용할 수 있다.
+
+- [x] 변수 선언 - 호이스팅현상
+- [x] 형타입 체크 - 숫자, 문자, 특수(undefined,/null),논리(t/f),객체(o,a),함수(function)
+  - [x] 배열 메소드 : push, pop, unshift,shift
+  - [x] 참조변수(배열,객체) / 일반변수 : 값 자체
+  - [x] 함수 : 선언식-기명함수 : 함수에 이름을 가진다.(함수자체가 호이스팅)  /  표현식-익명함수 : 변수에 함수를 담는다.(변수이름만 호이스팅)
+  - [x] 즉시실행함수 : (function(매개변수){인수} ) - 선언과 동시에 실행 / 메모리 낭비를 줄이기 위해, (개인정보 등) 외부에 노출되지않고, 기능을 각각 별도로 사용하려고
+  - [x] 전역변수, 지역변수
+  - [x] 문자 + 문자 -> 문자,  문 + 숫 -> 문,  숫 + 숫 ->숫자연산,  문자/숫자 -> NaN(숫자)
+
+# 211105 ~ 12
+
+## 수업내용
+
+**css ~ 전처리기(scss)**
+
+- [x] Vscode - plugin - live server compile, prepress, node.js
+- [x] 변수( $이름), nesting( 선택자{ 선택자 { &:hover{} } } )
+- [x] list, map
+- [ ] dictionary
+- [x] @mixin/@include , @function, @if
+
+**Javascript**
+
+- [x] 연산자
+  - [x] 사칙연산( + - * / % )  5 % 3  -> 2
+  - [x] 증감연산( ++a, a++, --a, b-- ) , 할당연산( += , -=, /=, *=, ... ), ... a+=1; , 비교연산( ||, &&, |, & ), 동치연산( ===, !==)
+  - [x] 삼항연산 : 3가지 영역으로 나눠서 처리하는 연산  / (조건) ? 참 : 거짓 ;
+- [x] 객체 내 객체 (배열 / 함수) [ [], [], [], [] ], [ {}, {}, {}, { a:[], b:[] } ]
+- [x] 문법
+  - [x] 조건문(switch, if) 
+  - [x] 반복문( while (실무에서는 쓰지않음) , do-while, for, for-in, for-Each )
+- [x] 메소드 : 객체 배열을 수행하는 함수( ) - 사용자 지정 형태.메소드( )  
+  - *push*, ***forEach***, *shift, pop, unshift*, *split,* ***reduce***, *reverse*, *join,* *splice*, *sort*, **filter**, *length*,*indexOf*,*concat*
+- [x] 내장함수 : 이미 만들어진형태.메소드( ) | 만들어져있는함수  - 자바스트립트에 기본적으로 내장되어있는 함수이다. 
+  -  alert( ), prompt( ), comfirm( ), Math.random( ), Math.ceil( ), Math.round( ), console.log( ) ...
+- [x] 함수 - 클로저, 재귀함수
+- [x] 깊은 복사, 얕은 복사
+
+
+
+# 211122
+
+## 수업내용
+
+- [ ] 생성자 함수( 함수를 생성한다는 의미를 가지지만, 원본으로 만들어서 사용할 때는 별도의 복제본을 쓰는 것.)
+
+```javascript
+ var Fn = function(site,link){
+  this.name = site;
+  this.url = link;
+ }
+ var naver = new Fn('naver', 'http://naver.com');
+```
+
+
+
+- [ ] this (window, 함수에서 window객체, 메소드 안에서 호출한 객체) - 무언가를 가리키는 지칭
+
+```javascript
+// this
+// 1. window : 
+console.log( this ); // window
+// 2. window/undefined - 'use strict'; 유무
+// 3. 생성자 함수에서 인스턴스 처리시 (객체로 변환) 그 변수
+// 4. 메소드 처리시
+// 5. 이벤트의 주체
+```
+
+- [ ] prototype(사용하게 위해 기본 편성된 내장 기능)
+
+```javascript
+var Fn = function(site, link){
+	this.name = site;
+	this.url = link;
+}
+Fn.prototype.charactor = 'sally';
+var naver = new Fn('naver', 'http://naver.com');
+
+naver.name // naver
+naver.url // http://naver.com
+naver.charactor // sally
+
+// call, apply, bind
+// 유사배열, 배열 구분하여 전환
+// Array.prototype.slice.call();
+```
+
+- [x] 객체를 불러와서 활용 1 : 브라우저에 코드를 삽입
+  - [ ] 선택자, 생성, 삽입, 덮어씌우기(html, text), style, attribute
+  - [ ] 여러개의 내용을 반복 순환하기 위해, for/forEach
+  - [ ] 하나의 기능이 여러번 반복하기 위헤 해당 기능들을 하나의 묶음으로 function(){}
+  - [ ]  jQuery를 통해 파일을 삽입하는 방법과의 비교(js 는 무엇이든 수동, jQuery는 반자동)
+- [ ] JSON 처리
+  - [ ] 외부파일을 불러오는 방법 ( XMLHttpRequest(open, send), fetch/then )
+    - [ ] var http = new XMLHttpRequest(); http.open('GET','fileurl',true ); , http.send(); http.status;
+  - [ ] GET(추출), POST(생성), PUSH(수정), DELETE(삭제) - crud
+
+------
+
+# 211124
+
+## 수업내용
+
+- javascript
+  - jQuery 일부 기능 파악 : slide 기능 - 기본(class), animation
+  - javascript를 이용하여 jQuery기능과 동일하게 처리하는 방법
+- scss
+  - 부트스트랩으로 처리된 반응형 navigation 영역을 직접 코딩
+
+------
+
+# 211126
+
+## 수업내용
+
+- ##### javascript
+
+  - 호이스트, 함수 - 응용 + 애니메이션 추가, for, if, 객체, 배열
+- [ ] 버튼 클릭시 사라지는 기능의 반대로 나타나는 형태로 제작
+    - [ ] 슬라이드 형태, fade 처리
+  - [ ] for / forEach문 정리 - 탭메뉴 사용법
+- [ ] setTimeout, setInterval, clearInterval, call, apply, bind, css값 가져오기
+
+------
+
+# 211201
+
+## 수업내용
+
+- javascript
+
+  복습단계체크
+  
+  - [ ] setInterval, setTimeout, clearInterval
+  - [ ] transition
+  - [ ] Index 파악 - if, 삼항연산자
+  - [ ] 여러 선택자를 모아서 사용가능하게 - 배열로 처리, forEach사용
+  - [ ] 접근성 고려를 위해 focus, for 문을 시용하여 forEach 대신 이벤트 처리 + 클로저
+
+  수업 내용 :
+  
+  - [ ] 탭메뉴 구성, fadeIn, fadeOut 처리에 따른 구성
+
+------
+
+# 211202
+
+## 수업내용
+
+- javascript
+
+  **복습단계체크 및 진행** :
+
+  - [ ] tabindex기능
+  - [ ] 요소 내부에 html코드 삽입하기 + html생성방법
+  - [ ] 모달 윈도우 처리하는 방법
+  - [ ] 객체형태의 data를 담아서 처리하는 방법
+
+- 16일 반응형 코드 제작
+
+# 211203
+
+## 수업내용
+
+진행 체크 :
+
+- 지난시간에 했던 내용 보수
+
+  - 추가로 내부에 요소를 담는 메소드 : <br / >
+
+    append, prepend, before, after
+
+  - textContent
+  - next / prev
+  - Focus : a, button 강제로 초점을 맞출 때
+
+- 모달 윈도우 + fadeIn, fadePut
+
+- 자료 관리/ 저장하는 방법/ 
+
+- branch로 처리하는 방법 - vercle
+
+
+
+# 211209
+
+## 수업내용
+
+- js
+
+  진행 체크 : 
+
+  - [ ] package.json - script, devDependencies, dependencies, module(부품)
+  - [ ] babel - es6 이상 버전의 파일을 공통으로 사용가능하게 만드는 모듈
+    - [ ] babel.config.js, babel.config.json, babelrc
+  - [ ] ES6
+    - [ ] 변수 선언 : ```const``` - 상수 : 선언과 동시에 그 값, 형태를 취해야 한다. ```let``` - 변수 : 선언 후 값을 기입 / 변경 가능, 변수가 사용되는 범위
+    - [ ] 비구조 할당
+    - [ ] 함수 :  표현식, 선언식, 즉시실행함수, 화살표함수
+    - [ ] ajax :``` XMLHttpRequest```, ```fetch().then()```
+
+------
+
+## **시험 : 2021.12.16**
+
+
+- 반응형으로 figma 디자인 완성(모든페이지)
+
+- 320, 768, 1280, 1440, 1920 (기준수치에서 변경 가능하지만, 다른페이지 모두 설정된 사이즈와 동일한 기준에서 변경)
+
+  
+
+
+
+------
+
+```
+javascript
+
+// -------------------------------------------------------------------------------------
+var id = document.getElementById( 'wrap' );
+var class1 = document.getElementsByClassName( 'box' )[ n ];
+var class2 = document.getAttribute( 'class', 'box' );
+var type = document.getElementsByTagName( 'html' );
+// var nodeSelect = document.querySelector( 'ul' );
+
+// -------------------------------------------------------------------------------------
+Var $ = function( ){ 
+	var inser = arguments;
+	switch( insert[0] ){
+		case ' . ' :
+				document.getElementsByClassName( insert );
+				break;
+	  case ' # ' :
+				document.getElementById( insert );
+	  default :
+				document.getElementsByTagName
+  }
+}
+```
+
+
+

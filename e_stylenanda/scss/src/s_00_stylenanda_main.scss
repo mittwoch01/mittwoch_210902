@@ -1,0 +1,33 @@
+// s_00_stylenanda_main.scss
+/* s_00_stylenanda_main.css */
+
+@import "../common/variable";
+@import "../common/mixin";
+
+// --------------------------------
+#wrap {
+  width: 100%; 
+  // min-width: 320px;
+  height: auto; min-height: 568px;
+  background-color: #fff;
+
+   //@include mobile { min-width: 320; }
+   //@include tablet { background-color: #adf; }
+   //@include laptop { background-color: #fdf; }
+   //@include pc { background-color: #dfd; }
+   //@include pcfull { background-color: #ddf; }
+} // #wrap
+
+// --------------------------------
+@import "../page/common/headBox";
+
+@import "../page/main/newBox";
+@import "../page/main/bestitemBox";
+@import "../page/main/nmbBox";
+@import "../page/main/storeBox";
+@import "../page/main/followStyleBox";
+
+@import "../page/common/footBox";
+// --------------------------------
+
+

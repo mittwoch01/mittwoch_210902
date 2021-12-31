@@ -1,0 +1,128 @@
+// nmbBox.scss
+/* nmb.css */
+
+$nmbImg:#{$imgPath}+'nmb_section_03.png';
+
+// ---------------------------------------------
+#nmbBox {
+  width: 100%; height: auto; min-height: 529px;
+  //background-color: #ddd;
+  
+  @include tablet { height: 700px; background-color: #fff;}
+  @include laptop { height: 700px; background-color: #fff;}
+  @include pc { height: 1022px; background-color: #fff;}
+  @include pcfull { height: 1022px; background-color: #fff;}
+
+  & > h2 { 
+    position: relative ; z-index: 500; top: 182px; left: 23%;
+
+    width: 100%; height: 108px; 
+    // background-color: #555;
+    font-size: 89px; font-weight: $font_weight_bolder; 
+    text-transform: uppercase;
+    
+    @include mobile { 
+      top: 87px; 
+      font-size: 25px; 
+      font-weight: $font_weight_bolder;
+    }
+    @include tablet { 
+      top: 26px; 
+      font-size: 64px; 
+    }
+    @include laptop { 
+      top: 26px; 
+      width: 100%; height: 86px;
+      font-size: 72px;
+    }    
+  }// h2
+
+// ------------------------------------------------
+  @at-root .content_box { 
+    display: flex; justify-content: space-between;
+    position: absolute; z-index: 100; top: 1990px; left: 0;
+    width: 1360px; height: 580px;
+    background-color: #fff;
+
+    @include mobile { 
+      flex-direction: column;
+      top: 1218px; width: 276px; height: 376px; 
+    }
+    @include tablet { top: 1949px; width: 714px; }
+    @include laptop { top: 1822px; width: 948px; }
+
+// ------------------------------------------------------
+    @at-root #nmb_img { 
+      width: 840px; height: 580px; 
+      // background-color: #fda;
+      background-size: cover; background-image: url($nmbImg); 
+
+      @include mobile { width: 276px; height: 202px;}
+      @include tablet { width: 446px;}
+      @include laptop { width: 618px; }
+    } // #nmb_img
+    @at-root .nmb_content { 
+      width: 306px; height: 416px;
+      // background-color: #dfa;
+      margin-top: 85px; margin-left: 104px;  
+      & > dl{ 
+        flex-direction: column;
+        width: 100%; height: auto;
+        & > dt { 
+          width: 200px; height: 24px;
+          margin-bottom: 36px;
+          //background-color: #fa0;
+          font-size: 20px; font-weight: $font_weight_bold;
+
+          @include mobile { 
+            width: 103px; height: 14px; 
+            font-size: 12px; font-weight: $font_weight_bolder;
+          }
+          @include tablet { margin-bottom: 29px;}
+          @include laptop { margin-bottom: 24px; }
+        }
+        & > dd { 
+          width: 100%; height: 240px;
+          margin-bottom: 85px;
+          background-color: #fff;
+          font-size: 19px; font-weight: $font_weight_bolder;
+
+          @include mobile { 
+            width: 167px; height: 85px;
+            margin-bottom: 26px;
+            font-size: 12px;
+          }
+          @include tablet {
+            width: 209px; height: 206px;
+            margin-bottom: 67px;
+            font-size: 14px;
+          }
+          @include laptop { 
+            width: 246px; height: 209px;
+            margin-bottom: 66px; 
+            font-size: 16px;
+          }
+        }// dd:nth-child(1)
+        
+            & > a {
+              width: 145px; height: 30px; 
+              margin-left: 30px;
+              // background-color: #faa;
+              font-size: 25px; font-weight: $font_weight_bold;
+              @include mobile { width: 56px; font-size: 12px;}
+              @include tablet { width: 102px; font-size: 22px;}
+              @include laptop { width: 116px;}
+            }// a
+        
+      }// dl
+
+      // -------------------------------------------------
+      @include mobile { width: 168px; height: 352px; margin-top: 27px;}
+      @include tablet { width: 210px; height: 352px; margin-top: 172px;}
+      @include laptop { width: 246px; height: 354px; margin-top: 163px;}
+      
+    // -------------------------------------------------
+    }// .nmb_content
+
+  }// .content_box
+}// #nmbBox

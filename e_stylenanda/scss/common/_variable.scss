@@ -1,0 +1,37 @@
+// variable.scss
+
+// color =========================
+$color_white_01: #ffffff;
+$color_gray_01: #d4d4d4;
+$color_gray_02: #7c7c7c;
+$color_gray_03: #515151;
+$color_black_01: #171717;
+$color_black_02: #141414;
+$color_peach_01: #ffc59b;
+$color_brown_01: #6b2700;
+// ================================
+// border 
+// $line1 : 1px solid $color_gray_03;
+// $line2 : 1px solid $color_primary_01;
+// $line3 : 2px solid $color_primary_01;
+
+// font ===========================
+$font_family_en:"Lato", "noto sans KR";
+$font_family_kr:"noto sans KR";
+$font_family_common:sans-serif;
+$font_weight_thin:300;
+$font_weight_normal:400;
+$font_weight_bold:500;
+$font_weight_bolder:700;
+$font_weight: (300, 400, 500, 700);
+$font_size:(
+  title2:40px,title3:36px,title4:28px,title5:22px,
+  content1:22px, content2:18px, content3:16px, content4:12px,
+  button:22px, option1:12px, option2:10px, option3:9px);
+
+// device size ================================
+$mobile : 320px;
+$tablet : 600px;
+$laptop : 1024px;
+$pc:1440px;
+$pcfull : 1920px;

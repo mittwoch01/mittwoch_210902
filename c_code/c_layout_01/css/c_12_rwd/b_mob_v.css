@@ -1,0 +1,47 @@
+/* (max-width:479px) design 기준 : 320px */
+
+@media all and (max-width:479px) {
+
+/*  */
+  #headBox { 
+    height: 40px; height: 12.5vw; /* 40/320*100 vw */ min-height: 40px;
+  } 
+  #headBox > .container { padding: 2.1875vw 10px; }
+  h1 { width: 110px; height: 26px;}
+  #navigation { width: 60px; padding: 0;}
+    .gnb { width: 20px; height: 26px; }
+    .unb { width: 26px; height: 26px; }
+
+/* #viewBox ============================================*/
+  #viewBox { 
+    height: 480px; height: 150vw; min-height: 480px; 
+    padding-top: 12.6vw; }
+
+/* .indicator ----------------------------------------- */
+  .indicator { 
+    left: auto; right: 20px;
+    width: 56px; height: 26px; 
+  }
+  .indi_list { display: none;}
+  .indi_list li {}
+  .indicator p { 
+    display: block;
+    width: 100%; height: 100%;
+    border-radius: 13px;
+    background-color: var(--color-deepGn); font-size: 1rem;
+    line-height: 26px;
+    color: var(--color-white); text-align: center;
+  }
+  .total { font-weight: 700;}
+  
+
+
+
+/*  */
+  #contentBox {  height: 480px; height: 150vw; min-height: 480px; }
+/*  */
+  #infoBox {  height: 480px; height: 150vw; min-height: 480px; }
+/*  */
+  #footBox { height: 40px; }
+
+} /* (max-width:479px */

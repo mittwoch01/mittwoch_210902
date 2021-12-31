@@ -7,8 +7,9 @@
   --color-gray1 : #c4c4c4;
   --color_sample : rgba(20,100,255,0.15);
   font-family: 'Lato', sans-serif;
-
+  
 }  
+a { text-decoration: none;}
 
 
 .wrapper {
@@ -22,18 +23,18 @@ h2 {text-transform: uppercase;}
   width: 1280px; height: auto; min-height: 500px;
   margin: auto;
 }
-/* header ========================================*/
-#header {
+/* headBox ========================================*/
+#headBox {
   position: fixed; z-index: 1000;
   top: 0; left: 0; right: 0;
-  padding-left: 10px;
   width: 100%;
   height: 88px;
   background-color: #fff;
   box-shadow: 0 0 10px 0 rgba(73, 73, 73, 0.5);
 }
+
 .head_wrapper {
-  width: 1290px; height: auto;
+  width: 1280px; height: auto;
   margin: auto;
 }
 h1 {
@@ -42,10 +43,12 @@ h1 {
   background-color: #515151;
   color: #fff;
 }
+
+/* ----navigation--------------------------------- */
 .navigation {
   float: left;
-  width: 1004px; height: 65px;
-  margin: 10px; margin-left: 76px;
+  width: auto; height: 100%;
+  margin: 10px; margin-left: 54px;
 }
 .navigation > ul { 
   position: relative; z-index: 1;
@@ -53,35 +56,43 @@ h1 {
 }
 .navigation > ul:before { 
   content:"";
-  width: 100%; height: 100%; height: 0;
+  width: 900px; height: 200px; height: 0;
+  margin-top: 13px;
+
   display: block; z-index: -1;
   position: absolute; 
-  top:79px; left: 0; 
-  background-color: #171717;
+  top:65px; left: 0; 
+  background-color: #8558b8;
 }
 .navigation > ul > li {
   float: left;
   width: 160px; height: auto;
-  margin-right: 51px;
+  margin-right: 25px;
 }
 .navigation > ul > li:last-child { margin-right: 0;}
+
+/* ---nav_title---------------------------------------- */
 .nav_title {
-  width: 100%; height: 65px;
+  width: 100%; height: 100%;
+  margin-top: 18px;
+  background-color: #fdd;
 }
 .nav_title a {
   display: block;
   width: 100%; height: 100%;
-  padding-top: 18px;
-  font-size: 25px;
-  font-weight: 700;
+  /* padding-top: 18px; */
+  font-size: 25px; font-weight: 700;
   text-align: center; line-height: 30px;
   text-transform: uppercase;
 }
+
+/* ---nav_list------------------------------------------ */
 .nav_list {
   display: none;
   width: 100%; height: auto;
+  margin-top: 30px; 
   color: #fff;
-  background-color: #171717;
+  background-color: #b93b3b;
 }
 .nav_list li {
   width: 100%; height: 40px;
@@ -95,6 +106,7 @@ h1 {
   line-height: 40px;
   text-transform: uppercase;
 }
+
 .navigation:hover .nav_list { display: block;}
 .navigation:hover ul:before{ height: 100%; }
 .nav_title:hover {
@@ -102,8 +114,8 @@ h1 {
   color: #171717;
 }
 
-/* new in ===========================================*/
-#new {
+/* newBox ===========================================*/
+#newBox {
   /* padding-top: 75px; */
   height: 768px;
   background-color: #d4d4d4;
@@ -111,7 +123,6 @@ h1 {
 .new_bar {
   margin: auto; margin-top: 710px;
   width: 159px; height: 25px;
-  background-color: #777;
 }
 .new_bar > ul { width: 100%; height: 100%;}
 .new_bar li {
@@ -123,8 +134,8 @@ h1 {
 }
 .new_bar li:last-child { margin-right: 0;}
 
-/* bestitem ======================================*/
-#bestitem {
+/* bestitemBox ======================================*/
+#bestitemBox {
   padding: 25px; 
   height: 963px;
   background-color: #fff;
@@ -205,12 +216,12 @@ h1 {
   background-color: #7c7c7c;
 }
 /* nanda made better ===========================================*/
-#nmb {
+#nmbBox {
   position: relative; 
   height: 700px;
   background-color: #ececec;
 }
-#nmb > h2 { 
+#nmbBox > h2 { 
   position: absolute; box-sizing: border-box;
   z-index: 100;
   width: 1280px; height: 138px; 
@@ -264,8 +275,8 @@ h1 {
   background-color: var(--color_sample);
 }
 
-/* store =========================================*/
-#store {
+/* storeBox =========================================*/
+#storeBox {
   padding-top: 112px;
   height: 780px;
   background-color: #fff;
@@ -375,8 +386,8 @@ button {
   color: #141414;
 }
 
-/* followUs ======================================*/
-#followUs {
+/* followStyleBox ======================================*/
+#followStyleBox {
   padding-top: 74px; box-sizing: border-box;
   height: 763px;
   background-color: #ffc59b;
@@ -492,6 +503,8 @@ button {
   width: 49px; height: 49px;
   background-color: #fff;
 }
+.foot_bar > button { width: 49px; height: 49px;}
+
 .foot_bar li:first-child { margin-right: 7.6px;}
 
 address {

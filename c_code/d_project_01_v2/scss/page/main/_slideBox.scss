@@ -1,0 +1,14 @@
+// slideBox.scss
+
+#slideBox{
+  width: 100%; height: 100vh; min-height: 500px;
+  padding-top: $headH;
+  background-color: #dff;
+
+
+@include mobile{padding-top: $headH;}
+@include tablet{padding-top: $headH; height: 450px;}
+@include laptop{padding-top: $headH; height: 600px;}
+@include pc{padding-top: $headH; height: 60px;}
+
+}// #slideBox

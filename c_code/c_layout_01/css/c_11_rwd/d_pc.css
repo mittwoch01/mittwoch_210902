@@ -1,0 +1,36 @@
+/* 960px - */
+@media all and (min-width:769px) {
+
+  #wrap { width: 100%; }
+  
+  #headBox { height: 150px; background-color: rgb(253, 252, 187);}
+  h1 { 
+    float: left;
+    width: 150px; height: 150px; 
+    background-color: rgb(75, 190, 119);
+  }
+  #snsBox { 
+    float: right; 
+    width: 400px; height: 50px;
+    margin-top: 40px; background-color: #fff;
+  }
+  .nav_btn {display: none;}
+  .global_navigation { width: 100%; height: 100%;}
+  .global_navigation li { 
+    float: left;
+    width: 80px; height: 100%; margin-left: 20px;
+    background-color: #ddf;
+  }
+  .global_navigation li:nth-child(1) { margin-left: 0;}
+  #viewBox { height: 450px; }
+  #imgBox { height: 600px; }
+  .img_01 { background-color: rgb(71, 126, 87);}
+  .img_02 { background-color: rgb(116, 173, 187);}
+  .img_03 { background-color: rgb(71, 126, 87);}
+  .img_04 { background-color: rgb(116, 173, 187);}
+  #conBox { display: none;}
+  #infoBox { display: none;}
+  #footBox { background-color: rgb(95, 71, 18);}
+  #footBox > h2 { float: left; width: 200px;}
+
+}

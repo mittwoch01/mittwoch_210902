@@ -1,0 +1,81 @@
+@charset "UTF-8 ";
+/* b_03_scss_coffee_main_design.css */
+
+#wrap { 
+  margin: auto;
+  width: 1440px; height: auto; min-height: 500px;
+  background-color: #eee;
+}
+/* headBox ===============================*/
+#headBox {
+  width: 1200px; height: 100px;
+  margin: auto;
+  padding: 10px; box-sizing: border-box;
+  background-color: #dff;
+}
+h1 { 
+  float: left; 
+  width: 130px; height: 80px; 
+  margin: 0;
+  background-color: rgb(9, 85, 56);
+}
+.navigation { 
+  float: right;
+  width: 550px; height: 80px;
+  background-color: #ddd;
+}
+.unb { 
+  float: right;
+  width: 300px; height: 25px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+.gnb { 
+  float: right;
+  width: 100%; height: 38px;
+  background-color: #fff;
+}
+/* imgBox ===============================*/
+#imgBox {
+  width: 100%; height: 250px;
+  margin: auto;
+  background-color: #fa0;
+}
+.inner_img { 
+  position: relative;
+  width: 1200px; height: 100%; 
+  margin: auto;
+  background-color: #ddf;
+}
+.textBox {
+  position: absolute; left: 20px; bottom: 20px; 
+  width: 600px; height: 100px;
+  background-color: #fff;
+}
+h3 {}
+/* conBox ===============================*/
+#conBox {
+  width: 100%; height: 1500px;
+  margin: auto;
+  background-color: #555;
+}
+.inner_con { 
+  width: 1200px; height: 100%;
+  margin: auto; padding-top: 100px; box-sizing: border-box;
+  background-color: #fff;
+}
+.img_title {
+  width: 1200px; height: 80px;
+  margin: auto; margin-bottom: 30px;
+  background-color: #eee;
+}
+.img_list {
+  width: 1200px; height: 1250px;
+  margin: auto; 
+  background-color: #fd0;
+}
+/* footBox ===============================*/
+#footBox {
+  width: 100%; height: 100px;
+  background-color: #fa0;
+}

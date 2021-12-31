@@ -1,0 +1,108 @@
+@charset "UTF-8 ";
+/* c_13_flex_test.css */
+
+#wrap { 
+  width: 900px; height: auto;
+  padding-bottom: 500px;
+}
+h3 { width: 150px; height: 80px; background-color: #ccc; }
+.gnb { float: left; width: 400px; height: 40px; background-color: #acf;}
+.gnb ul {width: 100%; height: 100%;}
+.gnb li {border: 1px solid #7d7; background-color: #fff;}
+
+.unb { float: right; width: 150px; height: 40px; background-color: #fdd;}
+
+
+/* .navi > .gnb { float: left;}
+.navi > .unb { float: right;} */
+
+/* basic ---------------------------------- */
+.header_01 {
+  width: 100%; height: auto;
+  border: 1px solid #333;
+  margin-bottom: 10px; padding: 10px; box-sizing: border-box;
+}
+.header_01 > h3 { float: left; }
+.header_01 > .navi {
+  float: right; width: 600px; height: 50px;
+  background-color: #eee;
+  margin-top: 30px;
+}
+.header_01 .gnb {
+  position: absolute; bottom: 0; left: 50%;
+  transform: translate(-50%);
+}
+.header_01 .gnb li { float: left; margin-right: 10px; background-color: #fff;}
+.header_01 .gnb li:last-child { margin-right: 0;}
+.header_01 .unb { float: right; }
+.header_01 .unb > a {
+  float: left; width: 30px;  
+  margin-left: 5px;
+  background-color: #fff;
+}
+.header_01 .unb > a:first-of-type { float: right;}
+.header_01 .unb > a:nth-child(2) {margin-left: 0;}
+
+/* ----------------------------------- */
+.header_02 {
+  width: 100%; height: auto;
+  border: 1px solid #07f; 
+  margin-bottom: 10px;
+  padding: 10px; box-sizing: border-box;
+  display: flex; justify-content: space-between;
+}
+/* flex는 부모에게 쓰고 자식이 영향을 받는다. */
+
+.header_02 > .navi {
+  width: 600px; height: 50px;
+  background-color: #eee;
+  margin-top: 30px;
+}
+
+
+/* flex ------------------------------ */
+.header_03 {
+  width: 100%; height: auto;
+  border: 1px solid #fa0; padding: 10px; box-sizing: border-box;
+  margin-bottom: 20px;
+
+  display: flex; justify-content: space-between;
+  align-items: flex-end;
+}
+.header_03 .gnb ul { display: flex; justify-content: space-around;}
+.header_03 .unb { display: flex; justify-content: space-between;}
+.header_03 .unb a { font-size: 0.7rem; background-color: #fa0;}
+.header_03 .unb a:nth-of-type(1) {order: 2;}
+
+/* ------------------------------ */
+.part { 
+  display: flex; justify-content: space-between;
+  width: 800px; height: 500px; background-color: #eee;
+}
+.part > ul { 
+  display: flex; justify-content: space-around;
+  width: 350px; height: 300px; 
+  border: 1px solid #333;
+}
+.part > ol { 
+  display: flex; justify-content: space-around;
+  width: 350px; height: 300px; 
+  border: 1px solid #f06;
+}
+
+.part li { 
+  width: 80px; height: 50px; 
+  background-image: linear-gradient(#dff, #fd7);
+}
+
+/* 
+* flex : 자식요소들을 정렬하는 것을 편하게 처리할 수 있는 기능이다.
+* flex-direction을 사용하면 가로정렬(row), 세로정렬(culumn)을 할 수 있다.
+* 내부요소들의 시작과, 끝의 정렬을 맞출 수 있는데 시작위치 정렬(flex-start) , 끝정렬(flex-end) , 가운데(center) , 양쪽정렬(space-between) , 공간을 가지는 양쪽정렬(space-around)의 값을 가질 수 있다.
+* 이러한 정렬이 요소의 배치방향에 따른 정렬이면 justify-contenta 속성을 사용
+* 요소의 나열방향이 아닌 방향이면, align-items와 align-content로 사용
+* 내용요소들은 기본적으로 지정영역보다 양이 많을 경우, 넘쳐서 처리된다. 이를 해결하기 위해 
+  flex-wrap을 사용한다. 
+  - 넘치는 것을 허용(한줄로 주주룩 넘치게 배열됨) : nowrap / 
+  - 허용하지 않고 내부에서 처리(밑으로 내려가면서 주루룩 배열됨) : wrap
+*/

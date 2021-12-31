@@ -1,0 +1,18 @@
+/* (디자인 기준 : 320px) - (767px 보다 작은 크기)767px */
+@media all and (max-width:767px) {
+
+  #wrap { width: 100%; min-width: 320px; min-height: 600px;}
+
+  /* % 계산 방법 : 수치(154px) / 기준값(320px) * 100 */
+
+  #headBox { height: 100px;}
+  #viewBox { 
+    width: 48.125%; min-width: 154px; height: 400px; 
+    background-color: #07f;
+  }
+  .view_area {width: 100%; height: 100%;}
+  #conBox { display: none;}
+  #infoBox { display: none;}
+  #footBox { height: 140px; background-color: #afa;}   
+
+} /* (max-width:767px) ================================ */

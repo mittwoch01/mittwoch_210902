@@ -1,0 +1,28 @@
+/* 480px */
+@media all and (max-width:480px) {
+
+  #wrap { width: 100%;}
+
+  #headBox { 
+    position: relative;
+    width: 100%; height: 100px; 
+    background-color: rgb(75, 190, 119);
+  }
+  #snsBox { 
+    position: absolute; top: 10px; right: 10px; bottom: 10px;
+    float: right;
+    width: 80px; height: 80px; 
+    background-color: #fff;
+  }
+  #viewBox { height: 400px; }
+  #imgBox { height: 400px;}
+
+  #conBox { height: 100px; }
+  #infoBox { height: 200px; }
+  #footBox { 
+    background-color: rgb(71, 54, 18);
+  }
+  #footBox > h2 { 
+    margin: auto;
+    width: 150px; }
+}

@@ -1,0 +1,127 @@
+// followStyleBox.scss
+/* followStyleBox.css */
+$imgPathFollowUs:'../../multi/img/followUs/';
+// ----------------------------------------------
+$followUs1: #{$imgPathFollowUs}+'followUs_1.png';
+$followUs2: #{$imgPathFollowUs}+'followUs_2.png';
+$followUs3: #{$imgPathFollowUs}+'followUs_3.png';
+$followUs4: #{$imgPathFollowUs}+'followUs_4.png';
+$followUs5: #{$imgPathFollowUs}+'followUs_5.png';
+$followUs6: #{$imgPathFollowUs}+'followUs_6.png';
+$followUs7: #{$imgPathFollowUs}+'followUs_7.png';
+$followUs8: #{$imgPathFollowUs}+'followUs_8.png';
+$followUs9: #{$imgPathFollowUs}+'followUs_9.png';
+$followUs10: #{$imgPathFollowUs}+'followUs_10.png';
+// ----------------------------------------------
+#followUsBox {
+  width: 100%; height: auto; min-height: 244px;
+  background-color: $color_peach_01;
+
+  @include tablet { height: 730px;}
+  @include laptop { height: 763px;}
+  @include pc { height: 763px;}
+  @include pcfull { height: 763px;}
+
+  // -------------------------------------------
+   @at-root .follow_area {
+    position: relative; top: 78px; left: 0; right: 0;
+    width: 1200px; height: 626px;
+    margin: auto;
+    // background-color: #fff;
+
+    @include mobile { top: 17px; width: 310px; height: 208px;}
+    @include tablet { top: 105px; width: 514px; height: 518px;}
+    @include laptop { top: 100px; width: 784px; height: 570px; }
+    
+    @at-root .follow_title_part {
+      width: 220px; height: 140px;
+      margin: auto;
+      // background-color: #fdf;
+      color: $color_black_02;
+      & > h2 {  
+        margin-bottom: 45px;
+        font-size: 50px; font-weight: $font_weight_bolder; 
+        text-transform: capitalize;
+
+        @include mobile {
+          width: 127px; height: 36px;
+          margin: auto;
+          margin-bottom: 14px; font-size: 28px;
+          }
+
+      }// h2
+      & > ul { width: 100%; height: auto;
+        & > li { 
+          width: 174px; height: 34px;
+          margin: auto;
+          & > a { 
+            font-size: 20px; font-weight: $font_weight_normal;
+            
+          } // a
+        } // li
+      }// ul
+
+    }// .follow_title_part
+    @at-root #follow_Img_part {
+      position: absolute; top: 186px; left: 60px;
+      width: 1080px; height: 430px;
+      // background-color: #fad;
+
+      @include mobile { top: 110px; left: 0; width: 310px; height: 100px;}
+      @include tablet { top: 181px; left: 0; width: 514px; height: 342px;}
+      @include laptop { top: 181px; left: 0; width: 784px; height: 387px; }
+      & > ul {
+        width: 100%; height: auto;
+        display: flex;flex-wrap: wrap; align-content: center;
+        & > li { 
+          width: 210px; height: 210px; 
+          margin: 0 7px 9px 0;
+          background-color: #ddd;
+          @include mobile { width: 100px; height: 100px;
+            margin-right: 5px;
+            &:nth-child(3) { margin-right: 0;}
+            &:nth-child(4) { display: none;}
+            &:nth-child(5) { display: none;} 
+            &:nth-child(6) { display: none;}
+            &:nth-child(7) { display: none;} 
+            &:nth-child(8) { display: none;}
+            &:nth-child(9) { display: none;} 
+            &:nth-child(10) { display: none;}
+          }
+          @include tablet { width: 166px; height: 166px;
+            margin-right: 7px;
+            &:nth-child(3) { margin-right: 0;} 
+            &:nth-child(6) { margin-right: 0;} 
+            &:nth-child(7) { display: none;} 
+            &:nth-child(8) { display: none;}
+            &:nth-child(9) { display: none;} 
+            &:nth-child(10) { display: none;}
+          }
+          @include laptop { width: 190px; height: 190px;  
+            margin-right: 7px;
+            &:nth-child(4) { margin-right: 0;}
+            &:nth-child(8) { margin-right: 0;}
+            &:nth-child(9) { display: none;} 
+            &:nth-child(10) { display: none;}
+          }
+          @include pc { 
+            &:nth-child(5) { margin-right: 0;}
+            &:nth-child(10) { margin-right: 0;}
+          }
+          &:nth-child(1){background-size: cover; background-image: url($followUs1);}
+          &:nth-child(2){background-size: cover; background-image: url($followUs2);}
+          &:nth-child(3){background-size: cover; background-image: url($followUs3);}
+          &:nth-child(4){background-size: cover; background-image: url($followUs4);}
+          &:nth-child(5){background-size: cover; background-image: url($followUs5);}
+          &:nth-child(6){background-size: cover; background-image: url($followUs6);}
+          &:nth-child(7){background-size: cover; background-image: url($followUs7);}
+          &:nth-child(8){background-size: cover; background-image: url($followUs8);}
+          &:nth-child(9){background-size: cover; background-image: url($followUs9);}
+          &:nth-child(10){ background-size: cover; background-image: url($followUs10);}
+        }// li
+      }// ul
+    }// .follow_Img_part
+
+  }// .follow_area
+
+}// #followUsBox

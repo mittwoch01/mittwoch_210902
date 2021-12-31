@@ -1,0 +1,120 @@
+/* b_02_scss_list_dic.css */
+/* 
+$psuedoCode2 : (
+  "hover": #ffa,
+  "focus": #f0a,
+  "active": #ddf
+);
+*/
+#wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #ffdd99;
+}
+
+.list_area {
+  width: 100px;
+  height: auto;
+}
+.list_area > li {
+  width: 100%;
+  background-color: #00f;
+}
+.list_area > li:hover {
+  background-color: #87f;
+}
+.list_area > li:focus {
+  background-color: #4f3;
+}
+
+.coffee_esspress {
+  width: 100%;
+}
+
+.coffee_2 {
+  width: 100%;
+}
+
+.area_esspress {
+  width: 10%;
+  height: 100%;
+  background-color: #00f;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.area_latte {
+  width: 20%;
+  height: 100%;
+  background-color: #0af;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.area_choco {
+  width: 30%;
+  height: 100%;
+  background-color: #00f;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.area_vanila {
+  width: 40%;
+  height: 100%;
+  background-color: #7af;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.area_other {
+  width: 50%;
+  height: 100%;
+  background-color: #adf;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#viewBox {
+  width: 100%;
+  height: 78.125vw;
+}
+
+/* -----------------------------------------*/
+.nav_area {
+  float: right;
+  width: 960px;
+  height: auto;
+}
+.nav_area > li {
+  float: left;
+  width: auto;
+  height: 30px;
+}
+.nav_area a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fa0;
+}
+.nav_area a > span {
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.nav_area:after, .nav_area::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*# sourceMappingURL=b_02_scss_list_dic.css.map */
