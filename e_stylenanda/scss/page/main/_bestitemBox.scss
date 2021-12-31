@@ -20,8 +20,7 @@ $thirdImgK:#{$imgPath}+'best_kkxx.png';
     & > .best_area { 
       width: 1140px; height: 790px;
       margin: auto;
-      background-color: #7ea;
-    }
+      background-color: #7ea;}
     @at-root .best_inner { 
       width: 100%; height: auto;
       background-color: #fd0;
@@ -33,63 +32,56 @@ $thirdImgK:#{$imgPath}+'best_kkxx.png';
         font-weight: $font_weight_bold;  
         text-transform: uppercase;
       }// h2
-
-// ----------------------------------------------
+// ----------------------------------------------------------------
+// responsive (laptop, pc, pcfull) ================================
     @at-root .best_title { 
       width: 660px; height: 33px;
       margin: auto; margin-top: 68px; 
-      // background-color: #f00;
-      & > ul { 
-        width: 100%; height: auto;
-        & > li { 
-          float: left;
-          height: auto;
-          margin-right: 50px;
-          // background-color: #fdd;
-          & > button { font-size: 26px;  
-            text-transform: uppercase; }
-
+      background-color: #f00;
+      @at-root .best_title_inner { 
+        display: flex; justify-content: space-between;
+        & > li { background-color: #fdd;
+          & > button { font-size: 26px; text-transform: uppercase; }
           & > button:hover { color: $color_brown_01; text-decoration: underline;}
-          & > button:focus { 
-            background-color: $color_brown_01;
-            color: $color_white_01; }
-            &:last-child { margin-right: 0;}
+          & > button:focus { background-color: $color_brown_01; color: $color_white_01; }
         }// li
       }// ul
+    // display:none; ---------------------------------
       @include mobile { display: none;}
       @include tablet { display: none;}
     }// .best_title
-
 // ------------------------------------------
+// basic (mobile 기준) =======================
     @at-root .mobile_title {
       width: 180px; height: 50px;
       margin: auto; margin-top: 38px;
-      // background-color: #dfe;
-      
-      & > ul { width: 100%; height: auto;
-        & >li {
+      background-color: #dfe;    
+      // responsive (tablet) ============================  
+      @include tablet { width: 440px; height: 114px; 
+        margin-top: 60px; background-color: #5ee;}
+      // ------------------------------------------------
+      & > ul { 
+        display: flex; justify-content: space-between;
+        @at-root .mobile_btn {
           float: left;
           width: 50px; height: 50px; 
-          margin-right: 9px;
           border-radius: 100%;
           background-color: $color_gray_01;
+        // responsive -----------------------------------------
           @include full('kakao_talk.png', $size:contain);
           @include mobile { width: 50px; height: 50px;}
-          @include tablet { 
-            width: 114px; height: 114px;
-            margin-right: 32px;
-          }
-          &:last-child { margin-right: 0;}
-        }// li
-        > li:nth-child(1) { background-image: url($threeceLogo);}
-        > li:nth-child(2) { background-image: url($nandaLogo);}
-        > li:nth-child(3) { background-image: url($barLogo);}
+          @include tablet { width: 114px; height: 114px;}
+          &:nth-child(1) { background-image: url($threeceLogo);}
+          &:nth-child(2) { background-image: url($nandaLogo);}
+          &:nth-child(3) { background-image: url($barLogo);}
+        }// .mobile_btn
+      // ------------------------------------------
+      // display:none; ---------------------------------
+        @include laptop { display: none;}
+        @include pc { display: none;}
+        @include pcfull { display: none;}
       }// ul
-// ------------------------------------------
-    @include tablet {
-      width: 440px; height: 114px; 
-      margin: auto; margin-top: 60px; 
-    }
+      // display:none; ----------------------------------
       @include laptop { display: none;}
       @include pc { display: none;}
       @include pcfull { display: none;}
@@ -103,7 +95,7 @@ $thirdImgK:#{$imgPath}+'best_kkxx.png';
     width: 1140px; height: 518px;
     margin: auto; margin-top: 114px;
     // background-color: #ddd;
-    @include mobile { width: 262px; height: 382px; margin-top: 25px;}
+    @include mobile { width: 262px; height: 362px; margin-top: 25px;}
     @include tablet { width: 750px; height: 518px; margin-top: 50px;}
     @include laptop { width: 926px; height: 518px;}
 
@@ -118,7 +110,7 @@ $thirdImgK:#{$imgPath}+'best_kkxx.png';
         
         @include mobile { 
           &:nth-child(1) { display: none; }
-          &:nth-child(2) { width: 262px; height: 382px;}
+          &:nth-child(2) { width: 262px; height: 342px;}
           &:nth-child(3) { display: none; }
         }
         @include tablet { 
@@ -147,18 +139,19 @@ $thirdImgK:#{$imgPath}+'best_kkxx.png';
   & > .best_area { 
     width: 262px; height: 530px;
     margin: auto;
-    background-color: #7ea;
-  }
-
-  & > h2 { 
-    width: 150px; height: 36px;
-    margin: auto;
-    background-color: #ffd;
-    font-size: 30px; line-height: 30px; 
-    font-weight: $font_weight_bolder;  
-    text-transform: uppercase;
-  }// h2
-
+    background-color: #7ae;}
+    @at-root .best_inner { 
+      width: 100%; height: auto;
+      background-color: #fd0;
+      & > h2 { 
+      width: 150px; height: 36px;
+      margin: auto;
+      background-color: #ffd;
+      font-size: 30px; line-height: 30px; 
+      font-weight: $font_weight_bolder;  
+      text-transform: uppercase;
+      }// h2
+    }// .best_inner
 }// mobile
 
 // tablet 768 ==================================================
@@ -169,9 +162,8 @@ $thirdImgK:#{$imgPath}+'best_kkxx.png';
   & > .best_area { 
     width: 750px; height: 802px;
     margin: auto;
-    background-color: #7ea;
+    background-color: #2ad;
   }
-
   & > h2 { 
     width: 250px; height: 60px;
     margin: auto;
@@ -190,7 +182,7 @@ $thirdImgK:#{$imgPath}+'best_kkxx.png';
   & > .best_area { 
     width: 926px; height: 790px;
     margin: auto;
-    background-color: #7ea;
+    background-color: #daa;
   }
 
   & > h2 { 
@@ -245,8 +237,4 @@ $thirdImgK:#{$imgPath}+'best_kkxx.png';
   }// h2
 
 }// pcfull
-
-
-
-
 }// #bestitemBox ==================================================

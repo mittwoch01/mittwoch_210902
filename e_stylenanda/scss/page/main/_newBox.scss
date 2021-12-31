@@ -1,32 +1,34 @@
 // newBox.scss
 /* newBox.css */
-// --------------------------------------------------
+// ---------------------------------------------------------------------
 #newBox {
   width: 100%; height: auto; min-height: 558px;
   padding-top: $headH;
   background-color: #ddf;
-
+ // headBox의 display:fixed; 때문에 내려야하는 높이 ==========================
     @include mobile{padding-top: $headH+px; height: 493px;}
     @include tablet{padding-top: 110px; height: 895px;}
     @include laptop{padding-top: $headH2+px; height: 768px;}
     @include pc{padding-top: $headH2+px; height: 768px;}
     @include pcfull{padding-top: $headH2+px; height: 768px;}
-  
 // ---------------------------------------------------------------------
   @at-root .indicator {
     position: absolute; z-index: 100; top: 710px; left: 50%; 
     width: 170px; height: 34px; 
+    margin: auto;
     padding: 4px; box-sizing: border-box;
-    //background-color: $color_gray_03;
+    background-color: $color_gray_03;
     border-radius: 100px;
     transform: translate(-50%);
+  // display:none; -----------------------------------------------------
     @include mobile { display: none; }
     @include tablet { display: none; }
-    & > .indi_list { 
+  // -------------------------------------------------------------------
+    @at-root .indi_list { 
+      display: flex; justify-content: space-between;
       > li { 
-        float: left;
-        width: 26px; height: 26px; 
         margin-left: 42px;
+        width: 26px; height: 26px; 
         > a { 
           display: block; 
           margin: auto;
@@ -34,6 +36,7 @@
           background-color: $color_white_01;
           border-radius: 100%;
         }// a
+       // &.action { }
       }// li
       > li:first-child { margin-left: 0;}
     }// .indi_list
