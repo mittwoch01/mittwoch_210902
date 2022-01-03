@@ -585,21 +585,56 @@ h1 > a > span {
 
 /* bestBox.css */
 #bestitemBox {
+  position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 964px;
   min-height: 556px;
   margin: auto;
   background-color: #dfe;
 }
+@media all and (max-width: 599px) {
+  #bestitemBox {
+    height: 556px;
+  }
+}
 #bestitemBox > .best_area {
+  position: absolute;
+  top: 84px;
+  left: 0;
+  right: 0;
   width: 1140px;
   height: 790px;
   margin: auto;
   background-color: #7ea;
 }
+@media all and (max-width: 599px) {
+  #bestitemBox > .best_area {
+    top: 28px;
+    width: 262px;
+    height: 530px;
+    background-color: #7ae;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #bestitemBox > .best_area {
+    top: 80px;
+    width: 750px;
+    height: 802px;
+    background-color: #2ad;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #bestitemBox > .best_area {
+    width: 926px;
+    background-color: #daa;
+  }
+}
 .best_inner {
   width: 100%;
   height: auto;
+  margin: auto;
   background-color: #fd0;
 }
 .best_inner > h2 {
@@ -611,6 +646,15 @@ h1 > a > span {
   line-height: 50px;
   font-weight: 500;
   text-transform: uppercase;
+}
+@media all and (max-width: 599px) {
+  .best_inner > h2 {
+    width: 150px;
+    height: 36px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+  }
 }
 .best_title {
   width: 660px;
@@ -826,129 +870,6 @@ h1 > a > span {
 .best_img > ul > li:nth-of-type(3) {
   background-size: cover;
   background-image: url(../../multi/img/best_kkxx.png);
-}
-
-@media all and (max-width: 599px) {
-  #bestitemBox {
-    height: 556px;
-    margin: auto;
-    padding: 26px 29px 26px;
-    box-sizing: border-box;
-  }
-  #bestitemBox > .best_area {
-    width: 262px;
-    height: 530px;
-    margin: auto;
-    background-color: #7ae;
-  }
-  .best_inner {
-    width: 100%;
-    height: auto;
-    background-color: #fd0;
-  }
-  .best_inner > h2 {
-    width: 150px;
-    height: 36px;
-    margin: auto;
-    background-color: #ffd;
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-}
-@media all and (min-width: 600px) and (max-width: 1023px) {
-  #bestitemBox {
-    height: 964px;
-    margin: auto;
-    padding: 78px 0 82px 0;
-    box-sizing: border-box;
-  }
-  #bestitemBox > .best_area {
-    width: 750px;
-    height: 802px;
-    margin: auto;
-    background-color: #2ad;
-  }
-  #bestitemBox > h2 {
-    width: 250px;
-    height: 60px;
-    margin: auto;
-    background-color: #ffd;
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1439px) {
-  #bestitemBox {
-    height: 963px;
-    padding: 84px 74px 88px 75px;
-    box-sizing: border-box;
-  }
-  #bestitemBox > .best_area {
-    width: 926px;
-    height: 790px;
-    margin: auto;
-    background-color: #daa;
-  }
-  #bestitemBox > h2 {
-    width: 250px;
-    height: 60px;
-    margin: auto;
-    background-color: #ffd;
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-}
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  #bestitemBox {
-    height: 964px;
-    padding: 84px 150px 88px 150px;
-    box-sizing: border-box;
-  }
-  #bestitemBox > .best_area {
-    width: 1140px;
-    height: 790px;
-    margin: auto;
-    background-color: #7ea;
-  }
-  #bestitemBox > h2 {
-    width: 250px;
-    height: 60px;
-    margin: auto;
-    background-color: #ffd;
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-}
-@media all and (min-width: 1920px) {
-  #bestitemBox {
-    height: 964px;
-    padding: 84px 150px 88px 150px;
-    box-sizing: border-box;
-  }
-  #bestitemBox > .best_area {
-    width: 1140px;
-    height: 790px;
-    margin: auto;
-    background-color: #7ea;
-  }
-  #bestitemBox > h2 {
-    width: 250px;
-    height: 60px;
-    margin: auto;
-    background-color: #ffd;
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
 }
 
 /* nmb.css */
