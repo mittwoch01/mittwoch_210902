@@ -1,128 +1,135 @@
 // nmbBox.scss
 /* nmb.css */
 
-$nmbImg:#{$imgPath}+'nmb_section_03.png';
+$nmbImg:#{$imgPath}+'nmb_left.jpeg';
 
-// ---------------------------------------------
+// -------------------------------------------------------------
 #nmbBox {
   width: 100%; height: auto; min-height: 529px;
-  //background-color: #ddd;
-  
-  @include tablet { height: 700px; background-color: #fff;}
-  @include laptop { height: 700px; background-color: #fff;}
-  @include pc { height: 1022px; background-color: #fff;}
-  @include pcfull { height: 1022px; background-color: #fff;}
-
+// all responsive bc 확인 ---------------------------------------
+  @include tablet { height: 800px; background-color: #7ed;}
+  @include laptop { height: 800px; background-color: #7ad;}
+  @include pc { height: 1022px; background-color: #fae;}
+  @include pcfull { height: 1022px; background-color: #ffe;}
+  // basic (mobile) --------------------------------------------
   & > h2 { 
-    position: relative ; z-index: 500; top: 182px; left: 23%;
-
-    width: 100%; height: 108px; 
-    // background-color: #555;
-    font-size: 89px; font-weight: $font_weight_bolder; 
+    position: relative ; z-index: 500; top: 56px;
+    width: 280px; height: 30px;
+    margin: auto;
+    font-size: 25px;  font-weight: $font_weight_bold; 
     text-transform: uppercase;
-    
-    @include mobile { 
-      top: 87px; 
-      font-size: 25px; 
-      font-weight: $font_weight_bolder;
-    }
+    @include mobile { background-color: #eff; }
     @include tablet { 
-      top: 26px; 
-      font-size: 64px; 
-    }
+      top: 34px; width: 720px; height: 78px;
+      background-color: #eaa;
+      font-size: 64px; }
     @include laptop { 
-      top: 26px; 
-      width: 100%; height: 86px;
-      font-size: 72px;
-    }    
+      top: 34px; width: 808px; height: 86px;
+      background-color: #edf;
+      font-size: 72px;}    
+    @include pc {
+      top: 100px; width: 1000px; height: 108px;
+      background-color: #faa;
+      font-size: 88px;}
+    @include pcfull {
+      top: 100px; width: 1000px; height: 108px;
+      background-color: #faa;
+      font-size: 88px;}
   }// h2
-
-// ------------------------------------------------
+// -------------------------------------------------------------
+// basic (mobile) ==============================================
   @at-root .content_box { 
     display: flex; justify-content: space-between;
-    position: absolute; z-index: 100; top: 1990px; left: 0;
-    width: 1360px; height: 580px;
-    background-color: #fff;
-
-    @include mobile { 
-      flex-direction: column;
-      top: 1218px; width: 276px; height: 376px; 
-    }
-    @include tablet { top: 1949px; width: 714px; }
-    @include laptop { top: 1822px; width: 948px; }
-
-// ------------------------------------------------------
-    @at-root #nmb_img { 
+    width: 276px; height: 376px; 
+    margin: auto;
+    background-color: #efa;
+    // responsive ==============================================
+    @include tablet { 
+      width: 714px; height: 580px; 
+      margin-top: 50px;
+      background-color: #edd;}
+    @include laptop { 
+      width: 948px; height: 580px; 
+      margin-top: 50px;
+      background-color: #ade;}
+    @include pc { 
+      width: 1360px; height: 580px; 
+      margin-top: 130px; 
+      background-color: #333;}
+    @include pcfull { 
+      width: 1360px; height: 580px; 
+      margin-top: 130px; 
+      background-color: #333;}
+    // =========================================================
+    // 1. .nmb_img -----------------------------------------------------
+    @at-root .nmb_img { 
       width: 840px; height: 580px; 
-      // background-color: #fda;
-      background-size: cover; background-image: url($nmbImg); 
-
-      @include mobile { width: 276px; height: 202px;}
+      background-color: #fff;
+      background-image: url($nmbImg); 
+      background-size: cover; 
+    // responsive ==============================================
+      @include mobile { display: none;}
       @include tablet { width: 446px;}
-      @include laptop { width: 618px; }
-    } // #nmb_img
+      @include laptop { width: 618px;}
+      @include pc {}
+      @include pcfull {}
+    }// #nmb_img
+
+    // 2. .nmb_content -------------------------------------------------
     @at-root .nmb_content { 
-      width: 306px; height: 416px;
-      // background-color: #dfa;
-      margin-top: 85px; margin-left: 104px;  
-      & > dl{ 
-        flex-direction: column;
+      // basic (mobile) ================================================
+      width: 168px; height: 147px; 
+      & > dl{   
         width: 100%; height: auto;
         & > dt { 
+        // basic (pc, pcfull) ------------------------------------------
           width: 200px; height: 24px;
           margin-bottom: 36px;
-          //background-color: #fa0;
-          font-size: 20px; font-weight: $font_weight_bold;
-
+          font-size: 20px; font-weight: $font_weight_bolder;
+        // responsive ==================================================
           @include mobile { 
-            width: 103px; height: 14px; 
-            font-size: 12px; font-weight: $font_weight_bolder;
-          }
+            width: 103px; height: 14px; font-size: 12px;}
           @include tablet { margin-bottom: 29px;}
           @include laptop { margin-bottom: 24px; }
-        }
-        & > dd { 
-          width: 100%; height: 240px;
+        }// dt
+        & > dd:first-of-type { 
+          width: 100%; height: 300px;
           margin-bottom: 85px;
           background-color: #fff;
           font-size: 19px; font-weight: $font_weight_bolder;
-
           @include mobile { 
             width: 167px; height: 85px;
             margin-bottom: 26px;
-            font-size: 12px;
-          }
+            font-size: 12px;}
           @include tablet {
-            width: 209px; height: 206px;
+            width: 209px; 
             margin-bottom: 67px;
-            font-size: 14px;
-          }
+            font-size: 14px;}
           @include laptop { 
-            width: 246px; height: 209px;
+            width: 246px; 
             margin-bottom: 66px; 
-            font-size: 16px;
-          }
-        }// dd:nth-child(1)
-        
-            & > a {
-              width: 145px; height: 30px; 
-              margin-left: 30px;
-              // background-color: #faa;
-              font-size: 25px; font-weight: $font_weight_bold;
-              @include mobile { width: 56px; font-size: 12px;}
-              @include tablet { width: 102px; font-size: 22px;}
-              @include laptop { width: 116px;}
-            }// a
-        
+            font-size: 16px;}
+        }// dd:nth-child(1)    
+        & > dd:last-of-type {
+          width: 170px; height: 40px;
+          margin: auto;
+          background-color: #fff;
+          & > a { font-size: 25px; font-weight: $font_weight_bold;
+          // responsive ==================================================
+            @include mobile { width: 56px; font-size: 12px;}
+            @include tablet { width: 102px; font-size: 22px;}
+            @include laptop { width: 116px;}
+          }// a
+        }       
       }// dl
-
-      // -------------------------------------------------
-      @include mobile { width: 168px; height: 352px; margin-top: 27px;}
-      @include tablet { width: 210px; height: 352px; margin-top: 172px;}
-      @include laptop { width: 246px; height: 354px; margin-top: 163px;}
-      
-    // -------------------------------------------------
+    // responsive ======================================================
+      @include mobile { margin-top: 100px;}
+      @include tablet { width: 210px; height: 580px; background-color: #7ae;}
+      @include laptop { width: 246px; height: 580px; background-color: #4de;}
+      @include pc { width: 306px; height: 580px; background-color: #ddf;}
+      @include pcfull { width: 306px; height: 580px; background-color: #ddf;}
     }// .nmb_content
 
-  }// .content_box
+  }// .content_box =====================================================
+
 }// #nmbBox

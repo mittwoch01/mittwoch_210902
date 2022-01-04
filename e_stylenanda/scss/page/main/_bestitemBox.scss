@@ -14,239 +14,149 @@ $thirdImgK:#{$imgPath}+'best_kkxx.png';
 
 // #bestitemBox basic ==================================================
 #bestitemBox {
-  width: 100%; height: auto; min-height: 556px;
-  margin: auto;
+  position: relative; top: 0; left: 0;
+  width: 100%; height: 964px; min-height: 556px;
+  margin: auto; 
   background-color: #dfe;
+  // responsive (moblie, tablet) ===================================
+  @include mobile { height: 556px; }
+  // ---------------------------------------------------------------
     & > .best_area { 
+      position: absolute; top: 84px; left: 0; right: 0;
       width: 1140px; height: 790px;
-      margin: auto;
+      margin: auto; 
       background-color: #7ea;
-    }
+      // responsive (moblie, tablet) ===============================
+      @include mobile { top: 28px; 
+        width: 262px; height: 530px; background-color: #7ae;}
+      @include tablet { top: 80px; 
+        width: 750px; height: 802px; background-color: #2ad;}
+      @include laptop{ width: 926px; background-color: #daa;}
+    // -------------------------------------------------------------      
+    // -------------------------------------------------------------
     @at-root .best_inner { 
       width: 100%; height: auto;
+      margin: auto;
       background-color: #fd0;
+      // responsive ================================================
+      @include mobile { }
+      @include tablet {}
+      @include laptop {}
+      @include pc {}
       & > h2 { 
+        // basic (pc. pcfull) ======================================
         width: 250px; height: 60px;
         margin: auto;
         background-color: #ffd;
         font-size: 50px; line-height: 50px; 
         font-weight: $font_weight_bold;  
         text-transform: uppercase;
-      }// h2
+        // responsive (moblie, tablet, laptop) =====================
+        @include mobile {
+          width: 150px; height: 36px;
+          font-size: 30px; line-height: 30px; 
+          font-weight: $font_weight_bolder; }
+        @include tablet {
 
-// ----------------------------------------------
+        }
+        @include laptop {}
+      }// h2
+// ----------------------------------------------------------------
+// responsive (laptop, pc, pcfull) ================================
     @at-root .best_title { 
       width: 660px; height: 33px;
       margin: auto; margin-top: 68px; 
-      // background-color: #f00;
-      & > ul { 
-        width: 100%; height: auto;
-        & > li { 
-          float: left;
-          height: auto;
-          margin-right: 50px;
-          // background-color: #fdd;
-          & > button { font-size: 26px;  
-            text-transform: uppercase; }
-
+      background-color: #f00;
+      @at-root .best_title_inner { 
+        display: flex; justify-content: space-between;
+        & > li { background-color: #fdd;
+          & > button { font-size: 26px; text-transform: uppercase; }
           & > button:hover { color: $color_brown_01; text-decoration: underline;}
-          & > button:focus { 
-            background-color: $color_brown_01;
-            color: $color_white_01; }
-            &:last-child { margin-right: 0;}
+          & > button:focus { background-color: $color_brown_01; color: $color_white_01; }
         }// li
       }// ul
+    // display:none; ---------------------------------
       @include mobile { display: none;}
       @include tablet { display: none;}
     }// .best_title
-
 // ------------------------------------------
+// basic (mobile 기준) =======================
     @at-root .mobile_title {
       width: 180px; height: 50px;
       margin: auto; margin-top: 38px;
-      // background-color: #dfe;
-      
-      & > ul { width: 100%; height: auto;
-        & >li {
+      background-color: #dfe;    
+      // responsive (tablet) ============================  
+      @include tablet { width: 440px; height: 114px; 
+        margin-top: 60px; background-color: #5ee;}
+      // ------------------------------------------------
+      & > ul { 
+        display: flex; justify-content: space-between;
+        @at-root .mobile_btn {
           float: left;
           width: 50px; height: 50px; 
-          margin-right: 9px;
           border-radius: 100%;
           background-color: $color_gray_01;
+        // responsive -----------------------------------------
           @include full('kakao_talk.png', $size:contain);
           @include mobile { width: 50px; height: 50px;}
-          @include tablet { 
-            width: 114px; height: 114px;
-            margin-right: 32px;
-          }
-          &:last-child { margin-right: 0;}
-        }// li
-        > li:nth-child(1) { background-image: url($threeceLogo);}
-        > li:nth-child(2) { background-image: url($nandaLogo);}
-        > li:nth-child(3) { background-image: url($barLogo);}
+          @include tablet { width: 114px; height: 114px;}
+          &:nth-child(1) { background-image: url($threeceLogo);}
+          &:nth-child(2) { background-image: url($nandaLogo);}
+          &:nth-child(3) { background-image: url($barLogo);}
+        }// .mobile_btn
+      // ------------------------------------------
+      // display:none; ---------------------------------
+        @include laptop { display: none;}
+        @include pc { display: none;}
+        @include pcfull { display: none;}
       }// ul
-// ------------------------------------------
-    @include tablet {
-      width: 440px; height: 114px; 
-      margin: auto; margin-top: 60px; 
-    }
+      // display:none; ----------------------------------
       @include laptop { display: none;}
       @include pc { display: none;}
       @include pcfull { display: none;}
     }// .mobile_title
 
-  }// .best_inner
+    }// .best_inner ============================================================
 
-// .best_img ------------------------------------------
-  @at-root .best_img {
-    // position: relative; 
-    width: 1140px; height: 518px;
-    margin: auto; margin-top: 114px;
-    // background-color: #ddd;
-    @include mobile { width: 262px; height: 382px; margin-top: 25px;}
-    @include tablet { width: 750px; height: 518px; margin-top: 50px;}
-    @include laptop { width: 926px; height: 518px;}
+    // .best_img 
+    @at-root .best_img {
+      // position: relative; 
+      width: 1140px; height: 518px;
+      margin: auto; margin-top: 114px;
+      // background-color: #ddd;
+      @include mobile { width: 262px; height: 362px; margin-top: 25px;}
+      @include tablet { width: 750px; height: 518px; margin-top: 50px;}
+      @include laptop { width: 926px; height: 518px;}
+  
+      > ul { 
+        // position: absolute;
+        display: flex; justify-content: space-between;
+        width: 100%; height: auto;
+        > li {
+          width: 320px; height:518px;
+          // background-color: #fa0;    
+          &:nth-of-type(2){ width: 460px; background-color: #eee;}
+          
+          @include mobile { 
+            &:nth-child(1) { display: none; }
+            &:nth-child(2) { width: 262px; height: 342px;}
+            &:nth-child(3) { display: none; }
+          }
+          @include tablet { 
+            width: 126px; height: 518px; 
+            &:nth-child(2) { width: 474px;}
+          }
+          @include laptop { 
+            width: 258px; height: 518px; 
+            &:nth-child(2) { width: 372px;}
+          }
+          &:nth-of-type(1){ background-size: cover; background-image: url($firstImgS);}
+          &:nth-of-type(2){ background-size: cover; background-image: url($secondImgN);}
+          &:nth-of-type(3){ background-size: cover; background-image: url($thirdImgK);}
+        }// li
+      }// ul
+    }// .best_img ==================================================
 
-    > ul { 
-      // position: absolute;
-      display: flex; justify-content: space-between;
-      width: 100%; height: auto;
-      > li {
-        width: 320px; height:518px;
-        // background-color: #fa0;    
-        &:nth-of-type(2){ width: 460px; background-color: #eee;}
-        
-        @include mobile { 
-          &:nth-child(1) { display: none; }
-          &:nth-child(2) { width: 262px; height: 382px;}
-          &:nth-child(3) { display: none; }
-        }
-        @include tablet { 
-          width: 126px; height: 518px; 
-          &:nth-child(2) { width: 474px;}
-        }
-        @include laptop { 
-          width: 258px; height: 518px; 
-          &:nth-child(2) { width: 372px;}
-        }
-        &:nth-of-type(1){ background-size: cover; background-image: url($firstImgS);}
-        &:nth-of-type(2){ background-size: cover; background-image: url($secondImgN);}
-        &:nth-of-type(3){ background-size: cover; background-image: url($thirdImgK);}
-      }// li
-    }// ul
-  }// .best_img
-
-
-
-// 반응형 ===================================================
-// mobile 320 ==================================================
-@include mobile{ 
-  height: 556px; 
-  margin: auto;
-  padding: 26px 29px 26px; box-sizing: border-box;
-  & > .best_area { 
-    width: 262px; height: 530px;
-    margin: auto;
-    background-color: #7ea;
-  }
-
-  & > h2 { 
-    width: 150px; height: 36px;
-    margin: auto;
-    background-color: #ffd;
-    font-size: 30px; line-height: 30px; 
-    font-weight: $font_weight_bolder;  
-    text-transform: uppercase;
-  }// h2
-
-}// mobile
-
-// tablet 768 ==================================================
-@include tablet{ 
-  height: 964px; 
-  margin: auto;
-  padding: 78px 0 82px 0; box-sizing: border-box;
-  & > .best_area { 
-    width: 750px; height: 802px;
-    margin: auto;
-    background-color: #7ea;
-  }
-
-  & > h2 { 
-    width: 250px; height: 60px;
-    margin: auto;
-    background-color: #ffd;
-    font-size: 50px; line-height: 50px; 
-    font-weight: $font_weight_bold;  
-    text-transform: uppercase;
-  }// h2
-
-}// tablet
-
-// laptop 1024 ==================================================
-@include laptop{ 
-  height: 963px; 
-  padding: 84px 74px 88px 75px; box-sizing: border-box;
-  & > .best_area { 
-    width: 926px; height: 790px;
-    margin: auto;
-    background-color: #7ea;
-  }
-
-  & > h2 { 
-    width: 250px; height: 60px;
-    margin: auto;
-    background-color: #ffd;
-    font-size: 50px; line-height: 50px; 
-    font-weight: $font_weight_bold;  
-    text-transform: uppercase;
-  }// h2
-
-}// laptop
-
-// pc  1440 =====================================================
-@include pc{ 
-  height: 964px; 
-  padding: 84px 150px 88px 150px; box-sizing: border-box;
-  & > .best_area { 
-    width: 1140px; height: 790px;
-    margin: auto;
-    background-color: #7ea;
-  }
-
-  & > h2 { 
-    width: 250px; height: 60px;
-    margin: auto;
-    background-color: #ffd;
-    font-size: 50px; line-height: 50px; 
-    font-weight: $font_weight_bold;  
-    text-transform: uppercase;
-  }// h2
-
-}// pc
-
-// pcfull 1920 ==================================================
-@include pcfull{ 
-  height: 964px; 
-  padding: 84px 150px 88px 150px; box-sizing: border-box;
-  & > .best_area { 
-    width: 1140px; height: 790px;
-    margin: auto;
-    background-color: #7ea;
-  }// .best_area
-
-  & > h2 { 
-    width: 250px; height: 60px;
-    margin: auto;
-    background-color: #ffd;
-    font-size: 50px; line-height: 50px; 
-    font-weight: $font_weight_bold;  
-    text-transform: uppercase;
-  }// h2
-
-}// pcfull
-
-
-
+    }//.best_area =================================================
 
 }// #bestitemBox ==================================================
