@@ -88,8 +88,8 @@ $closeBtn: #{$imgPath}+'closeBtn_x.png';
       @include pcfull { display: none;}     
     }// .nav_btn
 
-// ===========================================================
-// .navi_inner (mobile) --------------------------------------
+  // ===========================================================
+  // .navi_inner (mobile) --------------------------------------
     @at-root .navi_inner { 
       display: none;
       width: 100%; height: auto;
@@ -109,8 +109,8 @@ $closeBtn: #{$imgPath}+'closeBtn_x.png';
         @include pcfull { display: none;}   
       }// .close_btn
 
-// ==========================================================
-// .navi_part (mobile) --------------------------------------
+    // ----------------------------------------------------------
+    // .navi_part (mobile) --------------------------------------
       @at-root .navi_part { 
         position: absolute; z-index: 100; 
         top: 0; left: 0; right: 0; bottom: 0;
@@ -120,11 +120,11 @@ $closeBtn: #{$imgPath}+'closeBtn_x.png';
         @include mobile { padding: 20px; padding-top: 85px; }// mobile
         @include tablet { padding: 40px; padding-top: 150px; }// tablet
         @include laptop { padding: 40px; padding-top: 150px; }// laptop
-      // display:none; ---------------------------------
+      // display:none; --------------------------------------------
         @include pc { display: none;}
         @include pcfull { display: none;}
-// ----------------------------------------------------------
-        // basic (mobile 기준) =================================
+      // ----------------------------------------------------------
+        // basic (mobile 기준) =====================================
         & > ul { // 버튼+sns = 전체박스 크기
           width: 220px; height: 442px;
           //background-color: #7ae;
@@ -136,22 +136,24 @@ $closeBtn: #{$imgPath}+'closeBtn_x.png';
             //background-color: #afe; 
             text-transform: uppercase; 
             &:nth-child(5) { margin-bottom: 170px;}
-            @at-root .nav_title { width: 100%; height: 100%;
+            // ----------------------------------------------------
+            @at-root .mob_nav_title { width: 100%; height: 100%;
               & > a { 
                 display: block;
                 color: $color_white_01; 
                 font-size: 40px; font-weight: $font_weight_bold; line-height: 40px;
-                // a에 hover를 했을 경우.
+                // a에 hover를 했을 경우. -----------------------------------------
                 &:hover { text-decoration: underline; color: $color_peach_01;}
-                // a에 focus를 했을 경우.
+                // a에 focus를 했을 경우. -----------------------------------------
                 &:focus { font-size: 42px;}
-              // responsive (mobile) ============================
+              // responsive (mobile) ===========================================
                 @include mobile { font-size: 30px; line-height: 30px; 
                   &:focus { font-size: 32px;}
                 }
+                @include tablet { font-size: 40px;}
               }// a
             }// .nav_title
-// ==========================================================
+            // ----------------------------------------------------
             &:nth-child(6) {
               width: 100%; height: 45px;
               @at-root .navi_mob_sns{
@@ -160,25 +162,31 @@ $closeBtn: #{$imgPath}+'closeBtn_x.png';
                 & > ul { 
                   display: flex; justify-content: space-between; 
                   width: 100%; height: 100%;
+                  // basic (mob) ---------------------------------------
                   & > li { 
                     width: 45px; height: 45px;
                     // background-color: #555;
                     background-repeat: no-repeat;
                     background-size: contain;
+                    // responsive (tab, lap) ===========================
+                    @include tablet { width: 60px; height: 60px;}
+                    @include laptop { width: 60px; height: 60px;}
+                    // -------------------------------------------------
                     &:nth-child(1) {background-image: url($instagram);}
                     &:nth-child(2) {background-image: url($faceBook);}
                     &:nth-child(3) {background-image: url($kakaoTalk);}
                     &:nth-child(4) {background-image: url($youtube);}   
                   }// li
                 }// ul
-              }// .navi_mob_sns     
-            // display:none; ---------------------------------
-              @include pc { display: none;}
-              @include pcfull { display: none;}     
+              }// .navi_mob_sns         
             }// li:nth-child(6)
 
           }// .navi_part > ul > li
         }// .navi_part > ul
+
+        // display:none; ====================================
+        @include pc { display: none;}
+        @include pcfull { display: none;} 
       }//.navi_part
 
       &.on { display: block; transition: opacity 1;}
@@ -188,23 +196,23 @@ $closeBtn: #{$imgPath}+'closeBtn_x.png';
 // .pc_menu (pc, pcfull) =====================================
   @at-root .pc_menu {
     display: flex; justify-content: space-between;
-    width: 980px; height: 40px;
-    margin: auto; margin-top: 24px;
-    background-color: #dae;
+    width: 980px; height: 30px;
+    margin: auto; margin-top: 26px;
+    // background-color: #dae;
     & > li { height: auto;}
     @at-root .nav_title { 
       font-weight: $font_weight_bold;
       text-transform: uppercase;
       & > a { 
-        margin: auto;
         font-size: 25px; color: $color_black_02;
-        background-color: #eee;
+        //background-color: #eee;
         &:hover { 
           color: $color_black_02;
           text-decoration: underline; 
         }
       } // a
     }// .nav_title
+    // -------------------------------------------------------
     @at-root .nav_list {
       display: none;
       width: 100%; height: 180px;
