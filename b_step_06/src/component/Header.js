@@ -1,5 +1,6 @@
 // Header.js
 import Gnb from "./Gnb";
+import '../style/Header.scss'
 
 export default function Header({site, url}){
   const h1Style = { color:'#5ae', textTransform: 'uppercase'};
