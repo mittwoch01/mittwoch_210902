@@ -96,7 +96,7 @@ $thirdImgK:#{$imgPath}+'best_kkxx.png';
           width: 50px; height: 50px; 
           border-radius: 100%;
           background-color: $color_gray_01;
-        // responsive -----------------------------------------
+        // responsive ========================================
           @include full('kakao_talk.png', $size:contain);
           @include mobile { width: 50px; height: 50px;}
           @include tablet { width: 114px; height: 114px;}
@@ -105,12 +105,12 @@ $thirdImgK:#{$imgPath}+'best_kkxx.png';
           &:nth-child(3) { background-image: url($barLogo);}
         }// .mobile_btn
       // ------------------------------------------
-      // display:none; ---------------------------------
+      // display:none; ==================================
         @include laptop { display: none;}
         @include pc { display: none;}
         @include pcfull { display: none;}
       }// ul
-      // display:none; ----------------------------------
+      // display:none; ==================================
       @include laptop { display: none;}
       @include pc { display: none;}
       @include pcfull { display: none;}

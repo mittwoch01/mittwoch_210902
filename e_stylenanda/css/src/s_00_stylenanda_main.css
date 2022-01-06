@@ -478,63 +478,55 @@ h1 > a > span {
 #newBox {
   width: 100%;
   height: auto;
-  min-height: 558px;
-  padding-top: 66;
+  min-height: 494px;
   margin: auto;
-  background-color: #ddf;
+  background-color: #d5f;
 }
 @media all and (max-width: 599px) {
   #newBox {
     margin-top: 66px;
     min-width: 320px;
-    height: 493px;
   }
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   #newBox {
     margin-top: 110px;
     min-width: 768px;
-    height: 895px;
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
   #newBox {
     margin-top: 88px;
     min-width: 1024px;
-    height: 768px;
   }
 }
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   #newBox {
     margin-top: 88px;
     min-width: 1440px;
-    height: 900px;
   }
 }
 @media all and (min-width: 1920px) {
   #newBox {
     margin-top: 88px;
     max-width: 1920px;
-    height: 1080px;
   }
 }
 .indicator {
-  position: absolute;
-  z-index: 100;
-  top: 1080px;
-  left: 50%;
-  width: 170px;
-  height: 34px;
-  margin: auto;
+  width: 100%;
+  height: auto;
 }
 .indi_list {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
   width: 162px;
   height: 34px;
   padding: 4px;
   box-sizing: border-box;
   background-color: #515151;
   border-radius: 100px;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
   .indi_list {
@@ -543,7 +535,12 @@ h1 > a > span {
 }
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   .indi_list {
-    top: 600px;
+    top: 900px;
+  }
+}
+@media all and (min-width: 1920px) {
+  .indi_list {
+    top: 1060px;
   }
 }
 .indi_list > ul {
@@ -572,9 +569,55 @@ h1 > a > span {
 }
 
 .mob_list {
-  width: 320px;
-  height: 80px;
-  background-color: #3fe;
+  position: absolute;
+  z-index: 100;
+  top: 530px;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  padding: 4px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  .mob_list {
+    top: 956px;
+    height: 100px;
+    padding: 10px;
+  }
+}
+.mob_list > ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.mob_list > ul > li {
+  width: 54px;
+  height: 54px;
+  background-color: #daf;
+  background-size: cover;
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  .mob_list > ul > li {
+    width: 80px;
+    height: 80px;
+  }
+}
+.mob_list > ul > li:nth-child(1) {
+  background-image: url("$newIcon1");
+}
+.mob_list > ul > li:nth-child(2) {
+  background-image: url("$newIcon2");
+}
+.mob_list > ul > li:nth-child(3) {
+  background-image: url("$newIcon3");
+}
+.mob_list > ul > li:nth-child(4) {
+  background-image: url("$newIcon4");
+}
+.mob_list > ul > li:nth-child(5) {
+  background-image: url("$newIcon5");
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
   .mob_list {
@@ -595,6 +638,31 @@ h1 > a > span {
 .view_area {
   width: 100%;
   height: 100%;
+}
+@media all and (max-width: 599px) {
+  .view_area {
+    height: 494px;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  .view_area {
+    height: 895px;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  .view_area {
+    height: 768px;
+  }
+}
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .view_area {
+    height: 900px;
+  }
+}
+@media all and (min-width: 1920px) {
+  .view_area {
+    height: 1080px;
+  }
 }
 .view_area > .view_inner_wrap {
   position: relative;
