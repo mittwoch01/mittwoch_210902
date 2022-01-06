@@ -9,7 +9,7 @@
 
 (()=>{
   // 외부 파일 설정
-  const newBox = `/temp/s_00_newBox.html`;
+  const newBox = `/temp/s_00_stylenanda_main.html`;
   const scriptData = `/dist/src/s_00_slide_area_touch_002.js`;
   
 

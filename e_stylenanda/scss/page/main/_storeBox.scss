@@ -8,8 +8,9 @@ $current: #{$imgPath}+'current_Location.png';
 // ---------------------------------------------
 #storeBox {
   width: 100%; height: auto; min-height: 388px;
-  //background-color: #ddf;
-
+  padding-top: 120px;
+  //ackground-color: #ddf;
+  @include mobile { padding-top: 50px;}
   @include tablet { height: 780px;}
   @include laptop { height: 780px;}
   @include pc { height: 780px;}
@@ -87,13 +88,13 @@ $current: #{$imgPath}+'current_Location.png';
                 @include tablet { width: 290px;}
 // label ----------------------------
                 & > label { 
-                 
+                 display: flex;
                   width: 74px; height: 100%;
                   & > .location { 
                     width: 74px; height: 74px; 
-                    background-color: #dfa;
+                    //background-color: #dfa;
                     background-image: url($location);
-                    background-size: contain;
+                    background-size: cover;
                     @include mobile { width: 40px; height: 40px; }
                   }// .location
                 }// label

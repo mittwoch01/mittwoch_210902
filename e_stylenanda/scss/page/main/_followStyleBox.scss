@@ -108,6 +108,10 @@ $followUs10: #{$imgPathFollowUs}+'followUs_10.png';
             &:nth-child(5) { margin-right: 0;}
             &:nth-child(10) { margin-right: 0;}
           }
+          @include pcfull { 
+            &:nth-child(5) { margin-right: 0;}
+            &:nth-child(10) { margin-right: 0;}
+          }
           &:nth-child(1){background-size: cover; background-image: url($followUs1);}
           &:nth-child(2){background-size: cover; background-image: url($followUs2);}
           &:nth-child(3){background-size: cover; background-image: url($followUs3);}

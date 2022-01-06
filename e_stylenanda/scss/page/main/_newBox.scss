@@ -11,15 +11,15 @@ $newIcon5: #{$imgPath}+'new_icon_05.png';
 
 // ---------------------------------------------------------------------
 #newBox {
-  width: 100%; height: auto; min-height: 494px;
-  margin: auto;
-  background-color: #d5f;
+  width: 100%; height: auto; 
+  margin: auto; 
+  //background-color: #d5f;
  // headBox의 display:fixed; 때문에 내려야하는 높이 ==========================
-    @include mobile{margin-top: $headH+px; min-width: 320px; }
-    @include tablet{margin-top: 110px; min-width: 768px; }
-    @include laptop{margin-top: $headH2+px; min-width: 1024px; }
-    @include pc{margin-top: $headH2+px; min-width: 1440px; }
-    @include pcfull{ margin-top: $headH2+px; max-width: 1920px; }
+    @include mobile{margin-top: $headH+px;}
+    @include tablet{margin-top: 110px;}
+    @include laptop{margin-top: $headH2+px;}
+    @include pc{margin-top: $headH2+px;}
+    @include pcfull{ margin-top: $headH2+px;}
 // ---------------------------------------------------------------------
   @at-root .indicator {
     width: 100%; height: auto;
@@ -63,15 +63,16 @@ $newIcon5: #{$imgPath}+'new_icon_05.png';
       & > ul { display: flex; justify-content: space-between;
         width: 100%; height: auto;
         & > li { width: 54px; height: 54px;
-          background-color: #daf;
+          //background-color: #daf;
           background-size: cover;
           // responsive ================================================
           @include tablet { width: 80px; height: 80px;}
-          &:nth-child(1) { background-image: url('$newIcon1');}
-          &:nth-child(2) { background-image: url('$newIcon2');}
-          &:nth-child(3) { background-image: url('$newIcon3');}
-          &:nth-child(4) { background-image: url('$newIcon4');}
-          &:nth-child(5) { background-image: url('$newIcon5');}
+          // -----------------------------------------------------------
+          &:nth-child(1) { background-image: url($newIcon1);}
+          &:nth-child(2) { background-image: url($newIcon2);}
+          &:nth-child(3) { background-image: url($newIcon3);}
+          &:nth-child(4) { background-image: url($newIcon4);}
+          &:nth-child(5) { background-image: url($newIcon5);}
         }
       }// ul
       // display:none; =================================================

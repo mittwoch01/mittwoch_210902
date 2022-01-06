@@ -478,38 +478,31 @@ h1 > a > span {
 #newBox {
   width: 100%;
   height: auto;
-  min-height: 494px;
   margin: auto;
-  background-color: #d5f;
 }
 @media all and (max-width: 599px) {
   #newBox {
     margin-top: 66px;
-    min-width: 320px;
   }
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   #newBox {
     margin-top: 110px;
-    min-width: 768px;
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
   #newBox {
     margin-top: 88px;
-    min-width: 1024px;
   }
 }
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   #newBox {
     margin-top: 88px;
-    min-width: 1440px;
   }
 }
 @media all and (min-width: 1920px) {
   #newBox {
     margin-top: 88px;
-    max-width: 1920px;
   }
 }
 .indicator {
@@ -595,7 +588,6 @@ h1 > a > span {
 .mob_list > ul > li {
   width: 54px;
   height: 54px;
-  background-color: #daf;
   background-size: cover;
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
@@ -605,19 +597,19 @@ h1 > a > span {
   }
 }
 .mob_list > ul > li:nth-child(1) {
-  background-image: url("$newIcon1");
+  background-image: url(../../multi/img/new_icon_01.png);
 }
 .mob_list > ul > li:nth-child(2) {
-  background-image: url("$newIcon2");
+  background-image: url(../../multi/img/new_icon_02.png);
 }
 .mob_list > ul > li:nth-child(3) {
-  background-image: url("$newIcon3");
+  background-image: url(../../multi/img/new_icon_03.png);
 }
 .mob_list > ul > li:nth-child(4) {
-  background-image: url("$newIcon4");
+  background-image: url(../../multi/img/new_icon_04.png);
 }
 .mob_list > ul > li:nth-child(5) {
-  background-image: url("$newIcon5");
+  background-image: url(../../multi/img/new_icon_05.png);
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
   .mob_list {
@@ -708,8 +700,6 @@ h1 > a > span {
   width: 100%;
   height: 964px;
   min-height: 556px;
-  margin: auto;
-  background-color: #dfe;
 }
 @media all and (max-width: 599px) {
   #bestitemBox {
@@ -721,38 +711,32 @@ h1 > a > span {
   top: 84px;
   left: 0;
   right: 0;
-  width: 1140px;
+  width: 100%;
   height: 790px;
   margin: auto;
-  background-color: #7ea;
 }
 @media all and (max-width: 599px) {
   #bestitemBox > .best_area {
     top: 28px;
     width: 262px;
     height: 530px;
-    background-color: #7ae;
   }
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   #bestitemBox > .best_area {
     top: 80px;
-    width: 750px;
     height: 802px;
-    background-color: #2ad;
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
   #bestitemBox > .best_area {
     width: 926px;
-    background-color: #daa;
   }
 }
 .best_inner {
   width: 100%;
   height: auto;
   margin: auto;
-  background-color: #fd0;
 }
 @media all and (max-width: 599px) {
   .best_inner {
@@ -762,7 +746,6 @@ h1 > a > span {
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   .best_inner {
-    width: 768px;
     height: 802px;
   }
 }
@@ -782,7 +765,6 @@ h1 > a > span {
   width: 250px;
   height: 60px;
   margin: auto;
-  background-color: #ffd;
   font-size: 50px;
   line-height: 50px;
   font-weight: 500;
@@ -802,14 +784,10 @@ h1 > a > span {
   height: 33px;
   margin: auto;
   margin-top: 68px;
-  background-color: #f00;
 }
 .best_title_inner {
   display: flex;
   justify-content: space-between;
-}
-.best_title_inner > li {
-  background-color: #fdd;
 }
 .best_title_inner > li > button {
   font-size: 26px;
@@ -840,14 +818,12 @@ h1 > a > span {
   height: 50px;
   margin: auto;
   margin-top: 38px;
-  background-color: #dfe;
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   .mobile_title {
     width: 440px;
     height: 114px;
     margin-top: 60px;
-    background-color: #5ee;
   }
 }
 .mobile_title > ul {
@@ -931,7 +907,7 @@ h1 > a > span {
 }
 
 .best_img {
-  width: 1140px;
+  width: 100%;
   height: 518px;
   margin: auto;
   margin-top: 114px;
@@ -945,7 +921,6 @@ h1 > a > span {
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   .best_img {
-    width: 750px;
     height: 518px;
     margin-top: 50px;
   }
@@ -954,6 +929,16 @@ h1 > a > span {
   .best_img {
     width: 926px;
     height: 518px;
+  }
+}
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .best_img {
+    width: 1140px;
+  }
+}
+@media all and (min-width: 1920px) {
+  .best_img {
+    width: 1140px;
   }
 }
 .best_img > ul {
@@ -983,12 +968,15 @@ h1 > a > span {
   }
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
-  .best_img > ul > li {
-    width: 126px;
-    height: 518px;
+  .best_img > ul > li:nth-child(1) {
+    display: none;
   }
   .best_img > ul > li:nth-child(2) {
-    width: 474px;
+    margin: auto;
+    width: 450px;
+  }
+  .best_img > ul > li:nth-child(3) {
+    display: none;
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
@@ -1018,37 +1006,34 @@ h1 > a > span {
   width: 100%;
   height: auto;
   min-height: 529px;
+  background-color: #eee;
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   #nmbBox {
     height: 800px;
-    background-color: #7ed;
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
   #nmbBox {
     height: 800px;
-    background-color: #7ad;
   }
 }
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   #nmbBox {
     height: 1022px;
-    background-color: #fae;
   }
 }
 @media all and (min-width: 1920px) {
   #nmbBox {
     height: 1022px;
-    background-color: #ffe;
   }
 }
 #nmbBox > h2 {
   position: relative;
   z-index: 500;
   top: 56px;
-  width: 280px;
-  height: 30px;
+  width: 100%;
+  height: auto;
   margin: auto;
   font-size: 25px;
   font-weight: 500;
@@ -1056,16 +1041,17 @@ h1 > a > span {
 }
 @media all and (max-width: 599px) {
   #nmbBox > h2 {
-    background-color: #eff;
+    width: 280px;
+    height: 30px;
   }
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   #nmbBox > h2 {
     top: 34px;
-    width: 720px;
+    min-width: 600px;
+    max-width: 700px;
     height: 78px;
-    background-color: #eaa;
-    font-size: 64px;
+    font-size: 62px;
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
@@ -1073,7 +1059,6 @@ h1 > a > span {
     top: 34px;
     width: 808px;
     height: 86px;
-    background-color: #edf;
     font-size: 72px;
   }
 }
@@ -1082,7 +1067,6 @@ h1 > a > span {
     top: 100px;
     width: 1000px;
     height: 108px;
-    background-color: #faa;
     font-size: 88px;
   }
 }
@@ -1091,24 +1075,27 @@ h1 > a > span {
     top: 100px;
     width: 1000px;
     height: 108px;
-    background-color: #faa;
     font-size: 88px;
   }
 }
 .content_box {
   display: flex;
   justify-content: space-between;
-  width: 276px;
-  height: 376px;
+  width: 100%;
+  height: auto;
   margin: auto;
-  background-color: #efa;
+}
+@media all and (max-width: 599px) {
+  .content_box {
+    width: 276px;
+    height: 376px;
+  }
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   .content_box {
-    width: 714px;
+    max-width: 714px;
     height: 580px;
-    margin-top: 50px;
-    background-color: #edd;
+    margin-top: 76px;
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
@@ -1116,7 +1103,6 @@ h1 > a > span {
     width: 948px;
     height: 580px;
     margin-top: 50px;
-    background-color: #ade;
   }
 }
 @media all and (min-width: 1440px) and (max-width: 1919px) {
@@ -1124,7 +1110,6 @@ h1 > a > span {
     width: 1360px;
     height: 580px;
     margin-top: 130px;
-    background-color: #333;
   }
 }
 @media all and (min-width: 1920px) {
@@ -1132,7 +1117,6 @@ h1 > a > span {
     width: 1360px;
     height: 580px;
     margin-top: 130px;
-    background-color: #333;
   }
 }
 .nmb_img {
@@ -1149,7 +1133,7 @@ h1 > a > span {
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   .nmb_img {
-    width: 446px;
+    width: 386px;
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
@@ -1193,7 +1177,6 @@ h1 > a > span {
   width: 100%;
   height: 300px;
   margin-bottom: 85px;
-  background-color: #fff;
   font-size: 19px;
   font-weight: 700;
 }
@@ -1223,7 +1206,6 @@ h1 > a > span {
   width: 170px;
   height: 40px;
   margin: auto;
-  background-color: #fff;
 }
 .nmb_content > dl > dd:last-of-type > a {
   font-size: 25px;
@@ -1255,28 +1237,24 @@ h1 > a > span {
   .nmb_content {
     width: 210px;
     height: 580px;
-    background-color: #7ae;
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1439px) {
   .nmb_content {
     width: 246px;
     height: 580px;
-    background-color: #4de;
   }
 }
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   .nmb_content {
     width: 306px;
     height: 580px;
-    background-color: #ddf;
   }
 }
 @media all and (min-width: 1920px) {
   .nmb_content {
     width: 306px;
     height: 580px;
-    background-color: #ddf;
   }
 }
 
@@ -1285,6 +1263,12 @@ h1 > a > span {
   width: 100%;
   height: auto;
   min-height: 388px;
+  padding-top: 120px;
+}
+@media all and (max-width: 599px) {
+  #storeBox {
+    padding-top: 50px;
+  }
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   #storeBox {
@@ -1452,15 +1436,15 @@ h1 > a > span {
   }
 }
 .store_search > label {
+  display: flex;
   width: 74px;
   height: 100%;
 }
 .store_search > label > .location {
   width: 74px;
   height: 74px;
-  background-color: #dfa;
   background-image: url(../../multi/img/location.png);
-  background-size: contain;
+  background-size: cover;
 }
 @media all and (max-width: 599px) {
   .store_search > label > .location {
@@ -1876,6 +1860,14 @@ h1 > a > span {
   }
 }
 @media all and (min-width: 1440px) and (max-width: 1919px) {
+  #follow_Img_part > ul > li:nth-child(5) {
+    margin-right: 0;
+  }
+  #follow_Img_part > ul > li:nth-child(10) {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 1920px) {
   #follow_Img_part > ul > li:nth-child(5) {
     margin-right: 0;
   }
