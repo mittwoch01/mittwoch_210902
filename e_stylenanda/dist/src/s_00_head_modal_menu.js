@@ -7,7 +7,7 @@ const navArea = headArea.querySelector('.navi_area');
 const mobileBtn = navArea.querySelector('.nav_btn > button');
 
 const mobileModal = headArea.querySelector('.navi_inner');
-//close_Btn
+// close_Btn
 const closeBtn = mobileModal.querySelector('.close_btn');
 
 

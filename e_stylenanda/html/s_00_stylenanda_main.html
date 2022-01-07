@@ -41,7 +41,7 @@
               </button>
            </div> 
 
-<!-- (mobile) inner ====================================== -->
+<!-- (mobile) button 의 inner ============================== -->
            <div class="navi_inner">
              <h2 class="blind">navi 영역</h2>
 
@@ -51,6 +51,7 @@
                </button>
              </div>
 
+             <!-- 모바일용 메뉴를 누르면 보이는 글씨와 sns -->
              <div class="navi_part">
                <ul>
                  <li>
@@ -84,7 +85,6 @@
                </ul>
 
              </div> <!-- .navi_part -->
-
            </div> <!-- .navi_inner -->
 
 <!-- (pc/pc) full inner ================================== -->
@@ -150,8 +150,8 @@
      <!-- new in -->
      <section class="wrapper" id="newBox">    
        <!-- s_00_newBox.html -->
-       
          <h2 class="blind">newin 광고이미지 변환</h2>
+
          <div class="indicator">
            <div class="indi_list">
             <ul>
@@ -161,25 +161,65 @@
             </ul>
            </div>
            <div class="mob_list">
-            <ul>
+            <ul class="mob_button">
               <li><a href="#"><span class="blind">bag</span></a></li>
-              <li><a href="#"><span class="blind">search</span></a></li>
+              <li>
+                <button type="button">
+                  <span class="blind">search</span>
+                </button>
+              </li>
               <li>
                 <a href="./s_00_stylenanda_main.html">
                   <span class="blind">main page</span>
                 </a>
               </li>
               <li><a href="#"><span class="blind">user</span></a></li>
-              <li><a href="#"><span class="blind">language</span></a></li>
+              <li>
+                <button type="button">
+                  <span class="blind">language</span>
+                </button>
+              </li>
             </ul>
            </div> 
-         </div>
+           <!-- search_modal_inner -->
+           <div class="mob_search_modal_area">
+            <h3 class="blind">mobile search modal inner</h3>
+            
+            <div class="mob_inner">
+              <div class="search_close_btn">
+                <button type="button">
+                  <span class="blind">search modal close btn</span>
+                </button>
+              </div>
+              
+              <form action="#" method="get">
+                <fieldset>
+                  <legend class="blind">product search page</legend>
+                  <ul class="search_area">
+                    <li class="search_box">
+                      <label for="search_modal">
+                        <span class="blind">검색할 단어를 입력하세요.</span>
+                      </label>
+                      <input type="search" id="search_modal" placeholder="어떤 상품을 찾으시나요?">
+                    </li>
+                    <li class="search_btn">
+                      <button type="button">
+                        <span>검색</span>
+                      </button>
+                    </li>
+                  </ul>
+                </fieldset>
+              </form>
+            </div><!-- .mob_inner -->
+            
+           </div> <!-- .mob_search_modal_area -->
+         </div><!-- .indicator -->
 
          <div class="view_area">
            <ul class="view_inner_wrap">
-             <li>해당 광고 1번째</li>
-             <li>해당 광고 2번째</li>
-             <li>해당 광고 3번째</li>
+             <li><span class="blind">해당 광고 1번째</span></li>
+             <li><span class="blind">해당 광고 2번째</span></li>
+             <li><span class="blind">해당 광고 3번째</span></li>
            </ul>
          </div>
      </section>
@@ -332,7 +372,7 @@
         <div class="follow_title_part">
           <h2>follow us</h2> 
           <ul>
-            <li><a href="#">@stylenanda_korea</a></li>
+            <li><a href="https://www.instagram.com/stylenanda_korea/">@stylenanda_korea</a></li>
           </ul>
         </div>    
            
@@ -454,7 +494,15 @@
   </div>
 
   <!-- script -->
-  <script src="../dist/src/s_00_slide_area_touch.js"></script> 
+  
+  
+  <!-- headBox이 모바일 일 경우, 나타나는 modal menu 만들기o -->
   <script src="../dist/src/s_00_head_modal_menu.js"></script>
+  <!-- newBox의 자동슬라이드x -->
+  <script src="../dist/src/s_00_slide_area_touch.js"></script> 
+  <!-- newBox의 search버튼을 클릭했을 때, 검색 modal창 만들기o -->
+  <script src="../dist/src/s_00_newBox_search_modal.js"></script>
+  <!-- newBox의 언어설정 modalckd 만들기 -->
+  <script src="../dist/src/s_00_newBox_language_modal.js"></script>
 </body>
 </html>

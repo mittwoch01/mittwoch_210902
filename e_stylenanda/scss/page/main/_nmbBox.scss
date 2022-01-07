@@ -9,16 +9,16 @@ $nmbImg:#{$imgPath}+'nmb_left.jpeg';
   background-color: #eee;
 // all responsive bc 확인 ---------------------------------------
   @include tablet { height: 800px; 
-    //background-color: #7ed;
+    background-color: #7ed;
   }
   @include laptop { height: 800px; 
-    //background-color: #7ad;
+    background-color: #7ad;
   }
   @include pc { height: 1022px; 
-    //background-color: #fae;
+    background-color: #fae;
   }
   @include pcfull { height: 1022px; 
-    //background-color: #ffe;
+    background-color: #ffe;
   }
   // basic (mobile) --------------------------------------------
   & > h2 { 
@@ -57,27 +57,27 @@ $nmbImg:#{$imgPath}+'nmb_left.jpeg';
     // responsive ==============================================
     @include mobile {
       width: 276px; height: 376px; 
-      //background-color: #efa;
+      background-color: #efa;
     }
     @include tablet { 
       max-width: 714px; height: 580px; 
       margin-top: 76px;
-      //background-color: #edd;
+      background-color: #edd;
     }
     @include laptop { 
       width: 948px; height: 580px; 
       margin-top: 50px;
-      //background-color: #ade;
+      background-color: #ade;
     }
     @include pc { 
       width: 1360px; height: 580px; 
       margin-top: 130px; 
-      //background-color: #333;
+      background-color: #333;
     }
     @include pcfull { 
       width: 1360px; height: 580px; 
       margin-top: 130px; 
-      //background-color: #333;
+      background-color: #333;
     }
     // =========================================================
     // 1. .nmb_img -----------------------------------------------------
@@ -114,7 +114,7 @@ $nmbImg:#{$imgPath}+'nmb_left.jpeg';
         & > dd:first-of-type { 
           width: 100%; height: 300px;
           margin-bottom: 85px;
-          //background-color: #fff;
+          background-color: #fff;
           font-size: 19px; font-weight: $font_weight_bolder;
           @include mobile { 
             width: 167px; height: 85px;
@@ -132,7 +132,7 @@ $nmbImg:#{$imgPath}+'nmb_left.jpeg';
         & > dd:last-of-type {
           width: 170px; height: 40px;
           margin: auto;
-          //background-color: #fff;
+          background-color: #fff;
           & > a { font-size: 25px; font-weight: $font_weight_bold;
           // responsive ==================================================
             @include mobile { width: 56px; font-size: 12px;}
