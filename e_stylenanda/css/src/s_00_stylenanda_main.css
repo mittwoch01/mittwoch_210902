@@ -165,7 +165,6 @@ h1 > a > span {
   width: 45px;
   height: 45px;
   margin: auto;
-  background-color: #dde;
 }
 .navi_area .nav_btn > button {
   display: block;
@@ -415,7 +414,6 @@ h1 > a > span {
 
 .navi_inner.on {
   display: block;
-  transition: opacity 1;
 }
 
 .pc_menu {
@@ -586,9 +584,9 @@ h1 > a > span {
   height: auto;
 }
 .mob_button > li {
+  display: block;
   width: 54px;
   height: 54px;
-  background-color: #daf;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -601,6 +599,10 @@ h1 > a > span {
     height: 41px;
     margin-top: 6px;
     background-image: url(../../multi/img/new_icon_02.png);
+  }
+  .mob_button > li:nth-child(2) > button {
+    width: 40px;
+    height: 40px;
   }
   .mob_button > li:nth-child(3) {
     width: 28px;
@@ -638,11 +640,6 @@ h1 > a > span {
     background-image: url(../../multi/img/new_icon_05.png);
   }
 }
-.mob_button > li > button {
-  width: 100%;
-  height: auto;
-  background-color: transparent;
-}
 .mob_button > li > button:hover {
   background-color: rgba(23, 23, 23, 0.4);
 }
@@ -673,6 +670,12 @@ h1 > a > span {
   height: 420px;
   background-color: rgba(23, 23, 23, 0.5);
 }
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  .mob_search_modal_area {
+    width: 100%;
+    height: 834px;
+  }
+}
 .mob_inner {
   display: block;
   width: 308px;
@@ -683,6 +686,7 @@ h1 > a > span {
   box-sizing: border-box;
 }
 .search_close_btn {
+  display: block;
   float: right;
   width: 30px;
   height: 30px;
@@ -752,11 +756,9 @@ form {
   color: #171717;
 }
 
-.mob_inner.on {
+.mob_search_modal_area.on {
   display: block;
-  transition: opacity 1;
 }
-
 @media all and (min-width: 1024px) and (max-width: 1439px) {
   .mob_search_modal_area {
     display: none;
@@ -777,36 +779,10 @@ form {
   position: relative;
   z-index: 10;
   width: 100%;
-  height: 100%;
-  width: 100%;
-  height: 100%;
+  height: auto;
+  background-color: #def;
 }
-@media all and (max-width: 599px) {
-  .view_area {
-    height: 500px;
-  }
-}
-@media all and (min-width: 600px) and (max-width: 1023px) {
-  .view_area {
-    height: 895px;
-  }
-}
-@media all and (min-width: 1024px) and (max-width: 1439px) {
-  .view_area {
-    height: 768px;
-  }
-}
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  .view_area {
-    height: 900px;
-  }
-}
-@media all and (min-width: 1920px) {
-  .view_area {
-    height: 1080px;
-  }
-}
-.view_area > .view_inner_wrap > li {
+.view_area > .view_inner_wrap {
   width: 100%;
   height: auto;
   display: block;
@@ -817,7 +793,7 @@ form {
   background-position: 50% 50%;
   background-size: cover;
 }
-.view_area > .view_inner_wrap > li > span {
+.view_area > .view_inner_wrap > span {
   display: block;
   position: absolute;
   z-index: -1;
@@ -825,6 +801,35 @@ form {
   width: 0;
   height: 0;
   overflow: hidden;
+}
+@media all and (max-width: 599px) {
+  .view_area > .view_inner_wrap {
+    height: 500px;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  .view_area > .view_inner_wrap {
+    height: 895px;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  .view_area > .view_inner_wrap {
+    height: 768px;
+  }
+}
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .view_area > .view_inner_wrap {
+    height: 900px;
+  }
+}
+@media all and (min-width: 1920px) {
+  .view_area > .view_inner_wrap {
+    height: 1080px;
+  }
+}
+.view_area > .view_inner_wrap > li {
+  width: 100%;
+  height: auto;
 }
 .view_area > .view_inner_wrap > li.action {
   z-index: 20;

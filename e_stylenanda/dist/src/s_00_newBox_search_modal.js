@@ -4,20 +4,23 @@ const newBox = document.querySelector('#newBox');
 const indi = newBox.querySelector('.indicator');
 const mobList = indi.querySelector('.mob_list');
 const modalArea = indi.querySelector('.mob_search_modal_area');
+
 // open btn
-const searchBtn = mobList.querySelector('.mob_button > li')[1];
+const searchLi = mobList.querySelector('.mob_button > .two');
 
 const searchModal = modalArea.querySelector('.mob_inner');
+
 // closeBtn
-const closeBtn = searchModal.querySelector('.search_close_btn');
+const searchCloseBtn = searchModal.querySelector('.search_close_btn');
 
 // 이벤트 처리
-searchBtn.addEventListener('click', e => {
+searchLi.addEventListener('click', (e) => {
   e.preventDefault();
-  searchModal.classList.add('on');
+  modalArea.classList.add('on');
 });
 
-closeBtn.addEventListener('click', e => {
+searchCloseBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  searchModal.classList.add('remove');
+  modalArea.classList.remove('on');
 });
+
