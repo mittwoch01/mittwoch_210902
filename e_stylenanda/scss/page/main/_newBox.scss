@@ -76,12 +76,14 @@ $newInPng: #{$imgPath}+'new_in.png';
           @include mobile {
             &:nth-child(1) { background-image: url($newIcon1);}
             &:nth-child(2) { width: 41px; height: 41px; 
+              background-color: transparent;
               margin-top: 6px; background-image: url($newIcon2);
               >  button {width: 40px; height: 40px; }
             }
             &:nth-child(3) { width: 28px; background-image: url($newIcon3); }
             &:nth-child(4) { background-image: url($newIcon4);}
-            &:nth-child(5) { background-image: url($newIcon5);}
+            &:nth-child(5) { width: 54px; height: 54px; 
+              background-image: url($newIcon5);}
           }
           @include tablet { width: 80px; height: 80px;
             &:nth-child(1) { background-image: url($newIcon1);}
@@ -100,12 +102,24 @@ $newInPng: #{$imgPath}+'new_in.png';
       @include pc {display: none;}
       @include pcfull {display: none;}
     }// .mob_list
-    @at-root .mob_search_modal_area {
+// =============================================================================================   
+    @at-root .mob_search_modal_area { 
       display: none;
       position: absolute; z-index: 200; top: 66px; left: 0;
       width: 100%; height: 420px;
       background-color: rgba( $color_black_01, 0.5);
+      border-radius: 4px;
+      // responsive =====================================================
       @include tablet { width: 100%; height: 834px;}
+      // make to triangle ===============================================
+      @at-root .tri {
+        position: absolute; z-index: 200; top: 420px; left: 71px;
+        width: 0; height: 0;
+        border-top: 35px solid rgba( $color_black_01, 0.5);
+        border-right: 25px solid transparent;
+        border-bottom: 35px solid transparent;
+        border-left: 25px solid transparent;
+      }
       // ---------------------------------------------------------------
       @at-root .mob_inner {
         display: block;
@@ -113,6 +127,8 @@ $newInPng: #{$imgPath}+'new_in.png';
         margin: auto; margin-top: 137px; 
         padding: 4px; box-sizing: border-box;
         //background-color: #f00;
+        // responsive ==================================================
+
         @at-root .search_close_btn{ 
           display: block;
           float: right;
@@ -130,16 +146,17 @@ $newInPng: #{$imgPath}+'new_in.png';
           @at-root .search_area {
             display: flex; justify-content: space-between;
             width: 301px; height: 44px; 
-            margin-top: 28px;
+            margin-top: 24px;
+            //background-color: #fad;
             & > .search_box {
               width: 100%; height: auto;
               > #search_modal {
-                width: 246px; height: 44px;
+                width: 248px; height: 44px;
                 border-radius: 4px;
                 font-size: 16px;}
             }
             @at-root .search_btn { 
-              width: 48px; height: 44px; 
+              width: 52px; height: 44px; 
               padding: 12px 4px; box-sizing: border-box;
               background-color: $color_black_01;
               border-radius: 4px;
@@ -166,6 +183,69 @@ $newInPng: #{$imgPath}+'new_in.png';
       @include pc { display: none;}
       @include pcfull { display: none;}     
     }// .mob_search_modal_area
+// =============================================================================================
+    @at-root .mob_language_modal_area {
+      display: none;
+      position: absolute; z-index: 200; top: 198px; right: 5px;
+      width: 182px; height: auto;
+      padding: 10px; 
+      background-color: rgba($color_black_01, 0.5);
+      border-radius: 4px;
+      // display:none; ==============================================
+      @include laptop { display: none;}
+      @include pc { display: none;}
+      @include pcfull { display: none;}  
+      // ------------------------------------------------------------
+      @at-root .tri_five {
+        position: absolute; z-index: 200; top: 288px; right: 8px;
+        width: 0; height: 0;
+        border-top: 35px solid rgba( $color_black_01, 0.5);
+        border-right: 20px solid transparent;
+        border-bottom: 35px solid transparent;
+        border-left: 20px solid transparent;
+      }
+      @at-root .mob_language_inner {
+        display: flex; flex-direction: column; justify-content: space-between;
+        width: 100%; height: auto;
+        // li에 크기를 주지 말고 button에 크기를 주면 누를 수 있는 범위가 넓어진다?
+        & > li { 
+          width: 100%; height: auto; 
+          margin-bottom: 14px;
+          border-radius: 4px;
+          background-color: #fff;
+          font-size: 18px; font-weight: 500; 
+          text-align: center; line-height: 44px;
+          // ----------------------------------------------------------
+          &:nth-child(1) { 
+            width: 30px; height: 30px;
+            background-color: $color_black_01;
+            background-image: url(../../../multi/img/closeBtn_x.png);
+            background-size: cover;
+            &:hover { background-color: $color_peach_01;} }
+          &:nth-child(5) { margin-bottom: 0;}
+          //------------------------------------------------------------
+          & > button { 
+            width: 100%; height: 44px;
+            text-transform: uppercase; 
+            color: $color_gray_02;
+            transition:all 0.9s, color 0.3;
+          }// button
+          // -----------------------------------------------------------
+          &:hover { background-color: $color_black_01;
+            // box-shadow: 0 80px 0 0 rgba(0,0,0,0.25) inset,
+            //            0 -80px 0 0 rgba(0,0,0,0.25) inset;
+           > button {color: $color_white_01;}
+          }
+          // &:focus { background-color: $color_black_01;}
+        }// li
+      }// .mob_language_inner
+      &.on { display: block;}
+      // display:none; =================================================
+      @include laptop { display: none;}
+      @include pc { display: none;}
+      @include pcfull { display: none;}
+    }// .mob_language_modal_area
+// =============================================================================================
   }// .indicator
 // ---------------------------------------------------------------------
   @at-root .view_area {

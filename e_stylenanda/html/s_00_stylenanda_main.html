@@ -170,7 +170,7 @@
                 </a>
               </li>
               <li><a href="#"><span class="blind">user</span></a></li>
-              <li>
+              <li class="five">
                 <button type="button">
                   <span class="blind">language</span>
                 </button>
@@ -178,8 +178,10 @@
             
             </div>
            </div> 
-           <!-- search_modal_inner -->
+<!-- ========================================================== -->
+           <!-- li[2] mob_search_modal_inner -->
            <div class="mob_search_modal_area ">
+            <div class="tri"><span class="blind">tri</span></div>
             <h3 class="blind">mobile search modal inner</h3>
             
             <div class="mob_inner">
@@ -209,7 +211,41 @@
               </form>
             </div><!-- .mob_inner -->
             
-           </div> <!-- .mob_search_modal_area -->
+           </div> 
+           <!-- li[5] mob_language_modal_inner -->
+           <div class="mob_language_modal_area">
+             <div class="tri_five"><span class="blind">tri</span></div>
+             <h3 class="blind">mobile language modal inner</h3>
+
+             <div class="mob_language_inner">
+              <li class="langCloseBtn">
+                <button type="button">
+                  <span class="blind">close</span>
+                </button>
+              </li>
+              <li>
+                <button type="button">  
+                  <span>한국어</span>
+                </button>
+              </li>
+              <li>
+                <button type="button">
+                  <span>english</span>
+                </button>
+              </li>
+              <li>
+                <button type="button">
+                  <span>中國語</span>
+                </button>
+              </li>
+              <li>
+                <button type="button">
+                  <span>日本語</span>
+                </button>
+              </li>
+            </div>
+           </div>
+<!-- ========================================================== -->
          </div><!-- .indicator -->
 
          <div class="view_area">
@@ -502,5 +538,5 @@
   <!-- newBox의 search버튼을 클릭했을 때, 검색 modal창 만들기o -->
   <script src="../dist/src/s_00_newBox_search_modal.js"></script>
   <!-- newBox의 언어설정 modalckd 만들기 -->
-  <!-- <script src="../dist/src/s_00_newBox_language_modal.js"></script> -->
+  <script src="../dist/src/s_00_newBox_language_modal.js"></script>
 </html>

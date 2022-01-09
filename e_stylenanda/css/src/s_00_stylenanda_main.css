@@ -597,6 +597,7 @@ h1 > a > span {
   .mob_button > li:nth-child(2) {
     width: 41px;
     height: 41px;
+    background-color: transparent;
     margin-top: 6px;
     background-image: url(../../multi/img/new_icon_02.png);
   }
@@ -612,6 +613,8 @@ h1 > a > span {
     background-image: url(../../multi/img/new_icon_04.png);
   }
   .mob_button > li:nth-child(5) {
+    width: 54px;
+    height: 54px;
     background-image: url(../../multi/img/new_icon_05.png);
   }
 }
@@ -669,6 +672,7 @@ h1 > a > span {
   width: 100%;
   height: 420px;
   background-color: rgba(23, 23, 23, 0.5);
+  border-radius: 4px;
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
   .mob_search_modal_area {
@@ -676,6 +680,19 @@ h1 > a > span {
     height: 834px;
   }
 }
+.tri {
+  position: absolute;
+  z-index: 200;
+  top: 420px;
+  left: 71px;
+  width: 0;
+  height: 0;
+  border-top: 35px solid rgba(23, 23, 23, 0.5);
+  border-right: 25px solid transparent;
+  border-bottom: 35px solid transparent;
+  border-left: 25px solid transparent;
+}
+
 .mob_inner {
   display: block;
   width: 308px;
@@ -715,20 +732,20 @@ form {
   justify-content: space-between;
   width: 301px;
   height: 44px;
-  margin-top: 28px;
+  margin-top: 24px;
 }
 .search_area > .search_box {
   width: 100%;
   height: auto;
 }
 .search_area > .search_box > #search_modal {
-  width: 246px;
+  width: 248px;
   height: 44px;
   border-radius: 4px;
   font-size: 16px;
 }
 .search_btn {
-  width: 48px;
+  width: 52px;
   height: 44px;
   padding: 12px 4px;
   box-sizing: border-box;
@@ -771,6 +788,110 @@ form {
 }
 @media all and (min-width: 1920px) {
   .mob_search_modal_area {
+    display: none;
+  }
+}
+
+.mob_language_modal_area {
+  display: none;
+  position: absolute;
+  z-index: 200;
+  top: 198px;
+  right: 5px;
+  width: 182px;
+  height: auto;
+  padding: 10px;
+  background-color: rgba(23, 23, 23, 0.5);
+  border-radius: 4px;
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  .mob_language_modal_area {
+    display: none;
+  }
+}
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .mob_language_modal_area {
+    display: none;
+  }
+}
+@media all and (min-width: 1920px) {
+  .mob_language_modal_area {
+    display: none;
+  }
+}
+.tri_five {
+  position: absolute;
+  z-index: 200;
+  top: 288px;
+  right: 8px;
+  width: 0;
+  height: 0;
+  border-top: 35px solid rgba(23, 23, 23, 0.5);
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid transparent;
+  border-left: 20px solid transparent;
+}
+
+.mob_language_inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.mob_language_inner > li {
+  width: 100%;
+  height: auto;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 44px;
+}
+.mob_language_inner > li:nth-child(1) {
+  width: 30px;
+  height: 30px;
+  background-color: #171717;
+  background-image: url(../../../multi/img/closeBtn_x.png);
+  background-size: cover;
+}
+.mob_language_inner > li:nth-child(1):hover {
+  background-color: #ffc59b;
+}
+.mob_language_inner > li:nth-child(5) {
+  margin-bottom: 0;
+}
+.mob_language_inner > li > button {
+  width: 100%;
+  height: 44px;
+  text-transform: uppercase;
+  color: #7c7c7c;
+  transition: all 0.9s, color 0.3;
+}
+.mob_language_inner > li:hover {
+  background-color: #171717;
+}
+.mob_language_inner > li:hover > button {
+  color: #ffffff;
+}
+
+.mob_language_modal_area.on {
+  display: block;
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  .mob_language_modal_area {
+    display: none;
+  }
+}
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .mob_language_modal_area {
+    display: none;
+  }
+}
+@media all and (min-width: 1920px) {
+  .mob_language_modal_area {
     display: none;
   }
 }
