@@ -1,21 +1,18 @@
 // Header.js
 import Gnb from "./Gnb";
 import '../style/Header.scss'
+import React from "react";
+import { Link } from 'react-router-dom';
 
-export default function Header({site, url}){
-  const h1Style = { color:'#5ae', textTransform: 'uppercase'};
+export default function Header(props){
 
   return (
     <header id="headBox">
-        <h1 style={h1Style}>
-        <a href = {url} target = '_blank'>{site}</a>
-        </h1>
+        <h1><Link to="/">{props.heading}</Link></h1>
         <Gnb />
     </header>
   )
 }
-
-Header.defaultProps = { site : 'op' }
 
 
 // -----------------------------------

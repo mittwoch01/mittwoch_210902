@@ -1,28 +1,18 @@
-// FootBox.js
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function (props){
-  // FootBox.css -----------------
-  const stFoot = {
-    width:100+'%', height:'auto', borderTop:'1px solid #fa0'
-  }
-  const mySet = props.name.toUpperCase();
-  // -----------------------------
+export default function Footer(props){
   return (
-    <footer id='footBox' style={stFoot}>
-        <h2>company infomation</h2>
-        <address>
-          회사 주소에 대한 내용 작성
-        </address>
-        <dl>
-          <dt>{mySet} site</dt>
-          <dd>
-            <ul>
-              <li>site_01</li>
-              <li>site_02</li>
-              <li>site_03</li>
-            </ul>
-          </dd>
-        </dl>
+    <footer id="footBox">
+      <h2>{props.heading} 정보</h2>
+      <div className="company_info">
+        <ul>
+          <li><Link to="/manual">이용약관</Link></li>
+          <li><Link to="/person">개인정보처리</Link></li>
+          <li><Link to="/rule">회사방침</Link></li>
+          <li><Link to="/etc">기타</Link></li>
+        </ul>
+      </div>
     </footer>
   )
 }
