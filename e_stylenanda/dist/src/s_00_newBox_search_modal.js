@@ -24,3 +24,18 @@ searchCloseBtn.addEventListener('click', (e) => {
   modalArea.classList.remove('on');
 });
 
+// 다른 이벤트 처리 해보기 if else 써보기
+
+// var displayFn = view => {
+//   var displayCheck = view || false;
+//   console.log(displayCheck);
+//   if(!displayCheck){
+//     modalArea.style.display = 'black';
+//   }else{
+//     modalArea.style.display = 'none';
+//   }
+// };
+
+
+
+

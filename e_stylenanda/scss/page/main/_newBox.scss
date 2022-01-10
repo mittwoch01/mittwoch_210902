@@ -55,10 +55,10 @@ $newInPng: #{$imgPath}+'new_in.png';
     }// .indi_list
     // -----------------------------------------------------------------
     @at-root .mob_list { // ab
-      position: absolute; z-index: 100; top: 526px; left: 50%;
+      position: absolute; z-index: 100; top: 520px; left: 50%;
       width: 100%; height: auto;
-      padding: 6px; box-sizing: border-box;
-      //border: 2px solid #555;
+      padding: 20px 14px; box-sizing: border-box;
+      border: 2px solid #555;
       transform: translate((-50%, -50%));
       // responsive ====================================================
       @include tablet { top: 956px; height: 100px; padding: 10px;}
@@ -68,22 +68,22 @@ $newInPng: #{$imgPath}+'new_in.png';
         width: 100%; height: auto;
         & > li { 
           display: block;
-          width: 54px; height: 54px;
-          //background-color: #daf;
+          width: 47px; height: 47px;
+          background-color: #daf;
           background-size: cover;
           background-repeat: no-repeat;
           // responsive ================================================
           @include mobile {
             &:nth-child(1) { background-image: url($newIcon1);}
-            &:nth-child(2) { width: 41px; height: 41px; 
-              background-color: transparent;
-              margin-top: 6px; background-image: url($newIcon2);
+            &:nth-child(2) { 
+              // width: 41px; height: 41px; 
+              // margin-top: 6px; 
+              background-image: url($newIcon2);
               >  button {width: 40px; height: 40px; }
             }
             &:nth-child(3) { width: 28px; background-image: url($newIcon3); }
             &:nth-child(4) { background-image: url($newIcon4);}
-            &:nth-child(5) { width: 54px; height: 54px; 
-              background-image: url($newIcon5);}
+            &:nth-child(5) { background-image: url($newIcon5);}
           }
           @include tablet { width: 80px; height: 80px;
             &:nth-child(1) { background-image: url($newIcon1);}

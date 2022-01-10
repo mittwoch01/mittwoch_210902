@@ -562,12 +562,13 @@ h1 > a > span {
 .mob_list {
   position: absolute;
   z-index: 100;
-  top: 526px;
+  top: 520px;
   left: 50%;
   width: 100%;
   height: auto;
-  padding: 6px;
+  padding: 20px 14px;
   box-sizing: border-box;
+  border: 2px solid #555;
   transform: translate(-50%, -50%);
 }
 @media all and (min-width: 600px) and (max-width: 1023px) {
@@ -585,8 +586,9 @@ h1 > a > span {
 }
 .mob_button > li {
   display: block;
-  width: 54px;
-  height: 54px;
+  width: 47px;
+  height: 47px;
+  background-color: #daf;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -595,10 +597,6 @@ h1 > a > span {
     background-image: url(../../multi/img/new_icon_01.png);
   }
   .mob_button > li:nth-child(2) {
-    width: 41px;
-    height: 41px;
-    background-color: transparent;
-    margin-top: 6px;
     background-image: url(../../multi/img/new_icon_02.png);
   }
   .mob_button > li:nth-child(2) > button {
@@ -613,8 +611,6 @@ h1 > a > span {
     background-image: url(../../multi/img/new_icon_04.png);
   }
   .mob_button > li:nth-child(5) {
-    width: 54px;
-    height: 54px;
     background-image: url(../../multi/img/new_icon_05.png);
   }
 }
