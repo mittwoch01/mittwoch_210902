@@ -6,7 +6,7 @@
 html,body { 
   width:100%; height:100%;
   @include font_set; 
-  font-weight:nth($font_weight, 1);
+  font-weight:nth($font_weight, 1); // 300
 }
 
 html,body,
