@@ -64,7 +64,7 @@ $closeBtn: #{$imgPath}+'closeBtn_x.png';
       @include mobile { background-image: url($logoBlack) };
       @include tablet { background-image: url($logoBlack) };
     }// a
-  }// h1
+  }// h1//  ss
 // ============================================
   @at-root .navi_area {
     width: 100%; height: auto;
