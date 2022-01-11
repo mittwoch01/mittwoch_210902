@@ -2,13 +2,15 @@ import React from 'react';
 import Header from './component/Header';
 import FootBox from './component/FootBox';
 import RouterPage from './router/RouterPage';
+
 import './App.css';
 
 function App() {
   const title = 'op';
   // ---------------------------------------
   return (
-    <div className="App">
+    <div className="App"> 
+    {/* 감싸주는 태그가 있어줘야한다 완전히 없으면 안됨 큰일남/ fragment를 써도 됨 */}
       <Header heading={title} />
       <RouterPage />
       <FootBox heading={title} />

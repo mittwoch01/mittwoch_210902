@@ -3,6 +3,7 @@ import Card from "./Card";
 import "../style/Section.scss";
 
 export default function (){
+
   return (
     <section id="productBox">
       <div className="title">
@@ -14,6 +15,15 @@ export default function (){
         </dl>
       </div>
       <div className="Content">
+
+        { cardListData.map() }
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
         <Card />
       </div>
     </section>

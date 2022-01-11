@@ -3,6 +3,7 @@ import '../style/Company.scss';
 import ManualStyle from '../style/Manual.module.scss';
 import PersonStyle from '../style/Person.module.scss';
 
+
 export function Manual() {
   return ( 
     <div className="company_area">
