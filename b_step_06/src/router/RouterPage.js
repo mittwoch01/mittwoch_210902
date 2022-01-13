@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom';
 import Main from '../component/Main';
 // import Company from '../page/Company';
 import Product from '../component/Product';
+import Event from '../component/Event';
 import {Manual, Person, Rule, Etc} from '../page/Company';
 
 export default function RouterPage() {
@@ -16,7 +17,8 @@ export default function RouterPage() {
       <Route path="/person" element={<Person />} />
       <Route path="/rule" element={<Rule />} />
       <Route path="/product" element={<Product />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/event" element={<Event />} />
+      {/* <Route path="*" element={<NotFound />} /> */}
     </Routes>
   )
 }

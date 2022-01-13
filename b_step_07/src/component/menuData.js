@@ -1,5 +1,5 @@
 
-[
+const cardListData = [
   {
     "pageTitle" : "coffee",
     "pageContent" : "coffee 내용에 따른 설명",
@@ -21,4 +21,4 @@
       { "product" : "cafemocca", "narr" : "cafemocca 설명" }
     ]
   }
-]
+];

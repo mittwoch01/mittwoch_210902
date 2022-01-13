@@ -3,7 +3,7 @@ import Card from "./Card";
 import "../style/Section.scss";
 
 export default function (){
-  
+    
   return (
     <section id="productBox">
       <div className="title">

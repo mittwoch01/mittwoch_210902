@@ -9,16 +9,17 @@ import '../style/Product.scss';
 
 export default function Product() {
   // 두개의 인자를 가진 useState.....? 함수를 재실행해라 : useState...?
+  // useState에 객체를 전달해서 여러개의 상태를 관리....?
   // const num = 0, const setNum = (i)=>{num =i};
 
   const [num, setNum] = useState(0);
   // -------------------------------------
   const [menuData, setMenuData] = useState([]);
 
-  useEffect( ()=> {
-    axios.get('./data/menuData.json')
-    .then(res => setMenuData(res.data) )
-  }, [])
+  // useEffect( ()=> {
+  //   axios.get('./data/menuData.json')
+  //   .then(res => setMenuData(res.data) )
+  // }, [])
 
   console.log( menuData );
 

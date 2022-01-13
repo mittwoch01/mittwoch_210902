@@ -8,7 +8,8 @@ export default function Gnb (){
     {content:"Main", href:"main"},
     {content:"Review", href:"review"},
     {content:"CardList", href:"cardList"},
-    {content:"Product", href:'product' }
+    {content:"Product", href:'product' },
+    {content:"Event", href:"Event"}
   ];
 
   return (
