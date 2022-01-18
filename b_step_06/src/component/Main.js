@@ -8,10 +8,17 @@ import '../style/MainViewBox.scss';
 export default function Main() {
   
   const listData = ['content_01', 'content_02', 'content_03', 'content_04'];
+  listData.unshift(listData[listData.length-1]);
+
   const [num, setNum] = useState(0);
+  // const [check, setCheck] = useState('next');
+  const checkRef = useRef('next')
+
 
   const setStyle = {
-    transition:(num===0)? num :'margin 300ms ease',
+    position:'relative', left:'-100%',
+    transition:(num === 0) ? 'margin 500ms ease': 'none',
+    animation: 'firstSlide 500ms ease 1',
     marginLeft:`${num * -100}%`
   }
 
@@ -20,13 +27,13 @@ export default function Main() {
   }, [num])
 
 
-  const fnClassAdd = (i)=>{
-    const ON = (i === num) ? '  on' : '';
-    const VIEW = 'view_';
-    const textNum = '000' + (i+1);
-    const VIEWTEXT = VIEW + textNum.slice(-2);
-    return VIEWTEXT+ ON;
-  };
+  // const fnClassAdd = (i)=>{
+  //   const ON = (i === num) ? '  on' : '';
+  //   const VIEW = 'view_';
+  //   const textNum = '000' + (i+1);
+  //   const VIEWTEXT = VIEW + textNum.slice(-2);
+  //   return VIEWTEXT+ ON;
+  // };
 
   // const viewData = listData.filter( (list,idx) => idx === num );
   

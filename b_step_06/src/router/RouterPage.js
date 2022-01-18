@@ -2,6 +2,7 @@ import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Main from '../component/Main';
 // import Company from '../page/Company';
+import Review from '../component/Review';
 import Product from '../component/Product';
 import Event from '../component/Event';
 import {Manual, Person, Rule, Etc} from '../page/Company';
