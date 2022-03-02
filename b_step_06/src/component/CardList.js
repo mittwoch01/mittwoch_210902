@@ -2,7 +2,7 @@
 // import {} from 'react-icons/md';
 import '../style/CardList.scss';
 
-// id
+// id//
 // img+설명
 // title
 // content
